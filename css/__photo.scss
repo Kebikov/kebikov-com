@@ -1,0 +1,21 @@
+.photo {
+    max-width: 1100px;
+    margin: 0 auto;
+    & img{
+        object-fit: cover;
+        width: 100%;
+        margin-bottom: 6px;
+        @media (max-width: 1910px){
+            margin-bottom: calc(3px + 3 * (100vw - 375px) / 1535);
+        }
+        @media (max-width: 375px){
+            margin-bottom: 3px;
+        }
+    }
+}
+.lazy {
+}
+
+._margin-top{
+    margin:50px 0px 50px 0px;
+}

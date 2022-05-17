@@ -1,0 +1,27 @@
+$color-text: rgb(105, 105, 105);
+$color-gold:#ba9f5a;
+
+.all-title {
+    margin:0px 0px 40px 0px;
+    // .all-title__line
+    &__line {
+        border-bottom: $color-gold 2px solid;
+        width: 100%;
+    }
+
+    // .all-title__text
+    &__text {
+        font-family: 'Roboto';
+        color: $color-text;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 140%;
+        text-align: center;
+        padding: 10px 0px 10px 0px;
+    }
+}
+
+._width{
+    max-width: 1600px;
+    margin:0 auto;
+}

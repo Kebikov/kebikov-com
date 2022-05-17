@@ -1,0 +1,40 @@
+.video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px 20px;
+    @media (max-width: 1200px){
+        margin:0px 0px 20px 0px;
+    }
+
+    // .video__item
+    &__item {
+        flex: 0 1 32%;
+        @media (max-width: 1200px){
+            flex: 0 1 45%;
+        }
+        @media (max-width: 800px){
+            flex: 0 1 100%;
+        }
+    }
+
+    // .video__play
+    &__play {
+        width: 100%;
+    }
+}
+
+.center{
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+._margin{
+    margin:0px 0px 0px 0px;
+    @media (max-width: 1200px){
+        margin:0px 0px 20px 0px;
+    }
+}
