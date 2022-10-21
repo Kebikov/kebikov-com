@@ -1,0 +1,213 @@
+@import '../../scss/variables.scss';
+
+
+.header{
+    position: relative;
+    z-index: 100;
+}
+.heder-pc {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: #fff;
+    @media (max-width: 1200px){
+        z-index: 2;
+    }
+
+    &__body{
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        max-width: 1300px;
+        margin: 0px auto 20px auto;
+    }
+
+    // .heder-pc__left
+    &__left {
+        display: flex;
+        column-gap: 20px;
+        padding: 0px 0px 10px 0px;
+        @media (max-width: 1200px){
+            display: none;
+        }
+    }
+
+    // .heder-pc__link
+    &__link {
+        font-family: "Roboto";
+        font-size: 19px;
+        font-weight: 400;
+        color: $color-text;
+        @media (max-width: 1910px){
+            font-size: calc(17px + 2 * (100vw - 1200px) / 710);
+        }
+        @media (max-width: 1200px){
+            font-size: 17px;
+        }
+        &:hover{
+            color: $color-gold;
+        }
+        &.target{
+            color: $color-gold;
+        }
+    }
+
+    // .heder-pc__logo
+    &__logo img{
+        object-fit: cover;
+        height: 120px;
+        width: auto;
+        @media (max-width: 1200px){
+            height: 100px;
+        }
+    }
+
+    // .heder-pc__right
+    &__right {
+        display: flex;
+        column-gap: 20px;
+        padding: 0px 0px 10px 0px;
+        @media (max-width: 1200px){
+            display: none;
+        }
+    }
+}
+
+.burger {
+    background-color: #D2B69570;
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    transition-delay: 0.7s;
+    position: fixed;
+    top: 120px;
+    left: 20px;
+    z-index: 2;
+    margin: -70px 0px 20px 0px;
+    &.fixed{
+        top: 85px;
+    }
+    &.active{
+        opacity: 0;
+        visibility: hidden;
+        transition-delay: 0s;
+    }
+    @media (max-width: 1200px){
+        visibility: visible;
+    }
+
+    //burger__body
+    &__body{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    // .burger__line
+    &__line {
+        width: 80%;
+        height: 3px;
+        background-color: rgba(255, 255, 255, 0.527);
+        &::before {
+            position: absolute;
+            content: '';
+            top: 10px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 80%;
+            height: 3px;
+            background-color: rgba(255, 255, 255, 0.527);
+        }
+        &::after {
+            position: absolute;
+            content: '';
+            bottom: 10px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 80%;
+            height: 3px;
+            background-color: rgba(255, 255, 255, 0.527);
+        }
+    }
+}
+
+.menu-mob {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.801);
+    border-right: $color-gold 3px solid;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 1000;
+    transition: all 0.8s ease;
+
+    &.active{
+        left: 0;
+    }
+    
+    &__close{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 40px;
+        height: 40px;
+        border: $color-gold 3px solid;
+        border-radius: 5px;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 0;
+            width: 35px;
+            height: 3px;
+            transform: rotate(45deg);
+            background-color: $color-gold;
+        } 
+        &::after{
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 0;
+            width: 35px;
+            height: 3px;
+            transform: rotate(-45deg);
+            background-color: $color-gold;
+        }
+    }
+
+    // .menu-mob__list
+    &__list {
+    }
+
+    // .menu-mob__line
+    &__line {
+        padding: 0px 0px 30px 0px;
+    }
+
+    // .menu-mob__link
+    &__link {
+        font-family: 'Roboto';
+        font-size: 20px;
+        font-weight: 400;
+        color: $color-text;
+        &:hover{
+            color: $color-gold;
+        }
+        &.target{
+            color: $color-gold;
+        }
+    }
+}
+
+
