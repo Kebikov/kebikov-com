@@ -11,13 +11,14 @@ const Header = () => {
     const onBurger = () => {
         setBurger(!burger);
     }
-    const link = (link, text, classDiv) => {
+    const link = (link, text, classId, classLi) => {
         return(
-            <li className="heder-pc__line">
-                <Link to={link} className={classDiv}>{text}</Link>
+            <li className={classLi}>
+                <Link to={link} className={classId}>{text}</Link>
             </li>
         )
     }
+    
 
     const logo = () => {
         return(
@@ -27,16 +28,15 @@ const Header = () => {
         )
     }
 
-    const mainLink = link('/', 'Главная', '');
-    const weddingsLink = link('weddings-all', 'Свадебные фотографии');
-    const slideshowLink = link('slideshow', 'Slideshow');
-    const articlesLink = link('articles', 'Статьи');
-    const aboutMeLink = link('about-me', 'Обо мне');
-    const reviewsLink = link('reviews', 'Отзывы клиентов');
-    const praicePackages = link('praice-packages', 'Пакеты услуг');
-    const contactsLink = link('contacts', 'Контакты');
-
-    console.log('render');
+    const main = {link: '/', title: 'Главная'};
+    const weddings = {link: 'weddings-all', title: 'Свадебные фотографии'};
+    const slideshow = {link: 'slideshow', title: 'Slideshow'};
+    const articles = {link: 'articles', title: 'Статьи'};
+    const aboutMe = {link: 'about-me', title: 'Обо мне'};
+    const reviews = {link: 'reviews', title: 'Отзывы клиентов'};
+    const praice = {link: 'praice-packages', title: 'Пакеты услуг'};
+    const contacts = {link: 'contacts', title: 'Контакты'};
+    
 
     //* render 
     return(
@@ -45,23 +45,23 @@ const Header = () => {
             <div className="heder-pc">
                 <div className="heder-pc__body">
                     <ul className="heder-pc__left">
-                        {mainLink}
-                        {weddingsLink}
-                        {slideshowLink}
-                        {articlesLink}
+                        {link(main.link, main.title, 'heder-pc__link', 'heder-pc__line')}
+                        {link(weddings.link, weddings.title, 'heder-pc__link', 'heder-pc__line')}
+                        {link(slideshow.link, slideshow.title, 'heder-pc__link', 'heder-pc__line')}
+                        {link(articles.link, articles.title, 'heder-pc__link', 'heder-pc__line')}
                     </ul>
                     {logo()}
                     <ul className="heder-pc__right">
-                        {aboutMeLink}
-                        {reviewsLink}
-                        {praicePackages}
-                        {contactsLink}
+                        {link(aboutMe.link, aboutMe.title, 'heder-pc__link', 'heder-pc__line')}
+                        {link(reviews.link, reviews.title, 'heder-pc__link', 'heder-pc__line')}
+                        {link(praice.link, praice.title, 'heder-pc__link', 'heder-pc__line')}
+                        {link(contacts.link, contacts.title, 'heder-pc__link', 'heder-pc__line')}
                     </ul>
                 </div>
             </div>
 
             {/* меню для мобильных */}
-            <div className="burger">
+            <div className={burger ? "burger active" : "burger"}>
                 <div className={burger ? "burger__body active" : "burger__body"} onClick={onBurger}>
                     <div className="burger__line"></div>
                 </div>
@@ -69,14 +69,14 @@ const Header = () => {
             <div className={burger ? "menu-mob active" : "menu-mob"}>
                 <ul className="menu-mob__list">
                     <div className="menu-mob__close" onClick={onBurger}></div>
-                    {mainLink}
-                    {weddingsLink}
-                    {slideshowLink}
-                    {articlesLink}
-                    {aboutMeLink}
-                    {reviewsLink}
-                    {praicePackages}
-                    {contactsLink}
+                    {link(main.link, main.title, 'menu-mob__link', 'menu-mob__line')}
+                    {link(weddings.link, weddings.title, 'menu-mob__link', 'menu-mob__line')}
+                    {link(slideshow.link, slideshow.title, 'menu-mob__link', 'menu-mob__line')}
+                    {link(articles.link, articles.title, 'menu-mob__link', 'menu-mob__line')}
+                    {link(aboutMe.link, aboutMe.title, 'menu-mob__link', 'menu-mob__line')}
+                    {link(reviews.link, reviews.title, 'menu-mob__link', 'menu-mob__line')}
+                    {link(praice.link, praice.title, 'menu-mob__link', 'menu-mob__line')}
+                    {link(contacts.link, contacts.title, 'menu-mob__link', 'menu-mob__line')}
                 </ul>
             </div>
         </header>
