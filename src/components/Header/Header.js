@@ -1,7 +1,7 @@
 import './header.scss';
-import logoImg from '../../resources/images/header-futer/1.jpg';
+import logoImg from '../../resources/images/header/1.jpg';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
     //* hooks 
@@ -14,7 +14,7 @@ const Header = () => {
     const link = (link, text, classId, classLi) => {
         return(
             <li className={classLi}>
-                <Link to={link} className={classId}>{text}</Link>
+                <NavLink end  to={link} className={( ({isActive}) => (isActive ? `${classId} activeLink` : classId) )}>{text}</NavLink>
             </li>
         )
     }

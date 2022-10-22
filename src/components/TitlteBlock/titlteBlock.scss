@@ -1,0 +1,35 @@
+@import '../../scss/variables.scss';
+
+.title-weding {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0px 50px 0px;
+    flex-wrap: wrap;
+
+    // .title-weding__line
+    &__line {
+        flex: 0 1 35%;
+
+        border-bottom: $color-gold 2px solid;
+        width: 100%;
+        @media (max-width: 700px){
+            flex: 0 1 100%;
+        }
+    }
+
+    // .title-weding__text
+    &__text {
+        flex: 0 1 30%;
+        display: flex;
+        justify-content: center;
+        font-family: 'Roboto';
+        color: $color-text;
+        font-size: 20px;
+        font-weight: 400;
+        @media (max-width: 700px){
+            flex: 0 1 100%;
+            padding: 20px 0px 20px 0px;
+        }
+    }
+}

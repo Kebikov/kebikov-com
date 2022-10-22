@@ -8,7 +8,7 @@ import box from '../../resources/images/spiner/box.jpg';
 const GalleryMain = () => {
     //* hooks 
     useEffect(() => {
-        const imgObserver = new IntersectionObserver(entryCall, {rootMargin: '0px 0px 0px 0px'});
+        const imgObserver = new IntersectionObserver(entryCall, option);
         const pictureAll = document.querySelectorAll('picture');
         pictureAll.forEach(item => imgObserver.observe(item));
     },[]);
@@ -48,7 +48,7 @@ const GalleryMain = () => {
         return pictures;
     }
 
-    const {entryCall} = useHelperLazyLoad();
+    const {entryCall, option} = useHelperLazyLoad();
 
     const pictures = colums(3);
 

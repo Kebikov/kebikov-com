@@ -1,6 +1,5 @@
 @import '../../scss/variables.scss';
 
-
 .header{
     position: relative;
     z-index: 100;
@@ -186,10 +185,6 @@
         }
     }
 
-    // .menu-mob__list
-    &__list {
-    }
-
     // .menu-mob__line
     &__line {
         padding: 0px 0px 30px 0px;
@@ -210,4 +205,6 @@
     }
 }
 
-
+.activeLink {
+    color: $color-gold;
+}

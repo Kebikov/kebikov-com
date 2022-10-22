@@ -1,0 +1,145 @@
+@import '../../scss/variables.scss';
+
+.article-all {
+    margin: 40px auto 40px auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px 20px;
+    max-width: 1200px;
+
+    // .article-all__item
+    &__item {
+        min-width: 350px;
+        flex: 0 1 32%;
+
+        @media (max-width: 1090px) {
+            flex: 0 1 42%;
+        }
+
+        @media (max-width: 750px) {
+            flex: 0 1 72%;
+        }
+
+        @media (max-width: 550px) {
+            flex: 0 1 92%;
+        }
+    }
+}
+
+
+.article {
+
+    // .article__body
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        background-color: #e0e0e094;
+        height: 100%;
+    }
+
+    // .article__img
+    &__img {
+        padding-bottom: 50%;
+        overflow: hidden;
+        position: relative;
+
+        &:hover img {
+            transform: scale(1.15);
+        }
+
+        & img {
+            position: absolute;
+            top: -30%;
+            left: 0;
+            z-index: 2;
+            transition: all 0.5s ease;
+            object-fit: cover;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    // .article__title
+    &__title {
+        font-family: 'Roboto';
+        font-size: 23px;
+        font-weight: 400;
+        line-height: 130%;
+        text-transform: uppercase;
+        color: #3E616F;
+        padding: 20px 20px 20px 20px;
+    }
+
+    // .article__subtitle
+    &__subtitle {
+        font-family: 'Roboto';
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 150%;
+        color: #3E616F;
+        padding: 20px 20px 20px 20px;
+        flex: 1 1 auto;
+    }
+
+    &__button-body {
+        padding: 20px 0px 40px 20px;
+
+        &:hover .article__button span {
+            padding: 12px 23px 12px 23px;
+        }
+    }
+
+    // .article__button
+    &__button {
+        //display: inline;
+        font-family: 'Roboto';
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 150%;
+        color: #3E616F;
+
+        & span {
+            padding: 10px 20px 10px 20px;
+            border: #3E616F 2px solid;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+    }
+}
+
+.main-article-title {
+    margin: 40px auto 0 auto;
+
+    // .main-article-title__text
+    &__text {
+        font-family: 'Roboto';
+        font-size: 24px;
+        font-weight: 400;
+        color: #3E616F;
+        letter-spacing: 1.4px;
+        position: relative;
+
+        @media (max-width: 1000px) {
+            font-size: 18px;
+        }
+
+        &::before {
+            content: '';
+            background: url(../../resources/images/articles/main-page/Flov.png) 50% / cover no-repeat;
+            position: absolute;
+            top: -194%;
+            left: 47%;
+            height: 50px;
+            width: 50px;
+
+            @media (max-width: 1000px) {
+                top: -167%;
+                left: 48.5%;
+                height: 35px;
+                width: 35px;
+            }
+        }
+    }
+}

@@ -1,13 +1,20 @@
 import GalleryMain from "../components/GalleryMain/GalleryMain";
+import TitlteBlock from "../components/TitlteBlock/TitlteBlock";
+import WeddingSeries from "../components/WeddingSeries/WeddingSeries";
+import { useEffect } from "react";
 
 const Main = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    },[]);
     return(
         <>
-            <h1>Main</h1>
             <GalleryMain/>
+            <TitlteBlock title={'Свадебные серии'}/>
+            <WeddingSeries plusClass={'mb-50'}/>
         </>
         
     )
 }
 
-export default GalleryMain;
+export default Main;

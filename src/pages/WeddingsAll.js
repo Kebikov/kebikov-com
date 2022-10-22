@@ -1,6 +1,10 @@
+import WeddingSeries from "../components/WeddingSeries/WeddingSeries";
+
 const WeddingsAll = () => {
     return(
-        <h1>WeddingsAll</h1>
+        <div className="wed-center">
+            <WeddingSeries/>
+        </div>
     )
 }
 

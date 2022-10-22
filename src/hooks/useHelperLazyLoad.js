@@ -1,11 +1,8 @@
 const useHelperLazyLoad = () => {
 
     const entryCall = (entryAll, observer) => {
-        let i = 0;
         entryAll.forEach(item => {
             if(item.isIntersecting) {
-                i++;
-                console.log('i',i);
                 const img =  item.target.querySelector('img');
                 const source = item.target.querySelector('source');
                 img.src = img.dataset.src;
@@ -20,7 +17,9 @@ const useHelperLazyLoad = () => {
         })
     }
 
-    return {entryCall}
+    const option = {rootMargin: '0px 0px 800px 0px'};
+
+    return {entryCall, option}
 }
 
 export default useHelperLazyLoad;

@@ -1,0 +1,37 @@
+@import '../../scss/variables.scss';
+
+.all-title {
+    margin:0px 0px 40px 0px;
+    // .all-title__line
+    &__line {
+        border-bottom: $color-gold 2px solid;
+        width: 100%;
+    }
+
+    // .all-title__text
+    &__text {
+        font-family: 'Roboto';
+        color: $color-text;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 140%;
+        text-align: center;
+        padding: 10px 0px 10px 0px;
+    }
+}
+
+.photo {
+    max-width: 1000px;
+    margin: 0 auto 100px auto;
+    & img{
+        object-fit: cover;
+        width: 100%;
+        margin-bottom: 6px;
+        @media (max-width: 1910px){
+            margin-bottom: calc(3px + 3 * (100vw - 375px) / 1535);
+        }
+        @media (max-width: 375px){
+            margin-bottom: 3px;
+        }
+    }
+}
