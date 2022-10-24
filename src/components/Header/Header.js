@@ -3,6 +3,7 @@ import logoImg from '../../resources/images/header/1.jpg';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
+//= Header 
 const Header = () => {
     //* hooks 
     const [burger, setBurger] = useState(false);
@@ -11,10 +12,15 @@ const Header = () => {
     const onBurger = () => {
         setBurger(!burger);
     }
-    const link = (link, text, classId, classLi) => {
+
+    const onBurgerFalse = () => {
+        setBurger(false);
+    }
+
+    const link = (link, title, classId, classLi) => {
         return(
             <li className={classLi}>
-                <NavLink end  to={link} className={( ({isActive}) => (isActive ? `${classId} activeLink` : classId) )}>{text}</NavLink>
+                <NavLink end to={link} onClick={onBurgerFalse} className={( ({isActive}) => (isActive ? `${classId} activeLink` : classId) )}>{title}</NavLink>
             </li>
         )
     }
@@ -28,6 +34,7 @@ const Header = () => {
         )
     }
 
+    //links to pages
     const main = {link: '/', title: 'Главная'};
     const weddings = {link: 'weddings-all', title: 'Свадебные фотографии'};
     const slideshow = {link: 'slideshow', title: 'Slideshow'};

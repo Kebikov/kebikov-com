@@ -1,0 +1,50 @@
+@import '../../scss/variables.scss';
+
+.error-page {
+    flex: 1 1 auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    // .error-page__body
+    &__body {
+        flex: 0 1 800px;
+
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media (max-width: 700px){
+            flex-wrap: wrap;
+        }
+
+        & img{
+            flex: 0 1 40%;
+            width: 250px;
+            @media (max-width: 700px){
+                width: 200px;
+            }
+        }
+    }
+
+    // .error-page__text
+    &__text {
+        flex: 0 1 59.9%;
+        font-size: 30px;
+        font-family: 'Roboto';
+        font-weight: 700;
+        color: $color-text;
+        text-align: center;
+        line-height: 140%;
+        @media (max-width: 700px){
+            flex: 0 1 100%;
+            font-size: 25px;
+        }
+        @media (max-width: 500px){
+            font-size: 20px;
+        }
+
+    }
+}

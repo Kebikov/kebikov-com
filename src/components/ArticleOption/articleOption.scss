@@ -1,0 +1,14 @@
+.options {
+    max-width: 1200px;
+    margin: 20px auto 40px auto;
+
+    // .options__text
+    &__text {
+        font-family: 'Roboto';
+        font-size: 18px;
+        font-weight: 400;
+        color: #3E616F;
+        line-height: 140%;
+        padding: 0px 20px 40px 20px;
+    }
+}

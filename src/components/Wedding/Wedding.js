@@ -11,7 +11,6 @@ const Wedding = ({link}) => {
         const imgObserver = new IntersectionObserver(entryCall, option);
         const pictureAll = document.querySelectorAll('picture');
         pictureAll.forEach(item => imgObserver.observe(item));
-
     },[link]);
     const {entryCall, option} = useHelperLazyLoad();
 
@@ -64,9 +63,9 @@ const Wedding = ({link}) => {
     }
 
     const pictures = allImg.map(item => {
-        console.log('map');
+        
         return(
-            <picture key={item}>
+            <picture className='anime' key={item}>
                 <source data-srcset={item[1]} type="image/webp"/>
                 <img src={box} height={'800px'} width={'1200px'} data-src={item[0]} alt="my_alt"/>
             </picture>

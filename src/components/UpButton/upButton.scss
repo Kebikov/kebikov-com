@@ -1,0 +1,13 @@
+@import '../../scss/variables.scss';
+
+.up-button{
+    position: fixed;
+    z-index: 100;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: url(../../resources/images/items/arrow.png) 0 0 / cover no-repeat;
+    cursor: pointer;
+    opacity: 0.5;
+}

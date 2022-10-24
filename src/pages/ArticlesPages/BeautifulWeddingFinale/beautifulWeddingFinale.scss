@@ -1,0 +1,102 @@
+.left-img {
+
+    // .left-img__body
+    &__body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    // .left-img__item-img
+    &__item-img {
+        flex: 0 1 40%;
+        max-width: 500px;
+        padding: 20px;
+        @media (max-width: 1100px){
+            flex: 0 1 60%;
+        }
+        @media (max-width: 700px){
+            flex: 0 1 90%;
+        }
+    }
+
+    &__item-img-box {
+        padding-bottom: 100%;
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        & img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    // .left-img__item-text
+    &__item-text {
+        flex: 0 1 60%;
+        @media (max-width: 1100px){
+            flex: 0 1 95%;
+        }
+    }
+
+    &__text-body {
+        display: flex;
+        justify-content: center;
+        transform: translate(-3%,0);
+        padding: 0px 10px 0px 10px;
+        
+        & img {
+            object-fit: cover;
+            height: 50px;
+            width: 50px;
+            margin:-5px 0px 0px 0px;
+            @media (max-width: 1100px){
+                height: 40px;
+                width: 40px;
+                margin: 0px;
+            }
+        }
+    }
+
+    // .left-img__title
+    &__title {
+        display: inline;
+        font-family: 'Roboto';
+        font-size: 28px;
+        font-weight: 400;
+        color: #3E616F;
+        line-height: 140%;
+        text-align:center;
+        text-decoration: underline;
+        padding: 0px 0px 20px 5px;
+    }
+
+    // .left-img__text
+    &__text {
+        font-family: 'Roboto';
+        font-size: 18px;
+        font-weight: 400;
+        color: #3E616F;
+        line-height: 140%;
+        padding: 10px;
+        white-space: pre-line;
+    }
+}
+
+._order-1{
+    order: 1;
+    @media (max-width: 1100px){
+        order: 2;
+    }
+}
+._order-2{
+    order: 2;
+    @media (max-width: 1100px){
+        order: 1;
+    }
+}
