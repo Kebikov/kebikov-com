@@ -1,0 +1,26 @@
+.video {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 20px 0 20px 0;
+
+    // .video__body
+    &__body {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 5px 10px;
+    }
+
+    // .video__item
+    &__item {
+        min-width: 400px;
+        flex: 0 1 48%;
+        & video {
+            width: 100%;
+        }
+    }
+}
