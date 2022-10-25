@@ -2,6 +2,7 @@ import './beautifulWeddingFinale.scss';
 import HederArticles from '../../../components/HederArticles/HederArticles';
 import ArticleOption from '../../../components/ArticleOption/ArticleOption';
 import useArticle from '../../../hooks/useArticle';
+import { useEffect } from 'react';
 import jpg1 from '../../../resources/images/articles/beautiful-wedding-finale/1.jpg';
 import jpg2 from '../../../resources/images/articles/beautiful-wedding-finale/2.jpg';
 import jpg3 from '../../../resources/images/articles/beautiful-wedding-finale/3.jpg';
@@ -113,6 +114,10 @@ const finaleDB = [
 
 //= BeautifulWeddingFinale 
 const BeautifulWeddingFinale = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    });
+
     const {FinaleBox} = useArticle();
 
     //* render 

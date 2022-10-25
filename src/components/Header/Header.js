@@ -86,6 +86,7 @@ const Header = () => {
                     {link(contacts.link, contacts.title, 'menu-mob__link', 'menu-mob__line')}
                 </ul>
             </div>
+            <div className="header__bottom-line"/>
         </header>
     )
 }

@@ -26,13 +26,14 @@
         position: relative;
         border-radius: 10px;
         overflow: hidden;
+
         & img {
             position: absolute;
             top: 0;
             left: 0;
             object-fit: cover;
             width: 100%;
-            height: auto;
+            height: 100%;
         }
     }
 
@@ -48,7 +49,11 @@
         display: flex;
         justify-content: center;
         transform: translate(-3%,0);
-        padding: 0px 10px 0px 10px;
+        padding: 0px 10px 0px 10px; 
+        flex-wrap: wrap;
+        @media (max-width: 1100px){
+            transform: translate( 0,0);
+        }
         
         & img {
             object-fit: cover;
@@ -74,6 +79,10 @@
         text-align:center;
         text-decoration: underline;
         padding: 0px 0px 20px 5px;
+        @media (max-width: 1100px){
+            flex: 0 1 100%;
+            padding: 0px 0px 20px 0px;
+        }
     }
 
     // .left-img__text

@@ -17,6 +17,9 @@ const Main = lazy(() => import('../pages/Main'));
 const WeddingsAll = lazy(() => import('../pages/WeddingsAll'));
 const Articles = lazy(() => import('../pages/ArticlesPage'));
 const WeddingsPage = lazy(() => import('../pages/WeddingsPage'));
+const PreparationsWedding = lazy(() => import('../pages/ArticlesPages/PreparationsWedding/PreparationsWedding'));
+const FromThePhotographer = lazy(() => import('../pages/ArticlesPages/FromThePhotographer/FromThePhotographer'));
+const Accessories = lazy(() => import('../pages/ArticlesPages/Accessories/Accessories'));
 
 function App() {
     return (
@@ -33,6 +36,9 @@ function App() {
                             <Route path='articles' element={<Articles/>}/>
                                 <Route path='beautiful-wedding-finale' element={<BeautifulWeddingFinale/>}/>
                                 <Route path='bouquet-roll' element={<BouquetRoll/>}/>
+                                <Route path='preparations-wedding' element={<PreparationsWedding/>}/>
+                                <Route path='from-the-photographer' element={<FromThePhotographer/>}/>
+                                <Route path='accessories' element={<Accessories/>}/>
                             <Route path='about-me' element={<AboutMe/>}/>
                             <Route path='reviews' element={<Reviews/>}/>
                             <Route path='praice-packages' element={<PraicePackages/>}/>

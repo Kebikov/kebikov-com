@@ -1,6 +1,7 @@
 import HederArticles from '../../../components/HederArticles/HederArticles';
 import ArticleOption from '../../../components/ArticleOption/ArticleOption';
 import useArticle from '../../../hooks/useArticle';
+import { useEffect } from 'react';
 import jpg1 from '../../../resources/images/articles/bouquet-roll/1.jpg';
 import jpg2 from '../../../resources/images/articles/bouquet-roll/2.jpg';
 import jpg3 from '../../../resources/images/articles/bouquet-roll/3.jpg';
@@ -66,6 +67,10 @@ const finaleDB = [
 
 //= BouquetRoll 
 const BouquetRoll = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    });
+
     const {FinaleBox} = useArticle();
 
     //* render 

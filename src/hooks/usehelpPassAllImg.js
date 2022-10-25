@@ -1,5 +1,5 @@
 
-const usehelpPassAllImg = (context) => {
+const usehelpPassAllImg = (context, only = 2) => {
     
     function importAll(context) {
         let images = {};
@@ -11,7 +11,7 @@ const usehelpPassAllImg = (context) => {
     function allImg () {
         const arrImg = [];
         let arrJpgAndWebP = [];
-        let lengthArr = Object.keys(images).length / 2;
+        let lengthArr = Object.keys(images).length / only;
 
         for(let i = 1; i <= lengthArr; i++) {
             arrJpgAndWebP.push(images[`${i}.jpg`]);
@@ -26,6 +26,8 @@ const usehelpPassAllImg = (context) => {
 }
 
 export default usehelpPassAllImg;
+
+//const allImg = usehelpPassAllImg(require.context('../../resources/images/main-page/', false, /\.(png|jpe?g|svg|webp)$/));
 
 
 
