@@ -114,14 +114,13 @@ const finaleDB = [
 
 //= BeautifulWeddingFinale 
 const BeautifulWeddingFinale = () => {
+    //* hooks 
     useEffect(() => {
         window.scrollTo(0, 0);
     });
-
     const {FinaleBox} = useArticle();
 
     //* render 
-    console.log('render');
     return(
         <>
             <HederArticles title={'15 ВАРИАНТОВ КРАСИВОГО СВАДЕБНОГО ФИНАЛА'}/>

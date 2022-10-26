@@ -10,16 +10,17 @@ import PraicePackages from '../pages/PraicePackages';
 import Contacts from '../pages/Contacts';
 import Footer from '../components/Footer/Footer';
 import UpButton from '../components/UpButton/UpButton';
-import BeautifulWeddingFinale from '../pages/ArticlesPages/BeautifulWeddingFinale/BeautifulWeddingFinale';
-const BouquetRoll = lazy(() => import('../pages/ArticlesPages/BouquetRoll/BouquetRoll'));
+import BeautifulWeddingFinale from '../pages/ArticlesPages/beautiful-wedding-finale/BeautifulWeddingFinale';
+const BouquetRoll = lazy(() => import('../pages/ArticlesPages/bouquet-roll/BouquetRoll'));
 const Page404 = lazy(() => import('../pages/Page404'));
 const Main = lazy(() => import('../pages/Main'));
 const WeddingsAll = lazy(() => import('../pages/WeddingsAll'));
 const Articles = lazy(() => import('../pages/ArticlesPage'));
 const WeddingsPage = lazy(() => import('../pages/WeddingsPage'));
-const PreparationsWedding = lazy(() => import('../pages/ArticlesPages/PreparationsWedding/PreparationsWedding'));
-const FromThePhotographer = lazy(() => import('../pages/ArticlesPages/FromThePhotographer/FromThePhotographer'));
-const Accessories = lazy(() => import('../pages/ArticlesPages/Accessories/Accessories'));
+const PreparationsWedding = lazy(() => import('../pages/ArticlesPages/preparations-wedding/PreparationsWedding'));
+const FromThePhotographer = lazy(() => import('../pages/ArticlesPages/from-the-photographer/FromThePhotographer'));
+const Accessories = lazy(() => import('../pages/ArticlesPages/accessories/Accessories'));
+const PerfectWeddingPhotoSession = lazy(() => import('../pages/ArticlesPages/perfect-wedding-photo-session/PerfectWeddingPhotoSession'));
 
 function App() {
     return (
@@ -34,11 +35,12 @@ function App() {
                                 <Route path='/weddings-all/:wed' element={<WeddingsPage/>}/>
                             <Route path='slideshow' element={<Slideshow/>}/>
                             <Route path='articles' element={<Articles/>}/>
-                                <Route path='beautiful-wedding-finale' element={<BeautifulWeddingFinale/>}/>
-                                <Route path='bouquet-roll' element={<BouquetRoll/>}/>
-                                <Route path='preparations-wedding' element={<PreparationsWedding/>}/>
-                                <Route path='from-the-photographer' element={<FromThePhotographer/>}/>
-                                <Route path='accessories' element={<Accessories/>}/>
+                                <Route path='/articles/beautiful-wedding-finale' element={<BeautifulWeddingFinale/>}/>
+                                <Route path='/articles/bouquet-roll' element={<BouquetRoll/>}/>
+                                <Route path='/articles/preparations-wedding' element={<PreparationsWedding/>}/>
+                                <Route path='/articles/from-the-photographer' element={<FromThePhotographer/>}/>
+                                <Route path='/articles/accessories' element={<Accessories/>}/>
+                                <Route path='/articles/perfect-wedding-photo-session' element={<PerfectWeddingPhotoSession/>}/>
                             <Route path='about-me' element={<AboutMe/>}/>
                             <Route path='reviews' element={<Reviews/>}/>
                             <Route path='praice-packages' element={<PraicePackages/>}/>

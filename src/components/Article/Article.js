@@ -2,7 +2,6 @@ import './article.scss';
 import { Link } from 'react-router-dom';
 
 const Article = ({title, subtitle, picture, link = null}) => {
-    console.log('',link);
 
     return(
         <article className="article-all__item article">

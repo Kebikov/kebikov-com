@@ -18,9 +18,12 @@ const Header = () => {
     }
 
     const link = (link, title, classId, classLi) => {
+
+        const end = link === '/' ? true : false;
+
         return(
             <li className={classLi}>
-                <NavLink end to={link} onClick={onBurgerFalse} className={( ({isActive}) => (isActive ? `${classId} activeLink` : classId) )}>{title}</NavLink>
+                {end ? <NavLink end to={link} onClick={onBurgerFalse} className={( ({isActive}) => (isActive ? `${classId} activeLink` : classId) )}>{title}</NavLink> : <NavLink to={link} onClick={onBurgerFalse} className={( ({isActive}) => (isActive ? `${classId} activeLink` : classId) )}>{title}</NavLink>}
             </li>
         )
     }
