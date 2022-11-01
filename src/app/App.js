@@ -19,7 +19,7 @@ const Articles = lazy(() => import('../pages/ArticlesPage'));
 const WeddingsPage = lazy(() => import('../pages/WeddingsPage'));
 const PreparationsWedding = lazy(() => import('../pages/ArticlesPages/preparations-wedding/PreparationsWedding'));
 const FromThePhotographer = lazy(() => import('../pages/ArticlesPages/from-the-photographer/FromThePhotographer'));
-const Accessories = lazy(() => import('../pages/ArticlesPages/accessories/Accessories'));
+const Accessories = lazy(() => import('../pages/ArticlesPages/Accessories/Accessories'));
 const PerfectWeddingPhotoSession = lazy(() => import('../pages/ArticlesPages/perfect-wedding-photo-session/PerfectWeddingPhotoSession'));
 
 function App() {

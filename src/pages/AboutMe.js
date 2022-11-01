@@ -1,6 +1,7 @@
 import HederArticles from "../components/HederArticles/HederArticles";
 import me from '../resources/images/about/1000.jpg';
 import './scss/about.scss';
+import FormContact from "../components/FormContact/FormContact";
 
 const AboutMe = () => {
 
@@ -17,6 +18,7 @@ const AboutMe = () => {
                     <div className="about__text">{text}</div>
                 </div>
             </div>
+            <FormContact/>
         </>
     )
 }
