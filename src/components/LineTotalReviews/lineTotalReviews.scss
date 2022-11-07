@@ -3,8 +3,11 @@
     justify-content: center;
     width: 100%;
     padding: 10px 0px 0px 0px;
-    // .reviews-total__body
+    @media (max-width: 1200px){
+        display: none;
+    }
 
+    // .reviews-total__body
     &__body {
         display: flex;
         justify-content: center;
@@ -12,7 +15,6 @@
     }
 
     // .reviews-total__line
-
     &__line {
         height: 5px;
         width: 30px;

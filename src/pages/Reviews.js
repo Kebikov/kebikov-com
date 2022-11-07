@@ -1,12 +1,12 @@
 import './scss/reviews.scss';
 import ReviewsItem from "../components/ReviewsItem/ReviewsItem";
-import useGellary from '../hooks/useGellary';
+import GellaryReviews from '../components/GellaryReviews/GellaryReviews';
 import arrForReviews from './data/dataReviews';
 import LineTotalReviews from '../components/LineTotalReviews/LineTotalReviews';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const Reviews = () => {
-    useGellary('.all-reviews');
+    const [active, setActive] = useState(0);
 
     const reviewsItems = arrForReviews.map((item, i) => {
         return(
@@ -16,12 +16,8 @@ const Reviews = () => {
 
     return(
             <>
-                <LineTotalReviews arr={arrForReviews}/>
-                <div className="all-reviews">
-                    <div className="use-line">
-                        {reviewsItems}
-                    </div>
-                </div>
+                <LineTotalReviews arr={arrForReviews} active={active}/>
+                <GellaryReviews div={'.all-reviews'} reviewsItems={reviewsItems} setActive={setActive}/>
             </>
             
     )

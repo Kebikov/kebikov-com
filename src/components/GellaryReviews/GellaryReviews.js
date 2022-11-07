@@ -1,7 +1,7 @@
-import './scss/useGellary.scss';
+import './gellaryReviews.scss';
 import { useEffect, useState } from 'react';
 
-function useGellary (div) {
+const GellaryReviews = ({div, reviewsItems, setActive}) => {
     useEffect(() => {
         effect();
         return () => {
@@ -11,8 +11,6 @@ function useGellary (div) {
             window.removeEventListener('pointermove', moveFinger);
         }
     }, []);
-
-    const [activeSlide, setActiveSlide] = useState(0);
 
     let line = document.createElement('div');
     let kidsWidth = 0;
@@ -24,8 +22,7 @@ function useGellary (div) {
     let dragEnd = 0;
     let pointNow = 0;
 
-    //for total line
-    let arrLines = null;
+
     
     const effect = () => {
         const element = document.querySelector(div);
@@ -79,12 +76,12 @@ function useGellary (div) {
         if(direction > 0) {
             if(slidesCurrent >= kidsTotal - 3) {
                 slidesCurrent = kidsTotal - 3;
-                setActiveSlide(slidesCurrent);
+                setActive(slidesCurrent);
                 pointNow = -slidesCurrent * kidsWidth;
                 move(pointNow);
             }else{
                 slidesCurrent ++;
-                setActiveSlide(slidesCurrent);
+                setActive(slidesCurrent);
                 pointNow = -slidesCurrent * kidsWidth;
                 move(pointNow);
             }
@@ -95,12 +92,12 @@ function useGellary (div) {
         if(direction < 0) {
             if(slidesCurrent <= 0) {
                 slidesCurrent = 0;
-                setActiveSlide(slidesCurrent);
+                setActive(slidesCurrent);
                 pointNow = 0;
                 move(pointNow);
             }else{
                 slidesCurrent --;
-                setActiveSlide(slidesCurrent);
+                setActive(slidesCurrent);
                 pointNow = -slidesCurrent * kidsWidth;
                 move(pointNow);
             }
@@ -109,8 +106,15 @@ function useGellary (div) {
 
     const move = (x) => {
         line.style.transform= `translate(${x}px, 0)`;
-        //addColorLines();
     }
+
+    return(
+        <div className="all-reviews">
+            <div className="use-line">
+                {reviewsItems}
+            </div>
+        </div>
+    )
 }
 
-export default useGellary;
+export default GellaryReviews;
