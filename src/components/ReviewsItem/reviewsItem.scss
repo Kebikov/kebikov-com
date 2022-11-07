@@ -1,7 +1,11 @@
 @import '../../scss/variables.scss';
 
 .rewiews {
-    flex: 1 0 32.7%;
+    flex: 1 0 33.33333%;
+    padding: 0px 6px 0px 6px;
+    @media (max-width: 1200px){
+        padding: 0px 10px 10px 10px;
+    }
 
     // .rewiews__body
     &__body {
@@ -26,10 +30,13 @@
     // .rewiews__text
     &__text {
         font-family: 'Hand';
-        font-size: 22px;
+        font-size: 24px;
         text-align: center;
         line-height: 130%;
         padding: 0px 20px 0px 20px;
+        @media (max-width: 1200px){
+            padding: 0px 10px 0px 10px;
+        }
     }
 
     // .rewiews__name

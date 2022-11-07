@@ -63,6 +63,14 @@
         }
     }
 
+    &__check{
+        padding: 5px;
+        z-index: 5;
+        font-size: 20px;
+        font-family: 'Roboto';
+        margin: 0px 0px 20px 0px;
+    }
+
     // .contact__form
     &__form {
         flex: 0 1 50%;
@@ -89,7 +97,7 @@
         padding: 5px;
         font-family: 'Roboto';
         resize: none;
-        margin:0px 0px 30px 0px;
+        margin:0px 0px 20px 0px;
     }
     &__label{
         z-index: 5;
@@ -107,12 +115,14 @@
         background-color: $color-gold;
         padding: 10px 0px 10px 0px;
         width: 40%;
+        margin: 20px 0px 0px 0px;
     }
 }
 
 .error {
-    color: rgb(255, 255, 255);
-    font-size: 16px;
+    z-index: 5;
+    color: rgb(255, 40, 40);
+    font-size: 18px;
     margin: -20px 0px 0px 0px;
     font-family: 'Roboto';
 }

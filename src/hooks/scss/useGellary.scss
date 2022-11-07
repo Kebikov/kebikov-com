@@ -1,0 +1,11 @@
+.use-line{
+    display: flex;
+    @media (max-width: 1200px){
+        display: block;
+    }
+    max-width: 1400px;
+}
+
+.trans{
+    transition: all 0.7s ease;
+}

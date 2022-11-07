@@ -1,0 +1,70 @@
+.anime-meil {
+    display: block;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    // .anime-meil__body
+    &__body {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    // .anime-meil__box
+    &__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__text {
+        font-family: "Roboto";
+        font-size: 18px;
+        letter-spacing: 1.2px;
+        color: #fff;
+    }
+    // .anime-meil__meil
+    &__meil {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+        width: 100%;
+        margin: 0px 0px 20px 0px;
+        & img {
+            object-fit: cover;
+            height: 100%;
+            width: 80px;
+            animation: anim-mail 2s infinite;
+        }
+    }
+}
+
+@keyframes anim-mail {
+    from {
+        transform: scale(1);
+        transform-origin: center center;
+        animation-timing-function: ease-out;
+    }
+    10% {
+        transform: scale(0.91);
+        animation-timing-function: ease-in;
+    }
+    17% {
+        transform: scale(0.98);
+        animation-timing-function: ease-out;
+    }
+    33% {
+        transform: scale(0.87);
+        animation-timing-function: ease-in;
+    }
+    45% {
+        transform: scale(1);
+        animation-timing-function: ease-out;
+    }
+}

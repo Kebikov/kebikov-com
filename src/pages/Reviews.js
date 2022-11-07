@@ -1,49 +1,29 @@
 import './scss/reviews.scss';
 import ReviewsItem from "../components/ReviewsItem/ReviewsItem";
 import useGellary from '../hooks/useGellary';
+import arrForReviews from './data/dataReviews';
+import LineTotalReviews from '../components/LineTotalReviews/LineTotalReviews';
 import { useEffect } from 'react';
-import jpg1 from '../resources/images/reviews/1.jpg';
-import jpg2 from '../resources/images/reviews/2.jpg';
-import jpg3 from '../resources/images/reviews/3.jpg';
-
-const arrForReviews = [
-    {
-        img: jpg1,
-        text: 'Хотим поблагодарить тебя Женя за проделаную работу. Все было здорово, от начала съемки до ее конца. Ну и конечно сами фотографии сделаны на высшем уровне. Мы остались очень довольны!!! Очень хороший фотограф, который полностью окунается в свое любимое дело, ответственно подходит к каждой мелочи и в тоже время создает непринужденную дружелюбную обстановку. И как результат: отлично проведенное время, и шикарные фотографии!!!',
-        name: 'Наталья Жуковец',
-        href: '//vk.com/id43569400'
-    },
-    {
-        img: jpg2,
-        text: ' Занятие по поиску фотографа было нудным, долгим, все тщательно просматривали, НО, когда мы наткнулись на работы Евгения сразу поняли, что он мастер своего дела и только он должен быть фотографом на нашей свадьбе. На первой встрече было понятно, что с выбором не ошиблись. Содержимое для нас оказалось наиприятнейшим сюрпризом, фотографии сказочные. Эти фотографии будут радовать нас всю жизнь. Именно благодаря Евгению возвращаешься в день нашей свадьбы и испытываешь те чувства и эмоции, которые останутся с нами на всю жизнь. Спасибо тебе за профессионализм, непринужденность, легкость. Желаю всем молодоженам испытать счастье. Очень надеюсь, что с тобой мы еще поработаем. P.S. если ты все еще думаешь в чьи же руки отдать судьбу своих фотографий, то смело можешь вычеркнуть этот пункт и сразу позвонить Евгению))',
-        name: 'Александр Урбанович',
-        href: '//vk.com/id4181542'
-    },
-    {
-        img: jpg3,
-        text: ' Мы очень рады, что нам посчастливилось повстречать такого позитивного, открытого, креативного и одновременно очень простого и влюбленного в свое дело, фотографа! Женя, это все про тебя! Ты действительно профессионал! Видно, что ты отдаешься на съемках полностью. С тобой очень приятно работать! Спасибо тебе, что разделил с нами день нашей свадьбы! спасибо тебе за поддержку и готовность помочь :)',
-        name: 'Анна Ткачук',
-        href: '//vk.com/id89958119'
-    },
-]
-
 
 const Reviews = () => {
-    useEffect(() => {
-        effect();
-    },[]);
+    useGellary('.all-reviews');
 
-    const {effect} = useGellary('.all-reviews');
+    const reviewsItems = arrForReviews.map((item, i) => {
+        return(
+            <ReviewsItem item={item} key={i}/>
+        )
+    });
 
     return(
-            <div className="all-reviews">
-                <ReviewsItem item={arrForReviews[0]}/>
-                <ReviewsItem item={arrForReviews[1]}/>
-                <ReviewsItem item={arrForReviews[2]}/>
-                <ReviewsItem item={arrForReviews[1]}/>
-                <ReviewsItem item={arrForReviews[1]}/>
-                <ReviewsItem item={arrForReviews[1]}/>
-            </div>
+            <>
+                <LineTotalReviews arr={arrForReviews}/>
+                <div className="all-reviews">
+                    <div className="use-line">
+                        {reviewsItems}
+                    </div>
+                </div>
+            </>
+            
     )
 }
 
