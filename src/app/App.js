@@ -1,7 +1,7 @@
 import './App.scss';
 import Header from '../components/Header/Header';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, useState } from 'react';
 import Spinner from '../components/Spiner/Spiner';
 import Slideshow from '../pages/Slideshow';
 import AboutMe from '../pages/AboutMe';
@@ -22,11 +22,37 @@ const FromThePhotographer = lazy(() => import('../pages/ArticlesPages/from-the-p
 const Accessories = lazy(() => import('../pages/ArticlesPages/accessories/Accessories'));
 const PerfectWeddingPhotoSession = lazy(() => import('../pages/ArticlesPages/perfect-wedding-photo-session/PerfectWeddingPhotoSession'));
 
+
+
 function App() {
+    const [activeMenu, setactiveMenu] = useState(false);
+
+    let dragDown = null;
+    let dragUp = null;
+    let drag = null;
+
+    const start = (e) => {
+        dragDown = e.pageX;
+        console.log('dragDown',dragDown);
+    }
+
+    const end = (e) => {
+        dragUp = e.pageX;
+        drag = dragDown - dragUp;
+        console.log('1',drag);
+        if(drag > 50) {
+            console.log('end',);
+            setactiveMenu(true);
+        }
+        
+    }
+
+    //= вешаем событие на враппер !!!
+
     return (
         <BrowserRouter>
             <div className="wrapper">
-                <Header/>
+                <Header activeMenu={activeMenu}/>
                 <main className="main">
                     <Suspense fallback={<Spinner/>}>
                         <Routes>

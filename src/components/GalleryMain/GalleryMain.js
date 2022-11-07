@@ -1,5 +1,5 @@
 import './galleryMain.scss';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import usehelpPassAllImg from '../../hooks/usehelpPassAllImg';
 import useHelperLazyLoad from '../../hooks/useHelperLazyLoad';
 import box from '../../resources/images/spiner/box.jpg';
@@ -7,21 +7,25 @@ import box from '../../resources/images/spiner/box.jpg';
 //= GalleryMain 
 const GalleryMain = () => {
     //* hooks 
+    const [columsTotal, setColumnsTotal] = useState(3);
+
     useEffect(() => {
         const imgObserver = new IntersectionObserver(entryCall, option);
         const pictureAll = document.querySelectorAll('picture');
         pictureAll.forEach(item => imgObserver.observe(item));
-    },[]);
+        window.addEventListener('resize', size);
+        size();
+    },[columsTotal]);
     
     //* code 
     const allImg = usehelpPassAllImg(require.context('../../resources/images/main-page/', false, /\.(png|jpe?g|svg|webp)$/));
-    const colums = (row) => {
+    const colums = (row, x) => {
         let arrObj = {};
         let key = 0;
         const pictures = [];
         for(let i = 0; i < row; i++) {
             arrObj[i] = [];
-            for(let k = 0; k < allImg.length; k = k + row) {
+            for(let k = 0; k < allImg.length - x; k = k + row) {
                 if(allImg[i + k]) {
                     arrObj[i].push(allImg[i + k]);
                 }
@@ -48,9 +52,13 @@ const GalleryMain = () => {
         return pictures;
     }
 
+    const size = () => {
+        document.documentElement.clientWidth > 749 ? setColumnsTotal(3) : setColumnsTotal(2);
+    }
+
     const {entryCall, option} = useHelperLazyLoad();
 
-    const pictures = colums(3);
+    const pictures = columsTotal === 3 ? colums(3, 0) : colums(2, 1);
 
     //* render 
     return(

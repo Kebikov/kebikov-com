@@ -29,7 +29,6 @@ const FormContact = () => {
                                 check: Yup.number().min(5,'Не правильный ответ!').max(5,'Не правильный ответ!').required('Обязательное поле для заполнения!')
                             })}
                             onSubmit = {value => {
-                                console.log('ver.1.0');
                                 const formData = new FormData();
 
                                 formData.set("email", value.email);
@@ -38,7 +37,6 @@ const FormContact = () => {
                                 value.email = '';
                                         value.text = '';
                                         value.check = '';
-                                       // value.check.placeholder = '';
 
                                 fetch('mail.php',{method: 'POST', body: formData})
                                 .then(data => {
@@ -86,7 +84,7 @@ const FormContact = () => {
                                     id="text"
                                     name="check"
                                     className='contact__check'
-                                    placeholder='Введите ответ цыфрой: два плюс три'
+                                    placeholder='Введите ответ цифрой: два плюс три'
                                 />
                                 <ErrorMessage className='error' name='check' component={'div'}/>
                                 <button type="submit" className='contact__button'>Отправить</button>

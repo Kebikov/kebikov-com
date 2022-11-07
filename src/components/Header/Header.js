@@ -1,6 +1,6 @@
 import './header.scss';
 import logoImg from '../../resources/images/header/1.jpg';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 
 //= Header 
@@ -8,13 +8,27 @@ const Header = () => {
     //* hooks 
     const [burger, setBurger] = useState(false);
 
+    useEffect(() => {
+        bodyOverflow();
+    },[burger]);
+
     //* code 
+
+    let dragDown = null;
+    let dragUp = null;
+    let drag = null;
+
     const onBurger = () => {
         setBurger(!burger);
     }
 
     const onBurgerFalse = () => {
         setBurger(false);
+    }
+
+    const bodyOverflow = () => {
+        const body = document.body;
+        burger ? body.style.overflowY = 'hidden' : body.style.overflowY = 'auto';
     }
 
     const link = (link, title, classId, classLi) => {
@@ -27,7 +41,19 @@ const Header = () => {
             </li>
         )
     }
-    
+
+    const startMove = (e) => {
+        dragDown = e.pageX;
+        console.log('',dragDown);
+    }
+
+    const endMove = (e) => {
+        dragUp = e.pageX;
+        drag = dragDown - dragUp;
+        if(drag > 50) {
+            setBurger(false);
+        }
+    }
 
     const logo = () => {
         return(
@@ -76,7 +102,7 @@ const Header = () => {
                     <div className="burger__line"></div>
                 </div>
             </div>
-            <div className={burger ? "menu-mob active" : "menu-mob"}>
+            <div className={burger ? "menu-mob active" : "menu-mob"}  onPointerDown={startMove} onPointerUp={endMove}>
                 <ul className="menu-mob__list">
                     <div className="menu-mob__close" onClick={onBurger}></div>
                     {link(main.link, main.title, 'menu-mob__link', 'menu-mob__line')}

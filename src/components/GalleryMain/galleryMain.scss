@@ -4,7 +4,8 @@
     column-gap: 5px;
     width: 100%;
     @media (max-width: 749px){
-        flex-wrap: wrap;
+        //flex-wrap: wrap;
+        column-gap: 4px;
     }
 
     // .gallery__column
@@ -15,8 +16,10 @@
         row-gap: 5px;
         @media (max-width: 749px){
             flex: 0 1 100%;
-            margin:0px 0px 5px 0px;
+            //margin:0px 0px 5px 0px;
+            row-gap: 4px;
         }
+
         & img{
             object-fit: cover;
             width: 100%;
