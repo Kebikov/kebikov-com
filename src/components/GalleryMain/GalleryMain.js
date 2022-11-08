@@ -10,6 +10,10 @@ const GalleryMain = () => {
     const [columsTotal, setColumnsTotal] = useState(3);
 
     useEffect(() => {
+        //bunDragElement();
+    },[]);
+
+    useEffect(() => {
         const imgObserver = new IntersectionObserver(entryCall, option);
         const pictureAll = document.querySelectorAll('picture');
         pictureAll.forEach(item => imgObserver.observe(item));
@@ -17,7 +21,11 @@ const GalleryMain = () => {
         size();
     },[columsTotal]);
     
-    //* code 
+    //* code
+    const bunDragElement = (e) => {
+        e.target.ondragstart = () => false;
+    }
+
     const allImg = usehelpPassAllImg(require.context('../../resources/images/main-page/', false, /\.(png|jpe?g|svg|webp)$/));
     const colums = (row, x) => {
         let arrObj = {};
@@ -38,7 +46,7 @@ const GalleryMain = () => {
                 return (
                         <picture className={'anime'} key={item}>
                             <source type="image/webp" data-srcset={item[1]} key={item[1]}/>
-                            <img src={box} height={'800px'} width={'1200px'} data-src={item[0]} alt={'img'} key={item[0]}/>
+                            <img src={box} height={'800px'} width={'1200px'} data-src={item[0]} alt={'img'} key={item[0]} onLoad={bunDragElement}/>
                         </picture>
                 )
             })
@@ -51,6 +59,7 @@ const GalleryMain = () => {
         }
         return pictures;
     }
+
 
     const size = () => {
         document.documentElement.clientWidth > 749 ? setColumnsTotal(3) : setColumnsTotal(2);

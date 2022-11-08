@@ -25,7 +25,7 @@ const PerfectWeddingPhotoSession = lazy(() => import('../pages/ArticlesPages/per
 
 
 function App() {
-    const [activeMenu, setactiveMenu] = useState(false);
+    const [activeMenu, setActiveMenu] = useState(false);
 
     let dragDown = null;
     let dragUp = null;
@@ -33,26 +33,25 @@ function App() {
 
     const start = (e) => {
         dragDown = e.pageX;
-        console.log('dragDown',dragDown);
     }
 
     const end = (e) => {
         dragUp = e.pageX;
-        drag = dragDown - dragUp;
-        console.log('1',drag);
-        if(drag > 50) {
-            console.log('end',);
-            setactiveMenu(true);
+        drag = dragUp - dragDown;
+        if(drag > 50 && dragDown < 10) {
+            setActiveMenu(true);
         }
         
     }
 
-    //= вешаем событие на враппер !!!
+    const changeActiveMenu = (state) => {
+        setActiveMenu(state);
+    }
 
     return (
         <BrowserRouter>
-            <div className="wrapper">
-                <Header activeMenu={activeMenu}/>
+            <div className="wrapper" onPointerDown={start} onPointerUp={end}>
+                <Header changeActiveMenu={changeActiveMenu} activeMenu={activeMenu}/>
                 <main className="main">
                     <Suspense fallback={<Spinner/>}>
                         <Routes>
