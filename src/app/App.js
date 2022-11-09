@@ -1,7 +1,7 @@
 import './App.scss';
 import Header from '../components/Header/Header';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { lazy, Suspense, useState } from 'react';
+import { lazy, Suspense, useState, useEffect } from 'react';
 import Spinner from '../components/Spiner/Spiner';
 import Slideshow from '../pages/Slideshow';
 import AboutMe from '../pages/AboutMe';
@@ -23,35 +23,62 @@ const Accessories = lazy(() => import('../pages/ArticlesPages/accessories/Access
 const PerfectWeddingPhotoSession = lazy(() => import('../pages/ArticlesPages/perfect-wedding-photo-session/PerfectWeddingPhotoSession'));
 
 
-
+//= App 
 function App() {
-    const [activeMenu, setActiveMenu] = useState(false);
+    //* hook 
+    useEffect(() => {
+        window.addEventListener('resize', size);
+        size();
+        return() => {
+            window.removeEventListener('resize', size);
+        }
+    },[]);
 
+    const [activeMenu, setActiveMenu] = useState(false);
+    const [workSwipe, setWorkSwipe] = useState(null);
+
+    //* code 
     let dragDown = null;
     let dragUp = null;
     let drag = null;
 
+    const bodyOverflow = () => {
+        const body = document.body;
+        activeMenu ? body.style.overflowY = 'hidden' : body.style.overflowY = 'auto';
+    }
+
+    const size = () => {
+        let widthPage = document.documentElement.clientWidth;
+        widthPage < 1024 ? setWorkSwipe(true) : setWorkSwipe(false); 
+    }
+
     const start = (e) => {
-        dragDown = e.pageX;
+        if(workSwipe){
+            dragDown = e.pageX;
+        }
     }
 
     const end = (e) => {
-        dragUp = e.pageX;
-        drag = dragUp - dragDown;
-        if(drag > 50 && dragDown < 30) {
-            setActiveMenu(true);
+        if(workSwipe){
+            dragUp = e.pageX;
+            drag = dragUp - dragDown;
+            if(drag > 50 && dragDown < 50) {
+                setActiveMenu(true);
+            }
         }
-        
     }
 
     const changeActiveMenu = (state) => {
         setActiveMenu(state);
     }
 
+    bodyOverflow();
+
+    //* return 
     return (
         <BrowserRouter>
             <div className="wrapper" onPointerDown={start} onPointerUp={end}>
-                <Header changeActiveMenu={changeActiveMenu} activeMenu={activeMenu}/>
+                <Header changeActiveMenu={changeActiveMenu} activeMenu={activeMenu} workSwipe={workSwipe}/>
                 <main className="main">
                     <Suspense fallback={<Spinner/>}>
                         <Routes>

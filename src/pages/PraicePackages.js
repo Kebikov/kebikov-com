@@ -1,6 +1,8 @@
+import Faq from "../components/praice-faq/Faq";
+
 const PraicePackages = () => {
     return(
-        <h1>PraicePackages</h1>
+        <Faq/>
     )
 }
 

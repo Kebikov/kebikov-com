@@ -1,14 +1,11 @@
 import './header.scss';
 import logoImg from '../../resources/images/header/1.jpg';
-import { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 
 //= Header 
-const Header = ({changeActiveMenu, activeMenu}) => {
+const Header = ({changeActiveMenu, activeMenu, workSwipe}) => {
     //* hooks 
-    // useEffect(() => {
-    //     bodyOverflow();
-    // },[activeMenu]);
+    
 
     //* code 
     let dragDown = null;
@@ -23,11 +20,6 @@ const Header = ({changeActiveMenu, activeMenu}) => {
         changeActiveMenu(false);
     }
 
-    // const bodyOverflow = () => {
-    //     const body = document.body;
-    //     activeMenu ? body.style.overflowY = 'hidden' : body.style.overflowY = 'auto';
-    // }
-
     const link = (link, title, classId, classLi) => {
 
         const end = link === '/' ? true : false;
@@ -40,14 +32,18 @@ const Header = ({changeActiveMenu, activeMenu}) => {
     }
 
     const startMove = (e) => {
-        dragDown = e.pageX;
+        if(workSwipe){
+            dragDown = e.pageX;
+        }
     }
 
     const endMove = (e) => {
-        dragUp = e.pageX;
-        drag = dragDown - dragUp;
-        if(drag > 50) {
-            changeActiveMenu(false);
+        if(workSwipe){
+            dragUp = e.pageX;
+            drag = dragDown - dragUp;
+            if(drag > 50) {
+                changeActiveMenu(false);
+            }
         }
     }
 

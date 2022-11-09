@@ -1,0 +1,91 @@
+@import '../../scss/variables.scss';
+
+.faq {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 2;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background:rgb(48, 23, 23) url(../../resources/images/praice/bb.jpg) 0 0 / cover no-repeat;
+        z-index: 1;
+    }
+
+    // .faq__body
+    &__body {
+        max-width: 1000px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 5;
+    }
+
+    // .faq__text
+    &__text {
+        padding: 20px 10px 20px 10px;
+        font-family: 'Mont';
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 140%;
+        text-align: center;
+        color: rgb(230, 230, 230);
+    }
+
+    // .faq__title
+    &__title {
+        color: $color-gold;
+        text-align: center;
+        font-family: 'Mont';
+        font-size: 34px;
+        font-weight: 400;
+        margin: 0px 0px 20px 0px;
+    }
+}
+
+
+.question {
+    margin: 0px 0px 0px 0px;
+
+    // .question__line
+    &__line {
+        width: 100%;
+        height: 3px;
+        background-color: rgba(170, 140, 89, 0.556);
+        margin: 0px 0px 20px 0px;
+    }
+
+    // .question__case
+    &__case {
+        color: $color-gold;
+        font-family: 'Mont';
+        font-weight: 500;
+        font-size: 18px;
+        letter-spacing: 1.0px;
+        margin: 0px 0px 20px 0px;
+    }
+
+    // .question__answer
+    &__answer {
+        color: rgb(230, 230, 230);
+        font-family: 'Mont';
+        font-size: 16px;
+        line-height: 170%;
+        margin: 0px 0px 20px 0px;
+    }
+}

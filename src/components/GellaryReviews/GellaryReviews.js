@@ -6,9 +6,9 @@ const GellaryReviews = ({div, reviewsItems, setActive}) => {
         effect();
         return () => {
             window.removeEventListener('resize', size);
-            window.removeEventListener('pointerdown', startMove);
-            window.removeEventListener('pointerup', endMove);
-            window.removeEventListener('pointermove', moveFinger);
+            line.removeEventListener('pointerdown', startMove);
+            line.removeEventListener('pointerup', endMove);
+            line.removeEventListener('pointermove', moveFinger);
         }
     }, []);
 
@@ -40,12 +40,12 @@ const GellaryReviews = ({div, reviewsItems, setActive}) => {
 
     const events = () => {
         window.addEventListener('resize', size);
-        if(document.documentElement.clientWidth > 1200) {
-            window.addEventListener('pointerdown', startMove);
-            window.addEventListener('pointerup', endMove);
+        if(window.innerWidth > 1200) {
+            line.addEventListener('pointerdown', startMove);
+            line.addEventListener('pointerup', endMove);
         }else{
-            window.removeEventListener('pointerdown', startMove);
-            window.removeEventListener('pointerup', endMove);
+            line.removeEventListener('pointerdown', startMove);
+            line.removeEventListener('pointerup', endMove);
             move(0);
         }
     }
@@ -54,7 +54,7 @@ const GellaryReviews = ({div, reviewsItems, setActive}) => {
         line.style.transform= `translate(${pointNow}px, 0)`;
         dragStart = e.pageX;
 
-        window.addEventListener('pointermove', moveFinger);
+        line.addEventListener('pointermove', moveFinger);
     }
 
     const moveFinger = (e) => {
@@ -66,7 +66,7 @@ const GellaryReviews = ({div, reviewsItems, setActive}) => {
     const endMove = (e) => {
         dragEnd = e.pageX;
         direction = dragStart - dragEnd;
-        window.removeEventListener('pointermove', moveFinger);
+        line.removeEventListener('pointermove', moveFinger);
         line.classList.add('trans');
         ifPlusSlides();
         ifMinusSlides();

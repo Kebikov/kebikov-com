@@ -10,10 +10,6 @@ const GalleryMain = () => {
     const [columsTotal, setColumnsTotal] = useState(3);
 
     useEffect(() => {
-        //bunDragElement();
-    },[]);
-
-    useEffect(() => {
         const imgObserver = new IntersectionObserver(entryCall, option);
         const pictureAll = document.querySelectorAll('picture');
         pictureAll.forEach(item => imgObserver.observe(item));
@@ -21,9 +17,9 @@ const GalleryMain = () => {
         size();
     },[columsTotal]);
     
+
     //* code
     const bunDragElement = (e) => {
-        console.log('',document.documentElement.clientWidth);
         if(document.documentElement.clientWidth > 1024) {
             e.target.ondragstart = () => false;
         }
@@ -64,7 +60,6 @@ const GalleryMain = () => {
         return pictures;
     }
 
-
     const size = () => {
         document.documentElement.clientWidth > 749 ? setColumnsTotal(3) : setColumnsTotal(2);
     }
@@ -72,6 +67,7 @@ const GalleryMain = () => {
     const {entryCall, option} = useHelperLazyLoad();
 
     const pictures = columsTotal === 3 ? colums(3, 0) : colums(2, 1);
+
 
     //* render 
     return(
