@@ -38,7 +38,7 @@ function App() {
     const end = (e) => {
         dragUp = e.pageX;
         drag = dragUp - dragDown;
-        if(drag > 50 && dragDown < 10) {
+        if(drag > 50 && dragDown < 30) {
             setActiveMenu(true);
         }
         

@@ -23,7 +23,11 @@ const GalleryMain = () => {
     
     //* code
     const bunDragElement = (e) => {
-        e.target.ondragstart = () => false;
+        console.log('',document.documentElement.clientWidth);
+        if(document.documentElement.clientWidth > 1024) {
+            e.target.ondragstart = () => false;
+        }
+        
     }
 
     const allImg = usehelpPassAllImg(require.context('../../resources/images/main-page/', false, /\.(png|jpe?g|svg|webp)$/));
