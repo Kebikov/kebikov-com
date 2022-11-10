@@ -6,11 +6,11 @@ import Spinner from '../components/Spiner/Spiner';
 import Slideshow from '../pages/Slideshow';
 import AboutMe from '../pages/AboutMe';
 import Reviews from '../pages/Reviews';
-import PricePackages from '../pages/PricePackages';
 import Contacts from '../pages/Contacts';
 import Footer from '../components/Footer/Footer';
 import UpButton from '../components/UpButton/UpButton';
 import BeautifulWeddingFinale from '../pages/ArticlesPages/beautiful-wedding-finale/BeautifulWeddingFinale';
+const PricePackages = lazy(() => import('../pages/PricePackages'));
 const BouquetRoll = lazy(() => import('../pages/ArticlesPages/bouquet-roll/BouquetRoll'));
 const Page404 = lazy(() => import('../pages/Page404'));
 const Main = lazy(() => import('../pages/Main'));
@@ -62,7 +62,7 @@ function App() {
         if(workSwipe){
             dragUp = e.pageX;
             drag = dragUp - dragDown;
-            if(drag > 50 && dragDown < 50) {
+            if(drag > 20 && dragDown < 70) {
                 setActiveMenu(true);
             }
         }

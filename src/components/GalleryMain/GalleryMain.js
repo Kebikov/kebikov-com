@@ -68,7 +68,6 @@ const GalleryMain = () => {
 
     const pictures = columsTotal === 3 ? colums(3, 0) : colums(2, 1);
 
-
     //* render 
     return(
             <div className="gallery">
