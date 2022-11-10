@@ -78,6 +78,17 @@
         font-size: 18px;
         letter-spacing: 1.0px;
         margin: 0px 0px 20px 0px;
+        position: relative;
+        &::after{
+            content:"";
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 30px;
+            width: 30px;
+            background: url(../../../src/resources/images/praice/arrow.png) 0 0 / cover no-repeat;
+            transform: rotate(90deg);
+        }
     }
 
     // .question__answer
@@ -87,5 +98,8 @@
         font-size: 16px;
         line-height: 170%;
         margin: 0px 0px 20px 0px;
+        
+        // height: 0;
+        // font-size: 0;
     }
 }

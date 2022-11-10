@@ -6,7 +6,7 @@ import Spinner from '../components/Spiner/Spiner';
 import Slideshow from '../pages/Slideshow';
 import AboutMe from '../pages/AboutMe';
 import Reviews from '../pages/Reviews';
-import PraicePackages from '../pages/PraicePackages';
+import PricePackages from '../pages/PricePackages';
 import Contacts from '../pages/Contacts';
 import Footer from '../components/Footer/Footer';
 import UpButton from '../components/UpButton/UpButton';
@@ -95,7 +95,7 @@ function App() {
                                 <Route path='/articles/perfect-wedding-photo-session' element={<PerfectWeddingPhotoSession/>}/>
                             <Route path='about-me' element={<AboutMe/>}/>
                             <Route path='reviews' element={<Reviews/>}/>
-                            <Route path='praice-packages' element={<PraicePackages/>}/>
+                            <Route path='praice-packages' element={<PricePackages/>}/>
                             <Route path='contacts' element={<Contacts/>}/>
                             <Route path='*' element={<Page404/>}/>
                         </Routes>
