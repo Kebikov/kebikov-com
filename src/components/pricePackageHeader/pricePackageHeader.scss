@@ -1,0 +1,120 @@
+@import '../../scss/variables.scss';
+
+.price-header {
+    width: 100%;
+
+    &__body{
+        padding-bottom: 30%;
+        position: relative;
+        @media (max-width: 800px){
+            padding-bottom: 70%;
+        }
+    }
+
+    // .price-header__img
+    &__img {
+        & img{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+            object-position:  100% 100%;
+            @media (max-width: 800px){
+                object-position:  93% 100%;
+            }
+        }
+    }
+
+    // .price-header__tape
+    &__tape {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 10%;
+        height: 100%;
+        width: 30%;
+        background-color: #f1ece753;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    // .price-header__title
+    &__title {
+        font-family: 'Mont';
+        font-size: 50px;
+        color: rgb(211, 211, 211);
+        font-weight: 400;
+        @media (max-width: 1910px){
+            font-size: calc(20px + 30 * (100vw - 375px) / 1535);
+        }
+        @media (max-width: 375px){
+            font-size: 20px;
+        }
+    }
+
+    // .price-header__cash
+    &__cash {
+        font-family: 'Mont';
+        font-size: 40px;
+        color: rgb(211, 211, 211);
+        font-weight: 400;
+        @media (max-width: 1910px){
+            font-size: calc(20px + 30 * (100vw - 375px) / 1535);
+        }
+        @media (max-width: 375px){
+            font-size: 20px;
+        }
+    }
+}
+
+.price-description{
+    font-family: 'Mont';
+    font-size: 17px;
+    line-height: 130%;
+    color: rgb(211, 211, 211);
+    font-weight: 400;
+    background-color: #757b6f;
+    padding: 20px 10px 20px 10px;
+    text-align: center;
+}
+
+.description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+
+.paragraphs {
+    flex: 0 1 45%;
+    min-height: 120px;
+    margin: 0px 0px 20px 0px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    background-color: #fff8f1;
+
+    display: flex;
+    align-items: center;
+    @media (max-width: 1100px){
+        flex: 0 1 95%;
+    }
+
+    // .paragraphs__body
+    &__body {
+        font-family: 'Mont';
+        font-size: 17px;
+        line-height: 140%;
+        color: $color-text;
+        padding: 10px 10px 10px 10px;
+        & span{
+            font-weight: 500;
+        }
+    }
+}

@@ -83,6 +83,7 @@ const Faq = () => {
                     {items}
                     <div className="question__line"/>
                 </div>
+                <div className="border-bottom"/>
             </div>
     )
 }
@@ -92,10 +93,12 @@ const Question = ({arr, setKeyCurrent, keyCurrent, id}) => {
 
     //* code 
     const onOpen = (e) => {
-        console.log('++++++++++++++++',);
-        let key = e.target.parentElement.getAttribute('data-id');
-        let hiAnswer = e.target.parentElement.querySelector('.question__answer').offsetHeight;
+        console.log('',e.target);
+        let key = e.target.closest('.question').getAttribute('data-id');
+        console.log('',key);
+        let hiAnswer = e.target.closest('.question').querySelector('.question__answer').offsetHeight;
         if(hiAnswer === 0) {
+            console.log('',key);
             setKeyCurrent(key);
         }else{
             setKeyCurrent(-1);

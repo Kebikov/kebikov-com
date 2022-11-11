@@ -4,8 +4,9 @@
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    padding-bottom: 100px;
+    padding-bottom: 90px;
     position: relative;
+    margin: 0px 0px 80px 0px;
     &::after{
         content: '';
         position: absolute;
@@ -68,7 +69,7 @@
         width: 100%;
         height: 3px;
         background-color: rgba(170, 140, 89, 0.556);
-        margin: 0px 0px 20px 0px;
+       //margin: 0px 0px 20px 0px;
     }
 
     // .question__case
@@ -80,14 +81,14 @@
         line-height: 140%;
         letter-spacing: 1.0px;
         position: relative;
-        padding: 0px 50px 0px 10px;
+        padding: 20px 50px 20px 10px;
         @media (max-width: 1020px){
             font-size: 14px;
         }
         &::after{
             content:"";
             position: absolute;
-            top: -3px;
+            top: 17px;
             right: 10px;
             height: 30px;
             width: 30px;
@@ -106,11 +107,11 @@
         opacity: 0;
         visibility: hidden;
         font-size: 0px;
-        padding: 0 10px 0 10px;
-        margin: 0px 0px 20px 0px;
+        padding: 0 10px 0px 10px;
+        //margin: 0px 0px 20px 0px;
         transition: height 0.3s ease,  
                     opacity 0.3s ease 0.1s,
-                    margin 0.3s ease;
+                    padding 0.3s ease;
         
     }
     &__answer.rotate{
@@ -118,9 +119,38 @@
         font-family: 'Mont';
         font-size: 16px;
         line-height: 170%;
-        margin: 20px 0px 20px 0px;
+        //margin: 20px 0px 20px 0px;
+        padding: 0 10px 20px 10px;
         opacity: 1;
         visibility: visible;
         height: 100%;
+    }
+}
+
+.border-bottom{
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 10px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: linear-gradient(to bottom right, rgba(18, 48, 196, 0) 50%, $color-bg-beige 51%);
+        height: 70px;
+        width: 50%;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(to bottom left, rgba(18, 48, 196, 0) 50%, $color-bg-beige 51%);
+        height: 70px;
+        width: 50%;
     }
 }
