@@ -22,7 +22,7 @@ const AboutMe = () => {
                     <div className="about__text">{text}</div>
                 </div>
             </div>
-            <FormContact/>
+            <FormContact color={'#fff'}/>
         </>
     )
 }

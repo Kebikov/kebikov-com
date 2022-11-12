@@ -1,40 +1,8 @@
 import '../pages/scss/price.scss';
 import Faq from "../components/price-faq/Faq";
 import PricePackageHeader from "../components/pricePackageHeader/PricePackageHeader";
-
-const arrHeader = [
-    {
-        title: 'Premium',
-        cash: '550 $',
-        description: 'Eще до свадебного дня запланируем проведение Love Story. Вы получите не только замечательные фотографии, но и исчезновение какого-либо стеснения перед камерой. В пакет включено до 14 часов сьемки, от утра невесты и до выноса торта. После свадебной суматохи мы встретимся для ночной съемки, закат и огни ночного города создадут незабываемую атмосферу на фото.',
-        arrParagraphs: [
-            {
-                title: 'Свадебный фотограф работает в день свадьбы 14 часов.',
-                subtitle: ' До 15 часов съемки в свадебный день уже включены с стоимость пакета услуг. Каждое мгновение свадебного дня останется с вами.'
-            },
-            {
-                title: 'Съемка Love Story 2-3 часа.',
-                subtitle: ' Фотосессия в формате Love Story. Вы получите не только замечательные фотографии, но и исчезновение какого-либо стеснения перед камерой.'
-            },
-            {
-                title: 'Романтическая ночная съемка 2-3 часа.',
-                subtitle: ' Уже после свадебной суматохи мы встретимся для романтической ночной съемки, закат и огни ночного города создадут незабываемую атмосферу.'
-            },
-            {
-                title: 'Количество свадебных фотографий от 600 шт.',
-                subtitle: ' Минимальное количество фотографий при отдаче материала 600 шт. Суммарное количество фотографий которые вы получите, свадебный день+Love Story+ночная съемка.'
-            },
-            {
-                title: 'Запись материала на USB Flash в индивидуально оформленном деревянном коробе.',
-                subtitle: ' Вы получите красивый деревянный короб, с оригинальной флешкой, такое оформление подчеркнет красоту вашей свадебной истории.'
-            },
-            {
-                title: 'Авторская обработка всех свадебных фотографии.',
-                subtitle: ' Все фотографии будут в едином стиле обработки, не беспокойтесь о прыщиках и морщинках, все крупные портреты будут с ретушью.'
-            },
-        ]
-    }
-]
+import arrHeader from './data/dataPrice';
+import FormContact from '../components/FormContact/FormContact';
 
 const PricePackages = () => {
 
@@ -42,7 +10,10 @@ const PricePackages = () => {
     return(
             <div className="price-packages-body">
                 <Faq/>
-                <PricePackageHeader title={arrHeader[0].title} cash={arrHeader[0].cash} description={arrHeader[0].description} arrParagraphs={arrHeader[0].arrParagraphs}/>
+                <PricePackageHeader title={arrHeader[0].title} cash={arrHeader[0].cash} description={arrHeader[0].description} arrParagraphs={arrHeader[0].arrParagraphs} pic={arrHeader[0].pic}/>
+                <PricePackageHeader title={arrHeader[1].title} cash={arrHeader[1].cash} description={arrHeader[1].description} arrParagraphs={arrHeader[1].arrParagraphs} pic={arrHeader[1].pic}/>
+                <PricePackageHeader title={arrHeader[2].title} cash={arrHeader[2].cash} description={arrHeader[2].description} arrParagraphs={arrHeader[2].arrParagraphs} pic={arrHeader[2].pic}/>
+                <FormContact color={'#f1ece7'}/>
             </div>
     )
 }

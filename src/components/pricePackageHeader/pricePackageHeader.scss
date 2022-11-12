@@ -36,7 +36,8 @@
         left: 10%;
         height: 100%;
         width: 30%;
-        background-color: #f1ece753;
+        background-color: #746f69a3;
+        backdrop-filter: blur(3px);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -49,6 +50,18 @@
         font-size: 50px;
         color: rgb(211, 211, 211);
         font-weight: 400;
+        margin:0px 0px 20px 0px;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 70%;
+            height: 3px;
+            background-color: rgb(211, 211, 211);
+        }
         @media (max-width: 1910px){
             font-size: calc(20px + 30 * (100vw - 375px) / 1535);
         }
@@ -74,12 +87,12 @@
 
 .price-description{
     font-family: 'Mont';
-    font-size: 17px;
-    line-height: 130%;
+    font-size: 18px;
+    line-height: 140%;
     color: rgb(211, 211, 211);
     font-weight: 400;
     background-color: #757b6f;
-    padding: 20px 10px 20px 10px;
+    padding: 30px 30px 30px 30px;
     text-align: center;
 }
 
@@ -88,30 +101,65 @@
     justify-content: center;
     align-items: center;
     column-gap: 20px;
+    row-gap: 20px;
     flex-wrap: wrap;
-    padding: 20px;
+    padding: 40px 20px 80px 20px;
 }
 
 
 .paragraphs {
     flex: 0 1 45%;
-    min-height: 120px;
-    margin: 0px 0px 20px 0px;
+    min-height: 140px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     background-color: #fff8f1;
+    transition: all 0.3s ease;
 
     display: flex;
     align-items: center;
+    &:hover {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px 3px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        transform: rotate(1deg);
+    }
+    @media (max-width: 1350px){
+        min-height: 160px;
+    }
+    @media (max-width: 1300px){
+        min-height: 190px;
+    }
     @media (max-width: 1100px){
         flex: 0 1 95%;
     }
 
     // .paragraphs__body
     &__body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media (max-width: 1020px){
+            flex-wrap: wrap;
+        }
+    }
+
+    &__number {
+        text-align: center;
+        font-family: 'Mont';
+        font-size: 37px;
+        line-height: 140%;
+        color: #757b6f;
+        padding: 0px 10px 0px 20px;
+        @media (max-width: 1020px){
+            flex: 0 1 100%;
+        }
+    }
+
+    &__info {
         font-family: 'Mont';
         font-size: 17px;
         line-height: 140%;
         color: $color-text;
+        @media (max-width: 1020px){
+            flex: 0 1 100%;
+        }
         padding: 10px 10px 10px 10px;
         & span{
             font-weight: 500;

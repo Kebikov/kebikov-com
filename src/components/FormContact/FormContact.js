@@ -5,18 +5,21 @@ import EmailAnime from '../emailAnime/EmailAnime';
 import { useState } from 'react';
 
 
-const FormContact = () => {
+const FormContact = ({color}) => {
     const [animeEmail, setAnimeEmail] = useState(false);
     const [message, setMessage] = useState('');
     const text = 'Проверьте через e-mail, свободна ли ваша дата?!\n\nили позвоните\n\n+375 29 694 98 43 (Евгений)\n\nВы можете написать в соц.сети.';
     
     const anime = animeEmail ? <EmailAnime message={message}/> : null;
+    console.log('',color);
 
     return(
         <>
             {anime}
             <div className="contact">
                 <div className="contact__body">
+                    <div className="contact__body-after" style={{background: `linear-gradient(to top left, rgba(42,43,48,0) 50%, ${color} 50.5%)`}}/>
+                    <div className="contact__body-before" style={{background: `linear-gradient(to top right, rgba(42,43,48,0) 50%, ${color} 50.5%)`}}/>
                     <div className="contact__text">{text}</div>
                         <Formik
                             initialValues={{

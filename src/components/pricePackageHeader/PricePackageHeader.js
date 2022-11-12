@@ -1,14 +1,12 @@
 import './pricePackageHeader.scss';
-import jpg1 from '../../resources/images/praice/1.jpg';
-import jpg2 from '../../resources/images/praice/2.jpg';
 
 //= PricePackageHeader 
-const PricePackageHeader = ({title, cash, description, arrParagraphs}) => {
+const PricePackageHeader = ({title, cash, description, arrParagraphs, pic}) => {
 
     //* code 
     const itemsParagraphs = arrParagraphs.map((item, i) => {
         return(
-            <Paragraphs title={item.title} subtitle={item.subtitle} key={i}/>
+            <Paragraphs title={item.title} subtitle={item.subtitle} number={i} key={i}/>
         )
     });
 
@@ -18,7 +16,7 @@ const PricePackageHeader = ({title, cash, description, arrParagraphs}) => {
             <div className="price-header">
                 <div className="price-header__body">
                     <div className="price-header__img">
-                        <img src={jpg1} alt="weddings"/>
+                        <img src={pic} alt="weddings"/>
                     </div>
                     <div className="price-header__tape">
                         <div className="price-header__title">{title}</div>
@@ -37,13 +35,17 @@ const PricePackageHeader = ({title, cash, description, arrParagraphs}) => {
 }
 
 //= Paragraphs 
-const Paragraphs = ({title, subtitle}) => {
+const Paragraphs = ({title, subtitle, number}) => {
 
     //* return 
     return(
         <div className="paragraphs">
             <div className="paragraphs__body">
-                <span>{title}</span>{subtitle}
+                <div className="paragraphs__number">{`0${number + 1}`}</div>
+                <div className="paragraphs__info">
+                    <span>{title}</span>{subtitle}
+                </div>
+                
             </div>
         </div>
     )
