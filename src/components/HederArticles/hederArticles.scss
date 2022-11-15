@@ -13,6 +13,9 @@
 
     &__list {
         padding: 0px 10px 0px 10px;
+        & img{
+            animation: Orbita2 15s linear infinite;
+        }
     }
 
     // .main-article-title__text
@@ -48,4 +51,17 @@
 
 ._list-bottom {
     transform: scale(-1,1);
+}
+
+@keyframes Orbita2 {
+    from {
+        transform: rotate(0deg)
+                   translate(-10px) 
+                   rotate(0deg);
+}
+to {
+        transform: rotate(360deg)
+                   translate(-10px)
+                   rotate(-360deg);
+} 
 }

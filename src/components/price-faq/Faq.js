@@ -32,7 +32,7 @@ const arrQuestion = [
     },
     {
         case:'КАК ВЫ ОТДАЕТЕ СВАДЕБНЫЕ ФОТОГРАФИИ ?',
-        answer: 'Я как свадебный фотограф, хочу дать своим клиентам максимум положительных эмоций.Свадебная фотосессия будет записана на флеш USB, я бесплатно распечатаю для вас свадебные фото, все будет упаковано в деревянный короб.'
+        answer: 'Я как свадебный фотограф, хочу дать своим клиентам максимум положительных эмоций.Свадебная фотосессия будет записана на флеш USB из дерева с гравировкой ваших имен, я бесплатно распечатаю для вас свадебные фото и все это будет упаковано в деревянный короб на котором будет выполненна индивидуальная гравировка.'
     },
 ]
 
@@ -93,12 +93,9 @@ const Question = ({arr, setKeyCurrent, keyCurrent, id}) => {
 
     //* code 
     const onOpen = (e) => {
-        console.log('',e.target);
         let key = e.target.closest('.question').getAttribute('data-id');
-        console.log('',key);
         let hiAnswer = e.target.closest('.question').querySelector('.question__answer').offsetHeight;
         if(hiAnswer === 0) {
-            console.log('',key);
             setKeyCurrent(key);
         }else{
             setKeyCurrent(-1);
