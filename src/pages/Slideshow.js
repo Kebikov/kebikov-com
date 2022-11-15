@@ -9,7 +9,7 @@ import SD from '../resources/video/S&D.mp4';
 const Slideshow = () => {
 
     return(
-        <div className="video">
+        <div className="video container">
             <div className="video__body">
                 <div className="video__item">
                     <video src={DA} controls/>

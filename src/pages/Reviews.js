@@ -22,8 +22,11 @@ const Reviews = () => {
     return(
             <>
                 <HederArticles title={'Отзывы клиентов'}/>
-                <LineTotalReviews arr={arrForReviews} active={active}/>
-                <GellaryReviews div={'.all-reviews'} reviewsItems={reviewsItems} setActive={setActive}/>
+                <div className="container">
+                    <LineTotalReviews arr={arrForReviews} active={active}/>
+                    <GellaryReviews div={'.all-reviews'} reviewsItems={reviewsItems} setActive={setActive}/>
+                </div>
+                
             </>
             
     )

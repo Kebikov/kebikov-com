@@ -8,12 +8,11 @@ const Main = () => {
         window.scrollTo(0, 0);
     },[]);
     return(
-        <>
-            <GalleryMain/>
-            <TitlteBlock title={'Свадебные серии'}/>
-            <WeddingSeries plusClass={'mb-50'}/>
-        </>
-        
+            <div className="container">
+                <GalleryMain/>
+                <TitlteBlock title={'Свадебные серии'}/>
+                <WeddingSeries plusClass={'mb-50'}/>
+            </div>
     )
 }
 

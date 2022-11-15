@@ -114,13 +114,14 @@
 
     // .main-article-title__text
     &__text {
+        text-align: center;
+        position: relative;
+
         font-family: 'Roboto';
         font-size: 24px;
         font-weight: 400;
         color: #3E616F;
         letter-spacing: 1.4px;
-        position: relative;
-
         @media (max-width: 1000px) {
             font-size: 18px;
         }

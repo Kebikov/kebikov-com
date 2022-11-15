@@ -1,5 +1,5 @@
 import './faq.scss';
-import { useEffect, useState, useCallback } from 'react';
+import { useState } from 'react';
 
 const arrQuestion = [
     {
@@ -38,36 +38,11 @@ const arrQuestion = [
 
 //= Faq 
 const Faq = () => {
-    //* hook 
-    useEffect(() => {
-        window.addEventListener('resize', delay(size, 100));
-        //size();
-
-        return() => {
-            window.removeEventListener('resize', size);
-        }
-    },[]);
 
     //* state 
-    const [widthFaq, setWidthFaq] = useState(document.documentElement.clientWidth);
     const [keyCurrent, setKeyCurrent] = useState(-1);
 
     //* code 
-
-    const delay = (fnc, time) => {
-        let timeOut;
-        return function () {
-            clearTimeout(timeOut);
-            timeOut = setTimeout(fnc, time);
-        }
-    }
-    
-    const size = () => {
-        let widthCurrent = document.documentElement.clientWidth;
-        setWidthFaq(widthCurrent);
-    }
-
-
     const items = arrQuestion.map((item, i) => {
         return (
             <Question arr={item} setKeyCurrent={setKeyCurrent} keyCurrent={keyCurrent} id={i} key={i}/>
@@ -76,7 +51,7 @@ const Faq = () => {
 
     //* return 
     return(
-            <div className="faq" style={{width: widthFaq > 1400 ? '1400px' : `${widthFaq}px`}}>
+            <div className="faq">
                 <div className="faq__body">
                     <div className="faq__text">Уважаемые молодожёны, сейчас я постараюсь осветить наиболее часто встречающиеся вопросы нашего творческого сотрудничества. Хочу, чтобы после прочтения, вам все стало понятнее. Приятного чтения.</div>
                     <div className="faq__title">FAQ</div>

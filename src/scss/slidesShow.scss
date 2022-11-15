@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
 
-    margin: 20px 0 20px 0;
+    margin: 20px auto 20px auto;
 
     // .video__body
     &__body {
@@ -17,7 +17,7 @@
 
     // .video__item
     &__item {
-        min-width: 400px;
+        min-width: 350px;
         flex: 0 1 48%;
         & video {
             width: 100%;

@@ -45,27 +45,29 @@ const AboutMe = () => {
     return(
         <>
             <HederArticles title={'Кратко обо мне.'}/>
-            <div className="about">
-                <div className="about__body">
-                    <div className="about__pic">
-                        <motion.img 
-                            variants={motionImg}
+            <div className="container">
+                <div className="about">
+                    <div className="about__body">
+                        <div className="about__pic">
+                            <motion.img 
+                                variants={motionImg}
+                                initial={'hidden'}
+                                animate={'visible'}
+                                viewport={{once: true}}
+                                src={me} alt="me"
+                            />
+                        </div>
+                        <motion.div
+                            variants={motionText}
                             initial={'hidden'}
                             animate={'visible'}
-                            viewport={{once: true}}
-                            src={me} alt="me"
-                        />
+                            className="about__text">
+                            {text}
+                        </motion.div>
                     </div>
-                    <motion.div
-                        variants={motionText}
-                        initial={'hidden'}
-                        animate={'visible'}
-                        className="about__text">
-                        {text}
-                    </motion.div>
                 </div>
+                <FormContact color={'#fff'}/>
             </div>
-            <FormContact color={'#fff'}/>
         </>
     )
 }

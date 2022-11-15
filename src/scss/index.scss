@@ -57,13 +57,17 @@
     flex: 1 1 auto;
     position: relative;
     z-index: 99;
+}
 
-    display: flex;
-    flex-direction: column;
-
+.container{
     max-width: 1400px;
     overflow: hidden;
     margin: 0px auto;
+}
+
+.add-wed-all{
+    display: flex;
+    flex-direction: column;
 }
 
 
