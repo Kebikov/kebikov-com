@@ -73,8 +73,8 @@ const FormContact = ({color}) => {
                                 formData.set("message", value.text);
 
                                 value.email = '';
-                                        value.text = '';
-                                        value.check = '';
+                                value.text = '';
+                                value.check = '';
 
                                 fetch('mail.php',{method: 'POST', body: formData})
                                 .then(data => {
