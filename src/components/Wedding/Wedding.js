@@ -20,7 +20,7 @@ const Wedding = ({link}) => {
     
     switch (link) {
         case 'MY':
-            title = 'M & Y';
+            title = 'Максим & Юля';
             allImg = usehelpPassAllImg(require.context('../../resources/images/weddings/MY', false, /\.(png|jpe?g|svg|webp)$/));
             break;
         case 'PT':
@@ -77,7 +77,7 @@ const Wedding = ({link}) => {
         <>
             <div className="all-title">
                 <div className="all-title__line"></div>
-                <div className="all-title__text">Wedding day<br/>{title}</div>
+                <h1 className="all-title__text">Свадебная серия<br/>{title}</h1>
                 <div className="all-title__line"></div>
             </div>
             <div className="photo">

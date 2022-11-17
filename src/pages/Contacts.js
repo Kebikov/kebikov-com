@@ -2,6 +2,7 @@ import './scss/contacts.scss';
 import FormContact from '../components/FormContact/FormContact';
 import ava from '../resources/images/contacts/1.jpg';
 import { motion } from 'framer-motion';
+import { Helmet } from "react-helmet";
 
 const Contacts = () => {
     const motAva = {
@@ -22,10 +23,18 @@ const Contacts = () => {
 
     return(
             <div className="contacts container">
+                <Helmet>
+                    <title>Контакты Для Связи. Выберите Удобный Для Вас Способ !</title>
+                    <meta
+                        name="description"
+                        content="Контакты для связи со мной, адресс, телефон, почта, так же ссылка Вконтакте и Инстаграмм. Свадебный фотограф Евгений Кебиков, Минск."
+                    />
+                </Helmet>
+
                 <div className="contacts__body">
                     <div className="contacts__header">
                         <div className="contacts__subtitle">
-                            <div className="contacts__title">Контакты</div>
+                            <h1 className="contacts__title">Контакты</h1>
                             <div className="contacts__text">Свяжитесь со мной и раскажите о вашем особенном дне.<br/>Заполните форму ниже или свяжитесь удобным для вас способом.</div>
                         </div>
                         <motion.div

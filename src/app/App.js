@@ -36,6 +36,7 @@ function App() {
 
     const [activeMenu, setActiveMenu] = useState(false);
     const [workSwipe, setWorkSwipe] = useState(null);
+    const [lineHeader, setLineHeader] = useState(true);
 
     //* code 
     let dragDown = null;
@@ -78,23 +79,23 @@ function App() {
     return (
         <BrowserRouter>
             <div className="wrapper" onPointerDown={start} onPointerUp={end}>
-                <Header changeActiveMenu={changeActiveMenu} activeMenu={activeMenu} workSwipe={workSwipe}/>
+                <Header changeActiveMenu={changeActiveMenu} activeMenu={activeMenu} workSwipe={workSwipe} lineHeader={lineHeader}/>
                 <main className="main">
                     <Suspense fallback={<Spinner/>}>
                         <Routes>
                             <Route path='/' element={<Main/>}/>
-                            <Route path='/weddings-all' element={<WeddingsAll/>}/>
+                            <Route path='/weddings-all' element={<WeddingsAll setLineHeader={setLineHeader}/>}/>
                                 <Route path='/weddings-all/:wed' element={<WeddingsPage/>}/>
                             <Route path='slideshow' element={<Slideshow/>}/>
                             <Route path='articles' element={<Articles/>}/>
-                                <Route path='/articles/beautiful-wedding-finale' element={<BeautifulWeddingFinale/>}/>
-                                <Route path='/articles/bouquet-roll' element={<BouquetRoll/>}/>
-                                <Route path='/articles/preparations-wedding' element={<PreparationsWedding/>}/>
-                                <Route path='/articles/from-the-photographer' element={<FromThePhotographer/>}/>
-                                <Route path='/articles/accessories' element={<Accessories/>}/>
-                                <Route path='/articles/perfect-wedding-photo-session' element={<PerfectWeddingPhotoSession/>}/>
-                            <Route path='about-me' element={<AboutMe/>}/>
-                            <Route path='reviews' element={<Reviews/>}/>
+                                <Route path='/articles/beautiful-wedding-finale' element={<BeautifulWeddingFinale setLineHeader={setLineHeader}/>}/>
+                                <Route path='/articles/bouquet-roll' element={<BouquetRoll setLineHeader={setLineHeader}/>}/>
+                                <Route path='/articles/preparations-wedding' element={<PreparationsWedding setLineHeader={setLineHeader}/>}/>
+                                <Route path='/articles/from-the-photographer' element={<FromThePhotographer setLineHeader={setLineHeader}/>}/>
+                                <Route path='/articles/accessories' element={<Accessories setLineHeader={setLineHeader}/>}/>
+                                <Route path='/articles/perfect-wedding-photo-session' element={<PerfectWeddingPhotoSession setLineHeader={setLineHeader}/>}/>
+                            <Route path='about-me' element={<AboutMe setLineHeader={setLineHeader}/>}/>
+                            <Route path='reviews' element={<Reviews setLineHeader={setLineHeader}/>}/>
                             <Route path='praice-packages' element={<PricePackages/>}/>
                             <Route path='contacts' element={<Contacts/>}/>
                             <Route path='*' element={<Page404/>}/>

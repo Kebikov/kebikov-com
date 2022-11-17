@@ -42,9 +42,9 @@
 
     // .heder-pc__link
     &__link {
-        font-family: "Roboto";
+        font-family: "Mont";
         font-size: 19px;
-        font-weight: 400;
+        font-weight: 500;
         color: $color-text;
         @media (max-width: 1910px){
             font-size: calc(17px + 2 * (100vw - 1200px) / 710);
@@ -216,7 +216,7 @@
 
     // .menu-mob__link
     &__link {
-        font-family: 'Roboto';
+        font-family: 'Mont';
         font-size: 20px;
         font-weight: 400;
         color: rgba(255, 255, 255, 0.7);

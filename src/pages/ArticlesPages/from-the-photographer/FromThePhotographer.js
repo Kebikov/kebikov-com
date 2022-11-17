@@ -1,4 +1,6 @@
 import HederArticles from '../../../components/HederArticles/HederArticles';
+import { Helmet } from "react-helmet";
+import { useEffect } from 'react';
 import useArticle from '../../../hooks/useArticle';
 import jpg1 from '../../../resources/images/articles/from-the-photographer/1.jpg';
 import png1 from '../../../resources/images/articles/beautiful-wedding-finale/1.png';
@@ -46,12 +48,27 @@ const finaleDB = [
     },
 ];
 
-const FromThePhotographer = () => {
+const FromThePhotographer = ({setLineHeader}) => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+        setLineHeader(false);
+        return() => {
+            setLineHeader(true);
+        }
+    },[]);
 
     const {FinaleBox} = useArticle();
 
     return(
         <>
+            <Helmet>
+                <title>7 Советов для Невест от Фотографа. Прочитайте !</title>
+                <meta
+                    name="description"
+                    content="Советы для невест от свадебного фотографа. Прочтите семь простых советов, пусть день пройдет идеально. Все самое важное!"
+                />
+            </Helmet>
+
             <HederArticles title={'6 советов для невест от фотографа'}/>
             <FinaleBox info={finaleDB[0]} side={true}/>
             <FinaleBox info={finaleDB[1]} side={true}/>

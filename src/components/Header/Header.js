@@ -3,9 +3,8 @@ import logoImg from '../../resources/images/header/1.jpg';
 import { NavLink } from 'react-router-dom';
 
 //= Header 
-const Header = ({changeActiveMenu, activeMenu, workSwipe}) => {
+const Header = ({changeActiveMenu, activeMenu, workSwipe, lineHeader}) => {
     //* hooks 
-    
 
     //* code 
     let dragDown = null;
@@ -57,7 +56,7 @@ const Header = ({changeActiveMenu, activeMenu, workSwipe}) => {
 
     //links to pages
     const main = {link: '/', title: 'Главная'};
-    const weddings = {link: 'weddings-all', title: 'Свадебные фотографии'};
+    const weddings = {link: 'weddings-all', title: 'Свадебные серии'};
     const slideshow = {link: 'slideshow', title: 'Slideshow'};
     const articles = {link: 'articles', title: 'Статьи'};
     const aboutMe = {link: 'about-me', title: 'Обо мне'};
@@ -107,7 +106,7 @@ const Header = ({changeActiveMenu, activeMenu, workSwipe}) => {
                     {link(contacts.link, contacts.title, 'menu-mob__link', 'menu-mob__line')}
                 </ul>
             </div>
-            <div className="header__bottom-line"/>
+            {lineHeader ? <div className="header__bottom-line"/> : null}
         </header>
     )
 }

@@ -1,5 +1,6 @@
 import './accessories.scss';
 import { useEffect } from 'react';
+import { Helmet } from "react-helmet";
 import usehelpPassAllImg from '../../../hooks/usehelpPassAllImg';
 import HederArticles from '../../../components/HederArticles/HederArticles';
 import ArticleOption from '../../../components/ArticleOption/ArticleOption';
@@ -7,15 +8,28 @@ import Title from '../../../components/Title/Title';
 import PhotoRow from '../../../components/PhotoRow/PhotoRow';
 
 
-const Accessories = () => {
+const Accessories = ({setLineHeader}) => {
     useEffect(() => {
         window.scrollTo(0, 0);
+
+        setLineHeader(false);
+        return() => {
+            setLineHeader(true);
+        }
     });
 
     const allImg = usehelpPassAllImg(require.context('../../../resources/images/articles/accessories/', false, /\.(png|jpe?g|svg|webp)$/), 1);
 
     return(
         <>
+            <Helmet>
+                <title>Аксессуары для Свадебной Фотосессии</title>
+                <meta
+                    name="description"
+                    content="Аксессуары на свадебной фотосессии помогают получить красивые и оригинальные фотографии.Хотите получить красивые фото, тогда читаем !"
+                />
+            </Helmet>
+
             <HederArticles title={'Аксессуары для свадебной фотосессии'}/>
             <div className="options">
                 <ArticleOption text={'Думаю, не такой пары, которая бы не хотела получить красивые сюжетные фотографии со свадьбы. Аксессуары на свадебной фотосессии помогают получить красивые и оригинальные фотографии. Инициативу проявлять должен не только свадебный фотограф, это должно быть творческое сотрудничество и вы полноправный участник этого тандема. Постарайтесь проявить фантазию, ведь ни кто кроме вас не знает точно чего вы хотите. Давайте вместе подумаем, что вам подойдет.'}/>

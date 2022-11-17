@@ -2,6 +2,7 @@ import './perfectWeddingPhotoSession.scss';
 import usehelpPassAllImg from '../../../hooks/usehelpPassAllImg';
 import useArticle from '../../../hooks/useArticle';
 import { useEffect } from 'react';
+import { Helmet } from "react-helmet";
 import HederArticles from '../../../components/HederArticles/HederArticles';
 import ArticleOption from '../../../components/ArticleOption/ArticleOption';
 import png1 from '../../../resources/images/articles/beautiful-wedding-finale/1.png';
@@ -53,16 +54,28 @@ const finaleDB = [
 ];
 
 //= PerfectWeddingPhotoSession 
-const PerfectWeddingPhotoSession = () => {
+const PerfectWeddingPhotoSession = ({setLineHeader}) => {
     //* hooks 
     useEffect(() => {
         window.scrollTo(0, 0);
-    });
+        setLineHeader(false);
+        return() => {
+            setLineHeader(true);
+        }
+    },[]);
     const {FinaleBox} = useArticle();
 
     //* render 
     return(
         <>
+            <Helmet>
+                <title>7 Советов для Идеальной Свадебной Фотосесии</title>
+                <meta
+                    name="description"
+                    content="Прочитайте подборку советов и свадебная фотосессия пройдет как по нотам. Пары повторяют одни и те же ошибки, какие?"
+                />
+            </Helmet>
+
             <HederArticles title={'7 советов- идеальная свадебная фотосессия'}/>
             <div className="options">
                 <ArticleOption text={'Прочитайте подборку советов, которые помогут вам при планировании и проведении свадебной фотосессии. Я отснял не один десяток пар и понял, как часто люди повторяют одни и те же ошибки. Которых с легкостью можно избежать избавившись от неприятных сюрпризов. Прочитайте и свадебная фотосессия пройдет как по нотам !'}/>

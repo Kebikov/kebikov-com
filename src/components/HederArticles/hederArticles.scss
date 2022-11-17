@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 20px 0 0 0;
+    margin: 0px 0px 10px 0px;
 
     &__body {
         display: flex;
@@ -20,7 +20,7 @@
 
     // .main-article-title__text
     &__text {
-        font-family: 'Roboto';
+        font-family: 'Mont';
         font-size: 24px;
         font-weight: 400;
         color: #3E616F;
@@ -39,13 +39,13 @@
     &__top {
         border-top: #3E616F 2px solid;
         width: 100%;
-        padding: 20px 0px 0px 0px;
+        padding: 10px 0px 0px 0px;
     }
 
     &__bottom {
         border-bottom: #3E616F 2px solid;
         width: 100%;
-        padding: 0px 0px 20px 0px;
+        padding: 0px 0px 10px 0px;
     }
 }
 

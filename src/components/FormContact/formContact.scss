@@ -54,7 +54,7 @@
         line-height: 140%;
         color: #fff;
         font-size: 20px;
-        font-family: 'Roboto';
+        font-family: 'Mont';
         font-weight: 600;
         padding: 20px 20px 20px 40px;
         @media (max-width: 900px){
@@ -66,7 +66,7 @@
         padding: 5px;
         z-index: 5;
         font-size: 18px;
-        font-family: 'Roboto';
+        font-family: 'Mont';
         margin: 0px 0px 20px 0px;
         white-space: pre-line;
         @media (max-width: 800px){
@@ -91,14 +91,14 @@
         z-index: 5;
         font-size: 20px;
         padding: 5px;
-        font-family: 'Roboto';
+        font-family: 'Mont';
         margin:0px 0px 20px 0px;
     }
     &__textarea{
         z-index: 5;
         font-size: 20px;
         padding: 5px;
-        font-family: 'Roboto';
+        font-family: 'Mont';
         resize: none;
         margin:0px 0px 20px 0px;
     }
@@ -106,7 +106,7 @@
         z-index: 5;
         color: #fff;
         font-size: 20px;
-        font-family: 'Roboto';
+        font-family: 'Mont';
         margin:0px 0px 3px 0px;
     }
 
@@ -114,7 +114,7 @@
         z-index: 5;
         color: #fff;
         font-size: 20px;
-        font-family: 'Roboto';
+        font-family: 'Mont';
         background-color: $color-gold;
         padding: 10px 0px 10px 0px;
         width: 40%;
@@ -127,5 +127,5 @@
     color: rgb(255, 40, 40);
     font-size: 18px;
     margin: -20px 0px 0px 0px;
-    font-family: 'Roboto';
+    font-family: 'Mont';
 }

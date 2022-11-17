@@ -1,5 +1,6 @@
 import './preparationsWedding.scss';
 import { useEffect } from 'react';
+import { Helmet } from "react-helmet";
 import HederArticles from '../../../components/HederArticles/HederArticles';
 import png1 from '../../../resources/images/articles/preparations-wedding/1.png';
 import png2 from '../../../resources/images/articles/preparations-wedding/2.png';
@@ -65,9 +66,13 @@ const preparationsDB = [
     }
 ]
 
-const PreparationsWedding = () => {
+const PreparationsWedding = ({setLineHeader}) => {
     useEffect(() => {
         window.scrollTo(0, 0);
+        setLineHeader(false);
+        return() => {
+            setLineHeader(true);
+        }
     });
 
     const items = preparationsDB.map(item => {
@@ -75,6 +80,14 @@ const PreparationsWedding = () => {
 
         return(
                 <div className="start" key={title}>
+                    <Helmet>
+                        <title>C Чего Начать Подготовку к Свадьбе? 10 Шагов Подготовки !</title>
+                        <meta
+                            name="description"
+                            content="Как и с чего начать подготовку к свадебному дню ? Прочитайте и узнаете все подробности! 10 простых шагов, все четко и по пунктам."
+                        />
+                    </Helmet>
+
                     <div className="start__icon">
                         <img src={img} alt=""/>
                     </div>

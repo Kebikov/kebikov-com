@@ -3,6 +3,7 @@ import HederArticles from '../../../components/HederArticles/HederArticles';
 import ArticleOption from '../../../components/ArticleOption/ArticleOption';
 import useArticle from '../../../hooks/useArticle';
 import { useEffect } from 'react';
+import { Helmet } from "react-helmet";
 import jpg1 from '../../../resources/images/articles/beautiful-wedding-finale/1.jpg';
 import jpg2 from '../../../resources/images/articles/beautiful-wedding-finale/2.jpg';
 import jpg3 from '../../../resources/images/articles/beautiful-wedding-finale/3.jpg';
@@ -113,16 +114,28 @@ const finaleDB = [
 ]
 
 //= BeautifulWeddingFinale 
-const BeautifulWeddingFinale = () => {
+const BeautifulWeddingFinale = ({setLineHeader}) => {
     //* hooks 
     useEffect(() => {
         window.scrollTo(0, 0);
+        setLineHeader(false);
+        return() => {
+            setLineHeader(true);
+        }
     });
     const {FinaleBox} = useArticle();
 
     //* render 
     return(
         <>
+            <Helmet>
+                <title>15 Вариантов Красивого Свадебного Финала !</title>
+                <meta
+                    name="description"
+                    content="Завершение свадебного вечера, подборка 15 вариантов финала свадьбы, читайте чем завершить свадебный вечер, как зафиналить свадьбу ?"
+                />
+            </Helmet>
+
             <HederArticles title={'15 ВАРИАНТОВ КРАСИВОГО СВАДЕБНОГО ФИНАЛА'}/>
             <div className="options">
                 <ArticleOption text={'Самое долгожданное событие для каждой не женатой девушки на свадьбе — это бросание букета невесты. В классическом варианте, невеста становится спиной к не женатым подружкам и бросает его, не глядя через плечо. Сейчас я расскажу, как это сделать интересно и весело!'}/>

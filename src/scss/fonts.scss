@@ -1,33 +1,4 @@
 @font-face {
-    font-family: "Roboto";
-    src: url("../resources/fonts/Roboto-Light.woff2") format("woff2"), url("../resources/fonts/Roboto-Light.woff") format("woff");
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: "Roboto";
-    src: url("../resources/fonts/Roboto-Regular.woff2") format("woff2"), url("../resources/fonts/Roboto-Regular.woff") format("woff");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: "Roboto";
-    src: url("../resources/fonts/Roboto-Medium.woff2") format("woff2"), url("../resources/fonts/Roboto-Medium.woff") format("woff");
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: "Roboto";
-    src: url("../resources/fonts/Roboto-Bold.woff2") format("woff2"), url("../resources/fonts/Roboto-Bold.woff") format("woff");
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
     font-family: "Hand";
     src: url("../resources/fonts/Caveat-Regular.woff2") format("woff2"), url("../resources/fonts/Caveat-Regular.woff") format("woff");
     font-weight: 700;
@@ -36,14 +7,6 @@
 }
 
 //= Montserrat 
-@font-face {
-    font-family: "Mont";
-    src: url("../resources/fonts/Montserrat-Light.woff2") format("woff2"), url("../resources/fonts/Montserrat-Light.woff") format("woff");
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
 @font-face {
     font-family: "Mont";
     src: url("../resources/fonts/Montserrat-Regular.woff2") format("woff2"), url("../resources/fonts/Montserrat-Regular.woff") format("woff");
@@ -63,7 +26,7 @@
 @font-face {
     font-family: "Mont";
     src: url("../resources/fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../resources/fonts/Montserrat-SemiBold.woff") format("woff");
-    font-weight: 500;
+    font-weight: 600;
     font-style: normal;
     font-display: swap;
 }

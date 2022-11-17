@@ -2,6 +2,7 @@ import Article from '../components/Article/Article';
 import '../components/Article/article.scss';
 import { articlesDB } from '../components/Article/articlesDB';
 import { useEffect } from 'react';
+import { Helmet } from "react-helmet";
 
 const Articles = () => {
     useEffect(() => {
@@ -10,6 +11,14 @@ const Articles = () => {
 
     return(
         <>
+            <Helmet>
+                <title>Статьи свадебной тематики.</title>
+                <meta
+                    name="description"
+                    content="Подборка статей, которые помогут вам лучше подготовится к свадебному дню.Статьи свадебной тематики покажут вам типичные ошибки молодожен."
+                />
+            </Helmet>
+
             <div className="main-article-title">
                 <div className="main-article-title__text">CТАТЬИ⋅СВАДЕБНОЙ⋅ТЕМАТИКИ</div>
             </div>
