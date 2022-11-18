@@ -96,7 +96,7 @@ function App() {
                                 <Route path='/articles/perfect-wedding-photo-session' element={<PerfectWeddingPhotoSession setLineHeader={setLineHeader}/>}/>
                             <Route path='about-me' element={<AboutMe setLineHeader={setLineHeader}/>}/>
                             <Route path='reviews' element={<Reviews setLineHeader={setLineHeader}/>}/>
-                            <Route path='praice-packages' element={<PricePackages setLineHeader={setLineHeader}/>}/>
+                            <Route path='price-packages' element={<PricePackages setLineHeader={setLineHeader}/>}/>
                             <Route path='contacts' element={<Contacts/>}/>
                             <Route path='*' element={<Page404/>}/>
                         </Routes>

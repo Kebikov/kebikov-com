@@ -17,7 +17,7 @@
     left: 0;
     z-index: 3;
     background-color: #fff;
-    @media (max-width: 1200px){
+    @media (max-width: 1260px){
         z-index: 2;
     }
 
@@ -35,7 +35,7 @@
         display: flex;
         column-gap: 20px;
         padding: 0px 0px 10px 0px;
-        @media (max-width: 1200px){
+        @media (max-width: 1260px){
             display: none;
         }
     }
@@ -44,12 +44,12 @@
     &__link {
         font-family: "Mont";
         font-size: 19px;
-        font-weight: 500;
+        font-weight: 400;
         color: $color-text;
         @media (max-width: 1910px){
             font-size: calc(17px + 2 * (100vw - 1200px) / 710);
         }
-        @media (max-width: 1200px){
+        @media (max-width: 1260px){
             font-size: 17px;
         }
         &:hover{
@@ -75,7 +75,7 @@
         display: flex;
         column-gap: 20px;
         padding: 0px 0px 10px 0px;
-        @media (max-width: 1200px){
+        @media (max-width: 1260px){
             display: none;
         }
     }
