@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 0px 0px 10px 0px;
+    margin: 0px 0px 0px 0px;
 
     &__body {
         display: flex;
@@ -14,7 +14,13 @@
     &__list {
         padding: 0px 10px 0px 10px;
         & img{
+            width: 45px;
+            height: 50px;
             animation: Orbita2 15s linear infinite;
+            @media (max-width: 768px){
+                width: 35px;
+                height: 40px;
+            }
         }
     }
 
@@ -56,12 +62,12 @@
 @keyframes Orbita2 {
     from {
         transform: rotate(0deg)
-                   translate(-10px) 
+                   translate(-5px) 
                    rotate(0deg);
 }
 to {
         transform: rotate(360deg)
-                   translate(-10px)
+                   translate(-5px)
                    rotate(-360deg);
 } 
 }

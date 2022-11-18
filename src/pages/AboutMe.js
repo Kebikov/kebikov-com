@@ -60,7 +60,7 @@ const AboutMe = ({setLineHeader}) => {
                 />
             </Helmet>
 
-            <HederArticles title={'Кратко обо мне.'}/>
+            <HederArticles title={'Кратко обо мне'}/>
             <div className="container">
                 <div className="about">
                     <div className="about__body">

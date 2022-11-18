@@ -4,9 +4,17 @@ import PricePackageHeader from "../components/pricePackageHeader/PricePackageHea
 import arrHeader from './data/dataPrice';
 import FormContact from '../components/FormContact/FormContact';
 import { Helmet } from "react-helmet";
+import HederArticles from '../components/HederArticles/HederArticles';
+import { useEffect } from 'react';
 
-const PricePackages = () => {
-
+const PricePackages = ({setLineHeader}) => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+        setLineHeader(false);
+        return() => {
+            setLineHeader(true);
+        }
+    },[]);
 
     return(
             <div className="price-packages-body container">
@@ -18,6 +26,7 @@ const PricePackages = () => {
                     />
                 </Helmet>
 
+                <HederArticles title={'Свадебный фотограф Минск,цены'}/>
                 <Faq/>
                 <PricePackageHeader title={arrHeader[0].title} cash={arrHeader[0].cash} description={arrHeader[0].description} arrParagraphs={arrHeader[0].arrParagraphs} pic={arrHeader[0].pic}/>
                 <PricePackageHeader title={arrHeader[1].title} cash={arrHeader[1].cash} description={arrHeader[1].description} arrParagraphs={arrHeader[1].arrParagraphs} pic={arrHeader[1].pic}/>
