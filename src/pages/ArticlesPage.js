@@ -17,6 +17,7 @@ const Articles = () => {
                     name="description"
                     content="Подборка статей, которые помогут вам лучше подготовится к свадебному дню.Статьи свадебной тематики покажут вам типичные ошибки молодожен."
                 />
+                <link rel="canonical" href="https://kebikov.com/articles"/>
             </Helmet>
 
             <div className="main-article-title">

@@ -134,6 +134,7 @@ const BeautifulWeddingFinale = ({setLineHeader}) => {
                     name="description"
                     content="Завершение свадебного вечера, подборка 15 вариантов финала свадьбы, читайте чем завершить свадебный вечер, как зафиналить свадьбу ?"
                 />
+                <link rel="canonical" href="https://kebikov.com/articles/beautiful-wedding-finale"/>
             </Helmet>
 
             <HederArticles title={'15 ВАРИАНТОВ КРАСИВОГО СВАДЕБНОГО ФИНАЛА'}/>

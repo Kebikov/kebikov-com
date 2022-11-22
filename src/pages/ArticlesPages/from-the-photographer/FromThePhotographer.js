@@ -67,6 +67,7 @@ const FromThePhotographer = ({setLineHeader}) => {
                     name="description"
                     content="Советы для невест от свадебного фотографа. Прочтите семь простых советов, пусть день пройдет идеально. Все самое важное!"
                 />
+                <link rel="canonical" href="https://kebikov.com/articles/from-the-photographer"/>
             </Helmet>
 
             <HederArticles title={'6 советов для невест от фотографа'}/>

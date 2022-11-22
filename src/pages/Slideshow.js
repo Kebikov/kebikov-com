@@ -18,6 +18,7 @@ const Slideshow = () => {
                     name="description"
                     content="Заходите и посмотрите свадебные Slideshow, все фото с реальных свадеб. Яркие и живые чуства в свадебных роликах.Свадебный фотограф Минск."
                 />
+                <link rel="canonical" href="https://kebikov.com/slideshow" />
             </Helmet>
 
             <div className="video__body">

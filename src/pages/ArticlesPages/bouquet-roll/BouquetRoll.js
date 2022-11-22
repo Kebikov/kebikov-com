@@ -87,6 +87,7 @@ const BouquetRoll = ({setLineHeader}) => {
                     name="description"
                     content="Оригинальные способы бросить букет невесты. 8 способов, чтобы не было как у всех. Подборка лучших идей как расстаться с букетом невесты."
                 />
+                <link rel="canonical" href="https://kebikov.com/articles/bouquet-roll"/>
             </Helmet>
 
             <HederArticles title={'8 ОРИГИНАЛЬНЫХ СПОСОБОВ БРОСИТЬ БУКЕТ НЕВЕСТЫ'}/>

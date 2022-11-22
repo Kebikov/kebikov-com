@@ -86,6 +86,7 @@ const PreparationsWedding = ({setLineHeader}) => {
                             name="description"
                             content="Как и с чего начать подготовку к свадебному дню ? Прочитайте и узнаете все подробности! 10 простых шагов, все четко и по пунктам."
                         />
+                        <link rel="canonical" href="https://kebikov.com/articles/preparations-wedding"/>
                     </Helmet>
 
                     <div className="start__icon">

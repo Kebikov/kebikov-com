@@ -74,6 +74,7 @@ const PerfectWeddingPhotoSession = ({setLineHeader}) => {
                     name="description"
                     content="Прочитайте подборку советов и свадебная фотосессия пройдет как по нотам. Пары повторяют одни и те же ошибки, какие?"
                 />
+                <link rel="canonical" href="https://kebikov.com/articles/perfect-wedding-photo-session"/>
             </Helmet>
 
             <HederArticles title={'7 советов- идеальная свадебная фотосессия'}/>

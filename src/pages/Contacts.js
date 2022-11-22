@@ -29,6 +29,7 @@ const Contacts = () => {
                         name="description"
                         content="Контакты для связи со мной, адресс, телефон, почта, так же ссылка Вконтакте и Инстаграмм. Свадебный фотограф Евгений Кебиков, Минск."
                     />
+                    <link rel="canonical" href="https://kebikov.com/contacts"/>
                 </Helmet>
 
                 <div className="contacts__body">

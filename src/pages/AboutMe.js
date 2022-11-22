@@ -58,6 +58,7 @@ const AboutMe = ({setLineHeader}) => {
                     name="description"
                     content="Обо мне, на странице краткая информация, познакомитесь со мной чуть лучше, после прочтения, часть вопросов станет для вас яснее.Заходим !"
                 />
+                <link rel="canonical" href="https://kebikov.com/about-me"/>
             </Helmet>
 
             <HederArticles title={'Кратко обо мне'}/>

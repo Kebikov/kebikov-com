@@ -28,6 +28,7 @@ const Accessories = ({setLineHeader}) => {
                     name="description"
                     content="Аксессуары на свадебной фотосессии помогают получить красивые и оригинальные фотографии.Хотите получить красивые фото, тогда читаем !"
                 />
+                <link rel="canonical" href="https://kebikov.com/articles/accessories"/>
             </Helmet>
 
             <HederArticles title={'Аксессуары для свадебной фотосессии'}/>

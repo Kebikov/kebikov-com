@@ -24,6 +24,7 @@ const PricePackages = ({setLineHeader}) => {
                         name="description"
                         content="Свадебный фотограф Минск, цены. Четыре вида готовых пакетов услуг, выберите уже готовый пакет. Приятные цены от 250 до 550 у.е."
                     />
+                    <link rel="canonical" href="https://kebikov.com/price-packages"/>
                 </Helmet>
 
                 <HederArticles title={'Свадебный фотограф Минск,цены'}/>

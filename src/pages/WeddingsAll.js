@@ -24,6 +24,7 @@ const WeddingsAll = ({setLineHeader}) => {
                         name="description"
                         content="Фотографии свадеб снятых в Минске, свадебные фотосессии в Минске. Просмотрите съемки свадебных дней молодожен в Минске. Вам будет интересно !"
                     />
+                    <link rel="canonical" href="https://kebikov.com/weddings-all" />
                 </Helmet>
 
                 <HederArticles title={'Свадебные серии'}/>

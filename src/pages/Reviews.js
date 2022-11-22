@@ -35,6 +35,7 @@ const Reviews = ({setLineHeader}) => {
                         name="description"
                         content="Отзывы от клиентов, прочитайте как все прошло.Просмотрите фото свадебного дня молодожен. Свадебный фотограф Минск,Евгений Кебиков."
                     />
+                    <link rel="canonical" href="https://kebikov.com/reviews"/>
                 </Helmet>
                 <HederArticles title={'Отзывы клиентов'}/>
                 <div className="container">

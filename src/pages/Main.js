@@ -8,6 +8,8 @@ const Main = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     },[]);
+
+
     return(
             <div className="container">
                 <Helmet>
@@ -16,6 +18,7 @@ const Main = () => {
                         name="description"
                         content="Яркие, живые, наполненные улыбками и радостью, фотографии вашего свадебного дня.Свадебный фотограф Минск,Кебиков Евгений +375 29 694-98-43"
                     />
+                    <link rel="canonical" href="https://kebikov.com/" />
                 </Helmet>
 
                 <GalleryMain/>
