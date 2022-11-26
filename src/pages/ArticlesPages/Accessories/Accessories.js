@@ -7,16 +7,10 @@ import ArticleOption from '../../../components/ArticleOption/ArticleOption';
 import Title from '../../../components/Title/Title';
 import PhotoRow from '../../../components/PhotoRow/PhotoRow';
 
-
-const Accessories = ({setLineHeader}) => {
+const Accessories = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
-
-        setLineHeader(false);
-        return() => {
-            setLineHeader(true);
-        }
-    });
+    },[]);
 
     const allImg = usehelpPassAllImg(require.context('../../../resources/images/articles/accessories/', false, /\.(png|jpe?g|svg|webp)$/), 1);
 

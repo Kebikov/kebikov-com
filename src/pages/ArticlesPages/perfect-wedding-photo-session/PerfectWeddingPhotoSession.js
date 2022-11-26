@@ -54,14 +54,10 @@ const finaleDB = [
 ];
 
 //= PerfectWeddingPhotoSession 
-const PerfectWeddingPhotoSession = ({setLineHeader}) => {
+const PerfectWeddingPhotoSession = () => {
     //* hooks 
     useEffect(() => {
         window.scrollTo(0, 0);
-        setLineHeader(false);
-        return() => {
-            setLineHeader(true);
-        }
     },[]);
     const {FinaleBox} = useArticle();
 

@@ -23,7 +23,6 @@ const GalleryMain = () => {
         if(document.documentElement.clientWidth > 1024) {
             e.target.ondragstart = () => false;
         }
-        
     }
 
     const allImg = usehelpPassAllImg(require.context('../../resources/images/main-page/', false, /\.(png|jpe?g|svg|webp)$/));
@@ -46,7 +45,7 @@ const GalleryMain = () => {
                 return (
                         <picture className={'anime'} key={item}>
                             <source type="image/webp" data-srcset={item[1]} key={item[1]}/>
-                            <img src={box} height={'800px'} width={'1200px'} data-src={item[0]} alt={'Свадебное фото в Минске'} key={item[0]} onLoad={bunDragElement}/>
+                            <img src={box} height={'800px'} width={'1200px'} data-src={item[0]} alt={'Свадебное фото в Минске'} key={item[0]} />
                         </picture>
                 )
             })

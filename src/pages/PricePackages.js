@@ -7,13 +7,9 @@ import { Helmet } from "react-helmet";
 import HederArticles from '../components/HederArticles/HederArticles';
 import { useEffect } from 'react';
 
-const PricePackages = ({setLineHeader}) => {
+const PricePackages = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
-        setLineHeader(false);
-        return() => {
-            setLineHeader(true);
-        }
     },[]);
 
     return(

@@ -2,21 +2,21 @@ import './header.scss';
 import logoImg from '../../resources/images/header/1.jpg';
 import { NavLink } from 'react-router-dom';
 
+import { useContext } from 'react';
+import lineContext from '../../context/context-line-header';
+
 //= Header 
-const Header = ({changeActiveMenu, activeMenu, workSwipe, lineHeader}) => {
-    //* hooks 
+const Header = ({setActiveMenu, activeMenu}) => {
 
     //* code 
-    let dragDown = null;
-    let dragUp = null;
-    let drag = null;
+    const context = useContext(lineContext);
 
     const onBurger = () => {
-        changeActiveMenu(!activeMenu);
+        setActiveMenu(!activeMenu);
     }
 
     const onBurgerFalse = () => {
-        changeActiveMenu(false);
+        setActiveMenu(false);
     }
 
     const link = (link, title, classId, classLi) => {
@@ -28,22 +28,6 @@ const Header = ({changeActiveMenu, activeMenu, workSwipe, lineHeader}) => {
                 {end ? <NavLink end to={link} onClick={onBurgerFalse} className={( ({isActive}) => (isActive ? `${classId} activeLink` : classId) )}>{title}</NavLink> : <NavLink to={link} onClick={onBurgerFalse} className={( ({isActive}) => (isActive ? `${classId} activeLink` : classId) )}>{title}</NavLink>}
             </li>
         )
-    }
-
-    const startMove = (e) => {
-        if(workSwipe){
-            dragDown = e.pageX;
-        }
-    }
-
-    const endMove = (e) => {
-        if(workSwipe){
-            dragUp = e.pageX;
-            drag = dragDown - dragUp;
-            if(drag > 50) {
-                changeActiveMenu(false);
-            }
-        }
     }
 
     const logo = () => {
@@ -93,7 +77,7 @@ const Header = ({changeActiveMenu, activeMenu, workSwipe, lineHeader}) => {
                     <div className="burger__line"></div>
                 </div>
             </div>
-            <div className={activeMenu ? "menu-mob active" : "menu-mob"}  onPointerDown={startMove} onPointerUp={endMove}>
+            <div className={activeMenu ? "menu-mob active" : "menu-mob"}>
                 <ul className="menu-mob__list">
                     <div className="menu-mob__close" onClick={onBurger}></div>
                     {link(main.link, main.title, 'menu-mob__link', 'menu-mob__line')}
@@ -106,7 +90,7 @@ const Header = ({changeActiveMenu, activeMenu, workSwipe, lineHeader}) => {
                     {link(contacts.link, contacts.title, 'menu-mob__link', 'menu-mob__line')}
                 </ul>
             </div>
-            {lineHeader ? <div className="header__bottom-line"/> : null}
+            {context.line ? <div className="header__bottom-line"/> : null}
         </header>
     )
 }

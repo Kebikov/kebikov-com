@@ -1,13 +1,21 @@
 import GalleryMain from "../components/GalleryMain/GalleryMain";
 import TitlteBlock from "../components/TitlteBlock/TitlteBlock";
 import {WeddingSeries} from "../components/WeddingSeries/WeddingSeries";
-import { useEffect } from "react";
+import { useEffect, useContext } from "react";
 import { Helmet } from "react-helmet";
+
+import lineContext from "../context/context-line-header";
 
 const Main = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
+        context.setLine(true);
+        return () => {
+            context.setLine(false);
+        }
     },[]);
+
+    const context = useContext(lineContext);
 
 
     return(

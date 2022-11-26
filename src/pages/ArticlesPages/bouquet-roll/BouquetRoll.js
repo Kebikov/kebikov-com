@@ -21,7 +21,6 @@ import png6 from '../../../resources/images/articles/beautiful-wedding-finale/6.
 import png7 from '../../../resources/images/articles/beautiful-wedding-finale/7.png';
 import png8 from '../../../resources/images/articles/beautiful-wedding-finale/8.png';
 
-
 const finaleDB = [
     {
         title: 'Юла',
@@ -67,14 +66,10 @@ const finaleDB = [
 
 
 //= BouquetRoll 
-const BouquetRoll = ({setLineHeader}) => {
+const BouquetRoll = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
-        setLineHeader(false);
-        return() => {
-            setLineHeader(true);
-        }
-    });
+    },[]);
 
     const {FinaleBox} = useArticle();
 

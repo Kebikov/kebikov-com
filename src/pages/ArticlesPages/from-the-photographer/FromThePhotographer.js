@@ -15,6 +15,7 @@ import png5 from '../../../resources/images/articles/beautiful-wedding-finale/5.
 import jpg6 from '../../../resources/images/articles/from-the-photographer/6.jpg';
 import png6 from '../../../resources/images/articles/beautiful-wedding-finale/6.png';
 
+
 const finaleDB = [
     {
         title: 'Два букета для невесты',
@@ -51,10 +52,6 @@ const finaleDB = [
 const FromThePhotographer = ({setLineHeader}) => {
     useEffect(() => {
         window.scrollTo(0, 0);
-        setLineHeader(false);
-        return() => {
-            setLineHeader(true);
-        }
     },[]);
 
     const {FinaleBox} = useArticle();

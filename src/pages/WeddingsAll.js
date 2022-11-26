@@ -3,16 +3,14 @@ import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import HederArticles from '../components/HederArticles/HederArticles';
 
-const WeddingsAll = ({setLineHeader}) => {
+const WeddingsAll = () => {
     useEffect(() => {
+        window.scrollTo(0, 0);
         const wed = document.querySelector('.wed-center');
         const parent = wed.parentElement;
         parent.classList.add('add-wed-all');
-        setLineHeader(false);
-
         return() => {
             parent.classList.remove('add-wed-all');
-            setLineHeader(true);
         }
     },[]);
 

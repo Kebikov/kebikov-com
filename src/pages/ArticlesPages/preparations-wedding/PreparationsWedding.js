@@ -13,6 +13,7 @@ import png8 from '../../../resources/images/articles/preparations-wedding/8.png'
 import png9 from '../../../resources/images/articles/preparations-wedding/9.png';
 import png10 from '../../../resources/images/articles/preparations-wedding/10.png';
 
+
 const preparationsDB = [
     {
         title: 'Банкетная площадка для свадьбы',
@@ -66,14 +67,10 @@ const preparationsDB = [
     }
 ]
 
-const PreparationsWedding = ({setLineHeader}) => {
+const PreparationsWedding = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
-        setLineHeader(false);
-        return() => {
-            setLineHeader(true);
-        }
-    });
+    },[]);
 
     const items = preparationsDB.map(item => {
         const { title, text, img } = item;

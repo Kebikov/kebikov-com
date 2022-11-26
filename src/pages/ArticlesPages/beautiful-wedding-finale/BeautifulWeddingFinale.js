@@ -35,6 +35,7 @@ import png13 from '../../../resources/images/articles/beautiful-wedding-finale/1
 import png14 from '../../../resources/images/articles/beautiful-wedding-finale/14.png';
 import png15 from '../../../resources/images/articles/beautiful-wedding-finale/15.png';
 
+
 const finaleDB = [
     {
         title: 'Замочек',
@@ -114,16 +115,16 @@ const finaleDB = [
 ]
 
 //= BeautifulWeddingFinale 
-const BeautifulWeddingFinale = ({setLineHeader}) => {
+const BeautifulWeddingFinale = () => {
     //* hooks 
     useEffect(() => {
         window.scrollTo(0, 0);
-        setLineHeader(false);
-        return() => {
-            setLineHeader(true);
-        }
-    });
+    },[]);
+
     const {FinaleBox} = useArticle();
+
+    //* code 
+
 
     //* render 
     return(
@@ -136,7 +137,7 @@ const BeautifulWeddingFinale = ({setLineHeader}) => {
                 />
                 <link rel="canonical" href="https://kebikov.com/articles/beautiful-wedding-finale"/>
             </Helmet>
-
+            {console.log('render')}
             <HederArticles title={'15 ВАРИАНТОВ КРАСИВОГО СВАДЕБНОГО ФИНАЛА'}/>
             <div className="options">
                 <ArticleOption text={'Самое долгожданное событие для каждой не женатой девушки на свадьбе — это бросание букета невесты. В классическом варианте, невеста становится спиной к не женатым подружкам и бросает его, не глядя через плечо. Сейчас я расскажу, как это сделать интересно и весело!'}/>

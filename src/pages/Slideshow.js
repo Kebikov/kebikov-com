@@ -5,13 +5,33 @@ import MY from '../resources/video/M&Y.mp4';
 import NK from '../resources/video/N&K.mp4';
 import PT from '../resources/video/P&T.mp4';
 import SD from '../resources/video/S&D.mp4';
+import poster1 from '../resources/video/poster/1.jpg';
+import poster2 from '../resources/video/poster/2.jpg';
+import poster3 from '../resources/video/poster/MY.jpg';
+import poster4 from '../resources/video/poster/NK.jpg';
+import poster5 from '../resources/video/poster/PT.jpg';
+import poster6 from '../resources/video/poster/SD.jpg';
+
 import { Helmet } from "react-helmet";
+import lineContext from '../context/context-line-header';
+import { useContext, useEffect } from 'react';
 
 const Slideshow = () => {
+    useEffect(() => {
+        context.setLine(true);
+        return () => {
+            context.setLine(false);
+        }
+    },[]);
 
+    const context = useContext(lineContext);
+
+    //* code 
+
+
+    //* return 
     return(
         <div className="video container">
-
             <Helmet>
                 <title>Свадебные Slideshow, эмоции идут в комплекте.</title>
                 <meta
@@ -23,22 +43,22 @@ const Slideshow = () => {
 
             <div className="video__body">
                 <div className="video__item">
-                    <video src={DA} controls/>
+                    <video src={DA} controls poster={poster1}/>
                 </div>
                 <div className="video__item">
-                    <video src={SL} controls/>
+                    <video src={SL} controls poster={poster2}/>
                 </div>
                 <div className="video__item">
-                    <video src={MY} controls/>
+                    <video src={MY} controls poster={poster3}/>
                 </div>
                 <div className="video__item">
-                    <video src={NK} controls/>
+                    <video src={NK} controls poster={poster4}/>
                 </div>
                 <div className="video__item">
-                    <video src={PT} controls/>
+                    <video src={PT} controls poster={poster5}/>
                 </div>
                 <div className="video__item">
-                    <video src={SD} controls/>
+                    <video src={SD} controls poster={poster6}/>
                 </div>
             </div>
         </div>

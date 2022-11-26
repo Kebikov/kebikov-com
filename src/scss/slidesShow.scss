@@ -17,10 +17,18 @@
 
     // .video__item
     &__item {
-        min-width: 350px;
+        min-width: 370px;
         flex: 0 1 48%;
+        
         & video {
             width: 100%;
         }
     }
+}
+
+.time {
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    right: 0;
 }

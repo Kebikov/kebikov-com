@@ -6,13 +6,9 @@ import FormContact from "../components/FormContact/FormContact";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
 
-const AboutMe = ({setLineHeader}) => {
+const AboutMe = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
-        setLineHeader(false);
-        return() => {
-            setLineHeader(true);
-        }
     },[]);
 
 

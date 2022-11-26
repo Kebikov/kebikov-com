@@ -1,13 +1,20 @@
 import Article from '../components/Article/Article';
 import '../components/Article/article.scss';
 import { articlesDB } from '../components/Article/articlesDB';
-import { useEffect } from 'react';
+import { useEffect, useContext } from 'react';
 import { Helmet } from "react-helmet";
+import lineContext from '../context/context-line-header';
 
 const Articles = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
-    });
+        context.setLine(true);
+        return () => {
+            context.setLine(false);
+        }
+    },[]);
+
+    const context = useContext(lineContext);
 
     return(
         <>

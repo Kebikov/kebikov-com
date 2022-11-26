@@ -7,14 +7,9 @@ import { useEffect, useState } from 'react';
 import { Helmet } from "react-helmet";
 import HederArticles from '../components/HederArticles/HederArticles';
 
-const Reviews = ({setLineHeader}) => {
+const Reviews = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
-        setLineHeader(false);
-
-        return() => {
-            setLineHeader(true);
-        }
     },[]);
 
     //* code 
