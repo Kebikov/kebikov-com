@@ -2,6 +2,10 @@ import './App.scss';
 import Header from '../components/Header/Header';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { lazy, Suspense, useState, useEffect, useContext } from 'react';
+//* redux 
+import store from '../../redux/store';
+import { Provider } from 'react-redux';
+//*comp
 import lineContext from '../context/context-line-header';
 import Spinner from '../components/Spiner/Spiner';
 import Slideshow from '../pages/Slideshow';
@@ -22,6 +26,7 @@ const PreparationsWedding = lazy(() => import('../pages/ArticlesPages/preparatio
 const FromThePhotographer = lazy(() => import('../pages/ArticlesPages/from-the-photographer/FromThePhotographer'));
 const Accessories = lazy(() => import('../pages/ArticlesPages/accessories/Accessories'));
 const PerfectWeddingPhotoSession = lazy(() => import('../pages/ArticlesPages/perfect-wedding-photo-session/PerfectWeddingPhotoSession'));
+
 
 const {Provider} = lineContext;
 
