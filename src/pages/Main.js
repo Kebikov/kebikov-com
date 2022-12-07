@@ -1,21 +1,22 @@
 import GalleryMain from "../components/GalleryMain/GalleryMain";
 import TitlteBlock from "../components/TitlteBlock/TitlteBlock";
-import {WeddingSeries} from "../components/WeddingSeries/WeddingSeries";
-import { useEffect, useContext } from "react";
+import { WeddingSeries } from "../components/WeddingSeries/WeddingSeries";
+import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 
-import lineContext from "../context/context-line-header";
+import { useDispatch } from "react-redux";
+import { setLineHeader } from "../redux/actions/actions";
 
 const Main = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
-        context.setLine(true);
+        dispatch(setLineHeader(true));
         return () => {
-            context.setLine(false);
+            dispatch(setLineHeader(false));
         }
     },[]);
 
-    const context = useContext(lineContext);
+    const dispatch = useDispatch();
 
 
     return(

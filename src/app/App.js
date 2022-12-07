@@ -1,12 +1,12 @@
 import './App.scss';
 import Header from '../components/Header/Header';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { lazy, Suspense, useState, useEffect, useContext } from 'react';
+import { lazy, Suspense, useState } from 'react';
 //* redux 
-import store from '../../redux/store';
+import store from '../redux/store';
 import { Provider } from 'react-redux';
 //*comp
-import lineContext from '../context/context-line-header';
+//import lineContext from '../context/context-line-header';
 import Spinner from '../components/Spiner/Spiner';
 import Slideshow from '../pages/Slideshow';
 import AboutMe from '../pages/AboutMe';
@@ -28,7 +28,7 @@ const Accessories = lazy(() => import('../pages/ArticlesPages/accessories/Access
 const PerfectWeddingPhotoSession = lazy(() => import('../pages/ArticlesPages/perfect-wedding-photo-session/PerfectWeddingPhotoSession'));
 
 
-const {Provider} = lineContext;
+//const {Provider} = lineContext;
 
 
 //= App 
@@ -51,7 +51,7 @@ function App() {
 
     //* return 
     return (
-        <Provider value={lineHeader}>
+        <Provider store={store}>
             <BrowserRouter>
                 <div className="wrapper">
                     <Header setActiveMenu={setActiveMenu} activeMenu={activeMenu} lineHeader={lineHeader}/>

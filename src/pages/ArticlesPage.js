@@ -1,20 +1,22 @@
 import Article from '../components/Article/Article';
 import '../components/Article/article.scss';
 import { articlesDB } from '../components/Article/articlesDB';
-import { useEffect, useContext } from 'react';
+import { useEffect } from 'react';
 import { Helmet } from "react-helmet";
-import lineContext from '../context/context-line-header';
+
+import { useDispatch } from 'react-redux';
+import { setLineHeader } from '../redux/actions/actions';
 
 const Articles = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
-        context.setLine(true);
+        dispatch(setLineHeader(true));
         return () => {
-            context.setLine(false);
+            dispatch(setLineHeader(false));
         }
     },[]);
 
-    const context = useContext(lineContext);
+    const dispatch = useDispatch();
 
     return(
         <>
