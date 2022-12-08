@@ -1,5 +1,7 @@
 const initialState = {
-    lineHeader: false
+    lineHeader: false,
+    activeMenu: false,
+    activeSlidesReviews: 0
 };
 
 const reducer = (state = initialState, actions) => {
@@ -13,7 +15,12 @@ const reducer = (state = initialState, actions) => {
             return {
                 ...state,
                 activeMenu: actions.payload
-            }    
+            } 
+        case 'SET_ACTIVE_SLIDES_REVIEWS':
+            return {
+                ...state,
+                activeSlidesReviews: actions.payload
+            } 
     
         default: return state;
     }

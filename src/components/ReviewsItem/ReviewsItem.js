@@ -1,14 +1,25 @@
 import './reviewsItem.scss';
+import { useRef, useEffect } from 'react';
 
-const ReviewsItem = (obj) => {
-    const {img, text, name, href} = obj.item;
+//= ReviewsItem 
+const ReviewsItem = ({item, setReviewsItemLink}) => {
+    //* hooks 
+    useEffect(() => {
+        setReviewsItemLink(rewiewRef.current);
+    }, []);
+
+    const rewiewRef = useRef(null);
+
+    //* code 
+    const {img, text, name, href} = item;
 
     const bunDrag = (e) => {
         e.target.ondragstart = () => false;
     }
 
+    //* return 
     return(
-        <div className="rewiews">
+        <div className="rewiews" ref={rewiewRef}>
             <div className="rewiews__body">
                 <img src={img} alt="" className="rewiews__picture" onLoad={bunDrag}/>
                 <div className="rewiews__text">{text}</div>

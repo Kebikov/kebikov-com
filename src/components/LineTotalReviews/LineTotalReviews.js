@@ -1,16 +1,19 @@
 import './lineTotalReviews.scss';
-import { useState } from 'react';
+import arr from '../../pages/data/dataReviews';
+import { useSelector } from 'react-redux';
 
-const LineTotalReviews = (props) => {
-    const [active, setActive] = useState(false);
-    
-    let items = props.arr.map((item, i) => {
+//= LineTotalReviews 
+const LineTotalReviews = () => {
+    const {activeSlidesReviews} = useSelector(state => state);
 
+    //* code 
+    let items = arr.map((item, i) => {
         return(
-            <div className={i === props.active || i === props.active + 1 || i === props.active + 2 ? 'reviews-total__line full-color' : 'reviews-total__line'} key={i}></div>
+            <div className={i === activeSlidesReviews || i === activeSlidesReviews + 1 || i === activeSlidesReviews + 2 ? 'reviews-total__line full-color' : 'reviews-total__line'} key={i}></div>
         )
     });
 
+    //* return 
     return(
         <div className="reviews-total">
             <div className="reviews-total__body">

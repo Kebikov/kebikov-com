@@ -1,5 +1,5 @@
 import './gellaryReviews.scss';
-import { useEffect, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import ReviewsItem from '../ReviewsItem/ReviewsItem';
 import arrForReviews from '../../pages/data/dataReviews';
 import { useDispatch } from 'react-redux';
@@ -19,10 +19,9 @@ const GellaryReviews = () => {
     }, []);
 
     const dispatch = useDispatch();
-    const refUseLine = useRef(null);
 
     //* code 
-    let line;
+    let line = document.createElement('div');
     let kidsWidth = 0;
     let kidsTotal = 0;
     let slidesCurrent = 0;
@@ -31,11 +30,11 @@ const GellaryReviews = () => {
     let dragMove = 0;
     let dragEnd = 0;
     let pointNow = 0;
-    let reviewsItemLink;
 
-    //* function 
     const effect = () => {
-        line = refUseLine.current;
+        const element = document.querySelector('.all-reviews');
+        console.log('',element);
+        line = element.firstElementChild;
         size();
     }
 
@@ -115,6 +114,8 @@ const GellaryReviews = () => {
         line.style.transform= `translate(${x}px, 0)`;
     }
 
+    let reviewsItemLink;
+
     const setReviewsItemLink = (link) => {
         reviewsItemLink = link;
     }
@@ -125,13 +126,17 @@ const GellaryReviews = () => {
         )
     });
 
+    console.log('render-----------------------------------------------');
     //* return 
     return(
+        <>
+        {console.log('return')}
         <div className="all-reviews">
-            <div className="use-line" ref={refUseLine}>
+            <div className="use-line">
                 {reviewsItems}
             </div>
         </div>
+        </>
     )
 }
 

@@ -1,7 +1,7 @@
 import './App.scss';
 import Header from '../components/Header/Header';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { lazy, Suspense, useState } from 'react';
+import { lazy, Suspense } from 'react';
 //* redux 
 import store from '../redux/store';
 import { Provider } from 'react-redux';
@@ -28,25 +28,14 @@ const Accessories = lazy(() => import('../pages/ArticlesPages/accessories/Access
 const PerfectWeddingPhotoSession = lazy(() => import('../pages/ArticlesPages/perfect-wedding-photo-session/PerfectWeddingPhotoSession'));
 
 
-//const {Provider} = lineContext;
-
-
 //= App 
 function App() {
 
-    const [activeMenu, setActiveMenu] = useState(false);
-    const [lineHeader, setLineHeader] = useState( {line: false, setLine} );
-
     //* code 
-    function setLine(value) {
-        setLineHeader({...lineHeader, line: value});
-    }
-
     const bodyOverflow = () => {
         const body = document.body;
-        activeMenu ? body.style.overflowY = 'hidden' : body.style.overflowY = 'auto';
+        store.getState().activeMenu ? body.style.overflowY = 'hidden' : body.style.overflowY = 'auto';
     }
-
     bodyOverflow();
 
     //* return 
@@ -54,7 +43,7 @@ function App() {
         <Provider store={store}>
             <BrowserRouter>
                 <div className="wrapper">
-                    <Header setActiveMenu={setActiveMenu} activeMenu={activeMenu} lineHeader={lineHeader}/>
+                    <Header/>
                     <main className="main">
                         <Suspense fallback={<Spinner/>}>
                             <Routes>
