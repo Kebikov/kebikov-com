@@ -17,7 +17,7 @@ import { Helmet } from "react-helmet";
 import { useEffect } from 'react';
 
 import { useDispatch } from 'react-redux';
-import { setLineHeader } from '../redux/actions/actions';
+import { setLineHeader } from '../redux/slice/indexSlice';
 
 const Slideshow = () => {
     useEffect(() => {

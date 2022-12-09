@@ -2,6 +2,7 @@ import './lineTotalReviews.scss';
 import arr from '../../pages/data/dataReviews';
 import { useSelector } from 'react-redux';
 
+
 //= LineTotalReviews 
 const LineTotalReviews = () => {
     const {activeSlidesReviews} = useSelector(state => state);

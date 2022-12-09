@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react';
 import ReviewsItem from '../ReviewsItem/ReviewsItem';
 import arrForReviews from '../../pages/data/dataReviews';
 import { useDispatch } from 'react-redux';
-import { setActiveSlidesReviews } from '../../redux/actions/actions';
+import { setActiveSlidesReviews } from '../../redux/slice/indexSlice';
 
 //= GellaryReviews 
 const GellaryReviews = () => {

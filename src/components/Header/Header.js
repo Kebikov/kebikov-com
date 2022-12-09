@@ -3,7 +3,7 @@ import logoImg from '../../resources/images/header/1.jpg';
 import { NavLink } from 'react-router-dom';
 //*redux
 import { useSelector, useDispatch } from 'react-redux';
-import { setActiveMenu } from '../../redux/actions/actions';
+import { setActiveMenu } from '../../redux/slice/indexSlice';
 
 //= Header 
 const Header = () => {

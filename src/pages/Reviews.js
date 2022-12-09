@@ -3,7 +3,7 @@ import './scss/reviews.scss';
 import GellaryReviews from '../components/GellaryReviews/GellaryReviews';
 //import arrForReviews from './data/dataReviews';
 import LineTotalReviews from '../components/LineTotalReviews/LineTotalReviews';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Helmet } from "react-helmet";
 import HederArticles from '../components/HederArticles/HederArticles';
 
