@@ -3,7 +3,7 @@ import Header from '../components/Header/Header';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 //* redux 
-import store from '../redux/store';
+import store from '../redux/store/store';
 import { Provider } from 'react-redux';
 //*comp
 //import lineContext from '../context/context-line-header';
