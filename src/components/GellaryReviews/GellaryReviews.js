@@ -7,6 +7,7 @@ import { setActiveSlidesReviews } from '../../redux/slice/indexSlice';
 
 //= GellaryReviews 
 const GellaryReviews = () => {
+    
     //* hooks 
     useEffect(() => {
         effect();
