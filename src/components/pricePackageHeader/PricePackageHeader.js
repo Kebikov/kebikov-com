@@ -2,7 +2,7 @@ import './pricePackageHeader.scss';
 import { motion } from "framer-motion";
 
 //= PricePackageHeader 
-const PricePackageHeader = ({title, cash, description, arrParagraphs, pic}) => {
+const PricePackageHeader = ({title, cash, description, arrParagraphs, pic, correction = false}) => {
 
     //* code 
     const itemsParagraphs = arrParagraphs.map((item, i) => {
@@ -30,7 +30,7 @@ const PricePackageHeader = ({title, cash, description, arrParagraphs, pic}) => {
         <>
             <div className="price-header">
                 <div className="price-header__body">
-                    <div className="price-header__img">
+                    <div className={correction ? "price-header__corection" : "price-header__img"}>
                         <motion.img
                             variants={motionImg}
                             initial={'hidden'}
