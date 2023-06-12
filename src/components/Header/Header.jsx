@@ -42,7 +42,7 @@ const Header = () => {
     const main = {link: '/', title: 'Главная'};
     const weddings = {link: 'weddings-all', title: 'Свадебные серии'};
     const slideshow = {link: 'slideshow', title: 'Slideshow'};
-    const articles = {link: 'articles', title: 'Статьи по теме'};
+    const articles = {link: 'articles', title: 'Статьи'};
     const aboutMe = {link: 'about-me', title: 'Обо мне'};
     const reviews = {link: 'reviews', title: 'Отзывы клиентов'};
     const praice = {link: 'price-packages', title: 'Пакеты услуг'};

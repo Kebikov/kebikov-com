@@ -1,4 +1,5 @@
 @import '../../scss/variables.scss';
+@import '../../scss/mixin.scss';
 
 .header{
     position: relative;
@@ -22,19 +23,30 @@
     }
 
     &__body{
-        display: flex;
-        justify-content: space-around;
-        align-items: flex-end;
-        max-width: 1300px;
+        display: grid;
+        grid-template-columns: 1fr 240px 1fr;
+
+        //max-width: 1300px;
+
         margin: 0px auto 20px auto;
+
         position: relative;
+
+        @media (max-width: 1200px){
+            grid-template-columns: auto;
+        }
     }
 
     // .heder-pc__left
     &__left {
+        justify-self: end;
+        align-self: self-end;
+
         display: flex;
-        column-gap: 20px;
-        padding: 0px 0px 10px 0px;
+        column-gap: 30px;
+
+        padding: 0px 0px 7px 0px;
+
         @media (max-width: 1260px){
             display: none;
         }
@@ -42,16 +54,11 @@
 
     // .heder-pc__link
     &__link {
-        font-family: "Mont";
-        font-size: 18px;
-        font-weight: 400;
-        color: $color-text;
-        @media (max-width: 1910px){
-            font-size: calc(16px + 2 * (100vw - 1200px) / 710);
-        }
-        @media (max-width: 1260px){
-            font-size: 16px;
-        }
+        @include text_streach (15, 13, $color-text);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        white-space: nowrap;
+
         &:hover{
             color: $color-gold;
         }
@@ -61,20 +68,30 @@
     }
 
     // .heder-pc__logo
-    &__logo img{
-        object-fit: cover;
-        height: 120px;
-        width: auto;
-        @media (max-width: 1200px){
+    &__logo {
+        justify-self: center;
+        align-self: self-end;
+
+        & img{
+            object-fit: cover;
             height: 100px;
+            width: auto;
+            @media (max-width: 1200px){
+                margin: 10px 0px 0px 0px;
+                height: 80px;
+            }
         }
     }
 
     // .heder-pc__right
     &__right {
+        justify-self: start;
+        align-self: self-end;
+
         display: flex;
-        column-gap: 20px;
-        padding: 0px 0px 10px 0px;
+        column-gap: 30px;
+
+        padding: 0px 0px 7px 0px;
         @media (max-width: 1260px){
             display: none;
         }
@@ -82,17 +99,19 @@
 }
 
 .burger {
-    background-color: #D2B69570;
+    background-color: $background-burger-line;
     width: 50px;
     height: 50px;
     border-radius: 4px;
     transition: all 0.3s ease;
     transition-delay: 0.7s;
     position: fixed;
-    top: 120px;
+    top: 105px;
     left: 20px;
     z-index: 2;
+
     margin: -70px 0px 20px 0px;
+
         &.fixed{
         top: 85px;
     }
@@ -118,8 +137,8 @@
     // .burger__line
     &__line {
         width: 80%;
-        height: 3px;
-        background-color: rgba(255, 255, 255, 0.527);
+        height: $hi-burger-line;
+        background-color: $color-burger-line;
         &::before {
             position: absolute;
             content: '';
@@ -127,18 +146,20 @@
             left: 50%;
             transform: translate(-50%, 0);
             width: 80%;
-            height: 3px;
-            background-color: rgba(255, 255, 255, 0.527);
+            height: $hi-burger-line;
+            background-color: $color-burger-line;
         }
         &::after {
             position: absolute;
             content: '';
+
             bottom: 10px;
             left: 50%;
             transform: translate(-50%, 0);
             width: 80%;
-            height: 3px;
-            background-color: rgba(255, 255, 255, 0.527);
+            height: $hi-burger-line;
+
+            background-color: $color-burger-line;
         }
     }
 }

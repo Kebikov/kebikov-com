@@ -1,7 +1,7 @@
 .gallery {
     display: flex;
     justify-content: center;
-    column-gap: 5px;
+    column-gap: 10px;
     width: 100%;
     @media (max-width: 749px){
         column-gap: 4px;
@@ -12,7 +12,7 @@
         flex: 0 1 33%;
         display: flex;
         flex-direction: column;
-        row-gap: 5px;
+        row-gap: 10px;
         @media (max-width: 749px){
             flex: 0 1 100%;
             row-gap: 4px;

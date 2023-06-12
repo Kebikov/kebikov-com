@@ -1,20 +1,19 @@
 import './App.scss';
-import Header from '../components/Header/Header';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 //* redux 
 import store from '../redux/store/store';
 import { Provider } from 'react-redux';
-//*comp
-//import lineContext from '../context/context-line-header';
-import Spinner from '../components/Spiner/Spiner';
-import Slideshow from '../pages/Slideshow';
-import AboutMe from '../pages/AboutMe';
-import Reviews from '../pages/Reviews';
-import Contacts from '../pages/Contacts';
-import Footer from '../components/Footer/Footer';
-import UpButton from '../components/UpButton/UpButton';
-import BeautifulWeddingFinale from '../pages/ArticlesPages/beautiful-wedding-finale/BeautifulWeddingFinale';
+//*components 
+const Header = lazy(() => import('../components/Header/Header'));
+const Spiner = lazy(() => import('../components/Spiner/Spiner'));
+const Contacts = lazy(() => import('../pages/Contacts'));
+const Slideshow = lazy(() => import('../pages/Slideshow'));
+const AboutMe = lazy(() => import('../pages/AboutMe'));
+const Reviews = lazy(() => import('../pages/Reviews'));
+const Footer = lazy(() => import('../components/Footer/Footer'));
+const UpButton = lazy(() => import('../components/UpButton/UpButton'));
+const BeautifulWeddingFinale = lazy(() => import('../pages/ArticlesPages/beautiful-wedding-finale/BeautifulWeddingFinale'));
 const PricePackages = lazy(() => import('../pages/PricePackages'));
 const BouquetRoll = lazy(() => import('../pages/ArticlesPages/bouquet-roll/BouquetRoll'));
 const Page404 = lazy(() => import('../pages/Page404'));
@@ -45,7 +44,7 @@ function App() {
                 <div className="wrapper">
                     <Header/>
                     <main className="main">
-                        <Suspense fallback={<Spinner/>}>
+                        <Suspense fallback={<Spiner/>}>
                             <Routes>
                                 <Route path='/' element={<Main/>}/>
                                 <Route path='/weddings-all' element={<WeddingsAll/>}/>

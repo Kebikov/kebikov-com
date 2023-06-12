@@ -10,7 +10,7 @@ import { setLineHeader } from "../redux/slice/indexSlice";
 const Main = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
-        dispatch(setLineHeader(true));
+        //dispatch(setLineHeader(true));
         return () => {
             dispatch(setLineHeader(false));
         }
