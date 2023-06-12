@@ -17,13 +17,13 @@
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    column-gap: 5px;
-    row-gap: 5px;
+    column-gap: 12px;
+    row-gap: 12px;
     width: 100%;
 
     // .wedding-series__box
     &__box {
-        flex: 1 1 33%;
+        flex: 1 1 31%;
         min-width: 375px;
         position: relative;
         overflow: hidden;

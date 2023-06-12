@@ -20,7 +20,7 @@ const Main = () => {
 
 
     return(
-            <div className="container">
+            <div className="container-main">
                 <Helmet>
                     <title>Свадебный Фотограф Минск, Кебиков Евгений.</title>
                     <meta

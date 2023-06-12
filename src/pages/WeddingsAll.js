@@ -25,7 +25,7 @@ const WeddingsAll = () => {
                     <link rel="canonical" href="https://kebikov.com/weddings-all" />
                 </Helmet>
 
-                <HederArticles title={'Свадебные серии'}/>
+                {/* <HederArticles title={'Свадебные серии'}/> */}
                 <div className="wed-center container">
                     <WeddingSeries/>
                 </div>

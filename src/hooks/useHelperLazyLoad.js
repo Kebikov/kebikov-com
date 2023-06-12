@@ -17,7 +17,7 @@ const useHelperLazyLoad = () => {
         })
     }
 
-    const option = {rootMargin: '800px 0px 800px 0px'};
+    const option = {rootMargin: '200px 0px 200px 0px'};
 
     return {entryCall, option}
 }

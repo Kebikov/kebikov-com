@@ -23,7 +23,7 @@ const PricePackages = () => {
                     <link rel="canonical" href="https://kebikov.com/price-packages"/>
                 </Helmet>
 
-                <HederArticles title={'Свадебный фотограф Минск,цены'}/>
+                {/* <HederArticles title={'Свадебный фотограф Минск,цены'}/> */}
                 <Faq/>
                 <PricePackageHeader title={arrHeader[0].title} cash={arrHeader[0].cash} description={arrHeader[0].description} arrParagraphs={arrHeader[0].arrParagraphs} pic={arrHeader[0].pic}/>
                 <PricePackageHeader title={arrHeader[1].title} cash={arrHeader[1].cash} description={arrHeader[1].description} arrParagraphs={arrHeader[1].arrParagraphs} pic={arrHeader[1].pic} correction={true} />

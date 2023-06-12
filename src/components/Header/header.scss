@@ -10,6 +10,7 @@
         background-color: $color-gold;
     }
 }
+
 .heder-pc {
     width: 100%;
     height: auto;
@@ -32,7 +33,7 @@
 
         position: relative;
 
-        @media (max-width: 1200px){
+        @media (max-width: 1260px){
             grid-template-columns: auto;
         }
     }
@@ -98,6 +99,7 @@
     }
 }
 
+//= .burger 
 .burger {
     background-color: $background-burger-line;
     width: 50px;
@@ -106,7 +108,7 @@
     transition: all 0.3s ease;
     transition-delay: 0.7s;
     position: fixed;
-    top: 105px;
+    top: 112px;
     left: 20px;
     z-index: 2;
 
@@ -164,22 +166,29 @@
     }
 }
 
+//= .menu-mob 
 .menu-mob {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     width: 80%;
     height: 100%;
-    background:#fff url(../../resources/images/header/blur.jpg) 0 0 / cover no-repeat;
+
+    padding: 0px 0px 0px 40px;
+
+    background: #fff;
+
     background-position: 70% 0;
+
     position: fixed;
     top: 0;
     left: -100%;
     z-index: 1000;
+
     transition: all 0.4s ease;
+
     max-width: 500px;
     box-shadow: 0px 5px 15px 25px rgba(0, 0, 0, 0.3);
-
 
     border-radius: 0 30px 30px 0 / 0 40px 40px 0;
     &::before{
@@ -190,8 +199,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(132, 132, 132, 0.5);
-        border-radius: 0 30px 30px 0 / 0 40px 40px 0;
+        background-color: #fff;
     }
     &.active{
         left: 0;
@@ -203,8 +211,7 @@
         left: 20px;
         width: 40px;
         height: 40px;
-        border: #ba9f5a4c 3px solid;
-        border-radius: 5px;
+
         &::before{
             content: '';
             position: absolute;
@@ -213,7 +220,7 @@
             width: 35px;
             height: 3px;
             transform: rotate(45deg);
-            background-color: #ba9f5a4c;
+            background-color: $color-text;
         } 
         &::after{
             content: '';
@@ -223,7 +230,7 @@
             width: 35px;
             height: 3px;
             transform: rotate(-45deg);
-            background-color: #ba9f5a4c;
+            background-color: $color-text;
         }
     }
 
@@ -235,9 +242,14 @@
     // .menu-mob__link
     &__link {
         font-family: 'Mont';
-        font-size: 20px;
+        font-size: 17px;
         font-weight: 400;
-        color: rgba(255, 255, 255, 0.7);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $color-text;
+        @media (max-width: 1200px) {
+            font-size: 15px;
+        }
         &:hover{
             color: $color-gold;
         }

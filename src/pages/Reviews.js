@@ -26,7 +26,7 @@ const Reviews = () => {
                     />
                     <link rel="canonical" href="https://kebikov.com/reviews"/>
                 </Helmet>
-                <HederArticles title={'Отзывы клиентов'}/>
+                {/* <HederArticles title={'Отзывы клиентов'}/> */}
                 <div className="container">
                     <LineTotalReviews/>
                     <GellaryReviews/>

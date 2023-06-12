@@ -57,7 +57,7 @@ const AboutMe = () => {
                 <link rel="canonical" href="https://kebikov.com/about-me"/>
             </Helmet>
 
-            <HederArticles title={'Кратко обо мне'}/>
+            {/* <HederArticles title={'Кратко обо мне'}/> */}
             <div className="container">
                 <div className="about">
                     <div className="about__body">
@@ -79,7 +79,7 @@ const AboutMe = () => {
                         </motion.div>
                     </div>
                 </div>
-                <FormContact color={'#fff'}/>
+                {/* <FormContact color={'#fff'}/> */}
             </div>
         </>
     )
