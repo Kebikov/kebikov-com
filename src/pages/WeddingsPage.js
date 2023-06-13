@@ -1,8 +1,10 @@
 import Wedding from "../components/Wedding/Wedding";
-import { WeddingSeries, nameSeries } from "../components/WeddingSeries/WeddingSeries";
+import WeddingSeries from "../components/WeddingSeries/WeddingSeries";
 import { useParams } from "react-router-dom";
 import { useEffect} from "react";
 import { Helmet } from "react-helmet";
+//* const 
+import nameSeries from '../pages/data/dataSeries';
 
 const WeddingsPage = () => {
     useEffect(() => {
@@ -17,7 +19,7 @@ const WeddingsPage = () => {
         if(item[1] === wed) wedName = item[0];
     });
     
-    console.log('render', wed);
+    
     //* render 
     return(
             <>

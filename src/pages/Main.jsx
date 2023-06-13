@@ -1,13 +1,17 @@
 import GalleryMain from "../components/GalleryMain/GalleryMain";
 import TitlteBlock from "../components/TitlteBlock/TitlteBlock";
-import { WeddingSeries } from "../components/WeddingSeries/WeddingSeries";
+import WeddingSeries from "../components/WeddingSeries/WeddingSeries";
 import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 
 import { useDispatch } from "react-redux";
 import { setLineHeader } from "../redux/slice/indexSlice";
 
+
 const Main = () => {
+    
+    const dispatch = useDispatch();
+
     useEffect(() => {
         window.scrollTo(0, 0);
         //dispatch(setLineHeader(true));
@@ -16,11 +20,9 @@ const Main = () => {
         }
     },[]);
 
-    const dispatch = useDispatch();
-
 
     return(
-            <div className="container-main">
+            <div className="container">
                 <Helmet>
                     <title>Свадебный Фотограф Минск, Кебиков Евгений.</title>
                     <meta
@@ -29,9 +31,9 @@ const Main = () => {
                     />
                     <link rel="canonical" href="https://kebikov.com/" />
                 </Helmet>
-
+                
                 <GalleryMain/>
-                <TitlteBlock title={'Свадебный фотограф Минск'}/>
+                <TitlteBlock title={'Свадебныe серии'}/>
                 <WeddingSeries plusClass={'mb-50'}/>
             </div>
     )

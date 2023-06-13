@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 import usehelpPassAllImg from '../../hooks/usehelpPassAllImg';
 import useHelperLazyLoad from '../../hooks/useHelperLazyLoad';
 import box from '../../resources/images/spiner/box.jpg';
+//* components 
+import PictureObserver from '../picture.observer/PictureObserver';
 
 //= GalleryMain 
 const GalleryMain = () => {
@@ -10,9 +12,6 @@ const GalleryMain = () => {
     const [columsTotal, setColumnsTotal] = useState(3);
 
     useEffect(() => {
-        const imgObserver = new IntersectionObserver(entryCall, option);
-        const pictureAll = document.querySelectorAll('picture');
-        pictureAll.forEach(item => imgObserver.observe(item));
         window.addEventListener('resize', size);
         size();
     },[columsTotal]);
@@ -26,6 +25,7 @@ const GalleryMain = () => {
     }
 
     const allImg = usehelpPassAllImg(require.context('../../resources/images/main-page/', false, /\.(png|jpe?g|svg|webp)$/));
+
     const colums = (row, x) => {
         let arrObj = {};
         let key = 0;
@@ -41,12 +41,9 @@ const GalleryMain = () => {
         }
 
         function createRow(arr) {
-            const row = arr.map(item => {
+            const row = arr.map((item, i) => {
                 return (
-                        <picture className={'anime'} key={item}>
-                            <source type="image/webp" data-srcset={item[1]} key={item[1]}/>
-                            <img src={box} height={'800px'} width={'1200px'} data-src={item[0]} alt={'Свадебное фото в Минске'} key={item[0]} />
-                        </picture>
+                    <PictureObserver item={item} key={i} />
                 )
             })
             key++;
@@ -63,7 +60,7 @@ const GalleryMain = () => {
         document.documentElement.clientWidth > 749 ? setColumnsTotal(3) : setColumnsTotal(2);
     }
 
-    const {entryCall, option} = useHelperLazyLoad();
+    //const {entryCall, option} = useHelperLazyLoad();
 
     const pictures = columsTotal === 3 ? colums(3, 0) : colums(2, 1);
 

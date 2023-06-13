@@ -1,4 +1,4 @@
-import {WeddingSeries} from "../components/WeddingSeries/WeddingSeries";
+import WeddingSeries from "../components/WeddingSeries/WeddingSeries";
 import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import HederArticles from '../components/HederArticles/HederArticles';
