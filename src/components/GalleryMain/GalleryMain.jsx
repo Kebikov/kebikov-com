@@ -14,6 +14,9 @@ const GalleryMain = () => {
     useEffect(() => {
         window.addEventListener('resize', size);
         size();
+        return () => {
+            window.removeEventListener('resize', size);
+        }
     },[columsTotal]);
     
 

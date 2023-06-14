@@ -1,7 +1,7 @@
 import '../GalleryMain/galleryMain.scss';
 //* hooks 
 import { useInView } from 'react-intersection-observer';
-import { useState, useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 //* img 
 import box from '../../resources/images/spiner/box.jpg';
 
@@ -9,43 +9,37 @@ import box from '../../resources/images/spiner/box.jpg';
 //= PictureObserver 
 const PictureObserver = ({item}) => {
 
-    const [isIntersecting, setIsIntersecting] = useState(false);
-    const [isLoad, setIsLoad] = useState(false);
+    const refPicture = useRef(null);
 
-    const onLoading = (e) => {
-        console.log('Load', e.target);
-        setIsLoad(true);
-    }
-
-    const {ref, inView} = useInView({ threshold: 0, triggerOnce: true });
+    const {ref, inView} = useInView({ threshold: 0.1, triggerOnce: true });
 
     useEffect(() => {
         if(inView) {
-            setIsIntersecting(true);
+            const source = refPicture.current;
+            const img = source.nextElementSibling;
+            source.srcset = item[0];
+            img.src = item[1];
+            img.onload = () => {
+                img.className = 'loading-img';
+            }
         }
     },[inView]);
 
     return(
-        <div ref={ref} >
-            <picture>
-                {
-                    isIntersecting ?
-                    <>
-                        <source type="image/webp" srcSet={isLoad ? item[1] : null} />
-                        <img 
-                            onLoad={onLoading} 
-                            className={isLoad ? 'loading-img' : 'anime'} 
-                            src={item[0]} 
-                            height={'800px'} 
-                            width={'1200px'} 
-                            alt='Свадебное фото в Минске' 
-                        />
-                    </>
-                    :
-                    <img className='anime' src={box} height={'800px'} width={'1200px'} alt='Свадебное фото в Минске' />
-                }
-            </picture>
-        </div>
+        <picture ref={ref}>
+            <source 
+                ref={refPicture}
+                type="image/webp" 
+                srcSet={null} 
+            />
+            <img 
+                className={'anime'} 
+                src={box} 
+                height={'800px'} 
+                width={'1200px'} 
+                alt='Свадебное фото в Минске' 
+            />
+        </picture>
     )
 }
 
