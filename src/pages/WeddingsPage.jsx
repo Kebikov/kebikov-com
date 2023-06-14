@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { useEffect} from "react";
 import { Helmet } from "react-helmet";
 //* const 
-import nameSeries from '../pages/data/dataSeries';
+import nameSeries from './data/dataSeries';
 
 const WeddingsPage = () => {
     useEffect(() => {
