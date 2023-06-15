@@ -81,7 +81,6 @@ const Header = () => {
                     <div className="menu-mob__close" onClick={onBurger}></div>
                     {link(main.link, main.title, 'menu-mob__link', 'menu-mob__line')}
                     {link(weddings.link, weddings.title, 'menu-mob__link', 'menu-mob__line')}
-                    {link(slideshow.link, slideshow.title, 'menu-mob__link', 'menu-mob__line')}
                     {link(articles.link, articles.title, 'menu-mob__link', 'menu-mob__line')}
                     {link(aboutMe.link, aboutMe.title, 'menu-mob__link', 'menu-mob__line')}
                     {link(reviews.link, reviews.title, 'menu-mob__link', 'menu-mob__line')}
