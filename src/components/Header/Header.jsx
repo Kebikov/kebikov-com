@@ -58,12 +58,11 @@ const Header = () => {
                     <ul className="heder-pc__left">
                         {link(main.link, main.title, 'heder-pc__link', 'heder-pc__line')}
                         {link(weddings.link, weddings.title, 'heder-pc__link', 'heder-pc__line')}
-                        {link(slideshow.link, slideshow.title, 'heder-pc__link', 'heder-pc__line')}
                         {link(articles.link, articles.title, 'heder-pc__link', 'heder-pc__line')}
+                        {link(aboutMe.link, aboutMe.title, 'heder-pc__link', 'heder-pc__line')}
                     </ul>
                     {logo()}
                     <ul className="heder-pc__right">
-                        {link(aboutMe.link, aboutMe.title, 'heder-pc__link', 'heder-pc__line')}
                         {link(reviews.link, reviews.title, 'heder-pc__link', 'heder-pc__line')}
                         {link(praice.link, praice.title, 'heder-pc__link', 'heder-pc__line')}
                         {link(contacts.link, contacts.title, 'heder-pc__link', 'heder-pc__line')}

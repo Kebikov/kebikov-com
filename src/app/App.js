@@ -8,7 +8,6 @@ import { Provider } from 'react-redux';
 const Header = lazy(() => import('../components/Header/Header'));
 const Spiner = lazy(() => import('../components/Spiner/Spiner'));
 const Contacts = lazy(() => import('../pages/Contacts'));
-const Slideshow = lazy(() => import('../pages/Slideshow'));
 const AboutMe = lazy(() => import('../pages/AboutMe'));
 const Reviews = lazy(() => import('../pages/Reviews'));
 const Footer = lazy(() => import('../components/Footer/Footer'));
@@ -49,7 +48,6 @@ function App() {
                                 <Route path='/' element={<Main/>}/>
                                 <Route path='/weddings-all' element={<WeddingsAll/>}/>
                                     <Route path='/weddings-all/:wed' element={<WeddingsPage/>}/>
-                                <Route path='slideshow' element={<Slideshow/>}/>
                                 <Route path='articles' element={<Articles/>}/>
                                     <Route path='/articles/beautiful-wedding-finale' element={<BeautifulWeddingFinale/>}/>
                                     <Route path='/articles/bouquet-roll' element={<BouquetRoll/>}/>

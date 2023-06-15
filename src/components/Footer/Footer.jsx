@@ -5,6 +5,7 @@ import viber from '../../resources/images/footer/viber.png';
 import vk from '../../resources/images/footer/vk.png';
 
 
+//= Footer 
 const Footer = () => {
     return(
         <footer className="footer">

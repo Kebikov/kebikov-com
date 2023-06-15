@@ -1,8 +1,6 @@
 import './galleryMain.scss';
 import { useEffect, useState } from 'react';
 import usehelpPassAllImg from '../../hooks/usehelpPassAllImg';
-import useHelperLazyLoad from '../../hooks/useHelperLazyLoad';
-import box from '../../resources/images/spiner/box.jpg';
 //* components 
 import PictureObserver from '../picture.observer/PictureObserver';
 
@@ -28,7 +26,7 @@ const GalleryMain = () => {
     }
 
     const allImg = usehelpPassAllImg(require.context('../../resources/images/main-page/', false, /\.(png|jpe?g|svg|webp)$/));
-
+    //console.log(allImg);
     const colums = (row, x) => {
         let arrObj = {};
         let key = 0;
@@ -62,8 +60,6 @@ const GalleryMain = () => {
     const size = () => {
         document.documentElement.clientWidth > 749 ? setColumnsTotal(3) : setColumnsTotal(2);
     }
-
-    //const {entryCall, option} = useHelperLazyLoad();
 
     const pictures = columsTotal === 3 ? colums(3, 0) : colums(2, 1);
 

@@ -6,7 +6,7 @@ import CoverWedding from '../cover.wedding/CoverWedding';
 import nameSeries from '../../pages/data/dataSeries';
 
 //= WeddingSeries 
-const WeddingSeries = ({plusClass}) => {
+const WeddingSeries = () => {
 
     const allImg = usehelpPassAllImg(require.context('../../resources/images/weddings-series/', false, /\.(png|jpe?g|svg|webp)$/));
 
@@ -17,10 +17,8 @@ const WeddingSeries = ({plusClass}) => {
         )
     });
 
-    const classPlus = `wedding-series ${plusClass}`;
-
     return(
-        <div className={classPlus}>
+        <div className="wedding-series">
             {blocks}
         </div>
     )

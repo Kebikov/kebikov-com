@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet";
 import { useDispatch } from "react-redux";
 import { setLineHeader } from "../redux/slice/indexSlice";
 
-
+//-- Main 
 const Main = () => {
     
     const dispatch = useDispatch();
@@ -34,7 +34,7 @@ const Main = () => {
                 
                 <GalleryMain/>
                 <TitlteBlock title={'Свадебныe серии'}/>
-                <WeddingSeries plusClass={'mb-50'}/>
+                <WeddingSeries/>
             </div>
     )
 }

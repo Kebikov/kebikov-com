@@ -27,7 +27,6 @@ const usehelpPassAllImg = (context, only = 2) => {
 
 export default usehelpPassAllImg;
 
-//const allImg = usehelpPassAllImg(require.context('../../resources/images/main-page/', false, /\.(png|jpe?g|svg|webp)$/));
 
 
 
