@@ -17,10 +17,12 @@ const PictureObserver = ({item}) => {
         if(inView) {
             const source = refPicture.current;
             const img = source.nextElementSibling;
-            source.srcset = item[0];
-            img.src = item[1];
+            source.srcset = item[1];
+            img.src = item[0];
             img.onload = () => {
                 img.className = 'loading-img';
+                img.removeAttribute('height');
+                img.removeAttribute('width');
             }
         }
     },[inView]);
@@ -29,8 +31,7 @@ const PictureObserver = ({item}) => {
         <picture ref={ref}>
             <source 
                 ref={refPicture}
-                type="image/webp" 
-                srcSet={null} 
+                type="image/webp"
             />
             <img 
                 className={'anime'} 
