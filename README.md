@@ -1,4 +1,4 @@
-# Curent version app ?v=2.5
+# Curent version app ?v=2.7
 
 # Getting Started with Create React App
 

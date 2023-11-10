@@ -1,3 +1,4 @@
+import '../beautiful-wedding-finale/beautifulWeddingFinale.scss';
 import HederArticles from '../../../components/HederArticles/HederArticles';
 import { Helmet } from "react-helmet";
 import { useEffect } from 'react';

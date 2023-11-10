@@ -1,3 +1,4 @@
+import '../beautiful-wedding-finale/beautifulWeddingFinale.scss';
 import HederArticles from '../../../components/HederArticles/HederArticles';
 import ArticleOption from '../../../components/ArticleOption/ArticleOption';
 import useArticle from '../../../hooks/useArticle';

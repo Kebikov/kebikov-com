@@ -3,6 +3,7 @@ const useArticle = () => {
     //= FinaleBox 
     const FinaleBox = (props) => {
     const {title, text, img} = props.info;
+    console.log(title);
     const sideStyle = props.side ? 'left-img__item-img' : 'left-img__item-img _order-2';
     const sideStyleTwo = props.side ? 'left-img__item-text' : 'left-img__item-text _order-1';
 
