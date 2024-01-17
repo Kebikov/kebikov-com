@@ -20,9 +20,10 @@
 ---
 ## 📸 Screenshot:
 <div align="center" >
-  <img src="https://github.com/Kebikov/kebikov/blob/main/assets/kebikov.com/img/1.jpg" alt="Описание изображения" width="700" >
-  <img src="https://github.com/Kebikov/kebikov/blob/main/assets/kebikov.com/img/2.jpg" alt="Описание изображения" width="700" >
-  <img src="https://github.com/Kebikov/kebikov/blob/main/assets/kebikov.com/img/3.jpg" alt="Описание изображения" width="700" >
+  <img src="https://github.com/Kebikov/kebikov/blob/main/assets/kebikov.com/img/5.jpg" alt="Описание изображения" width="700" >
+  <img src="https://github.com/Kebikov/kebikov/blob/main/assets/kebikov.com/img/6.jpg" alt="Описание изображения" width="700" >
+  <img src="https://github.com/Kebikov/kebikov/blob/main/assets/kebikov.com/img/7.jpg" alt="Описание изображения" width="700" >
+  <img src="https://github.com/Kebikov/kebikov/blob/main/assets/kebikov.com/img/8.jpg" alt="Описание изображения" width="700" >
 </div>
 
 ---
