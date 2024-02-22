@@ -4,6 +4,7 @@ import ArticleOption from '../../../components/ArticleOption/ArticleOption';
 import useArticle from '../../../hooks/useArticle';
 import { useEffect } from 'react';
 import { Helmet } from "react-helmet";
+import SEO from '../../../components/SEO/SEO';
 import jpg1 from '../../../resources/images/articles/beautiful-wedding-finale/1.jpg';
 import jpg2 from '../../../resources/images/articles/beautiful-wedding-finale/2.jpg';
 import jpg3 from '../../../resources/images/articles/beautiful-wedding-finale/3.jpg';
@@ -129,15 +130,13 @@ const BeautifulWeddingFinale = () => {
     //* render 
     return(
         <>
-            <Helmet>
-                <title>15 Вариантов Красивого Свадебного Финала !</title>
-                <meta
-                    name="description"
-                    content="Завершение свадебного вечера, подборка 15 вариантов финала свадьбы, читайте чем завершить свадебный вечер, как зафиналить свадьбу ?"
-                />
-                <link rel="canonical" href="https://kebikov.com/articles/beautiful-wedding-finale"/>
-            </Helmet>
-            {console.log('render')}
+            <SEO
+                url='https://kebikov.com/articles/beautiful-wedding-finale'
+                title='15 Вариантов Красивого Свадебного Финала !'
+                description='Завершение свадебного вечера, подборка 15 вариантов финала свадьбы, читайте чем завершить свадебный вечер, как зафиналить свадьбу ?'
+                img='https://kebikov.com/opengraph/beautiful-wedding-finale.jpg'
+            />
+
             <HederArticles title={'15 ВАРИАНТОВ КРАСИВОГО СВАДЕБНОГО ФИНАЛА'}/>
             <div className="options">
                 <ArticleOption text={'Самое долгожданное событие для каждой не женатой девушки на свадьбе — это бросание букета невесты. В классическом варианте, невеста становится спиной к не женатым подружкам и бросает его, не глядя через плечо. Сейчас я расскажу, как это сделать интересно и весело!'}/>
