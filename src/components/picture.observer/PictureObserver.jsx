@@ -11,33 +11,41 @@ const PictureObserver = ({item}) => {
 
     const refPicture = useRef(null);
 
-    const {ref, inView} = useInView({ threshold: 0.1, triggerOnce: true });
+    const {ref, inView} = useInView({ threshold: 0, triggerOnce: true });
 
     useEffect(() => {
-        if(inView) {
+        if(inView && item[0]) {
             const source = refPicture.current;
             const img = source.nextElementSibling;
-            source.srcset = item[1];
-            img.src = item[0];
+
             img.onload = () => {
+                console.log('Загрузилось !', item[0]);
                 img.className = 'loading-img';
-                img.removeAttribute('height');
-                img.removeAttribute('width');
             }
+
+            source.srcset = item[1];
+            console.log('IMG = ', img, inView);
+            img.src = item[0];
+
         }
     },[inView]);
+
+    if(inView) {
+        console.log(item[0]);
+    }
 
     return(
         <picture ref={ref}>
             <source 
                 ref={refPicture}
                 type="image/webp"
+                srcSet={null}
             />
             <img 
                 className={'anime'} 
                 src={box} 
-                height={'800px'} 
-                width={'1200px'} 
+                height={'800'} 
+                width={'1200'} 
                 alt='Свадебное фото в Минске' 
             />
         </picture>

@@ -2,7 +2,6 @@ import GalleryMain from "../components/GalleryMain/GalleryMain";
 import TitlteBlock from "../components/TitlteBlock/TitlteBlock";
 import WeddingSeries from "../components/WeddingSeries/WeddingSeries";
 import { useEffect } from "react";
-import { Helmet } from "react-helmet";
 import SEO from "../components/SEO/SEO";
 
 import { useDispatch } from "react-redux";
@@ -10,7 +9,6 @@ import { setLineHeader } from "../redux/slice/indexSlice";
 
 //-- Main 
 const Main = () => {
-    
     const dispatch = useDispatch();
 
     useEffect(() => {

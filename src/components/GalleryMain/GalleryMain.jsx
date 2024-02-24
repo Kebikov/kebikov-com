@@ -1,5 +1,5 @@
 import './galleryMain.scss';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import usehelpPassAllImg from '../../hooks/usehelpPassAllImg';
 //* components 
 import PictureObserver from '../picture.observer/PictureObserver';
@@ -25,8 +25,8 @@ const GalleryMain = () => {
         }
     }
 
-    const allImg = usehelpPassAllImg(require.context('../../resources/images/main-page/', false, /\.(png|jpe?g|svg|webp)$/));
-    //console.log(allImg);
+    const allImg = useMemo(() => usehelpPassAllImg(require.context('../../resources/images/main-page/', false, /\.(png|jpe?g|svg|webp)$/)),[] );
+    
     const colums = (row, x) => {
         let arrObj = {};
         let key = 0;
