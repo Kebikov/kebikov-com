@@ -1,6 +1,13 @@
-.spiner{
-    flex: 1 1 auto;
-    display:flex;
-    justify-content:center;
-    align-items: center;
+.spiner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    &__svg {
+        margin: '0 auto'; 
+        background: 'none'; 
+        display: 'block';
+    }
 }
