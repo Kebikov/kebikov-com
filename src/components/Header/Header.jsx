@@ -1,5 +1,6 @@
 import './header.scss';
-import logoImg from '../../resources/images/header/1.jpg';
+import { useMemo } from 'react';
+import logoImg from '../../resources/images/header/2.jpg';
 import { NavLink } from 'react-router-dom';
 //*redux
 import { useSelector, useDispatch } from 'react-redux';
@@ -7,12 +8,15 @@ import { setActiveMenu } from '../../redux/slice/indexSlice';
 
 //= Header 
 const Header = () => {
-    //* code 
-    const state = useSelector(state => state);
+    
+    const activeMenu = useSelector(state => state.activeMenu);
+    const lineHeader = useSelector(state => state.lineHeader);
     const dispatch = useDispatch();
+    
+    console.log('%cHeader', 'color: green; font-size:18px;');
 
     const onBurger = () => {
-        dispatch(setActiveMenu(!state.activeMenu));
+        dispatch(setActiveMenu(!activeMenu));
     }
 
     const onBurgerFalse = () => {
@@ -20,9 +24,8 @@ const Header = () => {
     }
 
     const link = (link, title, classId, classLi) => {
-
         const end = link === '/' ? true : false;
-
+        
         return(
             <li className={classLi}>
                 {end ? <NavLink end to={link} onClick={onBurgerFalse} className={( ({isActive}) => (isActive ? `${classId} activeLink` : classId) )}>{title}</NavLink> : <NavLink to={link} onClick={onBurgerFalse} className={( ({isActive}) => (isActive ? `${classId} activeLink` : classId) )}>{title}</NavLink>}
@@ -33,15 +36,14 @@ const Header = () => {
     const logo = () => {
         return(
             <div className="heder-pc__logo">
-                <img src={logoImg} alt="my_alt" height="120" width="230"/>
+                <img src={logoImg} alt="my_alt" height="80" width="153"/>
             </div>
         )
     }
 
-    //links to pages
+    // links to pages
     const main = {link: '/', title: 'Главная'};
     const weddings = {link: 'weddings-all', title: 'Свадебные серии'};
-    const slideshow = {link: 'slideshow', title: 'Slideshow'};
     const articles = {link: 'articles', title: 'Статьи'};
     const aboutMe = {link: 'about-me', title: 'Обо мне'};
     const reviews = {link: 'reviews', title: 'Отзывы клиентов'};
@@ -71,12 +73,12 @@ const Header = () => {
             </div>
 
             {/* menu for mobile phone */}
-            <div className={state.activeMenu ? "burger active" : "burger"}>
-                <div className={state.activeMenu ? "burger__body active" : "burger__body"} onClick={onBurger}>
+            <div className={activeMenu ? "burger active" : "burger"}>
+                <div className={activeMenu ? "burger__body active" : "burger__body"} onClick={onBurger}>
                     <div className="burger__line"></div>
                 </div>
             </div>
-            <div className={state.activeMenu ? "menu-mob active" : "menu-mob"}>
+            <div className={activeMenu ? "menu-mob active" : "menu-mob"}>
                 <ul className="menu-mob__list">
                     <div className="menu-mob__close" onClick={onBurger}></div>
                     {link(main.link, main.title, 'menu-mob__link', 'menu-mob__line')}
@@ -88,9 +90,12 @@ const Header = () => {
                     {link(contacts.link, contacts.title, 'menu-mob__link', 'menu-mob__line')}
                 </ul>
             </div>
-            {state.lineHeader ? <div className="header__bottom-line"/> : null}
+            {lineHeader ? <div className="header__bottom-line"/> : null}
         </header>
     )
 }
 
 export default Header;
+
+
+

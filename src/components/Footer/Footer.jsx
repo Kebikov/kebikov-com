@@ -7,20 +7,22 @@ import vk from '../../resources/images/footer/vk.png';
 
 //= Footer 
 const Footer = () => {
+    console.log('%cFooter', 'color: green; font-size:18px;');
+    
     return(
         <footer className="footer">
             <div className="footer__icon">
                 <a href={"tel:+375296949843"} className="footer__link">
-                    <img src={tel} alt="tel" className="footer__img" />
+                    <img src={tel} className="footer__img" alt="phone number" />
                 </a>
                 <a href={"http://instagram.com/_u/kebikov"} className="footer__link">
-                    <img src={insta} alt="tel" className="footer__img" />
+                    <img src={insta} className="footer__img"  alt="logo instagram" />
                 </a>
                 <a href={"viber://chat?number=%2B375296949843"} className="footer__link" >
-                    <img src={viber} className="footer__img" />
+                    <img src={viber} className="footer__img" alt='logo viber' />
                 </a>
                 <a href={"https://vk.com/id58859701"} className="footer__link">
-                    <img src={vk} alt="tel" className="footer__img" />
+                    <img src={vk}  className="footer__img" alt="logo vk" />
                 </a>
             </div>
             <div className="footer__text">

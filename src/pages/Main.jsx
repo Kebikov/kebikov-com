@@ -1,11 +1,12 @@
+import { lazy } from 'react';
 import GalleryMain from "../components/GalleryMain/GalleryMain";
-import TitlteBlock from "../components/TitlteBlock/TitlteBlock";
-import WeddingSeries from "../components/WeddingSeries/WeddingSeries";
 import { useEffect } from "react";
 import SEO from "../components/SEO/SEO";
-
 import { useDispatch } from "react-redux";
 import { setLineHeader } from "../redux/slice/indexSlice";
+//: Lazy
+const WeddingSeries = lazy(() => import('../components/WeddingSeries/WeddingSeries'));
+const TitlteBlock = lazy(() => import('../components/TitlteBlock/TitlteBlock'));
 
 //-- Main 
 const Main = () => {
@@ -17,7 +18,7 @@ const Main = () => {
         return () => {
             dispatch(setLineHeader(false));
         }
-    },[]);
+    },[]); // eslint-disable-line 
 
 
     return(

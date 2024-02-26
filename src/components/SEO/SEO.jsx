@@ -17,7 +17,7 @@ import {Helmet} from 'react-helmet';
  * @example <SEO url="#" title="#" description="#" img="#"/>
  * @returns {import('@babel/types').JSXElement}
  */
-const SEO = ({url, title, description, img}) => {
+const SEO = ({url, title, description, img = 'https://kebikov.com/opengraph/kebikov.jpg'}) => {
     return(
         <Helmet>
             <title>{title}</title>

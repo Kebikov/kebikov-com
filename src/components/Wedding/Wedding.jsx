@@ -5,6 +5,7 @@ import box from '../../resources/images/spiner/box.jpg';
 import { useEffect } from 'react';
 
 const Wedding = ({link}) => {
+
     //* hooks 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -12,6 +13,7 @@ const Wedding = ({link}) => {
         const pictureAll = document.querySelectorAll('picture');
         pictureAll.forEach(item => imgObserver.observe(item));
     },[link]);
+
     const {entryCall, option} = useHelperLazyLoad();
 
     //* code 

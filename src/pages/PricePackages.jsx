@@ -3,9 +3,8 @@ import Faq from "../components/price-faq/Faq";
 import PricePackageHeader from "../components/pricePackageHeader/PricePackageHeader";
 import arrHeader from './data/dataPrice';
 import FormContact from '../components/FormContact/FormContact';
-import { Helmet } from "react-helmet";
-import HederArticles from '../components/HederArticles/HederArticles';
 import { useEffect } from 'react';
+import SEO from '../components/SEO/SEO';
 
 const PricePackages = () => {
     useEffect(() => {
@@ -13,15 +12,14 @@ const PricePackages = () => {
     },[]);
 
     return(
+        <>
+            <SEO
+                url='https://kebikov.com/price-packages'
+                title='Цены за Съемку Свадебного Дня Свадебного фотографа В Минске.'
+                description='Свадебный фотограф Минск, цены. Четыре вида готовых пакетов услуг, выберите уже готовый пакет. Приятные цены от 200 до 550 у.е.'
+            />
+        
             <div className="price-packages-body container">
-                <Helmet>
-                    <title>Свадебный Фотограф Минск, Цены за Съемку Свадебного Дня</title>
-                    <meta
-                        name="description"
-                        content="Свадебный фотограф Минск, цены. Четыре вида готовых пакетов услуг, выберите уже готовый пакет. Приятные цены от 200 до 550 у.е."
-                    />
-                    <link rel="canonical" href="https://kebikov.com/price-packages"/>
-                </Helmet>
 
                 {/* <HederArticles title={'Свадебный фотограф Минск,цены'}/> */}
                 <Faq/>
@@ -31,6 +29,7 @@ const PricePackages = () => {
                 <PricePackageHeader title={arrHeader[3].title} cash={arrHeader[3].cash} description={arrHeader[3].description} arrParagraphs={arrHeader[3].arrParagraphs} pic={arrHeader[3].pic}/>
                 <FormContact color={'#f1ece7'}/>
             </div>
+        </>
     )
 }
 

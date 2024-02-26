@@ -28,21 +28,24 @@ const PerfectWeddingPhotoSession = lazy(() => import('../pages/ArticlesPages/per
 
 //= App 
 function App() {
-
+    
     //* code 
     const bodyOverflow = () => {
         const body = document.body;
         store.getState().activeMenu ? body.style.overflowY = 'hidden' : body.style.overflowY = 'auto';
     }
+
     bodyOverflow();
+
 
     //* return 
     return (
+
         <Provider store={store}>
             <BrowserRouter>
                 <div className="wrapper">
                     <Header/>
-                    <main className="main">
+                    <main className="main" >
                         <Suspense fallback={<Spiner/>}>
                             <Routes>
                                 <Route path='/' element={<Main/>}/>

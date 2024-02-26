@@ -1,8 +1,8 @@
 import './galleryMain.scss';
-import { useEffect, useState, useMemo } from 'react';
-import usehelpPassAllImg from '../../hooks/usehelpPassAllImg';
+import { useEffect, useState } from 'react';
 //* components 
 import PictureObserver from '../picture.observer/PictureObserver';
+import picturesForPageMain from '../../helper/loadingImgForMainPage';
 
 //= GalleryMain 
 const GalleryMain = () => {
@@ -18,39 +18,31 @@ const GalleryMain = () => {
     },[columsTotal]);
     
 
-    //* code
-    const bunDragElement = (e) => {
-        if(document.documentElement.clientWidth > 1024) {
-            e.target.ondragstart = () => false;
-        }
-    }
-
-    const allImg = useMemo(() => usehelpPassAllImg(require.context('../../resources/images/main-page/', false, /\.(png|jpe?g|svg|webp)$/)),[] );
-    
     const colums = (row, x) => {
         let arrObj = {};
         let key = 0;
         const pictures = [];
+
         for(let i = 0; i < row; i++) {
             arrObj[i] = [];
-            for(let k = 0; k < allImg.length - x; k = k + row) {
-                if(allImg[i + k]) {
-                    arrObj[i].push(allImg[i + k]);
+            for(let k = 0; k < picturesForPageMain.length - x; k = k + row) {
+                if(picturesForPageMain[i + k]) {
+                    arrObj[i].push(picturesForPageMain[i + k]);
                 }
             }
             pictures.push(createRow(arrObj[i]));
         }
 
         function createRow(arr) {
-            const row = arr.map((item, i) => {
+            const rows = arr.map((item, i) => {
                 return (
-                    <PictureObserver item={item} key={i} />
+                    <PictureObserver item={item} row={row} key={i} />
                 )
             })
             key++;
             return (
                 <div className="gallery__column" key={key}>
-                    {row}
+                    {rows}
                 </div>
             )
         }

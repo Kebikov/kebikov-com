@@ -3,7 +3,6 @@ import HederArticles from '../../../components/HederArticles/HederArticles';
 import ArticleOption from '../../../components/ArticleOption/ArticleOption';
 import useArticle from '../../../hooks/useArticle';
 import { useEffect } from 'react';
-import { Helmet } from "react-helmet";
 import SEO from '../../../components/SEO/SEO';
 import jpg1 from '../../../resources/images/articles/beautiful-wedding-finale/1.jpg';
 import jpg2 from '../../../resources/images/articles/beautiful-wedding-finale/2.jpg';
@@ -123,9 +122,6 @@ const BeautifulWeddingFinale = () => {
     },[]);
 
     const {FinaleBox} = useArticle();
-
-    //* code 
-
 
     //* render 
     return(

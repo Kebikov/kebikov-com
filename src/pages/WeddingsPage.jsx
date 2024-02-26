@@ -10,10 +10,9 @@ const WeddingsPage = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     },[]);
+
     const {wed} = useParams();
 
-
-    //* code 
     let wedName = '';
     nameSeries.forEach(item => {
         if(item[1] === wed) wedName = item[0];
