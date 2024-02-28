@@ -2,14 +2,15 @@ import '../WeddingSeries/weddingSeries.scss';
 //* hooks 
 import { Link } from 'react-router-dom';
 import { useInView } from 'react-intersection-observer';
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect } from 'react';
 //* img 
 import box from '../../resources/images/spiner/box.jpg';
 
 
 //= CoverWedding 
 const CoverWedding = ({nameSeries, imgArr}) => {
-
+    console.log('===',nameSeries);
+    console.log('CoverWedding', imgArr);
     const [isIntersecting, setIsIntersecting] = useState(false);
 
     const {ref, inView} = useInView(
@@ -29,7 +30,6 @@ const CoverWedding = ({nameSeries, imgArr}) => {
 
     return(
             <Link className="wedding-series__box" to={`/weddings-all/${nameSeries.link}`} ref={ref} key={imgArr}>
-                {console.log('RENDER')}
                 <div className="wedding-series__item">
                     {
                         isIntersecting 
