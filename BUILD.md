@@ -1,10 +1,10 @@
 ## 1 - Build проекта.
 
-## 2 - Создать папку для opengraf
+## 2 - Создать папку для opengraf и добавить в build
 - Создать папку graph в build/static/opengraph\
 - Добавить в нее изображение для opengraf разметки, в итоге должна получится ссылка вида https://kebikov.com/static/opengraph/kebikov.jpg
 
-## 3 - Добавить файл .htaccess
+## 3 - Добавить в build файл .htaccess
 ```
 RewriteEngine On
 RewriteCond %{HTTPS} off
