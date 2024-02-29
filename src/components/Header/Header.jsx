@@ -1,99 +1,22 @@
 import './header.scss';
-import { useMemo } from 'react';
-import logoImg from '../../resources/images/header/2.jpg';
-import { NavLink } from 'react-router-dom';
-//*redux
-import { useSelector, useDispatch } from 'react-redux';
-import { setActiveMenu } from '../../redux/slice/indexSlice';
+import { useSelector } from 'react-redux';
+import MenuMobile from '../MenuMobile/MenuMobile';
+import MenuPc from '../MenuPc/MenuPc';
 
-//= Header 
+
 const Header = () => {
     
-    const activeMenu = useSelector(state => state.activeMenu);
     const lineHeader = useSelector(state => state.lineHeader);
-    const dispatch = useDispatch();
-    
-    console.log('%cHeader', 'color: green; font-size:18px;');
 
-    const onBurger = () => {
-        dispatch(setActiveMenu(!activeMenu));
-    }
-
-    const onBurgerFalse = () => {
-        dispatch(setActiveMenu(false));
-    }
-
-    const link = (link, title, classId, classLi) => {
-        const end = link === '/' ? true : false;
-        
-        return(
-            <li className={classLi}>
-                {end ? <NavLink end to={link} onClick={onBurgerFalse} className={( ({isActive}) => (isActive ? `${classId} activeLink` : classId) )}>{title}</NavLink> : <NavLink to={link} onClick={onBurgerFalse} className={( ({isActive}) => (isActive ? `${classId} activeLink` : classId) )}>{title}</NavLink>}
-            </li>
-        )
-    }
-
-    const logo = () => {
-        return(
-            <div className="heder-pc__logo">
-                <img src={logoImg} alt="my_alt" height="80" width="153"/>
-            </div>
-        )
-    }
-
-    // links to pages
-    const main = {link: '/', title: 'Главная'};
-    const weddings = {link: 'weddings-all', title: 'Свадебные серии'};
-    const articles = {link: 'articles', title: 'Статьи'};
-    const aboutMe = {link: 'about-me', title: 'Обо мне'};
-    const reviews = {link: 'reviews', title: 'Отзывы клиентов'};
-    const praice = {link: 'price-packages', title: 'Пакеты услуг'};
-    const contacts = {link: 'contacts', title: 'Контакты'};
-    
-
-    //* render 
     return(
         <header className="header">
-            {/* menu for pc  */}
-            <div className="heder-pc">
-                <div className="heder-pc__body">
-                    <ul className="heder-pc__left">
-                        {link(main.link, main.title, 'heder-pc__link', 'heder-pc__line')}
-                        {link(weddings.link, weddings.title, 'heder-pc__link', 'heder-pc__line')}
-                        {link(articles.link, articles.title, 'heder-pc__link', 'heder-pc__line')}
-                        {link(aboutMe.link, aboutMe.title, 'heder-pc__link', 'heder-pc__line')}
-                    </ul>
-                    {logo()}
-                    <ul className="heder-pc__right">
-                        {link(reviews.link, reviews.title, 'heder-pc__link', 'heder-pc__line')}
-                        {link(praice.link, praice.title, 'heder-pc__link', 'heder-pc__line')}
-                        {link(contacts.link, contacts.title, 'heder-pc__link', 'heder-pc__line')}
-                    </ul>
-                </div>
-            </div>
-
-            {/* menu for mobile phone */}
-            <div className={activeMenu ? "burger active" : "burger"}>
-                <div className={activeMenu ? "burger__body active" : "burger__body"} onClick={onBurger}>
-                    <div className="burger__line"></div>
-                </div>
-            </div>
-            <div className={activeMenu ? "menu-mob active" : "menu-mob"}>
-                <ul className="menu-mob__list">
-                    <div className="menu-mob__close" onClick={onBurger}></div>
-                    {link(main.link, main.title, 'menu-mob__link', 'menu-mob__line')}
-                    {link(weddings.link, weddings.title, 'menu-mob__link', 'menu-mob__line')}
-                    {link(articles.link, articles.title, 'menu-mob__link', 'menu-mob__line')}
-                    {link(aboutMe.link, aboutMe.title, 'menu-mob__link', 'menu-mob__line')}
-                    {link(reviews.link, reviews.title, 'menu-mob__link', 'menu-mob__line')}
-                    {link(praice.link, praice.title, 'menu-mob__link', 'menu-mob__line')}
-                    {link(contacts.link, contacts.title, 'menu-mob__link', 'menu-mob__line')}
-                </ul>
-            </div>
+            <MenuPc/>
+            <MenuMobile/>
             {lineHeader ? <div className="header__bottom-line"/> : null}
         </header>
     )
 }
+
 
 export default Header;
 

@@ -75,7 +75,7 @@
 
         & img{
             object-fit: cover;
-            height: 100px;
+            height: 90px;
             width: auto;
             @media (max-width: 1200px){
                 margin: 10px 0px 0px 0px;
@@ -134,6 +134,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
     }
 
     // .burger__line

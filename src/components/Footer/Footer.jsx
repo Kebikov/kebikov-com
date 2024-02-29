@@ -7,8 +7,7 @@ import vk from '../../resources/images/footer/vk.png';
 
 //= Footer 
 const Footer = () => {
-    console.log('%cFooter', 'color: green; font-size:18px;');
-    
+
     return(
         <footer className="footer">
             <div className="footer__icon">

@@ -1,5 +1,4 @@
-## 1 - Изменить версию CSS и JS
-?v=2.8
+## 1 - Build проекта.
 
 ## 2 - Создать папку для opengraf
 - Создать папку graph в build/static/opengraph\
@@ -37,3 +36,8 @@ Redirect 301 /7-sovetov-dlya-nevest-ot-fotografa/ https://kebikov.com/articles/f
 Redirect 301 /perfect-wedding-photo-session/ https://kebikov.com/articles/perfect-wedding-photo-session
 Redirect 301 /aksessuary-dlya-svadebnoj-fotosessii/ https://kebikov.com/articles/accessories
 ```
+
+## 4 - Сделать парсинг сайта.
+
+- Сделать парсинг для получения html для пререндера.
+- Добавить на сайт полученый код.

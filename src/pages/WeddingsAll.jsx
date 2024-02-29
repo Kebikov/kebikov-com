@@ -1,15 +1,15 @@
 import WeddingSeries from "../components/WeddingSeries/WeddingSeries";
 import { useEffect } from "react";
-import { Helmet } from "react-helmet";
-import HederArticles from '../components/HederArticles/HederArticles';
 import SEO from "../components/SEO/SEO";
 
 const WeddingsAll = () => {
+
     useEffect(() => {
         window.scrollTo(0, 0);
         const wed = document.querySelector('.wed-center');
         const parent = wed.parentElement;
         parent.classList.add('add-wed-all');
+        
         return() => {
             parent.classList.remove('add-wed-all');
         }
@@ -24,7 +24,6 @@ const WeddingsAll = () => {
                     img="https://kebikov.com/opengraph/weddings-all.jpg"
                 />
 
-                {/* <HederArticles title={'Свадебные серии'}/> */}
                 <div className="wed-center container">
                     <WeddingSeries/>
                 </div>

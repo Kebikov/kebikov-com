@@ -41,7 +41,7 @@ function App() {
     //* return 
     return (
 
-        <Provider store={store}>
+        <Provider store={store} >
             <BrowserRouter>
                 <div className="wrapper">
                     <Header/>

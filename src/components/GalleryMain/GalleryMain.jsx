@@ -1,12 +1,16 @@
 import './galleryMain.scss';
 import { useEffect, useState } from 'react';
-//* components 
 import PictureObserver from '../picture.observer/PictureObserver';
 import picturesForPageMain from '../../helper/loadingImgForMainPage';
 
-//= GalleryMain 
+
+/**
+ * Block of pictures on page main.
+ * @example <GalleryMain/>
+ */
+
 const GalleryMain = () => {
-    //* hooks 
+    
     const [columsTotal, setColumnsTotal] = useState(3);
 
     useEffect(() => {
@@ -55,12 +59,12 @@ const GalleryMain = () => {
 
     const pictures = columsTotal === 3 ? colums(3, 0) : colums(2, 1);
 
-    //* render 
     return(
             <div className="gallery">
                 {pictures}
             </div>
     )
 }
+
 
 export default GalleryMain;
