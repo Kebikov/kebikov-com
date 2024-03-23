@@ -38,6 +38,7 @@ const MenuMobile = () => {
                     <LinkMenu data={menuData.articles} action={onBurgerFalse} classLi={'menu-mob__line'} classActive={'menu-mob__link'} />
                     <LinkMenu data={menuData.aboutMe} action={onBurgerFalse} classLi={'menu-mob__line'} classActive={'menu-mob__link'} />
                     <LinkMenu data={menuData.reviews} action={onBurgerFalse} classLi={'menu-mob__line'} classActive={'menu-mob__link'} />
+                    <LinkMenu data={menuData.praice} action={onBurgerFalse} classLi={'menu-mob__line'} classActive={'menu-mob__link'} />
                     <LinkMenu data={menuData.contacts} action={onBurgerFalse} classLi={'menu-mob__line'} classActive={'menu-mob__link'} />
                 </ul>
             </div>
