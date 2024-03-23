@@ -5,11 +5,16 @@ import SEO from "../components/SEO/SEO";
 import { useDispatch } from "react-redux";
 import { setLineHeader } from "../redux/slice/indexSlice";
 //: Lazy
-const WeddingSeries = lazy(() => import('../components/WeddingSeries/WeddingSeries'));
-const TitlteBlock = lazy(() => import('../components/TitlteBlock/TitlteBlock'));
+import WeddingSeries from '../components/WeddingSeries/WeddingSeries';
+import TitlteBlock from '../components/TitlteBlock/TitlteBlock';
 
-//-- Main 
+
+/**
+ * @page Главная страница сайта.
+ * - kebikov.com
+ */
 const Main = () => {
+    console.log('Main');
     const dispatch = useDispatch();
 
     useEffect(() => {

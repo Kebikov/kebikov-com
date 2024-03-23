@@ -5,20 +5,21 @@ import { lazy, Suspense } from 'react';
 import store from '../redux/store/store';
 import { Provider } from 'react-redux';
 //*components 
-const Header = lazy(() => import('../components/Header/Header'));
-const Spiner = lazy(() => import('../components/Spiner/Spiner'));
+import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
+import Spiner from '../components/Spiner/Spiner';
+import UpButton from '../components/UpButton/UpButton';
+
 const Contacts = lazy(() => import('../pages/Contacts'));
 const AboutMe = lazy(() => import('../pages/AboutMe'));
 const Reviews = lazy(() => import('../pages/Reviews'));
-const Footer = lazy(() => import('../components/Footer/Footer'));
-const UpButton = lazy(() => import('../components/UpButton/UpButton'));
 const BeautifulWeddingFinale = lazy(() => import('../pages/ArticlesPages/beautiful-wedding-finale/BeautifulWeddingFinale'));
 const PricePackages = lazy(() => import('../pages/PricePackages'));
 const BouquetRoll = lazy(() => import('../pages/ArticlesPages/bouquet-roll/BouquetRoll'));
 const Page404 = lazy(() => import('../pages/Page404'));
 const Main = lazy(() => import('../pages/Main'));
 const WeddingsAll = lazy(() => import('../pages/WeddingsAll'));
-const Articles = lazy(() => import('../pages/ArticlesPage'));
+const Articles = lazy(() => import('../pages/Articles'));
 const WeddingsPage = lazy(() => import('../pages/WeddingsPage'));
 const PreparationsWedding = lazy(() => import('../pages/ArticlesPages/preparations-wedding/PreparationsWedding'));
 const FromThePhotographer = lazy(() => import('../pages/ArticlesPages/from-the-photographer/FromThePhotographer'));

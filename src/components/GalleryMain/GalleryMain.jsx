@@ -10,7 +10,7 @@ import picturesForPageMain from '../../helper/loadingImgForMainPage';
  */
 
 const GalleryMain = () => {
-    
+    console.log('GalleryMain');
     const [columsTotal, setColumnsTotal] = useState(3);
 
     useEffect(() => {

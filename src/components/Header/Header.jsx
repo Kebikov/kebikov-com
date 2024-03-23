@@ -5,7 +5,7 @@ import MenuPc from '../MenuPc/MenuPc';
 
 
 const Header = () => {
-    
+    console.log('Header');
     const lineHeader = useSelector(state => state.lineHeader);
 
     return(

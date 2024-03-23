@@ -7,6 +7,7 @@ import vk from '../../resources/images/footer/vk.png';
 
 //= Footer 
 const Footer = () => {
+    console.log('Footer');
 
     return(
         <footer className="footer">

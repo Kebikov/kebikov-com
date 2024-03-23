@@ -9,7 +9,7 @@ import nameSeries from '../../pages/data/dataSeries';
  * @example <WeddingSeries/>
  */
 const WeddingSeries = () => {
-
+    console.log('WeddingSeries');
     const allImg = usehelpPassAllImg(require.context('../../resources/images/weddings-series/'));
     
     return(

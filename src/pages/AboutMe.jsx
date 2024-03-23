@@ -1,18 +1,17 @@
-import HederArticles from "../components/HederArticles/HederArticles";
 import me from '../resources/images/about/1000.jpg';
 import { useEffect } from "react";
 import './scss/about.scss';
-import FormContact from "../components/FormContact/FormContact";
 import { motion } from "framer-motion";
-import { Helmet } from "react-helmet";
+import SEO from '../components/SEO/SEO';
 
+
+
+/**
+ * @page Страница обо мне.
+ * - https://kebikov.com/about-me
+ */
 const AboutMe = () => {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    },[]);
 
-
-    //* code 
     const text = 'Привет, меня зовут Евгений — предлагаю услуги по свадебной фотосъемке на всей территории Беларуси, да чего уж там, ради любимой работы, готов сорваться в любую точку мира.\n\nДобрый и позитивный творческий персонаж: фотограф и просто хороший человек, встал на путь свадебного кунг-фу фото в 2010-ом году и смело шагаю вперед, совершенствуя мастерство) Стараюсь быть не просто фотографом, но и другом,что-бы вы чувствовали себя комфортно во время съемки, я понимаю как важен для вас день свадьбы и стараюсь сделать память об этом дне не забываемым.\n\nУ меня на сайте нет фотографий с мастер-классов других фотографов, нет фотографий с воркшопов, нет съемок с нанятыми моделями, все фотографии только с реальными парами, сделанные на реальных свадьбах.\n\nПоверьте, мы будем с вами на одной волне, фотосессия пройдет в непринужденной обстановке и с хорошим настроением.\n\nКрепко обнимаю, жду вашего звонка !';
 
     const motionImg = {
@@ -45,19 +44,19 @@ const AboutMe = () => {
         }
     }
 
-    //* return 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    },[]);
+
+
     return(
         <>
-            <Helmet>
-                <title>Краткая информация обо мне</title>
-                <meta
-                    name="description"
-                    content="Обо мне, на странице краткая информация, познакомитесь со мной чуть лучше, после прочтения, часть вопросов станет для вас яснее.Заходим !"
-                />
-                <link rel="canonical" href="https://kebikov.com/about-me"/>
-            </Helmet>
+            <SEO
+                url='https://kebikov.com/about-me'
+                title='Краткая информация обо мне'
+                description='Обо мне, на странице краткая информация, познакомитесь со мной чуть лучше, после прочтения, часть вопросов станет для вас яснее.Заходим !'
+            />
 
-            {/* <HederArticles title={'Кратко обо мне'}/> */}
             <div className="container">
                 <div className="about">
                     <div className="about__body">
@@ -79,7 +78,6 @@ const AboutMe = () => {
                         </motion.div>
                     </div>
                 </div>
-                {/* <FormContact color={'#fff'}/> */}
             </div>
         </>
     )

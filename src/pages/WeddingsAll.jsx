@@ -2,8 +2,13 @@ import WeddingSeries from "../components/WeddingSeries/WeddingSeries";
 import { useEffect } from "react";
 import SEO from "../components/SEO/SEO";
 
-const WeddingsAll = () => {
 
+/**
+ * @page Свадебные серии.
+ * - kebikov.com/weddings-all
+ */
+const WeddingsAll = () => {
+    console.log('WeddingsAll');
     useEffect(() => {
         window.scrollTo(0, 0);
         const wed = document.querySelector('.wed-center');

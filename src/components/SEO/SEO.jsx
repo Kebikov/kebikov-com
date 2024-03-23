@@ -10,10 +10,13 @@ import {Helmet} from 'react-helmet';
  */
 
 /**
- * Для SEO оптимизации сайта. 
+ * @component Для SEO оптимизации сайта. 
  * - Добавляем в самый верх компонента страницы.
- * @component
  * @param {Propse}
+ * @param url Полная ссылка на страницу.
+ * @param title Title страницы.
+ * @param description Description страницы.
+ * @param img Img для страницы. (опционально)
  * @example <SEO url="#" title="#" description="#" img="#"/>
  * @returns {import('@babel/types').JSXElement}
  */
@@ -36,6 +39,8 @@ const SEO = ({url, title, description, img = 'https://kebikov.com/opengraph/kebi
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:image" content={img} />
             <meta data-hid="property::og:site_name" property="og:site_name" content="KEBIKOV.COM"/>
+
+            <link rel="canonical" href={url} />
         </Helmet>
     )
 }
