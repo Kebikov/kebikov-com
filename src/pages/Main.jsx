@@ -1,4 +1,4 @@
-import { lazy } from 'react';
+import './scss/main.scss';
 import GalleryMain from "../components/GalleryMain/GalleryMain";
 import { useEffect } from "react";
 import SEO from "../components/SEO/SEO";
@@ -7,6 +7,7 @@ import { setLineHeader } from "../redux/slice/indexSlice";
 //: Lazy
 import WeddingSeries from '../components/WeddingSeries/WeddingSeries';
 import TitlteBlock from '../components/TitlteBlock/TitlteBlock';
+import HeaderImage from '../components/HeaderImage/HeaderImage';
 
 
 /**
@@ -34,8 +35,8 @@ const Main = () => {
                 description="Яркие, живые, наполненные улыбками и радостью, фотографии вашего свадебного дня.Свадебный фотограф Минск,Кебиков Евгений +375 29 694-98-43"
                 img="https://kebikov.com/opengraph/kebikov.jpg"
             />
-            
-            <div className="container">
+            <HeaderImage/>
+            <div className="container margin-conteiner">
                 <GalleryMain/>
                 <TitlteBlock title={'Свадебныe серии'}/>
                 <WeddingSeries/>
