@@ -2,7 +2,6 @@ import Article from '../components/Article/Article';
 import '../components/Article/article.scss';
 import { articlesDB } from '../components/Article/articlesDB';
 import { useEffect } from 'react';
-import { Helmet } from "react-helmet";
 import SEO from '../components/SEO/SEO';
 import { useDispatch } from 'react-redux';
 import { setLineHeader } from '../redux/slice/indexSlice';

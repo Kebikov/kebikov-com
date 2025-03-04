@@ -26,9 +26,3 @@ const useHelperLazyLoad = () => {
 
 export default useHelperLazyLoad;
 
-
-
-{/* <picture className={'anime'} key={item}>
-    <source type="image/webp" data-srcset={item[1]} key={item[1]}/>
-    <img src={box} height={'800px'} width={'1200px'} data-src={item[0]} alt={'Свадебное фото в Минске'} key={item[0]} />
-</picture> */}
