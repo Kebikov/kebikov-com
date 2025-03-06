@@ -21,7 +21,15 @@
             row-gap: $gap-mobile;
         }
 
-        & img{
+        & img.vertical{
+            aspect-ratio: 2 / 3;
+            object-fit: cover;
+            width: 100%;
+            height: auto;
+            pointer-events:none;
+        }
+        & img.horizontal{
+            aspect-ratio: 3 / 2;
             object-fit: cover;
             width: 100%;
             height: auto;
