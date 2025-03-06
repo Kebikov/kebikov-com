@@ -2,9 +2,19 @@ import '../GalleryMain/galleryMain.scss';
 import { useInView } from 'react-intersection-observer';
 import box from '../../resources/images/spiner/box.jpg';
 import boxMobile from '../../resources/images/spiner/box-mobile.jpg';
+//import boxMobile from '@/resources/images/spiner/box-mobile.jpg';
+import { FC } from 'react';
 
 
-const PictureObserver = ({item, row}) => {
+
+
+interface IPictureObserver {
+    item: any;
+    row: any;
+}
+
+
+const PictureObserver: FC<IPictureObserver> = ({item, row}) => {
 
     const {ref, inView} = useInView(
         { 
@@ -29,8 +39,8 @@ const PictureObserver = ({item, row}) => {
                             <img 
                                 className={'loading-img'} 
                                 src={row === 4 ? item.jpg : item.jpgMobile} 
-                                height={orientation ? orientation === 'horizontal' ? '1200' : '800' : null} 
-                                width={orientation ? orientation === 'horizontal' ? '800' : '1200' : null} 
+                                height={orientation ? orientation === 'horizontal' ? '1200' : '800' : undefined} 
+                                width={orientation ? orientation === 'horizontal' ? '800' : '1200' : undefined} 
                                 alt='Свадебное фото в Минске' 
                             />
                         </>
@@ -48,3 +58,4 @@ const PictureObserver = ({item, row}) => {
 }
 
 export default PictureObserver;
+

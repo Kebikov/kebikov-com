@@ -206,20 +206,22 @@ import imgMobileWebP50 from '../resources/images/main-page/mob-(50).webp';
 import imgMobileWebP51 from '../resources/images/main-page/mob-(51).webp';
 
 
-/**
- * @typedef {Object} TPageMain
- * @property {string} jpg Изображение в формате jpg.
- * @property {string} jpgMobile Изображение для мобильного в формате jpg.
- * @property {string} webP Изображение в формате webP.
- * @property {string} webPMobile Изображение для мобильного в формате webP.
- * @property {'horizontal' | 'vertical'} orientation Ориентация изображения.
- */
+export interface IImage {
+     /** `Изображение в формате jpg.` */
+    jpg: string;
+     /** `Изображение для мобильного в формате webP.` */
+    webP: string;
+     /** `Изображение для мобильного в формате jpg.` */
+    jpgMobile: string;
+     /** `Изображение для мобильного в формате webP.` */
+    webPMobile: string;
+     /** `Ориентация изображения.` */
+    orientation: 'horizontal' | 'vertical';
+}
 
-/**
- * Массив изображений для главной страницы.
- * @type {TPageMain[]}
- */
-const picturesForPageMain = [
+
+/** `Массив изображений для главной страницы.` */
+const picturesForPageMain: Array<IImage> = [
     {
         jpg: imgJpg1,
         webP: imgWebP1,
