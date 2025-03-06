@@ -1,12 +1,13 @@
-$gap: 30px;
+@import '../../scss/variables.scss';
 
 .gallery {
     display: flex;
     justify-content: center;
     column-gap: $gap;
+    padding: 0 $gap 0 $gap;
     width: 100%;
     @media (max-width: 749px){
-        column-gap: 7px;
+        column-gap: $gap-mobile;
     }
 
     // .gallery__column
@@ -17,7 +18,7 @@ $gap: 30px;
         row-gap: $gap;
         @media (max-width: 749px){
             flex: 0 1 100%;
-            row-gap: 7px;
+            row-gap: $gap-mobile;
         }
 
         & img{

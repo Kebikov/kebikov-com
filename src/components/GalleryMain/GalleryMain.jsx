@@ -11,7 +11,7 @@ import picturesForPageMain from '../../helper/loadingImgForMainPage';
 
 const GalleryMain = () => {
 
-    const [columsTotal, setColumnsTotal] = useState(3);
+    const [columsTotal, setColumnsTotal] = useState(4);
 
     useEffect(() => {
         window.addEventListener('resize', size);
@@ -54,10 +54,10 @@ const GalleryMain = () => {
     }
 
     const size = () => {
-        document.documentElement.clientWidth > 749 ? setColumnsTotal(3) : setColumnsTotal(2);
+        document.documentElement.clientWidth > 749 ? setColumnsTotal(4) : setColumnsTotal(2);
     }
 
-    const pictures = columsTotal === 3 ? colums(3, 0) : colums(2, 1);
+    const pictures = columsTotal === 4 ? colums(4, 1) : colums(2, 1);
 
     return(
             <div className="gallery">

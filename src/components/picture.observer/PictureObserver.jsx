@@ -9,7 +9,7 @@ const PictureObserver = ({item, row}) => {
     const {ref, inView} = useInView(
         { 
             rootMargin: '0px 0px 50px 0px',
-            triggerOnce: true 
+            triggerOnce: true
         }
     );
 
@@ -24,11 +24,11 @@ const PictureObserver = ({item, row}) => {
                         <>
                             <source 
                                 type="image/webp"
-                                srcSet={row === 3 ? item.webP : item.webPMobile}
+                                srcSet={row === 4 ? item.webP : item.webPMobile}
                             />
                             <img 
                                 className={'loading-img'} 
-                                src={row === 3 ? item.jpg : item.jpgMobile} 
+                                src={row === 4 ? item.jpg : item.jpgMobile} 
                                 height={orientation ? orientation === 'horizontal' ? '1200' : '800' : null} 
                                 width={orientation ? orientation === 'horizontal' ? '800' : '1200' : null} 
                                 alt='Свадебное фото в Минске' 
@@ -37,7 +37,7 @@ const PictureObserver = ({item, row}) => {
                         :
                         <img 
                             className={'anime'} 
-                            src={row === 3 ? boxMobile : box} 
+                            src={row === 4 ? boxMobile : box} 
                             alt='Свадебное фото в Минске' 
                         />
                     }

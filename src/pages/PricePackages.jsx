@@ -7,6 +7,9 @@ import { useEffect } from 'react';
 import SEO from '../components/SEO/SEO';
 
 const PricePackages = () => {
+
+    console.log(document.referrer);
+
     useEffect(() => {
         window.scrollTo(0, 0);
     },[]);

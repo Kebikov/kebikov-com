@@ -16,10 +16,11 @@ import HeaderImage from '../components/HeaderImage/HeaderImage';
  */
 const Main = () => {
     console.log('Main');
+    console.log(document.referrer);
     const dispatch = useDispatch();
 
     useEffect(() => {
-        window.scrollTo(0, 0);
+        window.scrollTo(0, 0);  
         //dispatch(setLineHeader(true));
         return () => {
             dispatch(setLineHeader(false));
@@ -36,7 +37,7 @@ const Main = () => {
                 img="https://kebikov.com/opengraph/kebikov.jpg"
             />
             <HeaderImage/>
-            <div className="container margin-conteiner">
+            <div className="container margin-conteiner" >
                 <GalleryMain/>
                 <TitlteBlock title={'Свадебныe серии'}/>
                 <WeddingSeries/>

@@ -225,7 +225,7 @@ const picturesForPageMain = [
         webP: imgWebP1,
         jpgMobile: imgMobileJpg1,
         webPMobile: imgMobileWebP1,
-        orientation: 'horizontal' 
+        orientation: 'horizontal'
     },
     {
         jpg: imgJpg2,
@@ -239,21 +239,21 @@ const picturesForPageMain = [
         webP: imgWebP3,
         jpgMobile: imgMobileJpg3,
         webPMobile: imgMobileWebP3,
-        orientation: 'horizontal' 
+        orientation: 'horizontal'
     },
     {
         jpg: imgJpg4,
         webP: imgWebP4,
         jpgMobile: imgMobileJpg4,
         webPMobile: imgMobileWebP4,
-        orientation: 'horizontal' 
+        orientation: 'horizontal'
     },
     {
         jpg: imgJpg5,
         webP: imgWebP5,
         jpgMobile: imgMobileJpg5,
         webPMobile: imgMobileWebP5,
-        orientation: 'vertical' 
+        orientation: 'vertical'
     },
     {
         jpg: imgJpg6,
