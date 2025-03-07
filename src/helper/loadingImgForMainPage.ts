@@ -219,369 +219,381 @@ export interface IImage {
     orientation: 'horizontal' | 'vertical';
 }
 
+export const order: {[key in number | string]: number[]} = {
+    1: [1, 14, 13, 46, 21, 25, 29, 33, 37, 41, 47, 22],
+    2: [2, 5, 12, 28, 18, 10, 49, 30, 34, 38, 42, 50],
+    3: [17, 6, 36, 11, 15, 19, 23, 31, 39, 43, 26, 51],
+    4: [4, 3, 27, 8, 24, 16, 20, 9, 32, 44, 7, 40]
+}
+
+export const orderTwoColumn: {[key in number | string]: number[]} = {
+    1: [1, 14, 13, 46, 21, 25, 29, 33, 37, 41, 47, 22, 17, 6, 36, 11, 15, 19, 23, 31, 39, 43, 26, 51],
+    2: [2, 5, 12, 28, 18, 10, 49, 30, 34, 38, 42, 50, 4, 3, 27, 8, 24, 16, 20, 9, 32, 44, 7, 40]
+}
+
+//запас: 35, 47, 48
 
 /** `Массив изображений для главной страницы.` */
-const picturesForPageMain: Array<IImage> = [
-    {
+export const picturesForPageMain: {[key in number | string]: IImage} = {
+    1:{
         jpg: imgJpg1,
         webP: imgWebP1,
         jpgMobile: imgMobileJpg1,
         webPMobile: imgMobileWebP1,
         orientation: 'horizontal'
     },
-    {
+    2:{
         jpg: imgJpg2,
         webP: imgWebP2,
         jpgMobile: imgMobileJpg2,
         webPMobile: imgMobileWebP2,
         orientation: 'horizontal'
     },
-    {
+    3:{
         jpg: imgJpg3,
         webP: imgWebP3,
         jpgMobile: imgMobileJpg3,
         webPMobile: imgMobileWebP3,
         orientation: 'horizontal'
     },
-    {
+    4:{
         jpg: imgJpg4,
         webP: imgWebP4,
         jpgMobile: imgMobileJpg4,
         webPMobile: imgMobileWebP4,
         orientation: 'horizontal'
     },
-    {
+    5:{
         jpg: imgJpg5,
         webP: imgWebP5,
         jpgMobile: imgMobileJpg5,
         webPMobile: imgMobileWebP5,
         orientation: 'vertical'
     },
-    {
+    6:{
         jpg: imgJpg6,
         webP: imgWebP6,
         jpgMobile: imgMobileJpg6,
         webPMobile: imgMobileWebP6,
         orientation: 'horizontal' 
     },
-    {
+    7:{
         jpg: imgJpg7,
         webP: imgWebP7,
         jpgMobile: imgMobileJpg7,
         webPMobile: imgMobileWebP7,
         orientation: 'horizontal' 
     },
-    {
+    8:{
         jpg: imgJpg8,
         webP: imgWebP8,
         jpgMobile: imgMobileJpg8,
         webPMobile: imgMobileWebP8,
         orientation: 'horizontal' 
     },
-    {
+    9:{
         jpg: imgJpg9,
         webP: imgWebP9,
         jpgMobile: imgMobileJpg9,
         webPMobile: imgMobileWebP9,
         orientation: 'horizontal' 
     },
-    {
+    10:{
         jpg: imgJpg10,
         webP: imgWebP10,
         jpgMobile: imgMobileJpg10,
         webPMobile: imgMobileWebP10,
         orientation: 'vertical' 
     },
-    {
+    11:{
         jpg: imgJpg11,
         webP: imgWebP11,
         jpgMobile: imgMobileJpg11,
         webPMobile: imgMobileWebP11,
         orientation: 'horizontal' 
     },
-    {
+    12:{
         jpg: imgJpg12,
         webP: imgWebP12,
         jpgMobile: imgMobileJpg12,
         webPMobile: imgMobileWebP12,
         orientation: 'vertical' 
     },
-    {
+    13:{
         jpg: imgJpg13,
         webP: imgWebP13,
         jpgMobile: imgMobileJpg13,
         webPMobile: imgMobileWebP13,
         orientation: 'horizontal' 
     },
-    {
+    14:{
         jpg: imgJpg14,
         webP: imgWebP14,
         jpgMobile: imgMobileJpg14,
         webPMobile: imgMobileWebP14,
         orientation: 'horizontal' 
     },
-    {
+    15:{
         jpg: imgJpg15,
         webP: imgWebP15,
         jpgMobile: imgMobileJpg15,
         webPMobile: imgMobileWebP15,
         orientation: 'horizontal' 
     },
-    {
+    16:{
         jpg: imgJpg16,
         webP: imgWebP16,
         jpgMobile: imgMobileJpg16,
         webPMobile: imgMobileWebP16,
         orientation: 'horizontal' 
     },
-    {
+    17:{
         jpg: imgJpg17,
         webP: imgWebP17,
         jpgMobile: imgMobileJpg17,
         webPMobile: imgMobileWebP17,
         orientation: 'vertical' 
     },
-    {
+    18:{
         jpg: imgJpg18,
         webP: imgWebP18,
         jpgMobile: imgMobileJpg18,
         webPMobile: imgMobileWebP18,
         orientation: 'horizontal' 
     },
-    {
+    19:{
         jpg: imgJpg19,
         webP: imgWebP19,
         jpgMobile: imgMobileJpg19,
         webPMobile: imgMobileWebP19,
         orientation: 'horizontal' 
     },
-    {
+    20:{
         jpg: imgJpg20,
         webP: imgWebP20,
         jpgMobile: imgMobileJpg20,
         webPMobile: imgMobileWebP20,
         orientation: 'horizontal' 
     },
-    {
+    21:{
         jpg: imgJpg21,
         webP: imgWebP21,
         jpgMobile: imgMobileJpg21,
         webPMobile: imgMobileWebP21,
         orientation: 'horizontal' 
     },
-    {
+    22:{
         jpg: imgJpg22,
         webP: imgWebP22,
         jpgMobile: imgMobileJpg22,
         webPMobile: imgMobileWebP22,
         orientation: 'vertical' 
     },
-    {
+    23:{
         jpg: imgJpg23,
         webP: imgWebP23,
         jpgMobile: imgMobileJpg23,
         webPMobile: imgMobileWebP23,
         orientation: 'horizontal' 
     },
-    {
+    24:{
         jpg: imgJpg24,
         webP: imgWebP24,
         jpgMobile: imgMobileJpg24,
         webPMobile: imgMobileWebP24,
         orientation: 'vertical'
     },
-    {
+    25:{
         jpg: imgJpg25,
         webP: imgWebP25,
         jpgMobile: imgMobileJpg25,
         webPMobile: imgMobileWebP25,
         orientation: 'vertical'
     },
-    {
+    26:{
         jpg: imgJpg26,
         webP: imgWebP26,
         jpgMobile: imgMobileJpg26,
         webPMobile: imgMobileWebP26,
         orientation: 'vertical'
     },
-    {
+    27:{
         jpg: imgJpg27,
         webP: imgWebP27,
         jpgMobile: imgMobileJpg27,
         webPMobile: imgMobileWebP27,
         orientation: 'vertical' 
     },
-    {
+    28:{
         jpg: imgJpg28,
         webP: imgWebP28,
         jpgMobile: imgMobileJpg28,
         webPMobile: imgMobileWebP28,
         orientation: 'horizontal' 
     },
-    {
+    29:{
         jpg: imgJpg29,
         webP: imgWebP29,
         jpgMobile: imgMobileJpg29,
         webPMobile: imgMobileWebP29,
         orientation: 'horizontal' 
     },
-    {
+    30:{
         jpg: imgJpg30,
         webP: imgWebP30,
         jpgMobile: imgMobileJpg30,
         webPMobile: imgMobileWebP30,
         orientation: 'horizontal' 
     },
-    {
+    31:{
         jpg: imgJpg31,
         webP: imgWebP31,
         jpgMobile: imgMobileJpg31,
         webPMobile: imgMobileWebP31,
         orientation: 'horizontal' 
     },
-    {
+    32:{
         jpg: imgJpg32,
         webP: imgWebP32,
         jpgMobile: imgMobileJpg32,
         webPMobile: imgMobileWebP32,
         orientation: 'vertical'
     },
-    {
+    33:{
         jpg: imgJpg33,
         webP: imgWebP33,
         jpgMobile: imgMobileJpg33,
         webPMobile: imgMobileWebP33,
         orientation: 'horizontal' 
     },
-    {
+    34:{
         jpg: imgJpg34,
         webP: imgWebP34,
         jpgMobile: imgMobileJpg34,
         webPMobile: imgMobileWebP34,
         orientation: 'horizontal' 
     },
-    {
+    35:{
         jpg: imgJpg35,
         webP: imgWebP35,
         jpgMobile: imgMobileJpg35,
         webPMobile: imgMobileWebP35,
         orientation: 'horizontal' 
     },
-    {
+    36:{
         jpg: imgJpg36,
         webP: imgWebP36,
         jpgMobile: imgMobileJpg36,
         webPMobile: imgMobileWebP36,
         orientation: 'horizontal' 
     },
-    {
+    37:{
         jpg: imgJpg37,
         webP: imgWebP37,
         jpgMobile: imgMobileJpg37,
         webPMobile: imgMobileWebP37,
         orientation: 'vertical' 
     },
-    {
+    38:{
         jpg: imgJpg38,
         webP: imgWebP38,
         jpgMobile: imgMobileJpg38,
         webPMobile: imgMobileWebP38,
         orientation: 'horizontal' 
     },
-    {
+    39:{
         jpg: imgJpg39,
         webP: imgWebP39,
         jpgMobile: imgMobileJpg39,
         webPMobile: imgMobileWebP39,
         orientation: 'vertical'
     },
-    {
+    40:{
         jpg: imgJpg40,
         webP: imgWebP40,
         jpgMobile: imgMobileJpg40,
         webPMobile: imgMobileWebP40,
         orientation: 'horizontal' 
     },
-    {
+    41:{
         jpg: imgJpg41,
         webP: imgWebP41,
         jpgMobile: imgMobileJpg41,
         webPMobile: imgMobileWebP41,
         orientation: 'horizontal' 
     },
-    {
+    42:{
         jpg: imgJpg42,
         webP: imgWebP42,
         jpgMobile: imgMobileJpg42,
         webPMobile: imgMobileWebP42,
         orientation: 'horizontal' 
     },
-    {
+    43:{
         jpg: imgJpg43,
         webP: imgWebP43,
         jpgMobile: imgMobileJpg43,
         webPMobile: imgMobileWebP43,
         orientation: 'horizontal' 
     },
-    {
+    44:{
         jpg: imgJpg44,
         webP: imgWebP44,
         jpgMobile: imgMobileJpg44,
         webPMobile: imgMobileWebP44,
         orientation: 'vertical' 
     },
-    {
+    45:{
         jpg: imgJpg45,
         webP: imgWebP45,
         jpgMobile: imgMobileJpg45,
         webPMobile: imgMobileWebP45,
-        orientation: 'horizontal' 
+        orientation: 'horizontal'
     },
-    {
+    46:{
         jpg: imgJpg46,
         webP: imgWebP46,
         jpgMobile: imgMobileJpg46,
         webPMobile: imgMobileWebP46,
-        orientation: 'horizontal' 
+        orientation: 'vertical'
     },
-    {
+    47:{
         jpg: imgJpg47,
         webP: imgWebP47,
         jpgMobile: imgMobileJpg47,
         webPMobile: imgMobileWebP47,
         orientation: 'horizontal' 
     },
-    {
+    48:{
         jpg: imgJpg48,
         webP: imgWebP48,
         jpgMobile: imgMobileJpg48,
         webPMobile: imgMobileWebP48,
         orientation: 'horizontal' 
     },
-    {
+    49:{
         jpg: imgJpg49,
         webP: imgWebP49,
         jpgMobile: imgMobileJpg49,
         webPMobile: imgMobileWebP49,
         orientation: 'vertical'
     },
-    {
+    50:{
         jpg: imgJpg50,
         webP: imgWebP50,
         jpgMobile: imgMobileJpg50,
         webPMobile: imgMobileWebP50,
         orientation: 'horizontal' 
     },
-    {
+    51:{
         jpg: imgJpg51,
         webP: imgWebP51,
         jpgMobile: imgMobileJpg51,
         webPMobile: imgMobileWebP51,
         orientation: 'vertical'
-    },
-];
+    }
+};
 
-export default picturesForPageMain;
 
 
 

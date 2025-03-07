@@ -25,6 +25,19 @@ const PictureObserver: FC<IPictureObserver> = ({
     );
 
     const orientation = item.orientation;
+    const nameImg = item.jpg.match(/(?<=\/)\d+(?=\.)/gi);
+
+    const Info = () => (
+        <div style={{
+            position: 'absolute',
+            zIndex: '2',
+            top: '10px',
+            right: '10px',
+            color: '#000',
+            fontSize: '24px',
+            backgroundColor: '#fff'
+        }}>{nameImg}</div>
+    )
 
     return(
         <>
@@ -32,19 +45,20 @@ const PictureObserver: FC<IPictureObserver> = ({
                     {   
                         inView 
                         ?
-                        <>
+                        <picture style={{position: 'relative'}}>
                             <source 
                                 type="image/webp"
                                 srcSet={row === 4 ? item.webP : item.webPMobile}
                             />
                             <img 
-                                className={orientation === 'horizontal' ? 'loading-img horizontal' : 'loading-img vertical'} 
+                                className={'loading-img'} 
                                 src={row === 4 ? item.jpg : item.jpgMobile} 
                                 height={orientation ? orientation === 'horizontal' ? '1200' : '800' : undefined} 
                                 width={orientation ? orientation === 'horizontal' ? '800' : '1200' : undefined} 
                                 alt='Свадебное фото в Минске' 
                             />
-                        </>
+                            {/* <Info/> */}
+                        </picture>
                         :
                         <img 
                             className={'anime'} 

@@ -64,6 +64,13 @@
     max-width: 1450px;
     overflow: hidden;
     margin: 0px auto;
+    @media (min-width: 1921px) and (max-width: 2600px){
+        max-width: 70vw;
+    };
+
+    @media (min-width: 2601px){
+        max-width: 2400px;
+    };
 }
 
 .container-main{

@@ -6,33 +6,27 @@
     column-gap: $gap;
     padding: 0 $gap 0 $gap;
     width: 100%;
+
     @media (max-width: 749px){
         column-gap: $gap-mobile;
     }
 
     // .gallery__column
     &__column {
-        flex: 0 1 33%;
+        flex: 0 1 25%;
         display: flex;
         flex-direction: column;
         row-gap: $gap;
+
         @media (max-width: 749px){
             flex: 0 1 100%;
             row-gap: $gap-mobile;
         }
 
-        & img.vertical{
-            aspect-ratio: 2 / 3;
+        & img{
             object-fit: cover;
             width: 100%;
-            height: auto;
-            pointer-events:none;
-        }
-        & img.horizontal{
-            aspect-ratio: 3 / 2;
-            object-fit: cover;
-            width: 100%;
-            height: auto;
+            height: 100%;
             pointer-events:none;
         }
     }
