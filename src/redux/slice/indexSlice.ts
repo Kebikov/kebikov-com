@@ -26,6 +26,7 @@ const indexSlice = createSlice({
             state.lineHeader = action.payload;
         },
         setActiveMenu: (state, action) => {
+            console.log(action.payload);
             state.activeMenu = action.payload;
         },
         setActiveSlidesReviews: (state, action) => {

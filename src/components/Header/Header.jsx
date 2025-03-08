@@ -1,12 +1,12 @@
 import './header.scss';
-import { useSelector } from 'react-redux';
 import MenuMobile from '../MenuMobile/MenuMobile';
 import MenuPc from '../MenuPc/MenuPc';
+import { useAppSelector } from '@/redux/store/hooks';
 
 
 const Header = () => {
     console.log('Header');
-    const lineHeader = useSelector(state => state.lineHeader);
+    const lineHeader = useAppSelector(state => state.indexSlice.lineHeader);
 
     return(
         <header className="header">

@@ -1,6 +1,6 @@
 import './lineTotalReviews.scss';
 import arr from '../../pages/data/dataReviews';
-import { useSelector } from 'react-redux';
+import { useAppSelector } from '@/redux/store/hooks';
 
 
 /**
@@ -10,7 +10,7 @@ import { useSelector } from 'react-redux';
 const LineTotalReviews = () => {
     console.log('LineTotalReviews');
 
-    const {activeSlidesReviews} = useSelector(state => state);
+    const {activeSlidesReviews} = useAppSelector(state => state.indexSlice);
 
 
     let items = arr.map((item, i) => {

@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { setActiveMenu } from '../../redux/slice/indexSlice';
 import logoImg from '../../resources/images/header/1.jpg';
 import menuData from '../../data/DataLinks';
+import { useAppDispatch } from '../../redux/store/hooks';
 
 
 /**
@@ -13,7 +14,7 @@ import menuData from '../../data/DataLinks';
 
 const MenuPc = () => {
 
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
 
     const onBurgerFalse = () => {
         dispatch(setActiveMenu(false));

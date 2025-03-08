@@ -1,8 +1,9 @@
 import '../Header/header.scss';
 import LinkMenu from "../LinkMenu/LinkMenu";
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { setActiveMenu } from '../../redux/slice/indexSlice';
 import menuData from '../../data/DataLinks';
+import { useAppSelector } from '@/redux/store/hooks';
 
 
 /**
@@ -12,7 +13,7 @@ import menuData from '../../data/DataLinks';
 
 const MenuMobile = () => {
 
-    const activeMenu = useSelector(state => state.activeMenu);
+    const activeMenu = useAppSelector(state => state.indexSlice.activeMenu);
     const dispatch = useDispatch();
 
     const onBurger = () => {
