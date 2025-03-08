@@ -1,9 +1,19 @@
 import './headerImage.scss';
 import { memo } from 'react';
 import useFontSize from '../../hooks/useFontSize';
+import { useWindowSize } from 'react-use';
 
 
-const Hello = memo(({size, nameOS}) => {
+interface IHello {
+    size?: number;
+    nameOS?: string;
+}
+
+
+const Hello = memo(({
+    size, nameOS
+}: IHello) => {
+
     
     return(
         <div 
@@ -18,8 +28,8 @@ const Hello = memo(({size, nameOS}) => {
             }}
         >
             <div className='hello__body'>
-                <div className='hello__hi' style={{fontSize: `${size * 1.1}px`}} >ПРИВЕТ !</div>
-                <h1 className='hello__I' style={{fontSize: `${size * 1.1}px`}} >Я - Евгений - свадебный фотограф в Минске !</h1>
+                <div className='hello__hi' style={size ? {fontSize: `${size * 1.1}px`} : undefined} >ПРИВЕТ !</div>
+                <h1 className='hello__I' style={size ? {fontSize: `${size * 1.1}px`} : undefined} >Я - Евгений - свадебный фотограф в Минске !</h1>
                 <div className='hello__text' style={{fontSize: `${size}px`}} >Вот уже 10 лет я запечатлеваю самые искренние эмоции, счастливые улыбки и трепетные взгляды влюблённых. <br/>Для меня свадьба — это не просто событие, а настоящая магия момента, который должен остаться с вами навсегда.</div>
                 <h2 className='hello__show' style={{fontSize: `${size}px`}} >На моем сайте все про свадебную съемку. Приятного просмотра.</h2>
             </div>
@@ -50,7 +60,7 @@ const HeaderImage = () => {
     const {size, nameOS} = useFontSize({maxWidth: 2560, minWidth: 400, maxSize: 18, minSize: 15});
 
     return(
-        <div className='header-image' >
+        <div className='header-image'>
             <div className='header-image__body'>
                 {/* <div className='info-test' >{`nameOS = ${nameOS}, scale = ${scaleOS}, size = ${size}`}</div> */}
                 <MainImage/>

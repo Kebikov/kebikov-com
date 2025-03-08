@@ -3,13 +3,22 @@ import { useState, useEffect } from 'react';
 import { UAParser } from 'ua-parser-js';
 
 
+interface IuseFontSize {
+    minSize: number;
+    maxSize: number;
+    maxWidth: number;
+    minWidth: number;
+}
+
+
 const useFontSize = ({
     minSize,
     maxSize,
     maxWidth,
     minWidth
-}) => {
-    const [size, setSize] = useState(false);
+}: IuseFontSize) => {
+
+    const [size, setSize] = useState<number>();
 
     const parser = new UAParser();
     const result = parser.getResult();
@@ -26,6 +35,7 @@ const useFontSize = ({
 
         setSize(calcSize);
     }, [width, scaleOS, minSize, maxSize, maxWidth, minWidth]);
+
 
     return {
         size, 
