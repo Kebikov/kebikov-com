@@ -55,9 +55,10 @@ const PictureObserver: FC<IPictureObserver> = ({
                                 src={row === 4 ? item.jpg : item.jpgMobile} 
                                 height={orientation ? orientation === 'horizontal' ? '1200' : '800' : undefined} 
                                 width={orientation ? orientation === 'horizontal' ? '800' : '1200' : undefined} 
+                                // data-img={item.}
                                 alt='Свадебное фото в Минске' 
                             />
-                            {/* <Info/> */}
+                            <Info/>
                         </picture>
                         :
                         <img 

@@ -38,7 +38,7 @@ const CreateAllColumns: FC<ICreateAllColumns> = ({row}) => {
 
         for(const key of columnKey) {
             let elementsColumn: IImage[] = [];
-            order[key].forEach(item => {
+            orderTwoColumn[key].forEach(item => {
                 elementsColumn.push(picturesForPageMain[item])
             });
             pictures.push(<CreateColumn arr={elementsColumn} row={row} keyEl={keyForColumn} key={keyForColumn}/>)
