@@ -9,6 +9,7 @@ import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import Spiner from '../components/Spiner/Spiner';
 import UpButton from '../components/UpButton/UpButton';
+import ShowImage from '../components/ShowImage/ShowImage';
 
 const Contacts = lazy(() => import('../pages/Contacts'));
 const AboutMe = lazy(() => import('../pages/AboutMe'));
@@ -45,6 +46,7 @@ function App() {
         <Provider store={store} >
             <BrowserRouter>
                 <div className="wrapper">
+                    <ShowImage/>
                     <Header/>
                     <main className="main" >
                         <Suspense fallback={<Spiner/>}>

@@ -217,6 +217,8 @@ export interface IImage {
     webPMobile: string;
      /** `Ориентация изображения.` */
     orientation: 'horizontal' | 'vertical';
+     /** `Имя изображения, добавляется в компаненте CreateAllColumns` */
+    name?: string | number;
 }
 
 export const order: {[key in number | string]: number[]} = {

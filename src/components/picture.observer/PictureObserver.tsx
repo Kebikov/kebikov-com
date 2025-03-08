@@ -41,34 +41,36 @@ const PictureObserver: FC<IPictureObserver> = ({
 
     return(
         <>
-                <picture ref={ref}>
-                    {   
-                        inView 
-                        ?
-                        <picture style={{position: 'relative'}}>
-                            <source 
-                                type="image/webp"
-                                srcSet={row === 4 ? item.webP : item.webPMobile}
-                            />
-                            <img 
-                                className={'loading-img'} 
-                                src={row === 4 ? item.jpg : item.jpgMobile} 
-                                height={orientation ? orientation === 'horizontal' ? '1200' : '800' : undefined} 
-                                width={orientation ? orientation === 'horizontal' ? '800' : '1200' : undefined} 
-                                // data-img={item.}
-                                alt='Свадебное фото в Минске' 
-                            />
-                            <Info/>
-                        </picture>
-                        :
+            <picture 
+                ref={ref}
+                onClick={() => console.log(item.name)}
+            >
+                {   
+                    inView 
+                    ?
+                    <picture style={{position: 'relative'}}>
+                        <source 
+                            type="image/webp"
+                            srcSet={row === 4 ? item.webP : item.webPMobile}
+                        />
                         <img 
-                            className={'anime'} 
-                            src={row === 4 ? boxMobile : box} 
+                            className={'loading-img'} 
+                            src={row === 4 ? item.jpg : item.jpgMobile} 
+                            height={orientation ? orientation === 'horizontal' ? '1200' : '800' : undefined} 
+                            width={orientation ? orientation === 'horizontal' ? '800' : '1200' : undefined} 
+                            data-img={item.name}
                             alt='Свадебное фото в Минске' 
                         />
-                    }
-                </picture>
-
+                        <Info/>
+                    </picture>
+                    :
+                    <img 
+                        className={'anime'} 
+                        src={row === 4 ? boxMobile : box} 
+                        alt='Свадебное фото в Минске' 
+                    />
+                }
+            </picture>
         </>
     )
 }

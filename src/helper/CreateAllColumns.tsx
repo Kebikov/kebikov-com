@@ -2,6 +2,7 @@ import { picturesForPageMain, IImage, order, orderTwoColumn } from './loadingImg
 import React from 'react';
 import CreateColumn from './CreateColumn';
 import { FC } from 'react';
+import { number } from 'yup';
 
 
 interface ICreateAllColumns {
@@ -15,8 +16,6 @@ interface ICreateAllColumns {
  * @param row Количество рядов которое создаем.
  * */
 const CreateAllColumns: FC<ICreateAllColumns> = ({row}) => {
-    /** `Ключ для каждого элемента изображения.` */
-    let keyForColumn: number = 0;
     /** `Все элементы изображений для отображения.` */
     const pictures: React.JSX.Element[] = [];
 
@@ -26,11 +25,11 @@ const CreateAllColumns: FC<ICreateAllColumns> = ({row}) => {
 
         for(const key of columnKey) {
             let elementsColumn: IImage[] = [];
-            order[key].forEach(item => {
+            order[key].forEach((item: number) => {
+                picturesForPageMain[item].name = item;
                 elementsColumn.push(picturesForPageMain[item])
             });
-            pictures.push(<CreateColumn arr={elementsColumn} row={row} keyEl={keyForColumn} key={keyForColumn}/>)
-            keyForColumn++;
+            pictures.push(<CreateColumn arr={elementsColumn} row={row} itemKey={key} key={key} />)
         }
     } else {
          /** `Ключи массивов, колонки 1-2` */
@@ -41,8 +40,7 @@ const CreateAllColumns: FC<ICreateAllColumns> = ({row}) => {
             orderTwoColumn[key].forEach(item => {
                 elementsColumn.push(picturesForPageMain[item])
             });
-            pictures.push(<CreateColumn arr={elementsColumn} row={row} keyEl={keyForColumn} key={keyForColumn}/>)
-            keyForColumn++;
+            pictures.push(<CreateColumn arr={elementsColumn} row={row} itemKey={key} key={key} />)
         }
     }
 
