@@ -4,6 +4,8 @@ import box from '../../resources/images/spiner/box.jpg';
 import boxMobile from '@/resources/images/spiner/box-mobile.jpg';
 import { FC } from 'react';
 import { IImage } from '../../helper/loadingImgForMainPage';
+import { SET_SHOW_IMAGE } from '../../redux/slice/indexSlice';
+import { useAppDispatch } from '../../redux/store/hooks';
 
 
 interface IPictureObserver {
@@ -16,6 +18,8 @@ const PictureObserver: FC<IPictureObserver> = ({
     item, 
     row
 }) => {
+
+    const dispatch = useAppDispatch();
 
     const {ref, inView} = useInView(
         { 
@@ -39,11 +43,18 @@ const PictureObserver: FC<IPictureObserver> = ({
         }}>{nameImg}</div>
     )
 
+    const onPress = () => {
+        //console.log(item.name);
+        document.body.style.overflow = 'hidden';
+        document.addEventListener('touchmove', (e) => e.preventDefault, {passive: true})
+        dispatch(SET_SHOW_IMAGE(item.name))
+    }
+
     return(
         <>
             <picture 
                 ref={ref}
-                onClick={() => console.log(item.name)}
+                onClick={onPress}
             >
                 {   
                     inView 
@@ -61,7 +72,7 @@ const PictureObserver: FC<IPictureObserver> = ({
                             data-img={item.name}
                             alt='Свадебное фото в Минске' 
                         />
-                        <Info/>
+                        {/* <Info/> */}
                     </picture>
                     :
                     <img 
