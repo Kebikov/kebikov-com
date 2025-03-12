@@ -92,7 +92,7 @@
     &__cash {
         font-family: 'Mont';
         font-size: 40px;
-        color: rgb(211, 211, 211);
+        color: var(--color-bg-list);
         font-weight: 400;
         @media (max-width: 1910px){
             font-size: calc(20px + 30 * (100vw - 375px) / 1535);
@@ -105,11 +105,12 @@
 
 .price-description{
     font-family: 'Mont';
-    font-size: 18px;
+    font-size: 17px;
     line-height: 140%;
-    color: rgb(211, 211, 211);
+    white-space: pre-line;
+    color: var(--color-text-light);
     font-weight: 400;
-    background-color: #757b6f;
+    background-color: var(--color-bg-text);
     padding: 30px 30px 30px 30px;
     text-align: center;
 }
@@ -121,7 +122,7 @@
     column-gap: 20px;
     row-gap: 20px;
     flex-wrap: wrap;
-    padding: 40px 20px 80px 20px;
+    padding: 20px;
 }
 
 
@@ -129,7 +130,7 @@
     flex: 0 1 45%;
     min-height: 140px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    background-color: #fff8f1;
+    background-color: var(--color-bg-list);
     transition: all 0.3s ease;
 
     display: flex;
@@ -172,7 +173,7 @@
 
     &__info {
         font-family: 'Mont';
-        font-size: 17px;
+        font-size: 16px;
         line-height: 140%;
         color: $color-text;
         @media (max-width: 1020px){

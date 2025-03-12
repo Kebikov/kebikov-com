@@ -18,9 +18,11 @@
 
       "baseUrl": "src",
       "paths": {
-        "@/*": ["*"]
-      }
-      
+        "@/*": ["*"],
+        "@components/*": ["./components/*"],
+        "@image/*": ["./resources/images/*"]
+      },
+      "types": ["webpack-env"]
     },
     "include": ["src", "**/*.ts", "**/*.tsx"]
   }

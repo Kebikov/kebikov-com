@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 //* redux 
 import store from '../redux/store/store';
+import { FC } from 'react';
 import { Provider } from 'react-redux';
 //*components 
 import Header from '../components/Header/Header';
@@ -34,7 +35,7 @@ function App() {
     //* code 
     const bodyOverflow = () => {
         const body = document.body;
-        store.getState().activeMenu ? body.style.overflowY = 'hidden' : body.style.overflowY = 'auto';
+        store.getState().indexSlice.activeMenu ? body.style.overflowY = 'hidden' : body.style.overflowY = 'auto';
     }
 
     bodyOverflow();
@@ -42,7 +43,7 @@ function App() {
 
     //* return 
     return (
-
+        
         <Provider store={store} >
             <BrowserRouter>
                 <div className="wrapper">
@@ -76,6 +77,7 @@ function App() {
         </Provider>
     )
 }
+
 
 export default App;
 

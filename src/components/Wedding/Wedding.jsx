@@ -79,7 +79,7 @@ const Wedding = ({link}) => {
         <>
             <div className="all-title">
                 <div className="all-title__line"></div>
-                <h1 className="all-title__text">Свадебная серия<br/>{title}</h1>
+                <h1 className="all-title__text">{title}</h1>
                 <div className="all-title__line"></div>
             </div>
             <div className="photo">

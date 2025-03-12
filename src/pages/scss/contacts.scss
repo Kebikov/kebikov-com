@@ -1,7 +1,7 @@
 @import '../../scss/variables.scss';
 
 .contacts {
-    background-color: $color-bg-beige;
+    background-color: var(--color-bg-list);
 
     // .contacts__body
     &__body {
@@ -10,7 +10,7 @@
 
     //* .contacts__header
     &__header {
-        background-color: #757b6f;
+        background-color: var(--color-bg-text);
         display: flex;
         justify-content: space-between;
         margin: 0px 0px 70px 0px;
@@ -29,20 +29,22 @@
         flex: 0 1 60%;
         @media (max-width: 1020px){
             flex: 0 1 100%;
+            padding: 0px;
         }
     }
 
     // .contacts__title
     &__title {
         font-family: 'Mont';
-        font-size: 50px;
+        font-size: 34px;
         font-weight: 500;
-        color: #fff;
+        color: var(--color-text-light);
         letter-spacing: 2px;
         padding: 0px 0px 20px 0px;
+
         @media (max-width: 1020px){
             text-align: center;
-            font-size: 40px;
+            font-size: 30px;
             padding: 20px 0px 20px 0px;
         }
     }
@@ -50,7 +52,7 @@
     // .contacts__text
     &__text {
         font-family: 'Mont';
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 400;
         color: #fff;
         line-height: 140%;
@@ -58,7 +60,7 @@
         @media (max-width: 1020px){
             flex: 0 1 100%;
             text-align: center;
-            font-size: 17px;
+            font-size: 16px;
         }
     }
 
@@ -68,8 +70,8 @@
         top: 0;
         right: 0;
         margin: 30px 0px -50px 0px;
-        flex: 0 1 20%;
-        padding-bottom: 20%;
+        flex: 0 1 15%;
+        padding-bottom: 15%;
         & img {
             position: absolute;
             top: 0;
@@ -106,8 +108,7 @@
     &__social {
         padding: 30px 0px 30px 30px;
         flex: 0 1 50%;
-        background-color: #757b6f;
-        
+        background-color: var(--color-bg-text);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -120,26 +121,26 @@
     // .contacts__phone
     &__info-block {
         font-family: 'Mont';
-        font-size: 22px;
+        font-size: 18px;
         font-weight: 400;
         color: #fff;
         padding: 10px 0px 10px 0px;
         line-height: 140%;
         @media (max-width: 1020px){
             text-align: center;
-            font-size: 20px;
+            font-size: 16px;
         }
         & span {
-            font-size: 28px;
+            font-size: 22px;
             @media (max-width: 1020px){
-                font-size: 23px;
+                font-size: 20px;
             }
         }
         & a {
             color: #fff;
-            font-size: 22px;
+            font-size: 20px;
             @media (max-width: 1020px){
-                font-size: 22px;
+                font-size: 18px;
             }
         }
     }

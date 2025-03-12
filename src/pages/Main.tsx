@@ -1,13 +1,13 @@
 import './scss/main.scss';
 import GalleryMain from "../components/GalleryMain/GalleryMain";
 import { useEffect } from "react";
-import SEO from "../components/SEO/SEO";
+import SEO from "@components/SEO/SEO";
 import { useDispatch } from "react-redux";
 import { setLineHeader } from "../redux/slice/indexSlice";
 //: Lazy
-import WeddingSeries from '../components/WeddingSeries/WeddingSeries';
-import TitlteBlock from '../components/TitlteBlock/TitlteBlock';
-import HeaderImage from '../components/HeaderImage/HeaderImage';
+import WeddingSeries from '@components/WeddingSeries/WeddingSeries';
+import TitlteBlock from '@components/TitlteBlock/TitlteBlock';
+import HeaderImage from '@components/HeaderImage/HeaderImage';
 
 
 /**
@@ -15,8 +15,7 @@ import HeaderImage from '../components/HeaderImage/HeaderImage';
  * - kebikov.com
  */
 const Main = () => {
-    console.log('Main');
-    console.log(document.referrer);
+    
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -48,6 +47,12 @@ const Main = () => {
 }
 
 export default Main;
+
+
+
+
+
+
 
 
 

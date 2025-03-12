@@ -7,6 +7,7 @@ import { Helmet } from "react-helmet";
 import nameSeries from './data/dataSeries';
 
 const WeddingsPage = () => {
+    
     useEffect(() => {
         window.scrollTo(0, 0);
     },[]);

@@ -86,19 +86,19 @@ const Map = () => {
 const Social = () => {
     return(
         <div className="contacts__social">
-                            <div className="contacts__info-block">
-                                <span>Phone<br/></span>
-                                <a href={"tel:+375296949843"}>+375296949843</a>
-                            </div>
-                            <div className="contacts__info-block">
-                                <span>Address<br/></span>
-                                г.Минск, ул.Рафиева 109/126
-                            </div>
-                            <div className="contacts__info-block">
-                                <span>Email<br/></span>
-                                info@kebikov.com
-                            </div>
-                        </div>
+            <div className="contacts__info-block">
+                <span>Phone<br/></span>
+                <a href={"tel:+375296949843"}>+375296949843</a>
+            </div>
+            <div className="contacts__info-block">
+                <span>Address<br/></span>
+                г.Минск, ул.Рафиева 109/126
+            </div>
+            <div className="contacts__info-block">
+                <span>Email<br/></span>
+                info@kebikov.com
+            </div>
+        </div>
     )
 } 
 

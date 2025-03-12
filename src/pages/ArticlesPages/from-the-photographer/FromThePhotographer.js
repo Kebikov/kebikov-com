@@ -50,7 +50,8 @@ const finaleDB = [
     },
 ];
 
-const FromThePhotographer = ({setLineHeader}) => {
+const FromThePhotographer = () => {
+    
     useEffect(() => {
         window.scrollTo(0, 0);
     },[]);

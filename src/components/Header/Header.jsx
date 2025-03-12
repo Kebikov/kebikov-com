@@ -5,7 +5,7 @@ import { useAppSelector } from '@/redux/store/hooks';
 
 
 const Header = () => {
-    console.log('Header');
+
     const lineHeader = useAppSelector(state => state.indexSlice.lineHeader);
 
     return(

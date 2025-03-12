@@ -7,7 +7,8 @@ module.exports = {
     webpack: {
         alias: {
             '@': resolvePath('./src'),
-            '@components': resolvePath('./src/components')
+            '@components': resolvePath('./src/components'),
+            '@image': resolvePath('./src/resources/images')
         }
     }
 }

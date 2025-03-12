@@ -37,7 +37,6 @@
 #root{
     height: 100%;
     width: 100%;
-    // background-color: #fffff4;
 }
 
 .wrapper{
@@ -71,6 +70,8 @@
     @media (min-width: 2601px){
         max-width: 2400px;
     };
+
+    
 }
 
 .container-main{
@@ -83,6 +84,39 @@
     display: flex;
     flex-direction: column;
 }
+
+
+//= Theme                                                             
+
+html {
+    --color-background: #fff;
+
+    --color-bg-text: #4d5653;
+    --color-bg-list: #f1ece7;
+
+    --color-text: rgb(105, 105, 105);
+    --color-text-light: #fff;
+
+    --color-gold: #ba9f5a;
+
+}
+
+// html[data-theme='dark'] {
+//     --color-background: #020003;
+//     --text-color: white;
+// }
+
+
+// @media (prefers-color-scheme: dark) {
+//     :root {
+//         // --color-background: #272c32;
+//         --color-background: #020003;
+//         --text-color: white;
+//     }
+// }
+
+
+
 
 
 

@@ -3,7 +3,11 @@ const usehelpPassAllImg = (context, only = 2) => {
     
     function importAll(context) {
         let images = {};
-        context.keys().forEach((item) => { images[item.replace('./', '')] = context(item); });
+        context.keys().forEach((item) => { 
+            if(typeof item === 'string' && item.startsWith('./')) {
+                images[item.replace('./', '')] = context(item);
+            }
+        });
         return images
     }
     const images = importAll(context);
