@@ -8,7 +8,7 @@ import SEO from "../components/SEO/SEO";
  * - kebikov.com/weddings-all
  */
 const WeddingsAll = () => {
-    console.log('WeddingsAll');
+
     useEffect(() => {
         window.scrollTo(0, 0);
         const wed = document.querySelector('.wed-center');

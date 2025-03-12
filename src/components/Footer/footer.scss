@@ -40,8 +40,15 @@
     &__text {
         @include text_streach (15, 16, $color-text);
         text-align: center;
-        // @media (max-width: 760px){ 
-        //     display: none;
-        // }
     }
+}
+
+.telegram {
+    display: inline-block;
+    width: 33px;
+    height: 33px;
+    background-color: #6b6b6b;
+    mask-image: url('../../resources/images/footer/telegram.png');
+    mask-repeat: no-repeat;
+    mask-size: cover;
 }

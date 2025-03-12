@@ -11,7 +11,8 @@ interface IHello {
 
 
 const Hello = memo(({
-    size, nameOS
+    size,
+    nameOS
 }: IHello) => {
 
     
@@ -39,7 +40,7 @@ const Hello = memo(({
 
 
 const MainImage = memo(() => {
-    console.log('render');
+    
     return(
         <div className='header-image__box-img'>
             <picture>

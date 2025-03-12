@@ -1,5 +1,5 @@
 import './weddingSeries.scss';
-import usehelpPassAllImg from '../../hooks/usehelpPassAllImg';
+import getAllImages from '../../helper/getAllImages';
 import CoverWedding from '../CoverWedding/CoverWedding';
 import nameSeries from '../../pages/data/dataSeries';
 
@@ -9,17 +9,18 @@ import nameSeries from '../../pages/data/dataSeries';
  * @example <WeddingSeries/>
  */
 const WeddingSeries = () => {
-    console.log('WeddingSeries');
-    const allImg = usehelpPassAllImg(require.context('../../resources/images/weddings-series/'));
     
+    const allImages = getAllImages(require.context('../../resources/images/weddings-series/', false, /\.(png|jpe?g|svg|webp)$/));
+
     return(
         <div className="wedding-series">
             { 
-                nameSeries.map((item, i) => <CoverWedding nameSeries={item} imgArr={allImg[i]} key={i} /> )
+                nameSeries.map((item, i) => <CoverWedding nameSeries={item} imgObject={allImages[i]} key={i} /> )
             }
         </div>
     )
 };
+
 
 export default WeddingSeries;
 

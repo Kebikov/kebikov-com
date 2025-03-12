@@ -1,7 +1,7 @@
 import './accessories.scss';
 import { useEffect } from 'react';
 import { Helmet } from "react-helmet";
-import usehelpPassAllImg from '../../../hooks/usehelpPassAllImg';
+import usehelpPassAllImg from '../../../helper/getAllImages';
 import HederArticles from '../../../components/HederArticles/HederArticles';
 import ArticleOption from '../../../components/ArticleOption/ArticleOption';
 import Title from '../../../components/Title/Title';

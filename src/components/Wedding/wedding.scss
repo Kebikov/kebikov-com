@@ -37,6 +37,7 @@
 }
 
 .anime{
+    position: relative;
     animation: fade infinite 3s;
 }
 @keyframes fade {
@@ -53,6 +54,7 @@
 
 .loading-img{
     animation: loading-img 1s;
+    position: relative;
 }
 @keyframes loading-img {
     0% {

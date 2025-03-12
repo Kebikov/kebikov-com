@@ -6,6 +6,7 @@ import { FC } from 'react';
 import { IImage } from '../../helper/loadingImgForMainPage';
 import { SET_SHOW_IMAGE } from '../../redux/slice/indexSlice';
 import { useAppDispatch } from '../../redux/store/hooks';
+import Info from '../Info/Info';
 
 
 interface IPictureObserver {
@@ -29,19 +30,6 @@ const PictureObserver: FC<IPictureObserver> = ({
     );
 
     const orientation = item.orientation;
-    const nameImg = item.jpg.match(/(?<=\/)\d+(?=\.)/gi);
-
-    const Info = () => (
-        <div style={{
-            position: 'absolute',
-            zIndex: '2',
-            top: '10px',
-            right: '10px',
-            color: '#000',
-            fontSize: '24px',
-            backgroundColor: '#fff'
-        }}>{nameImg}</div>
-    )
 
     const onPress = () => {
         //console.log(item.name);
@@ -72,7 +60,7 @@ const PictureObserver: FC<IPictureObserver> = ({
                             data-img={item.name}
                             alt='Свадебное фото в Минске' 
                         />
-                        {/* <Info/> */}
+                        {/* <Info name={item.jpg} match /> */}
                     </picture>
                     :
                     <img 

@@ -15,9 +15,8 @@
     width: 100%;
     height: auto;
     position: relative;
-    top: 0;
-    left: 0;
-    z-index: 3;
+    z-index: 4;
+    background-color: var(--color-background);
     @media (max-width: 1260px){
         z-index: 2;
     }
@@ -25,8 +24,6 @@
     &__body{
         display: grid;
         grid-template-columns: 1fr 240px 1fr;
-
-        //max-width: 1300px;
 
         margin: 0px auto 20px auto;
 
@@ -113,7 +110,7 @@
 
     margin: -70px 0px 20px 0px;
 
-        &.fixed{
+    &.fixed {
         top: 85px;
     }
     &.active{
@@ -211,6 +208,8 @@
         left: 20px;
         width: 40px;
         height: 40px;
+
+        cursor: pointer;
 
         &::before{
             content: '';

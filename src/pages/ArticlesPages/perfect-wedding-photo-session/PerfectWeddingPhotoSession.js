@@ -1,5 +1,5 @@
 import './perfectWeddingPhotoSession.scss';
-import usehelpPassAllImg from '../../../hooks/usehelpPassAllImg';
+import usehelpPassAllImg from '../../../helper/getAllImages';
 import useArticle from '../../../hooks/useArticle';
 import { useEffect } from 'react';
 import { Helmet } from "react-helmet";

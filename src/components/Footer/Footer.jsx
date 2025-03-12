@@ -2,7 +2,6 @@ import './footer.scss';
 import insta from '../../resources/images/footer/insta.png';
 import tel from '../../resources/images/footer/tel.png';
 import viber from '../../resources/images/footer/viber.png';
-import vk from '../../resources/images/footer/vk.png';
 
 
 //= Footer 
@@ -20,8 +19,8 @@ const Footer = () => {
                 <a href={"viber://chat?number=%2B375296949843"} className="footer__link" >
                     <img src={viber} className="footer__img" alt='logo viber' />
                 </a>
-                <a href={"https://vk.com/id58859701"} className="footer__link">
-                    <img src={vk}  className="footer__img" alt="logo vk" />
+                <a href={"https://t.me/Eugene_Ghionis"} className="footer__link telegram">
+                    {/* <img src={telegram}  className="footer__img telegram" alt="logo telegram" /> */}
                 </a>
             </div>
             <div className="footer__text">

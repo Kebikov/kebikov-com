@@ -6,11 +6,6 @@ import menuData from '../../data/DataLinks';
 import { useAppSelector } from '@/redux/store/hooks';
 
 
-/**
- * Element.JSX Menu mobile.
- * @example <MenuMobile/>
- */
-
 const MenuMobile = () => {
 
     const activeMenu = useAppSelector(state => state.indexSlice.activeMenu);

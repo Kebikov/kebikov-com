@@ -6,34 +6,38 @@ import { Helmet } from "react-helmet";
 //* const 
 import nameSeries from './data/dataSeries';
 
+
 const WeddingsPage = () => {
     
     useEffect(() => {
         window.scrollTo(0, 0);
     },[]);
 
+    /**
+     * wed окончание пути.
+     * @example
+     * "MY" || "NK" ...
+     */
     const {wed} = useParams();
 
-    let wedName = '';
-    nameSeries.forEach(item => {
-        if(item[1] === wed) wedName = item[0];
-    });
+     /** `Поиск обьекта и возврат полного имени свадьбы.` */
+    const name = nameSeries.find(item => item.link === wed)?.title;
     
+    if(!wed) return null
     
-    //* render 
     return(
             <>
                 <Helmet>
-                    <title>{wedName} свадебная серия фотографии.</title>
+                    <title>{name} свадебная серия фотографии.</title>
                     <meta
                         name="description"
-                        content={`Фотографии свадьбы ${wedName}, свадебная фотосессия в Минске. Просмотрите фото свадебного дня молодожен. Свадебный фотограф Минск.`}
+                        content={`Фотографии свадьбы ${name}, свадебная фотосессия в Минске. Просмотрите фото свадебного дня молодожен. Свадебный фотограф Минск.`}
                     />
                     <link rel="canonical" href={`https://kebikov.com/weddings-all/${wed}`}/>
                 </Helmet>
 
                 <Wedding link={wed}/>
-                <WeddingSeries plusClass={'mb-50'}/>
+                <WeddingSeries/>
             </>
     )
 }
