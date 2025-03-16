@@ -44,12 +44,20 @@ const MainImage = memo(() => {
     return(
         <div className='header-image__box-img'>
             <picture>
-            <source srcSet={require('../../resources/images/header-image/main-mobile.webp')} type="image/webp" media="(max-width: 767px)" />
-            <source srcSet={require('../../resources/images/header-image/main-mobile.jpg')} type="image/jpeg" media="(max-width: 767px)" />
+                {/* <img src={require('../../resources/images/header-image/main-mobile.avif')} alt='#' /> */}
+                <source srcSet={require('../../resources/images/header-image/main-mobile.avif')} type="image/avif" media="(max-width: 767px)" />
+                <source srcSet={require('../../resources/images/header-image/main-mobile.webp')} type="image/webp" media="(max-width: 767px)" />
+                <source srcSet={require('../../resources/images/header-image/main-mobile.jpg')} type="image/jpeg" media="(max-width: 767px)" />
                 <source srcSet={require('../../resources/images/header-image/main-1920.webp')} type="image/webp" media="(max-width: 1500px)" />
                 <source srcSet={require('../../resources/images/header-image/main-1920.jpg')} type="image/jpeg" media="(max-width: 1500px)" />
                 <source srcSet={require('../../resources/images/header-image/main-2560.webp')} type="image/webp" />
-                <img className="header-image__img" src={require('../../resources/images/header-image/main-2560.jpg')} alt="Свадебный фотограф в Минске" />
+                <img 
+                    className="header-image__img" src={require('../../resources/images/header-image/main-2560.jpg')} 
+                    width="1200" height="800"
+                    decoding="async"
+                    fetchPriority="high"
+                    alt="Свадебный фотограф в Минске" 
+                />
             </picture>
         </div>
     )

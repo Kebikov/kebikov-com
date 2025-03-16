@@ -15,7 +15,7 @@
 
     // .about__pic
     &__pic {
-        flex: 0 1 50%;
+        flex: 0 1 42%;
         display: flex;
         justify-content: flex-end;
         padding: 20px 0px 20px 0px;
@@ -47,9 +47,11 @@
         padding: 20px;
         border-radius: 5px;
         font-family: 'Hand';
+
         font-size: 24px;
+        
         font-weight: 400;
-        color: var(--color-text);
+        color: var(--color-text-light);
         line-height: 140%;
         white-space: pre-line;
         @media (max-width: 1200px){
@@ -61,6 +63,9 @@
             margin: 0px 10px 20px 10px;
             justify-content: center;
             font-size: 23px;
+        }
+        @media (min-width: 2000px){
+            font-size: 26px;
         }
     }
 }

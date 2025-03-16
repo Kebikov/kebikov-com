@@ -2,7 +2,7 @@ import './titlteBlock.scss';
 
 //= TitlteBlock 
 const TitlteBlock = (props) => {
-    console.log('TitlteBlock');
+
     return(
         <div className="title-weding">
             <div className="title-weding__line"></div>
