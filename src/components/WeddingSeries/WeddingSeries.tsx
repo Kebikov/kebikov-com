@@ -10,12 +10,12 @@ import nameSeries from '../../pages/data/dataSeries';
  */
 const WeddingSeries = () => {
     
-    const allImages = getAllImages(require.context('../../resources/images/weddings-series/', false, /\.(png|jpe?g|svg|webp)$/));
+    const {images} = getAllImages(require.context('../../resources/images/weddings-series/', false, /\.(png|jpe?g|svg|webp)$/));
 
     return(
         <div className="wedding-series">
             { 
-                nameSeries.map((item, i) => <CoverWedding nameSeries={item} imgObject={allImages[i]} key={i} /> )
+                nameSeries.map((item, i) => <CoverWedding nameSeries={item} imgObject={images[i]} key={i} /> )
             }
         </div>
     )

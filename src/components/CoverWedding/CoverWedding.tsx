@@ -33,7 +33,7 @@ const CoverWedding: FC<ICoverWedding> = ({
                     {
                         inView 
                         ?
-                        <PictureTag srcImg={imgObject.jpg} srcSource={imgObject.webp} alt='Серии свадебных фотографий' />
+                        <PictureTag imgObject={imgObject} alt='Серии свадебных фотографий' />
                         :
                         <img src={box} className='loading-img'  alt="Серии свадебных фотографий"/>
                     }

@@ -25,7 +25,6 @@ const Wedding: FC<IWedding> = ({
         pictureAll.forEach(item => imgObserver.observe(item));
     },[link]);
 
-    //* render 
     return(
         <>
             <div className="all-title">
@@ -35,7 +34,7 @@ const Wedding: FC<IWedding> = ({
             </div>
             <div className="photo">
                 {
-                    allImages.map(item => <ImageWedding item={item} key={item.jpg}/> )
+                    allImages.map((item, i) => <ImageWedding item={item} key={i}/> )
                 }
             </div>
         </>

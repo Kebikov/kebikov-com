@@ -37,7 +37,10 @@ const WeddingsPage = () => {
                 </Helmet>
 
                 <Wedding link={wed}/>
-                <WeddingSeries/>
+
+                {/* <div className="container" >
+                    <WeddingSeries/>
+                </div> */}
             </>
     )
 }
