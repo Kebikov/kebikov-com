@@ -1,7 +1,7 @@
 import './headerImage.scss';
 import { memo } from 'react';
 import useFontSize from '../../hooks/useFontSize';
-import { useWindowSize } from 'react-use';
+import { IMG_header_image as images } from '../../data/image/header-image';
 
 
 interface IHello {
@@ -44,15 +44,18 @@ const MainImage = memo(() => {
     return(
         <div className='header-image__box-img'>
             <picture>
-                {/* <img src={require('../../resources/images/header-image/main-mobile.avif')} alt='#' /> */}
-                <source srcSet={require('../../resources/images/header-image/main-mobile.avif')} type="image/avif" media="(max-width: 767px)" />
-                <source srcSet={require('../../resources/images/header-image/main-mobile.webp')} type="image/webp" media="(max-width: 767px)" />
-                <source srcSet={require('../../resources/images/header-image/main-mobile.jpg')} type="image/jpeg" media="(max-width: 767px)" />
-                <source srcSet={require('../../resources/images/header-image/main-1920.webp')} type="image/webp" media="(max-width: 1500px)" />
-                <source srcSet={require('../../resources/images/header-image/main-1920.jpg')} type="image/jpeg" media="(max-width: 1500px)" />
-                <source srcSet={require('../../resources/images/header-image/main-2560.webp')} type="image/webp" />
+                <source srcSet={images[1000].avif} type="image/avif" media="(max-width: 767px)" />
+                <source srcSet={images[1000].webp} type="image/webp" media="(max-width: 767px)" />
+                <source srcSet={images[1000].jpg} type="image/jpeg" media="(max-width: 767px)" />
+
+                <source srcSet={images[1920].avif} type="image/avif" media="(max-width: 1940px)" />
+                <source srcSet={images[1920].webp} type="image/webp" media="(max-width: 1940px)" />
+                <source srcSet={images[1920].jpg} type="image/jpeg" media="(max-width: 1940px)" />
+
+                <source srcSet={images[2560].avif} type="image/avif" />
+                <source srcSet={images[2560].webp} type="image/webp" />
                 <img 
-                    className="header-image__img" src={require('../../resources/images/header-image/main-2560.jpg')} 
+                    className="header-image__img" src={images[2560].jpg} 
                     width="1200" height="800"
                     decoding="async"
                     fetchPriority="high"
