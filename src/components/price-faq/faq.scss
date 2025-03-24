@@ -24,7 +24,14 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background:rgb(48, 23, 23) url(../../resources/images/praice/bb.jpg) center center / cover no-repeat;
+        background:rgb(48, 23, 23) url(../../resources/images/praice/6.jpg) center center / cover no-repeat;
+        @supports (background: url('../../resources/images/praice/6.webp') 0 0 / cover no-repeat) {
+            background-image: url('../../resources/images/praice/6.webp');
+        }
+        @supports (background: url('../../resources/images/praice/6.avif') 0 0 / cover no-repeat) {
+            background-image: url('../../resources/images/praice/6.avif');
+        }
+        
         z-index: 1;
     }
 

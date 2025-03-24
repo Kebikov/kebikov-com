@@ -1,10 +1,12 @@
 import '../../pages/ArticlesPages/beautiful-wedding-finale/beautifulWeddingFinale.scss';
+import { IImageWedding } from '@/data/image/weddings/types';
+import ImageWedding from '../ImageWedding/ImageWedding';
 import { FC } from "react";
 
 interface IFinaleBox {
     title: string;
     text: string;
-    img: string[];
+    img: [string, IImageWedding];
     side?: boolean;
 }
 
@@ -24,12 +26,12 @@ const FinaleBox: FC<IFinaleBox> = ({
                 <div className="left-img__body">
                     <div className={sideStyle}>
                         <div className="left-img__item-img-box">
-                            <img src={img[1]} alt="number"/>
+                            <ImageWedding item={img[1]}/>
                         </div>
                     </div>
                     <div className={sideStyleTwo}>
                         <div className="left-img__text-body">
-                            <img src={img[0]} alt="торт"/>
+                            <img src={img[0]} alt="number"/>
                             <div className="left-img__title">{title}</div>
                         </div>
                         <div className="left-img__text">{text}</div>
