@@ -1,7 +1,7 @@
 import './beautifulWeddingFinale.scss';
 import HederArticles from '../../../components/HederArticles/HederArticles';
 import ArticleOption from '../../../components/ArticleOption/ArticleOption';
-import useArticle from '../../../hooks/useArticle';
+import FinaleBox from '../../../components/FinaleBox/FinaleBox';
 import { useEffect } from 'react';
 import SEO from '../../../components/SEO/SEO';
 import jpg1 from '../../../resources/images/articles/beautiful-wedding-finale/1.jpg';
@@ -121,8 +121,6 @@ const BeautifulWeddingFinale = () => {
         window.scrollTo(0, 0);
     },[]);
 
-    const {FinaleBox} = useArticle();
-
     //* render 
     return(
         <>
@@ -136,21 +134,9 @@ const BeautifulWeddingFinale = () => {
             <HederArticles title={'15 ВАРИАНТОВ КРАСИВОГО СВАДЕБНОГО ФИНАЛА'}/>
             <div className="options">
                 <ArticleOption text={'Самое долгожданное событие для каждой не женатой девушки на свадьбе — это бросание букета невесты. В классическом варианте, невеста становится спиной к не женатым подружкам и бросает его, не глядя через плечо. Сейчас я расскажу, как это сделать интересно и весело!'}/>
-                <FinaleBox info={finaleDB[0]} side={true}/>
-                <FinaleBox info={finaleDB[1]} side={false}/>
-                <FinaleBox info={finaleDB[2]} side={true}/>
-                <FinaleBox info={finaleDB[3]} side={false}/>
-                <FinaleBox info={finaleDB[4]} side={true}/>
-                <FinaleBox info={finaleDB[5]} side={false}/>
-                <FinaleBox info={finaleDB[6]} side={true}/>
-                <FinaleBox info={finaleDB[7]} side={false}/>
-                <FinaleBox info={finaleDB[8]} side={true}/>
-                <FinaleBox info={finaleDB[9]} side={false}/>
-                <FinaleBox info={finaleDB[10]} side={true}/>
-                <FinaleBox info={finaleDB[11]} side={false}/>
-                <FinaleBox info={finaleDB[12]} side={true}/>
-                <FinaleBox info={finaleDB[13]} side={false}/>
-                <FinaleBox info={finaleDB[14]} side={true}/>
+                {
+                    finaleDB.map((item, i) => <FinaleBox title={item.title} text={item.text} img={item.img} side={i % 2 === 0} />)
+                }
             </div>
         </>
     )

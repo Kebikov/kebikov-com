@@ -1,7 +1,7 @@
 import '../beautiful-wedding-finale/beautifulWeddingFinale.scss';
 import HederArticles from '../../../components/HederArticles/HederArticles';
 import ArticleOption from '../../../components/ArticleOption/ArticleOption';
-import useArticle from '../../../hooks/useArticle';
+import FinaleBox from '../../../components/FinaleBox/FinaleBox';
 import { useEffect } from 'react';
 import { Helmet } from "react-helmet";
 import jpg1 from '../../../resources/images/articles/bouquet-roll/1.jpg';
@@ -72,8 +72,6 @@ const BouquetRoll = () => {
         window.scrollTo(0, 0);
     },[]);
 
-    const {FinaleBox} = useArticle();
-
     //* render 
     return(
         <>
@@ -89,14 +87,14 @@ const BouquetRoll = () => {
             <HederArticles title={'8 ОРИГИНАЛЬНЫХ СПОСОБОВ БРОСИТЬ БУКЕТ НЕВЕСТЫ'}/>
             <div className="options">
                 <ArticleOption text={'Самое долгожданное событие для каждой не женатой девушки на свадьбе — это бросание букета невесты. В классическом варианте, невеста становится спиной к не женатым подружкам и бросает его, не глядя через плечо. Сейчас я расскажу, как это сделать интересно и весело!'}/>
-                <FinaleBox info={finaleDB[0]} side={true}/>
-                <FinaleBox info={finaleDB[1]} side={false}/>
-                <FinaleBox info={finaleDB[2]} side={true}/>
-                <FinaleBox info={finaleDB[3]} side={false}/>
-                <FinaleBox info={finaleDB[4]} side={true}/>
-                <FinaleBox info={finaleDB[5]} side={false}/>
-                <FinaleBox info={finaleDB[6]} side={true}/>
-                <FinaleBox info={finaleDB[7]} side={false}/>
+                <FinaleBox title={finaleDB[0].title} text={finaleDB[0].text} img={finaleDB[0].img} side />
+                <FinaleBox title={finaleDB[1].title} text={finaleDB[1].text} img={finaleDB[1].img} />
+                <FinaleBox title={finaleDB[2].title} text={finaleDB[2].text} img={finaleDB[2].img} side />
+                <FinaleBox title={finaleDB[3].title} text={finaleDB[3].text} img={finaleDB[3].img} />
+                <FinaleBox title={finaleDB[4].title} text={finaleDB[4].text} img={finaleDB[4].img} side />
+                <FinaleBox title={finaleDB[5].title} text={finaleDB[5].text} img={finaleDB[5].img} />
+                <FinaleBox title={finaleDB[6].title} text={finaleDB[6].text} img={finaleDB[6].img} side />
+                <FinaleBox title={finaleDB[7].title} text={finaleDB[7].text} img={finaleDB[7].img} />
             </div>
         </>
     )

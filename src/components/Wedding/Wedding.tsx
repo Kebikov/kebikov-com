@@ -1,8 +1,6 @@
 import './wedding.scss';
-import useHelperLazyLoad from '../../hooks/useHelperLazyLoad';
-import { useEffect } from 'react';
 import { FC } from 'react';
-import { weddingImages } from '@/helper/weddingImages';
+import { getWeddingImages } from '@/helper/getWeddingImages';
 import ImageWedding from '../ImageWedding/ImageWedding';
 
 
@@ -15,15 +13,7 @@ const Wedding: FC<IWedding> = ({
     link
 }) => {
 
-    const {entryCall, option} = useHelperLazyLoad();
-    const {allImages, title} = weddingImages(link);
-
-    useEffect(() => {
-        window.scrollTo(0, 0);
-        const imgObserver = new IntersectionObserver(entryCall, option);
-        const pictureAll = document.querySelectorAll('picture');
-        pictureAll.forEach(item => imgObserver.observe(item));
-    },[link]);
+    const {allImages, title} = getWeddingImages(link);
 
     return(
         <>
@@ -34,7 +24,10 @@ const Wedding: FC<IWedding> = ({
             </div>
             <div className="photo">
                 {
+                    allImages !== undefined ?
                     allImages.map((item, i) => <ImageWedding item={item} key={i}/> )
+                    :
+                    null
                 }
             </div>
         </>

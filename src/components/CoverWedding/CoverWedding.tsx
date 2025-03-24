@@ -1,17 +1,16 @@
 import '../WeddingSeries/weddingSeries.scss';
 import { Link } from 'react-router-dom';
 import { useInView } from 'react-intersection-observer';
-import box from '../../resources/images/spiner/box.jpg';
-import PictureTag from '../PictureTag/PictureTag';
+import ImageWedding from '../ImageWedding/ImageWedding';
 import './types';
 import { FC } from 'react';
-import type { TJpgWebp } from '@/helper/getAllImages';
+import type { IImageWedding } from '@/data/image/weddings/types';
 import type { InameSeries } from '@/pages/data/dataSeries';
 
 
 interface ICoverWedding {
     nameSeries: InameSeries;
-    imgObject: TJpgWebp;
+    imgObject: IImageWedding;
 }
 
  /** `Обложка для сводьбы.` */
@@ -30,13 +29,7 @@ const CoverWedding: FC<ICoverWedding> = ({
     return(
             <Link className="wedding-series__box" to={`/weddings-all/${nameSeries.link}`} ref={ref} >
                 <div className="wedding-series__item" >
-                    {
-                        inView 
-                        ?
-                        <PictureTag imgObject={imgObject} alt='Серии свадебных фотографий' />
-                        :
-                        <img src={box} className='loading-img'  alt="Серии свадебных фотографий"/>
-                    }
+                    <ImageWedding item={imgObject} />
                     <div className="wedding-series__title">{nameSeries.title}</div>
                     <div className="wedding-series__sub-title">wedding day</div>
                 </div>

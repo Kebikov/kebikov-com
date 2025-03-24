@@ -1,7 +1,7 @@
 import './weddingSeries.scss';
-import getAllImages from '../../helper/getAllImages';
 import CoverWedding from '../CoverWedding/CoverWedding';
 import nameSeries from '../../pages/data/dataSeries';
+import { IMG_wedding_series } from '@/data/image/wedding-series';
 
 
 /**
@@ -10,12 +10,11 @@ import nameSeries from '../../pages/data/dataSeries';
  */
 const WeddingSeries = () => {
     
-    const {images} = getAllImages(require.context('../../resources/images/weddings-series/', false, /\.(png|jpe?g|svg|webp)$/));
 
     return(
         <div className="wedding-series">
             { 
-                nameSeries.map((item, i) => <CoverWedding nameSeries={item} imgObject={images[i]} key={i} /> )
+                nameSeries.map((item, i) => <CoverWedding nameSeries={item} imgObject={IMG_wedding_series[i]} key={i} /> )
             }
         </div>
     )

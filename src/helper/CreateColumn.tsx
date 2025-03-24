@@ -1,11 +1,10 @@
-import { IImage } from "./loadingImgForMainPage";
-import React from "react";
-import PictureObserver from "../components/picture.observer/PictureObserver";
+import { IImageWedding } from "@/data/image/weddings/types";
 import { FC } from "react";
+import ImageWedding from "@/components/ImageWedding/ImageWedding";
 
 
 interface ICreateColumn {
-    arr: IImage[];
+    arr: IImageWedding[];
     row: number;
      /** `Номер колонки 1-2-3-4` */
     itemKey: string;
@@ -17,7 +16,7 @@ const CreateColumn: FC<ICreateColumn> = ({arr, row, itemKey}) => {
 
     const rows = arr.map((item, i) => {
         return (
-            <PictureObserver item={item} row={row} key={i} />
+            <ImageWedding item={item} press key={i} />
         )
     })
     

@@ -1,8 +1,8 @@
-import { picturesForPageMain, IImage, order, orderTwoColumn } from './loadingImgForMainPage';
+import { IMG_main_page, orderOneColumn, orderTwoColumn} from '@/data/image/main-page';
+import type { IImageWedding } from '@/data/image/weddings/types';
 import React from 'react';
 import CreateColumn from './CreateColumn';
 import { FC } from 'react';
-import { number } from 'yup';
 
 
 interface ICreateAllColumns {
@@ -21,13 +21,13 @@ const CreateAllColumns: FC<ICreateAllColumns> = ({row}) => {
 
     if(row === 4) {
          /** `Ключи массивов, колонки 1-2-3-4` */
-        const columnKey = Object.keys(order);
+        const columnKey = Object.keys(orderOneColumn);
 
         for(const key of columnKey) {
-            let elementsColumn: IImage[] = [];
-            order[key].forEach((item: number) => {
-                picturesForPageMain[item].name = item;
-                elementsColumn.push(picturesForPageMain[item])
+            let elementsColumn: IImageWedding[] = [];
+            orderOneColumn[key].forEach((item: number) => {
+                //IMG_main_page[item].name = item;
+                elementsColumn.push(IMG_main_page[item])
             });
             pictures.push(<CreateColumn arr={elementsColumn} row={row} itemKey={key} key={key} />)
         }
@@ -36,9 +36,9 @@ const CreateAllColumns: FC<ICreateAllColumns> = ({row}) => {
         const columnKey = Object.keys(orderTwoColumn);
 
         for(const key of columnKey) {
-            let elementsColumn: IImage[] = [];
+            let elementsColumn: IImageWedding[] = [];
             orderTwoColumn[key].forEach(item => {
-                elementsColumn.push(picturesForPageMain[item])
+                elementsColumn.push(IMG_main_page[item])
             });
             pictures.push(<CreateColumn arr={elementsColumn} row={row} itemKey={key} key={key} />)
         }

@@ -2,14 +2,15 @@ export interface IImageWedding {
      /** `Изображение в формате jpg.` */
     jpg: string;
      /** `Изображение для мобильного в формате webp.` */
-    webp: string;
+    webp?: string;
      /** `Изображение для мобильного в формате avif.` */
-    avif: string;
+    avif?: string;
 
-     /** `Изображение для мобильного в формате jpg.` */
-    jpg_mobile: string;
+     /** `Для телефона в размере.` */
+     /** `Изображение в формате jpg.` */
+    jpg_mobile?: string;
      /** `Изображение для мобильного в формате webp.` */
-    webp_mobile: string;
-     /** `Изображение для мобильного в формате webp.` */
-    avif_mobile: string;
+    webp_mobile?: string;
+     /** `Изображение для мобильного в формате avif.` */
+    avif_mobile?: string;
 }

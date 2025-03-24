@@ -83,8 +83,6 @@ const getAllImages = (context: RequireContext): {images: TJpgWebp[]} => {
 
     const images = allImg();
 
-    console.log(images);
-
     return {
         images
     }
