@@ -10,14 +10,19 @@ import { matchSlashDot } from "@/helper/matchSlashDot";
 interface IIW {
     item: IImageWedding;
     press?: boolean;
+    infoTest?: string;
 }
 
 
 const ImageWedding: FC<IIW> = ({
     item,
-    press = false
+    press = false,
+    infoTest
 }) => {
-
+    if(infoTest === 'CoverWedding') {
+        console.log('ImageWedding');
+    }
+    
     const dispatch = useAppDispatch();
 
     const {ref, inView} = useInView(

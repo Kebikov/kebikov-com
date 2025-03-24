@@ -1,5 +1,6 @@
 import type { IImageWedding } from './weddings/types';
 
+
 import imgJpg_1 from '@image/wedding-series/1.jpg';
 import imgWebp_1 from '@image/wedding-series/1.webp';
 import imgAvif_1 from '@image/wedding-series/1.avif';
@@ -27,6 +28,7 @@ import imgAvif_8 from '@image/wedding-series/8.avif';
 import imgJpg_9 from '@image/wedding-series/9.jpg';
 import imgWebp_9 from '@image/wedding-series/9.webp';
 import imgAvif_9 from '@image/wedding-series/9.avif';
+
 
 export const IMG_wedding_series: IImageWedding[] = [
     {

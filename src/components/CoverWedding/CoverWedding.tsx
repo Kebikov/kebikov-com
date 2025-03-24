@@ -1,6 +1,5 @@
 import '../WeddingSeries/weddingSeries.scss';
 import { Link } from 'react-router-dom';
-import { useInView } from 'react-intersection-observer';
 import ImageWedding from '../ImageWedding/ImageWedding';
 import './types';
 import { FC } from 'react';
@@ -19,17 +18,12 @@ const CoverWedding: FC<ICoverWedding> = ({
     imgObject
 }) => {
 
-    const {ref, inView} = useInView(
-        {
-            rootMargin: '0px 0px 70px 0px',
-            triggerOnce: true
-        }
-    );
+    console.log('COVER');
 
     return(
-            <Link className="wedding-series__box" to={`/weddings-all/${nameSeries.link}`} ref={ref} >
+            <Link className="wedding-series__box" to={`/weddings-all/${nameSeries.link}`} >
                 <div className="wedding-series__item" >
-                    <ImageWedding item={imgObject} />
+                    <ImageWedding item={imgObject} infoTest='CoverWedding' />
                     <div className="wedding-series__title">{nameSeries.title}</div>
                     <div className="wedding-series__sub-title">wedding day</div>
                 </div>

@@ -51,17 +51,3 @@
         opacity: 1;
     }
 }
-
-.loading-img{
-    animation: loading-img 1s;
-    position: relative;
-}
-@keyframes loading-img {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}

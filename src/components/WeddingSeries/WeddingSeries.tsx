@@ -1,6 +1,6 @@
 import './weddingSeries.scss';
 import CoverWedding from '../CoverWedding/CoverWedding';
-import nameSeries from '../../pages/data/dataSeries';
+import dataSeries from '../../pages/data/dataSeries';
 import { IMG_wedding_series } from '@/data/image/wedding-series';
 
 
@@ -9,12 +9,12 @@ import { IMG_wedding_series } from '@/data/image/wedding-series';
  * @example <WeddingSeries/>
  */
 const WeddingSeries = () => {
-    
+    console.log('WS');
 
     return(
         <div className="wedding-series">
             { 
-                nameSeries.map((item, i) => <CoverWedding nameSeries={item} imgObject={IMG_wedding_series[i]} key={i} /> )
+                dataSeries.map((item, i) => <CoverWedding nameSeries={item} imgObject={IMG_wedding_series[i]} key={IMG_wedding_series[i].jpg} /> )
             }
         </div>
     )
