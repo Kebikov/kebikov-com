@@ -1,5 +1,13 @@
 @import '../../scss/variables.scss';
 
+.price-line {
+    margin-top: 8px;
+
+    width: 40%;
+    height: 2px;
+    background-color: var(--color-bg-list);
+}
+
 .price-header {
     width: 100%;
 
@@ -60,36 +68,39 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        @media (max-width: 800px){
+            width: 42%;
+        }
+    }
+
+    &__h2 {
+        font-family: 'Mont';
+        font-size: clamp(12px, 1.3vw, 20px);
+        color: var(--color-bg-list);
+        font-weight: 500;
+        text-align: center;
     }
 
     // .price-header__title
     &__title {
+        margin-top: 8px;
+
         font-family: 'Mont';
-        font-size: 50px;
-        color: rgb(211, 211, 211);
+        font-size: clamp(28px, 3vw, 50px);
+        color: var(--color-bg-list);
         font-weight: 400;
-        margin:0px 0px 20px 0px;
-        position: relative;
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translate(-50%, 0);
-            width: 70%;
-            height: 3px;
-            background-color: rgb(211, 211, 211);
-        }
-        @media (max-width: 1910px){
-            font-size: calc(20px + 30 * (100vw - 375px) / 1535);
-        }
-        @media (max-width: 375px){
-            font-size: 20px;
-        }
+        // @media (max-width: 1910px){
+        //     font-size: calc(20px + 30 * (100vw - 375px) / 1535);
+        // }
+        // @media (max-width: 375px){
+        //     font-size: 20px;
+        // }
     }
 
     // .price-header__cash
     &__cash {
+        margin-top: 8px;
+
         font-family: 'Mont';
         font-size: 40px;
         color: var(--color-bg-list);

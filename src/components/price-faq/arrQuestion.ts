@@ -1,7 +1,9 @@
-import './faq.scss';
-import { useState } from 'react';
+export interface IItemQuestion {
+    case: string;
+    answer: string;
+}
 
-const arrQuestion = [
+export const arrQuestion: IItemQuestion[] = [
     {
         case:'СКОЛЬКО СТОИТ СВАДЕБНАЯ ФОТОСЕССИЯ ?',
         answer: 'Вы можете выбрать один из четырех пакетов свадебной фотосессии, или мы с вами вместе сформируем ваш индивидуальный комплекс услуг, убрав или добавив пункты по желанию. Спектр цен  гибко подстраивается под практически любой свадебный бюджет. Пожалуйста, свяжитесь со мной лично, чтобы обговорить все детали свадебного дня и составить для вас индивидуальный пакет услуг в зависимости от ваших пожеланий.'
@@ -35,58 +37,3 @@ const arrQuestion = [
     //     answer: 'Я как свадебный фотограф, хочу дать своим клиентам максимум положительных эмоций. В свадебный пакетах "Premium" и "Standart", свадебная фотосессия будет записана на флеш USB из дерева с гравировкой ваших имен, я бесплатно распечатаю для вас свадебные фото и все это будет упаковано в деревянный короб на котором будет выполненна индивидуальная гравировка.'
     // },
 ]
-
-//= Faq 
-const Faq = () => {
-
-    //* state 
-    const [keyCurrent, setKeyCurrent] = useState(-1);
-
-    //* code 
-    const items = arrQuestion.map((item, i) => {
-        return (
-            <Question arr={item} setKeyCurrent={setKeyCurrent} keyCurrent={keyCurrent} id={i} key={i}/>
-        )});
-
-
-    //* return 
-    return(
-            <div className="faq">
-                <div className="faq__body">
-                    <div className="faq__text">Уважаемые молодожёны, сейчас я постараюсь осветить наиболее часто встречающиеся вопросы нашего творческого сотрудничества. Хочу, чтобы после прочтения, вам все стало понятнее. Приятного чтения.</div>
-                    <div className="faq__title">FAQ</div>
-                    {items}
-                    <div className="question__line"/>
-                </div>
-                <div className="border-bottom"/>
-            </div>
-    )
-}
-
-//= Question 
-const Question = ({arr, setKeyCurrent, keyCurrent, id}) => {
-
-    //* code 
-    const onOpen = (e) => {
-        let key = e.target.closest('.question').getAttribute('data-id');
-        let hiAnswer = e.target.closest('.question').querySelector('.question__answer').offsetHeight;
-        if(hiAnswer === 0) {
-            setKeyCurrent(key);
-        }else{
-            setKeyCurrent(-1);
-        }
-        
-    }
-
-    //* return 
-    return(
-        <div className="question" onClick={onOpen} data-id={id}>
-            <div className="question__line"/>
-            <div className={+keyCurrent === id ? "question__case rotate" : "question__case"}>{arr.case}</div>
-            <div className={+keyCurrent === id ? "question__answer rotate" : "question__answer"}>{arr.answer}</div>
-        </div>
-    )
-}
-
-
-export default Faq;

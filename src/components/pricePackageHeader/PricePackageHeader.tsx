@@ -4,6 +4,9 @@ import type { IArrParagraphs } from '../../data/dataPrice';
 import type { IImageWedding } from '../../data/image/weddings/types';
 import { FC } from 'react';
 
+const Line = () => (
+    <div className="price-line" />
+);
 
 interface IPricePackageHeader {
     title: string;
@@ -46,19 +49,11 @@ const PricePackageHeader: FC<IPricePackageHeader> = ({
         }
     }
 
-    //* return 
     return(
         <>
             <div className="price-header">
                 <div className="price-header__body">
                     <div className={correction ? "price-header__corection" : "price-header__img"}>
-                        {/* <motion.img
-                            variants={motionImg}
-                            initial={'hidden'}
-                            whileInView={'visible'}
-                            viewport={{amount: 0.1, once: true}}
-                            src={pic} alt="weddings"
-                        /> */}
                         <motion.picture
                             variants={motionImg}
                             initial={'hidden'}
@@ -74,7 +69,10 @@ const PricePackageHeader: FC<IPricePackageHeader> = ({
                         </motion.picture>
                     </div>
                     <div className="price-header__tape">
+                        <h2 className='price-header__h2' >пакет свадебной съемки</h2>
+                        <Line/>
                         <div className="price-header__title">{title}</div>
+                        <Line/>
                         <div className="price-header__cash">{cash}</div>
                     </div>
                 </div>

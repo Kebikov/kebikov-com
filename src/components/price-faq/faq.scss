@@ -43,6 +43,18 @@
         z-index: 5;
     }
 
+    &__h1 { 
+        margin-top: 20px;
+        padding: 0 10px 0 10px;
+
+        font-family: 'Mont';
+        font-size: 18px;
+        font-weight: 400;
+        color: white;
+        text-align: center;
+        line-height: 140%;
+    }
+
     // .faq__text
     &__text {
         padding: 20px 10px 20px 10px;
