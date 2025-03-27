@@ -3,11 +3,6 @@
 .contacts {
     background-color: var(--color-bg-list);
 
-    // .contacts__body
-    &__body {
-        
-    }
-
     //* .contacts__header
     &__header {
         background-color: var(--color-bg-text);
@@ -36,7 +31,7 @@
     // .contacts__title
     &__title {
         font-family: 'Mont';
-        font-size: 34px;
+        font-size: clamp(21px, 1.4vw, 30px);
         font-weight: 500;
         color: var(--color-text-light);
         letter-spacing: 2px;
@@ -44,7 +39,6 @@
 
         @media (max-width: 1020px){
             text-align: center;
-            font-size: 30px;
             padding: 20px 0px 20px 0px;
         }
     }
@@ -52,7 +46,7 @@
     // .contacts__text
     &__text {
         font-family: 'Mont';
-        font-size: 18px;
+        font-size: clamp(16px, 0.9vw, 18px);
         font-weight: 400;
         color: #fff;
         line-height: 140%;
@@ -60,7 +54,6 @@
         @media (max-width: 1020px){
             flex: 0 1 100%;
             text-align: center;
-            font-size: 16px;
         }
     }
 
@@ -121,27 +114,22 @@
     // .contacts__phone
     &__info-block {
         font-family: 'Mont';
-        font-size: 18px;
+        font-size: clamp(17px, .9vw, 20px);
         font-weight: 400;
         color: #fff;
         padding: 10px 0px 10px 0px;
         line-height: 140%;
+
         @media (max-width: 1020px){
             text-align: center;
             font-size: 16px;
         }
         & span {
-            font-size: 22px;
-            @media (max-width: 1020px){
-                font-size: 20px;
-            }
+            font-size: clamp(18px, 1vw, 20px);
         }
         & a {
             color: #fff;
-            font-size: 20px;
-            @media (max-width: 1020px){
-                font-size: 18px;
-            }
+            font-size: clamp(18px, 0.9vw, 20px);
         }
     }
 

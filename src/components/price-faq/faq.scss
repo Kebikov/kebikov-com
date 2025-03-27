@@ -48,8 +48,8 @@
         padding: 0 10px 0 10px;
 
         font-family: 'Mont';
-        font-size: 18px;
-        font-weight: 400;
+        font-size: clamp(16px, 0.71vw, 19px);
+        font-weight: 500;
         color: white;
         text-align: center;
         line-height: 140%;
@@ -59,7 +59,7 @@
     &__text {
         padding: 20px 10px 20px 10px;
         font-family: 'Mont';
-        font-size: 17px;
+        font-size: clamp(16px, 0.71vw, 19px);
         font-weight: 400;
         line-height: 140%;
         text-align: center;
@@ -77,13 +77,10 @@
     }
 }
 
-
 .question {
     margin: 0px 0px 0px 0px;
     padding: 0px 10px 0px 10px;
     cursor: pointer;
-    //margin: 0px 0px 20px 0px;
-
     // .question__line
     &__line {
         width: 100%;
@@ -91,21 +88,19 @@
         background-color: rgba(170, 140, 89, 0.556);
        //margin: 0px 0px 20px 0px;
     }
-
     // .question__case
     &__case {
         color: $color-gold;
         font-family: 'Mont';
         font-weight: 500;
-        font-size: 17px;
+        text-transform: uppercase;
+        font-size: clamp(13px, .665vw, 17px);
         line-height: 140%;
         letter-spacing: 1.0px;
+
         position: relative;
         padding: 20px 50px 20px 10px;
-        @media (max-width: 1020px){
-            font-size: 14px;
-        }
-        &::after{
+        &::after {
             content:"";
             position: absolute;
             top: 17px;
@@ -114,10 +109,10 @@
             width: 30px;
             background: url(../../../src/resources/images/praice/arrow.png) 0 0 / cover no-repeat;
             transform: rotate(90deg);
-            transition: all 0.2s ease;
+            transition: transform 0.3s ease;
         }
     }
-    &__case.rotate::after{
+    &__case.rotate::after {
         transform: rotate(0deg);
     }
 
@@ -128,18 +123,16 @@
         visibility: hidden;
         font-size: 0px;
         padding: 0 10px 0px 10px;
-        //margin: 0px 0px 20px 0px;
-        transition: height 0.3s ease,  
-                    opacity 0.3s ease 0.1s,
-                    padding 0.3s ease;
         
+        transition: height 0.5s ease,  
+                    opacity 0.5s ease 0.1s,
+                    padding 0.5s ease;
     }
-    &__answer.rotate{
+    &__answer.rotate {
         color: rgb(230, 230, 230);
         font-family: 'Mont';
         font-size: 16px;
         line-height: 170%;
-        //margin: 20px 0px 20px 0px;
         padding: 0 10px 20px 10px;
         opacity: 1;
         visibility: visible;
@@ -174,3 +167,4 @@
         width: 50%;
     }
 }
+

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import type { IArrParagraphs } from '../../data/dataPrice';
 import type { IImageWedding } from '../../data/image/weddings/types';
 import { FC } from 'react';
+import NoWrap from '../NoWrap/NoWrap';
 
 const Line = () => (
     <div className="price-line" />
@@ -69,7 +70,7 @@ const PricePackageHeader: FC<IPricePackageHeader> = ({
                         </motion.picture>
                     </div>
                     <div className="price-header__tape">
-                        <h2 className='price-header__h2' >пакет свадебной съемки</h2>
+                        <h2 className='price-header__h2' >пакет <NoWrap>свадебной съемки</NoWrap></h2>
                         <Line/>
                         <div className="price-header__title">{title}</div>
                         <Line/>

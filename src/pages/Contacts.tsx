@@ -3,8 +3,9 @@ import FormContact from '../components/FormContact/FormContact';
 import ava from '../resources/images/contacts/1.jpg';
 import { motion } from 'framer-motion';
 import { Helmet } from "react-helmet";
+import NoWrap from '@/components/NoWrap/NoWrap';
 
-//= Contacts 
+
 const Contacts = () => {
     
     return(
@@ -27,7 +28,6 @@ const Contacts = () => {
     )
 }
 
-//= HeaderContacts 
 const HeaderContacts = () => {
     const motAva = {
         hidden: {
@@ -44,12 +44,12 @@ const HeaderContacts = () => {
         }
     }
 
-    //* return 
+
     return(
         <div className="contacts__header">
             <div className="contacts__subtitle">
                 <h1 className="contacts__title">Контакты</h1>
-                <div className="contacts__text">Свяжитесь со мной и раскажите о вашем особенном дне.<br/>Заполните форму ниже или свяжитесь удобным для вас способом.</div>
+                <h2 className="contacts__text">Свяжитесь со мной и раскажите о вашем <NoWrap>свадном дне.</NoWrap><br/>Заполните форму ниже или свяжитесь удобным для вас способом.</h2>
             </div>
             <motion.div
                 variants={motAva}
@@ -63,7 +63,7 @@ const HeaderContacts = () => {
     )
 }
 
-//= Info 
+
 const Info = () => {
     return(
         <div className="contacts__info">
@@ -73,7 +73,6 @@ const Info = () => {
     )
 }
 
-//= Map 
 const Map = () => {
     return(
         <div className="contacts__map">
@@ -82,7 +81,6 @@ const Map = () => {
     )
 }
 
-//= Social 
 const Social = () => {
     return(
         <div className="contacts__social">
