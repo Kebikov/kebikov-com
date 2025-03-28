@@ -5,6 +5,7 @@ import { setActiveMenu } from '../../redux/slice/indexSlice';
 import logoImg from '../../resources/images/header/1.jpg';
 import menuData from '../../data/DataLinks';
 import { useAppDispatch } from '../../redux/store/hooks';
+import { NavLink } from 'react-router-dom';
 
 
 /**
@@ -29,9 +30,9 @@ const MenuPc = () => {
                     <LinkMenu data={menuData.articles} action={onBurgerFalse} classLi={'heder-pc__line'} classActive={'heder-pc__link'} />
                     <LinkMenu data={menuData.aboutMe} action={onBurgerFalse} classLi={'heder-pc__line'} classActive={'heder-pc__link'} />
                 </ul>
-                <div className="heder-pc__logo">
+                <NavLink to={'/'} className="heder-pc__logo">
                     <img src={logoImg} alt="my_alt" height="80" width="153"/>
-                </div>
+                </NavLink>
                 <ul className="heder-pc__right">
                     <LinkMenu data={menuData.reviews} action={onBurgerFalse} classLi={'heder-pc__line'} classActive={'heder-pc__link'} />
                     <LinkMenu data={menuData.praice} action={onBurgerFalse} classLi={'heder-pc__line'} classActive={'heder-pc__link'} />
