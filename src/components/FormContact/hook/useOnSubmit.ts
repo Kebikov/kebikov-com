@@ -12,7 +12,10 @@ export interface IStateDataForm extends IReqPostEmailSend {
 
 
 
-const useOnSubmit = (stateForm: IStateDataForm) => {
+const useOnSubmit = (
+    stateForm: IStateDataForm, 
+    setStateForm: React.Dispatch<React.SetStateAction<IStateDataForm>>
+) => {
     /** 
       * @param message Сообщение при отпавке данных формы.
       */
@@ -34,7 +37,7 @@ const useOnSubmit = (stateForm: IStateDataForm) => {
         
         await validationSchema.validate(stateForm, {abortEarly: false})
             .then(async () => {
-                await sendEmail(stateForm, setMessage, setError);
+                await sendEmail(stateForm, setStateForm, setMessage, setError);
             })
             .catch((error) => {
                 if(error instanceof ValidationError) {

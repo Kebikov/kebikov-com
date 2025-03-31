@@ -28,6 +28,7 @@
 		"build": "craco build",
 		"server": "serve -s build",
 		"test-types": "tsc --noEmit",
+        
 		"eject-1": "react-scripts eject",
 		"dev-1": "react-scripts start",
 		"build-1": "react-scripts build",

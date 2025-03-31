@@ -20,7 +20,7 @@ const FormContact: FC<IFormContact> = ({
 }) => {
 
     const [stateForm, setStateForm] = useState<IStateDataForm>({email: '', msg: '', check: undefined});
-    const {message, error, onSubmit} = useOnSubmit(stateForm);
+    const {message, error, onSubmit} = useOnSubmit(stateForm, setStateForm);
 
     const handelChange = (evt: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setStateForm(state => ({...state, [evt.target.name]: evt.target.value}));

@@ -7,6 +7,7 @@ const serverURL = process.env.NODE_ENV === 'production' ? 'https://admin.kebikov
 
 export const sendEmail = async (
     stateForm: IStateDataForm, 
+    setStateForm: React.Dispatch<React.SetStateAction<IStateDataForm>>,
     setMessage: React.Dispatch<React.SetStateAction<string>>,
     setError: React.Dispatch<React.SetStateAction<TErrorValidation>>
 ) => {
@@ -21,10 +22,10 @@ export const sendEmail = async (
                 check: stateForm.check
             })
         .then(res => {
-            console.log(1);
             if(res.status === 200){
                 setMessage('Спасибо, письмо отправлено !');
                 setTimeout(() => {
+                    setStateForm({email: '', msg: '', check: undefined});
                     setMessage('');
                 }, 1000);
             }
