@@ -51,12 +51,13 @@
         z-index: 5;
         white-space: pre-line;
         text-align: center;
-        line-height: 140%;
+        line-height: 200%;
         color: #fff;
-        font-size: 20px;
+        font-size: clamp(18px, 0.8vw, 20px);
         font-family: 'Mont';
         font-weight: 600;
         padding: 20px 20px 20px 40px;
+
         @media (max-width: 900px){
             flex: 0 1 95%;
         }
@@ -125,7 +126,9 @@
 .error {
     z-index: 5;
     color: rgb(255, 40, 40);
-    font-size: 18px;
+    font-size: clamp(15px, 0.8vw,18px);
     margin: -20px 0px 0px 0px;
     font-family: 'Mont';
+    font-weight: 600;
+    text-transform: lowercase;
 }

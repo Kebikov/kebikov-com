@@ -3,7 +3,6 @@ import FormContact from '../components/FormContact/FormContact';
 import ava from '../resources/images/contacts/1.jpg';
 import { motion } from 'framer-motion';
 import { Helmet } from "react-helmet";
-import NoWrap from '@/components/NoWrap/NoWrap';
 
 
 const Contacts = () => {
@@ -49,7 +48,7 @@ const HeaderContacts = () => {
         <div className="contacts__header">
             <div className="contacts__subtitle">
                 <h1 className="contacts__title">Контакты</h1>
-                <h2 className="contacts__text">Свяжитесь со мной и раскажите о вашем <NoWrap>свадном дне.</NoWrap><br/>Заполните форму ниже или свяжитесь удобным для вас способом.</h2>
+                <h2 className="contacts__text">Свяжитесь со мной и раскажите о вашем свадном дне.<br/>Заполните форму ниже или свяжитесь удобным для вас способом.</h2>
             </div>
             <motion.div
                 variants={motAva}

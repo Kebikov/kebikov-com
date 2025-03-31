@@ -1,5 +1,5 @@
 import { IItemQuestion } from "../price-faq/arrQuestion";
-import { FC, useRef, useState } from "react";
+import { FC } from "react";
 
 
 interface IQuestion {

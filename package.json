@@ -6,7 +6,6 @@
 		"@reduxjs/toolkit": "^2.6.0",
 		"@types/react-router-dom": "^5.3.3",
 		"axios": "^1.8.4",
-		"formik": "^2.2.9",
 		"framer-motion": "^12.4.10",
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0",
@@ -25,13 +24,14 @@
 		"yup": "^1.6.1"
 	},
 	"scripts": {
-		"dev1": "react-scripts start",
 		"dev": "craco start",
-		"build1": "react-scripts build",
 		"build": "craco build",
-		"test": "react-scripts test",
-		"eject": "react-scripts eject",
-		"server": "serve -s build"
+		"server": "serve -s build",
+		"test-types": "tsc --noEmit",
+		"eject-1": "react-scripts eject",
+		"dev-1": "react-scripts start",
+		"build-1": "react-scripts build",
+		"test-1": "react-scripts test"
 	},
 	"browserslist": {
 		"production": [
