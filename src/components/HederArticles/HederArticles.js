@@ -1,6 +1,5 @@
 import './hederArticles.scss';
 import flov from '../../resources/images/items/Flov.png';
-import { motion } from "framer-motion";
 
 const HederArticles = ({title}) => {
 

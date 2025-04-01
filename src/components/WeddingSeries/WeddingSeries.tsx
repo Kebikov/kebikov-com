@@ -9,7 +9,6 @@ import { IMG_wedding_series } from '@/data/image/wedding-series';
  * @example <WeddingSeries/>
  */
 const WeddingSeries = () => {
-    console.log('WS');
 
     return(
         <div className="wedding-series">

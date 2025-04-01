@@ -29,7 +29,7 @@
         font-family: 'Mont';
         font-size: 24px;
         font-weight: 400;
-        color: #3E616F;
+        color: var(--color-text);
         letter-spacing: 1.4px;
         text-transform: uppercase;
         text-align: center;
@@ -43,13 +43,13 @@
     }
 
     &__top {
-        border-top: #3E616F 2px solid;
+        border-top: 2px solid var(--color-text);
         width: 100%;
         padding: 10px 0px 0px 0px;
     }
 
     &__bottom {
-        border-bottom: #3E616F 2px solid;
+        border-bottom: 2px solid var(--color-text);
         width: 100%;
         padding: 0px 0px 10px 0px;
     }

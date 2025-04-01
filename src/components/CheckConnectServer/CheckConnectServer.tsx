@@ -7,8 +7,7 @@ const serverURL = process.env.NODE_ENV === 'production' ? 'https://admin.kebikov
 const CheckConnectServer = () => {
 
     const onClick = async () => {
-        console.log('click');
-        
+
         // await axios
         //     .get(serverURL)
         //     .then(res => console.log(res))
@@ -43,7 +42,7 @@ const CheckConnectServer = () => {
 }
 
 const style: CSSProperties = {
-    background: 'green',
+    background: 'var(--color-background-second)',
     fontSize: '24px',
     color: '#fff',
     padding: '10px'

@@ -19,7 +19,7 @@
         font-family: 'Mont';
         font-size: 24px;
         font-weight: 400;
-        color: #3E616F;
+        color: var(--color-text);
         line-height: 140%;
         text-align: center;
         text-decoration: underline;
@@ -32,7 +32,7 @@
         font-family: 'Mont';
         font-size: 18px;
         font-weight: 400;
-        color: #3E616F;
+        color: var(--color-text);
         line-height: 140%;
         padding: 0px 15px 0px 15px;
         white-space: pre-line;

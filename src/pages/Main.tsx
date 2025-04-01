@@ -8,6 +8,7 @@ import { setLineHeader } from "../redux/slice/indexSlice";
 import WeddingSeries from '@components/WeddingSeries/WeddingSeries';
 import TitlteBlock from '@components/TitlteBlock/TitlteBlock';
 import HeaderImage from '@components/HeaderImage/HeaderImage';
+import { setTheme } from '@/helper/fncLocalStorage';
 
 
 /**
@@ -25,6 +26,11 @@ const Main = () => {
             dispatch(setLineHeader(false));
         }
     },[]); // eslint-disable-line 
+
+    useEffect(() => {
+        setTheme('dark');
+    }, []);
+
 
 
     return(

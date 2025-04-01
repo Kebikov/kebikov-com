@@ -4,14 +4,14 @@
     margin:0px 0px 40px 0px;
     // .all-title__line
     &__line {
-        border-bottom: $color-gold 2px solid;
+        border-bottom: 2px solid var(--color-gold);
         width: 100%;
     }
 
     // .all-title__text
     &__text {
         font-family: 'Streamster';
-        color: $color-text;
+        color: var(--color-text);
         font-size: 32px;
         font-weight: 400;
         line-height: 140%;

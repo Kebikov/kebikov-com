@@ -29,7 +29,7 @@ const Article: FC<IArticle> = ({
                 <div className="article__title">{title}</div>
                 <div className="article__subtitle">{subtitle}</div>
                 <div className="article__button-body">
-                    <Link to={link} className="article__button"><span>читать статью</span></Link>
+                    <Link to={link} className="article__button">читать статью</Link>
                 </div>
             </div>
         </article>

@@ -41,7 +41,6 @@ const useOnSubmit = (
             })
             .catch((error) => {
                 if(error instanceof ValidationError) {
-                    console.log(error.inner);
                     const objectErrors: Record<string, string> = {};
                     error.inner.forEach(err => {
                         if(err.path) objectErrors[err.path] = err.message;

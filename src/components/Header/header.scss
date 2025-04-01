@@ -2,12 +2,13 @@
 @import '../../scss/mixin.scss';
 
 .header{
+    margin-top: 5px;
     position: relative;
     z-index: 100;
     &__bottom-line{
         width: 100%;
         height: 2px;
-        background-color: $color-gold;
+        background-color: var(--color-const-focus);
     }
 }
 
@@ -25,7 +26,7 @@
         display: grid;
         grid-template-columns: 1fr 240px 1fr;
 
-        margin: 0px auto 20px auto;
+        margin: 0px auto 10px auto;
 
         position: relative;
 
@@ -51,16 +52,16 @@
 
     // .heder-pc__link
     &__link {
-        @include text_streach (15, 13, $color-text);
+        font-family: 'Mont';
+        color: var(--color-text);
+        font-size: clamp(13px, .8vw, 17px);
+        font-weight: 400;
         text-transform: uppercase;
         letter-spacing: 1px;
         white-space: nowrap;
 
         &:hover{
-            color: $color-gold;
-        }
-        &.target{
-            color: $color-gold;
+            color: var(--color-const-focus);
         }
     }
 
@@ -70,8 +71,9 @@
         align-self: self-end;
 
         & img{
+            opacity: .85;
             object-fit: cover;
-            height: 90px;
+            height: 80px;
             width: auto;
             @media (max-width: 1200px){
                 margin: 10px 0px 0px 0px;
@@ -97,14 +99,14 @@
 
 //= .burger 
 .burger {
-    background-color: $background-burger-line;
+    background-color: var(--background-burger-line);
     width: 50px;
     height: 50px;
     border-radius: 4px;
     transition: all 0.3s ease;
     transition-delay: 0.7s;
     position: fixed;
-    top: 112px;
+    top: 100px;
     left: 20px;
     z-index: 2;
 
@@ -137,7 +139,7 @@
     &__line {
         width: 80%;
         height: $hi-burger-line;
-        background-color: $color-burger-line;
+        background-color: var(--color-burger-line);
         &::before {
             position: absolute;
             content: '';
@@ -146,7 +148,7 @@
             transform: translate(-50%, 0);
             width: 80%;
             height: $hi-burger-line;
-            background-color: $color-burger-line;
+            background-color: var(--color-burger-line);
         }
         &::after {
             position: absolute;
@@ -158,7 +160,7 @@
             width: 80%;
             height: $hi-burger-line;
 
-            background-color: $color-burger-line;
+            background-color: var(--color-burger-line);
         }
     }
 }
@@ -173,7 +175,7 @@
 
     padding: 0px 0px 0px 40px;
 
-    background: #fff;
+    background: var(--color-background);
 
     background-position: 70% 0;
 
@@ -196,7 +198,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: #fff;
+        background-color: var(--color-background);
     }
     &.active{
         left: 0;
@@ -219,7 +221,7 @@
             width: 35px;
             height: 3px;
             transform: rotate(45deg);
-            background-color: $color-text;
+            background-color: var(--color-cross-close);
         } 
         &::after{
             content: '';
@@ -229,7 +231,7 @@
             width: 35px;
             height: 3px;
             transform: rotate(-45deg);
-            background-color: $color-text;
+            background-color: var(--color-cross-close);
         }
     }
 
@@ -241,23 +243,17 @@
     // .menu-mob__link
     &__link {
         font-family: 'Mont';
-        font-size: 17px;
+        font-size: clamp(15px, .8vw, 17px);
         font-weight: 400;
         letter-spacing: 1px;
         text-transform: uppercase;
-        color: $color-text;
-        @media (max-width: 1200px) {
-            font-size: 15px;
-        }
+        color: var(--color-text);
         &:hover{
-            color: $color-gold;
-        }
-        &.target{
-            color: $color-gold;
+            color: var(--color-const-focus);
         }
     }
 }
 
 .activeLink {
-    color: $color-gold;
+    color: var(--color-const-focus);
 }

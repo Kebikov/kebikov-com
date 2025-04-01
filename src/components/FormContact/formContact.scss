@@ -17,7 +17,7 @@
     &__body {
         display: flex;
         justify-content: center;
-        background: #000 url(../../resources/images/contact/fonContact.jpg) center center / cover no-repeat;
+        background: url(../../resources/images/contact/fonContact.jpg) center center / cover no-repeat;
         padding: 100px 0px 0px 0px;
         //transform: scale()
         position: relative;
@@ -30,7 +30,6 @@
         z-index: 5;
         top: 0px;
         right: 0;
-        background: linear-gradient(to top right, rgba(42,43,48,0) 50%, #ffffff 51%);
         height: 70px;
         width: 80%;
     }
@@ -39,7 +38,6 @@
         z-index: 5;
         top: 0px;
         left: 0;
-        background: linear-gradient(to top left, rgba(42,43,48,0) 50%, #ffffff 51%);
         height: 50px;
         width: 20%;
     }
@@ -113,10 +111,14 @@
 
     &__button{
         z-index: 5;
-        color: #fff;
+
+        color: #1a1c1f;
         font-size: 20px;
+        font-weight: 500;
         font-family: 'Mont';
-        background-color: $color-gold;
+        text-transform: lowercase;
+
+        background-color: var(--color-const-focus);
         padding: 10px 0px 10px 0px;
         width: 40%;
         margin: 20px 0px 0px 0px;

@@ -18,8 +18,6 @@ const CoverWedding: FC<ICoverWedding> = ({
     imgObject
 }) => {
 
-    console.log('COVER');
-
     return(
             <Link className="wedding-series__box" to={`/weddings-all/${nameSeries.link}`} >
                 <div className="wedding-series__item" >

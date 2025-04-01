@@ -22,7 +22,7 @@ const Contacts = () => {
                     <HeaderContacts/>
                     <Info/>
                 </div>
-                <FormContact color={'#f1ece7'}/>
+                <FormContact color={'var(--color-background)'}/>
             </div>
     )
 }

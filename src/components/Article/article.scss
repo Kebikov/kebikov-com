@@ -35,7 +35,7 @@
         display: flex;
         justify-content: space-between;
         flex-direction: column;
-        background-color: #e0e0e094;
+        background-color: var(--color-background-second);
         height: 100%;
     }
 
@@ -68,7 +68,7 @@
         font-weight: 400;
         line-height: 130%;
         text-transform: uppercase;
-        color: #3E616F;
+        color: var(--color-text);
         padding: 20px 20px 20px 20px;
     }
 
@@ -78,7 +78,7 @@
         font-size: 17px;
         font-weight: 400;
         line-height: 150%;
-        color: #3E616F;
+        color: var(--color-text);
         padding: 20px 20px 20px 20px;
         flex: 1 1 auto;
     }
@@ -93,19 +93,14 @@
 
     // .article__button
     &__button {
-        //display: inline;
         font-family: 'Mont';
         font-size: 17px;
-        font-weight: 400;
-        line-height: 150%;
-        color: #3E616F;
+        font-weight: 500;
+        color: var(--color-background-third);
 
-        & span {
-            padding: 10px 20px 10px 20px;
-            border: #3E616F 2px solid;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-        }
+        background-color: var(--color-const-focus);
+        padding: 10px 20px 10px 20px;
+        border-radius: 8px;
     }
 }
 
@@ -120,7 +115,7 @@
         font-family: 'Mont';
         font-size: 24px;
         font-weight: 400;
-        color: #3E616F;
+        color: var(--color-text);
         letter-spacing: 1.4px;
         @media (max-width: 1000px) {
             font-size: 18px;

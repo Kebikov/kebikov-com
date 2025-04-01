@@ -8,7 +8,6 @@ import { useAppSelector } from '@/redux/store/hooks';
  * @returns 
  */
 const LineTotalReviews = () => {
-    console.log('LineTotalReviews');
 
     const {activeSlidesReviews} = useAppSelector(state => state.indexSlice);
 

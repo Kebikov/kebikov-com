@@ -11,7 +11,7 @@
     &__line {
         flex: 0 1 35%;
 
-        border-bottom: $color-gold 2px solid;
+        border-bottom: 2px solid var(--color-gold);
         width: 100%;
         @media (max-width: 700px){
             flex: 0 1 100%;
@@ -24,7 +24,7 @@
         display: flex;
         justify-content: center;
         font-family: 'Mont';
-        color: $color-text;
+        color: var(--color-text);
         font-size: 20px;
         font-weight: 400;
         white-space: pre-line;

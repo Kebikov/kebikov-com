@@ -1,11 +1,11 @@
 @import '../../scss/variables.scss';
 
 .contacts {
-    background-color: var(--color-bg-list);
+    background-color: var(--color-background-second);
 
     //* .contacts__header
     &__header {
-        background-color: var(--color-bg-text);
+        background-color: var(--);
         display: flex;
         justify-content: space-between;
         margin: 0px 0px 70px 0px;
@@ -101,7 +101,7 @@
     &__social {
         padding: 30px 0px 30px 30px;
         flex: 0 1 50%;
-        background-color: var(--color-bg-text);
+        background-color: var(--color-background-third);
         display: flex;
         flex-direction: column;
         justify-content: center;

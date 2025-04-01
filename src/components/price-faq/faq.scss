@@ -50,7 +50,7 @@
         font-family: 'Mont';
         font-size: clamp(16px, 0.71vw, 19px);
         font-weight: 500;
-        color: white;
+        color: var(--color-text);
         text-align: center;
         line-height: 140%;
     }
@@ -63,12 +63,12 @@
         font-weight: 400;
         line-height: 140%;
         text-align: center;
-        color: rgb(230, 230, 230);
+        color: var(--color-text);
     }
 
     // .faq__title
     &__title {
-        color: $color-gold;
+        color: var(--color-gold);
         text-align: center;
         font-family: 'Mont';
         font-size: 34px;
@@ -90,7 +90,7 @@
     }
     // .question__case
     &__case {
-        color: $color-gold;
+        color: var(--color-gold);
         font-family: 'Mont';
         font-weight: 500;
         text-transform: uppercase;
@@ -140,7 +140,7 @@
     }
 }
 
-.border-bottom{
+.border-bottom {
     position:absolute;
     bottom: 0;
     left: 0;
@@ -153,7 +153,7 @@
         position: absolute;
         bottom: 0;
         right: 0;
-        background: linear-gradient(to bottom right, rgba(18, 48, 196, 0) 50%, $color-bg-beige 51%);
+        background: linear-gradient(to bottom right, rgba(18, 48, 196, 0) 50%, var(--color-background) 51%);
         height: 70px;
         width: 50%;
     }
@@ -162,7 +162,7 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        background: linear-gradient(to bottom left, rgba(18, 48, 196, 0) 50%, $color-bg-beige 51%);
+        background: linear-gradient(to bottom left, rgba(18, 48, 196, 0) 50%, var(--color-background) 51%);
         height: 70px;
         width: 50%;
     }

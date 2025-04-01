@@ -19,9 +19,6 @@ const ImageWedding: FC<IIW> = ({
     press = false,
     infoTest
 }) => {
-    if(infoTest === 'CoverWedding') {
-        console.log('ImageWedding');
-    }
     
     const dispatch = useAppDispatch();
 

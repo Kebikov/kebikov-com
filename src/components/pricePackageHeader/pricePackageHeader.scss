@@ -5,7 +5,7 @@
 
     width: 40%;
     height: 2px;
-    background-color: var(--color-bg-list);
+    background-color: var(--color-text);
 }
 
 .price-header {
@@ -78,7 +78,7 @@
         line-height: 120%;
         font-size: clamp(13px, .8vw, 18px);
         letter-spacing: .5px;
-        color: var(--color-bg-list);
+        color: var(--color-text);
         font-weight: 400;
         text-align: center;
     }
@@ -89,7 +89,7 @@
 
         font-family: 'Mont';
         font-size: clamp(28px, 1.9vw, 44px);
-        color: var(--color-bg-list);
+        color: var(--color-text);
         font-weight: 400;
     }
 
@@ -99,7 +99,7 @@
 
         font-family: 'Mont';
         font-size: clamp(20px, 1.57vw, 36px);
-        color: var(--color-bg-list);
+        color: var(--color-text);
         font-weight: 400;
     }
 }
@@ -111,7 +111,7 @@
     white-space: pre-line;
     color: var(--color-text-light);
     font-weight: 400;
-    background-color: var(--color-bg-text);
+    background-color: var(--color-background-second);
     padding: 30px 30px 30px 30px;
     text-align: center;
 }
@@ -126,18 +126,17 @@
     padding: 20px;
 }
 
-
 .paragraphs {
     flex: 0 1 45%;
     min-height: 140px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    background-color: var(--color-bg-list);
+    box-shadow: var(--color-shadow-one) 0px 0px 5px 1px, var(--color-shadow-two) 0px 0px 1px -1px;
+    background-color: var(--color-background-second);
     transition: all 0.3s ease;
 
     display: flex;
     align-items: center;
     &:hover {
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px 3px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        box-shadow: var(--color-shadow-one) 0px 0px 5px 5px, var(--color-shadow-two) 0px 0px 5px -1px;
         transform: rotate(1deg);
     }
     @media (max-width: 1350px){
@@ -165,7 +164,7 @@
         font-family: 'Mont';
         font-size: 37px;
         line-height: 140%;
-        color: #757b6f;
+        color: var(--color-const-focus);
         padding: 0px 10px 0px 20px;
         @media (max-width: 1020px){
             flex: 0 1 100%;
@@ -176,7 +175,7 @@
         font-family: 'Mont';
         font-size: 16px;
         line-height: 140%;
-        color: $color-text;
+        color: var(--color-text);
         @media (max-width: 1020px){
             flex: 0 1 100%;
         }

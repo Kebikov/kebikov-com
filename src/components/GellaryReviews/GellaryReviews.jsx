@@ -10,8 +10,7 @@ import { setActiveSlidesReviews } from '../../redux/slice/indexSlice';
  * @component Галерея отзывов.
  */
 const GellaryReviews = () => {
-    console.log('GellaryReviews');
-    
+
     let line;
     let kidsWidth = 0;
     let kidsTotal = 0;

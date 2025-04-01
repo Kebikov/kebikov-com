@@ -8,8 +8,6 @@ import SEO from '../components/SEO/SEO';
 
 const PricePackages = () => {
 
-    console.log(document.referrer);
-
     useEffect(() => {
         window.scrollTo(0, 0);
     },[]);
@@ -28,7 +26,7 @@ const PricePackages = () => {
                 <PricePackageHeader title={arrHeader[1].title} cash={arrHeader[1].cash} description={arrHeader[1].description} arrParagraphs={arrHeader[1].arrParagraphs} pic={arrHeader[1].pic} correction={true} />
                 <PricePackageHeader title={arrHeader[2].title} cash={arrHeader[2].cash} description={arrHeader[2].description} arrParagraphs={arrHeader[2].arrParagraphs} pic={arrHeader[2].pic}/>
                 <PricePackageHeader title={arrHeader[3].title} cash={arrHeader[3].cash} description={arrHeader[3].description} arrParagraphs={arrHeader[3].arrParagraphs} pic={arrHeader[3].pic}/>
-                <FormContact color={'#f1ece7'}/>
+                <FormContact color={'var(--color-background)'}/>
             </div>
         </>
     )

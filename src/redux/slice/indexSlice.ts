@@ -26,7 +26,6 @@ const indexSlice = createSlice({
             state.lineHeader = action.payload;
         },
         setActiveMenu: (state, action) => {
-            console.log(action.payload);
             state.activeMenu = action.payload;
         },
         setActiveSlidesReviews: (state, action) => {
@@ -34,7 +33,6 @@ const indexSlice = createSlice({
         },
         SET_SHOW_IMAGE: (state, actions: PayloadAction<number | string | undefined>) => {
             state.nameShowImage = actions.payload;
-            console.log('actions.payload = ', actions.payload);
         }
     }
 });

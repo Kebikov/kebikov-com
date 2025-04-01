@@ -8,7 +8,7 @@ import { useRef, useEffect } from 'react';
  * @returns 
  */
 const ReviewsItem = ({item, setReviewsItemLink}) => {
-    console.log('ReviewsItem');
+
     const rewiewRef = useRef(null);
 
     const {img, text, name, href} = item;
