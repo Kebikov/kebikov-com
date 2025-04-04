@@ -32,7 +32,7 @@
         align-self: center;
         width: 38px;
         height: 38px;
-        background-color: var(--color-const-focus);
+        background-color: var(--color-green__to__color-orange);
         mask-repeat: no-repeat;
         mask-size: contain;
     }
@@ -40,7 +40,7 @@
     &__text {
         font-size: clamp(14px, .8vw, 16px);
         font-family: 'Mont';
-        color: var(--color-text);
+        color: var(--color-green__to__color-orange);
         text-align: center;
     }
 }

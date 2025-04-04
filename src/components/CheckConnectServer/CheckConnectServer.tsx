@@ -42,7 +42,7 @@ const CheckConnectServer = () => {
 }
 
 const style: CSSProperties = {
-    background: 'var(--color-background-second)',
+    background: 'var(--color-light-2__to__color-black-2)',
     fontSize: '24px',
     color: '#fff',
     padding: '10px'

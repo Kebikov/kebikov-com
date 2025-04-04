@@ -1,4 +1,6 @@
 @import 'fonts';
+@import 'theme';
+
 
 *{
     padding: 0;
@@ -45,7 +47,7 @@
     justify-content: space-between;
     flex-direction: column;
 
-    background-color: var(--color-background);
+    background-color: var(--color-light-1__to__color-black-1);
     
     -webkit-touch-callout: none;
     -webkit-user-select: none;   
@@ -88,58 +90,6 @@
 }
 
 
-//= Theme                                                             
-
-html {
-    //: Фон 
-    --color-background: #fff;
-    --color-background-second: #f1ece7;
-    --color-background-third: #4d5653;
-
-    //: Акцентные цвета 
-    
-
-    //: Текст 
-    --color-text: #3E616F;
-    --color-text-light: #fff;
-    --color-link: #2554b988;
-
-    //: burger
-    --color-burger-line: rgba(0, 0, 0, 0.699);
-    --background-burger-line: #ffffff2b;
-    --color-cross-close: #3E616F;;
-
-    //: anime-meil
-    --anume-background-color: rgba(0, 0, 0, 0.8);
-
-    //: Тень 
-    --color-shadow-one: rgba(50, 50, 93, 0.25);
-    --color-shadow-two: rgba(0, 0, 0, 0.3);
-
-
-    //: const 
-    --color-gold: #ba9f5a;
-    --const-focus: 250, 162, 115;
-    --color-const-focus: rgb(var(--const-focus));
-}
-
-html[data-theme='dark'] {
-    //: Фон 
-    --color-background: #111111;
-    --color-background-second: #1a1c1f;
-    --color-background-third: #222628;
-
-    //: Текст 
-    --color-text: rgb(214, 214, 214);
-    --color-link: #83a0de;
-    //: burger
-    --color-burger-line: rgba(var(--const-focus), .8);
-    --background-burger-line: #ffffff2b;
-    --color-cross-close: #faa273b6;
-    //: Тень 
-    --color-shadow-one: rgba(250, 162, 115, .3);
-    --color-shadow-two: rgba(250, 162, 115, .3);
-}
 
 
 

@@ -6,7 +6,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--anume-background-color);
+    background-color: rgba(0, 0, 0, 0.8);
     // .anime-meil__body
     &__body {
         width: 100%;
@@ -26,7 +26,7 @@
         font-family: "Mont";
         font-size: 18px;
         letter-spacing: 1.2px;
-        color: var(--color-text-light);
+        color: var(--color-light-1);
     }
     // .anime-meil__meil
     &__meil {

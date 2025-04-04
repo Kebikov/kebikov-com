@@ -1,6 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 
+type TTheme = 'light' | 'dark';
 
 
 interface IInitialState {
@@ -9,12 +10,15 @@ interface IInitialState {
     activeSlidesReviews: number;
 
     nameShowImage?: string | number;
+
+    theme: TTheme;
 }
 
 const initialState: IInitialState = {
     lineHeader: false,
     activeMenu: false,
-    activeSlidesReviews: 0
+    activeSlidesReviews: 0,
+    theme: 'light'
 };
 
 
@@ -25,7 +29,7 @@ const indexSlice = createSlice({
         setLineHeader: (state, action: PayloadAction<boolean>) => {
             state.lineHeader = action.payload;
         },
-        setActiveMenu: (state, action) => {
+        SET_ACTIVE_MENU: (state, action) => {
             state.activeMenu = action.payload;
         },
         setActiveSlidesReviews: (state, action) => {
@@ -33,6 +37,10 @@ const indexSlice = createSlice({
         },
         SET_SHOW_IMAGE: (state, actions: PayloadAction<number | string | undefined>) => {
             state.nameShowImage = actions.payload;
+        },
+        SET_THEME: (state, actions: PayloadAction<TTheme>) => {
+            console.log('Текущяя тема = ', actions.payload);
+            state.theme = actions.payload;
         }
     }
 });
@@ -42,9 +50,12 @@ const {reducer, actions} = indexSlice;
 
 
 export default reducer;
+
+
 export const {
     setLineHeader,
-    setActiveMenu,
+    SET_ACTIVE_MENU,
     setActiveSlidesReviews,
-    SET_SHOW_IMAGE
+    SET_SHOW_IMAGE,
+    SET_THEME
 } = actions;

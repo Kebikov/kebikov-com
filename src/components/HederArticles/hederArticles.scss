@@ -29,7 +29,7 @@
         font-family: 'Mont';
         font-size: 24px;
         font-weight: 400;
-        color: var(--color-text);
+        color: var(--color-bark-green__to__color-light-2);
         letter-spacing: 1.4px;
         text-transform: uppercase;
         text-align: center;
@@ -43,13 +43,13 @@
     }
 
     &__top {
-        border-top: 2px solid var(--color-text);
+        border-top: 2px solid var(--color-green__to__color-orange);
         width: 100%;
         padding: 10px 0px 0px 0px;
     }
 
     &__bottom {
-        border-bottom: 2px solid var(--color-text);
+        border-bottom: 2px solid var(--color-green__to__color-orange);
         width: 100%;
         padding: 0px 0px 10px 0px;
     }

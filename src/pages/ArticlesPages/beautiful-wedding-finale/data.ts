@@ -1,17 +1,12 @@
-import './beautifulWeddingFinale.scss';
-import HederArticles from '../../../components/HederArticles/HederArticles';
-import ArticleOption from '../../../components/ArticleOption/ArticleOption';
-import FinaleBox from '../../../components/FinaleBox/FinaleBox';
-import { useEffect } from 'react';
-import SEO from '../../../components/SEO/SEO';
-import { IMG_numbers as num } from '../../../data/image/numbers';
+import { IMG_numbers as num } from '@/data/image/numbers';
 import { IMG_beautiful_wedding_finale as images } from '../../../data/image/articles/beautiful-wedding-finale';
+import { IDataForFinaleBox } from '../perfect-wedding-photo-session/PerfectWeddingPhotoSession';
 
 
-const finaleDB = [
+export const data: IDataForFinaleBox[] = [
     {
-        title: 'Замочек',
-        text: 'Надо заранее найти сундучок или ларец, для эффектности обмотать цепями и повесить замок. Более простой вариант, прикрепить к букету невесты замочек. Разложить перед подружками ключи, пусть сами решают какой нравится больше, кто замочек откроет той и достанется букет.',
+        title: 'Семейный очаг',
+        text: 'На церемонии обычно используется свеча, которую зажигают молодожёны. Чаще всего существует традиция, по которой каждый из пары зажигает свою свечу, а затем вместе зажигают одну общую свечу, тем самым символизируя объединение двух семей, двух жизней в одну.\n\nЭто не только красивый символический жест, но и момент, который подчеркивает важность создания своего домашнего мира, где царят любовь, забота и уважение.',
         img: [num[1], images[0]]
     },
     {
@@ -85,33 +80,3 @@ const finaleDB = [
         img: [num[15], images[14]]
     }
 ]
-
-//= BeautifulWeddingFinale 
-const BeautifulWeddingFinale = () => {
-    //* hooks 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    },[]);
-
-    //* render 
-    return(
-        <>
-            <SEO
-                url='https://kebikov.com/articles/beautiful-wedding-finale'
-                title='15 Вариантов Красивого Свадебного Финала !'
-                description='Завершение свадебного вечера, подборка 15 вариантов финала свадьбы, читайте чем завершить свадебный вечер, как зафиналить свадьбу ?'
-                img='https://kebikov.com/opengraph/beautiful-wedding-finale.jpg'
-            />
-
-            <HederArticles title={'15 ВАРИАНТОВ КРАСИВОГО СВАДЕБНОГО ФИНАЛА'}/>
-            <div className="options">
-                <ArticleOption text={'Самое долгожданное событие для каждой не женатой девушки на свадьбе — это бросание букета невесты. В классическом варианте, невеста становится спиной к не женатым подружкам и бросает его, не глядя через плечо. Сейчас я расскажу, как это сделать интересно и весело!'}/>
-                {
-                    finaleDB.map((item, i) => <FinaleBox title={item.title} text={item.text} img={item.img} side={i % 2 === 0} />)
-                }
-            </div>
-        </>
-    )
-}
-
-export default BeautifulWeddingFinale;

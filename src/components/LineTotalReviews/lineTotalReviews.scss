@@ -18,11 +18,11 @@
     &__line {
         height: 5px;
         width: 30px;
-        background-color: #ba9f5a55;
+        background-color: var(--color-green__30__to__color-orange__30);
         margin: 0px 3px 0px 3px;
     }
 }
 
 .full-color{
-    background-color: #ba9f5a;
+    background-color: var(--color-green__to__color-orange);
 }

@@ -5,7 +5,7 @@
 
     width: 40%;
     height: 2px;
-    background-color: var(--color-text);
+    background-color: var(--color-light-2);
 }
 
 .price-header {
@@ -78,7 +78,7 @@
         line-height: 120%;
         font-size: clamp(13px, .8vw, 18px);
         letter-spacing: .5px;
-        color: var(--color-text);
+        color: var(--color-light-2);
         font-weight: 400;
         text-align: center;
     }
@@ -89,7 +89,7 @@
 
         font-family: 'Mont';
         font-size: clamp(28px, 1.9vw, 44px);
-        color: var(--color-text);
+        color: var(--color-light-2);
         font-weight: 400;
     }
 
@@ -99,7 +99,7 @@
 
         font-family: 'Mont';
         font-size: clamp(20px, 1.57vw, 36px);
-        color: var(--color-text);
+        color: var(--color-light-2);
         font-weight: 400;
     }
 }
@@ -109,9 +109,9 @@
     font-size: clamp(16px, 0.8vw, 18px);
     line-height: 140%;
     white-space: pre-line;
-    color: var(--color-text-light);
+    color: var(--color-light-1);
     font-weight: 400;
-    background-color: var(--color-background-second);
+    background-color: var(--color-bark-green__to__color-black-2);
     padding: 30px 30px 30px 30px;
     text-align: center;
 }
@@ -130,7 +130,7 @@
     flex: 0 1 45%;
     min-height: 140px;
     box-shadow: var(--color-shadow-one) 0px 0px 5px 1px, var(--color-shadow-two) 0px 0px 1px -1px;
-    background-color: var(--color-background-second);
+    background-color: var(--color-bark-green__to__color-black-2);
     transition: all 0.3s ease;
 
     display: flex;
@@ -164,7 +164,7 @@
         font-family: 'Mont';
         font-size: 37px;
         line-height: 140%;
-        color: var(--color-const-focus);
+        color: var(--color-light-2__to__color-orange);
         padding: 0px 10px 0px 20px;
         @media (max-width: 1020px){
             flex: 0 1 100%;
@@ -175,7 +175,7 @@
         font-family: 'Mont';
         font-size: 16px;
         line-height: 140%;
-        color: var(--color-text);
+        color: var(--color-light-2);
         @media (max-width: 1020px){
             flex: 0 1 100%;
         }

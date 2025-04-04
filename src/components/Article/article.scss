@@ -35,7 +35,7 @@
         display: flex;
         justify-content: space-between;
         flex-direction: column;
-        background-color: var(--color-background-second);
+        background-color: var(--color-light-2__to__color-black-2);
         height: 100%;
     }
 
@@ -68,7 +68,7 @@
         font-weight: 400;
         line-height: 130%;
         text-transform: uppercase;
-        color: var(--color-text);
+        color: var(--color-green__to__color-orange);
         padding: 20px 20px 20px 20px;
     }
 
@@ -78,7 +78,7 @@
         font-size: 17px;
         font-weight: 400;
         line-height: 150%;
-        color: var(--color-text);
+        color: var(--color-bark-green__to__color-light-2);
         padding: 20px 20px 20px 20px;
         flex: 1 1 auto;
     }
@@ -96,9 +96,9 @@
         font-family: 'Mont';
         font-size: 17px;
         font-weight: 500;
-        color: var(--color-background-third);
+        color: var(--color-light-2__to__color-black-2);
 
-        background-color: var(--color-const-focus);
+        background-color: var(--color-green__to__color-orange);
         padding: 10px 20px 10px 20px;
         border-radius: 8px;
     }
@@ -115,7 +115,7 @@
         font-family: 'Mont';
         font-size: 24px;
         font-weight: 400;
-        color: var(--color-text);
+        color: var(--color-bark-green__to__color-light-2);
         letter-spacing: 1.4px;
         @media (max-width: 1000px) {
             font-size: 18px;
