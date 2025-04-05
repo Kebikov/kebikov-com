@@ -1,0 +1,14 @@
+.popupTheme {
+    width: clamp(350px, 19vw, 450px);
+    height: clamp(130px, 7vw, 160px);
+    border-radius: 20px;
+
+    position: fixed;
+    z-index: 1000;
+    bottom: 5%;
+    right: 50%;
+
+    transition: transform 1s ease;
+
+    background-color: green;
+}

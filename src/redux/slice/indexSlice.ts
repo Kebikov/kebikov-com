@@ -1,24 +1,26 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 
-type TTheme = 'light' | 'dark';
-
+export type TTheme = 'light' | 'dark';
 
 interface IInitialState {
+    popupTheme: boolean;
     lineHeader: boolean;
     activeMenu: boolean;
     activeSlidesReviews: number;
 
     nameShowImage?: string | number;
 
-    theme: TTheme;
+    theme?: TTheme;
 }
 
+
 const initialState: IInitialState = {
+    popupTheme: false,
     lineHeader: false,
     activeMenu: false,
     activeSlidesReviews: 0,
-    theme: 'light'
+    theme: undefined
 };
 
 
@@ -41,6 +43,9 @@ const indexSlice = createSlice({
         SET_THEME: (state, actions: PayloadAction<TTheme>) => {
             console.log('Текущяя тема = ', actions.payload);
             state.theme = actions.payload;
+        },
+        SET_POPUP_THEME: (state, actions: PayloadAction<boolean>) => {
+            state.popupTheme = actions.payload;
         }
     }
 });
@@ -57,5 +62,6 @@ export const {
     SET_ACTIVE_MENU,
     setActiveSlidesReviews,
     SET_SHOW_IMAGE,
-    SET_THEME
+    SET_THEME,
+    SET_POPUP_THEME
 } = actions;

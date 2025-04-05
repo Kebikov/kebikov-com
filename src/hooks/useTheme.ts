@@ -1,24 +1,34 @@
-import { useState, useEffect } from "react"
+import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from '@/redux/store/hooks';
-import { SET_THEME } from '@/redux/slice/indexSlice';
+import { TTheme, SET_THEME, SET_POPUP_THEME } from '@/redux/slice/indexSlice';
 
-
-type TTheme = 'dark' | 'light';
 
 function isTTheme(value: unknown): value is TTheme {
     return value === "dark" || value === "light";
 }
 
+ /** `Черная тема в приоритете у пользователя ?` */
+const isDarkTheme = () => window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-export const getThemeLocalStorage = (): TTheme => {
+
+ /** `Получение установленой темы в Local Storage.` */
+export const getThemeLocalStorage = (): TTheme | undefined => {
     const theme = localStorage.getItem("theme");
-    return isTTheme(theme) ? theme : 'light';
+    return isTTheme(theme) ? theme : undefined;
 }
+
 
 
 export const useTheme = () => {
 
     const dispatch = useAppDispatch();
+    const theme = getThemeLocalStorage();
+
+     /** `Если тема была до этого выбрана и она записана в LS.` */
+    if(theme) {
+        document.documentElement.setAttribute("data-theme", theme);
+        dispatch(SET_THEME(theme));
+    }
 
     const setTheme = (value: TTheme) => {
         document.documentElement.setAttribute("data-theme", value);
@@ -26,24 +36,26 @@ export const useTheme = () => {
         localStorage.setItem("theme", value);
     }
 
-    /** 
-     * `Переключение свитчера.` 
-     * if > isChecked === true > видна луна
-     */
-    //const [isChecked, setIsChecked] = useState<boolean>(true);
     const currentTheme = useAppSelector(state => state.indexSlice.theme);
 
     useEffect(() => {
-        const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        console.log('mediaQuery = ', mediaQuery);
-
-        const theme = getThemeLocalStorage();
-        setTheme(theme);
+        window.onload = () => {
+            alert("Все ресурсы (HTML, изображения, стили, шрифты) загружены.");
+            setTimeout(() => {
+                /** `Первая загрузка сайта, предложение установки начальной темы.` */
+                if(!theme && isDarkTheme()) {
+                    dispatch(SET_POPUP_THEME(true));
+                }
+            }, 1000);
+        };
     }, []);
-
 
     return {
         currentTheme,
-        setTheme
+        setTheme,
+        getThemeLocalStorage
     }
 }
+
+
+  

@@ -27,6 +27,7 @@ const PreparationsWedding = lazy(() => import('../pages/ArticlesPages/preparatio
 const FromThePhotographer = lazy(() => import('../pages/ArticlesPages/from-the-photographer/FromThePhotographer'));
 const Accessories = lazy(() => import('../pages/ArticlesPages/accessories/Accessories'));
 const PerfectWeddingPhotoSession = lazy(() => import('../pages/ArticlesPages/perfect-wedding-photo-session/PerfectWeddingPhotoSession'));
+import PopupTheme from '@/components/PopupTheme/PopupTheme';
 
 
 //= App 
@@ -47,6 +48,7 @@ function App() {
         <Provider store={store} >
             <BrowserRouter>
                 <div className="wrapper">
+                    <PopupTheme/>
                     <ShowImage/>
                     <Header/>
                     <main className="main" >
