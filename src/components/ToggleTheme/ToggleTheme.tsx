@@ -1,15 +1,19 @@
 import './toggleTheme.scss';
-import { useTheme } from '@/hooks/useTheme';
+import Theme from '@/helper/Theme';
+import { useAppSelector } from '@/redux/store/hooks';
+import { useAppDispatch } from '@/redux/store/hooks';
+import { SET_THEME } from '@/redux/slice/indexSlice';
 
 
 const ToggleTheme = () => {
 
-    const {setTheme, currentTheme} = useTheme();
-
-    console.log('---------------------------------------------------------------');
+    const dispatch = useAppDispatch();
+    const currentTheme = useAppSelector(state => state.indexSlice.theme);
 
     const onChangeCheckbox = (evt: React.ChangeEvent<HTMLInputElement>) => {
-        setTheme(evt.target.checked ? 'dark' : 'light')
+        const theme = evt.target.checked ? 'dark' : 'light';
+        Theme.setTheme(theme);
+        dispatch(SET_THEME(theme));
     }
 
     return(

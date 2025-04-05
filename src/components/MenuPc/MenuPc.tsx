@@ -4,12 +4,12 @@ import logoWhite from '@image/logo/logo-white.png';
 import logoBlack from '@image/logo/logo-black.png';
 import menuData from '../../data/DataLinks';
 import { NavLink } from 'react-router-dom';
-import { useTheme } from '../../hooks/useTheme';
+import { useAppSelector } from '@/redux/store/hooks';
 
 
 const MenuPc = () => {
 
-    const {currentTheme} = useTheme();
+    const currentTheme = useAppSelector(state => state.indexSlice.theme);
 
     return(
         <div className="heder-pc">
