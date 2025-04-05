@@ -85,15 +85,15 @@ const Social = () => {
         <div className="contacts__social">
             <div className="contacts__info-block">
                 <span>Phone<br/></span>
-                <a href={"tel:+375296949843"}>+375296949843</a>
+                <a href={"tel:+375296949843"}>+375 29 694-98-43</a>
             </div>
             <div className="contacts__info-block">
                 <span>Address<br/></span>
-                г.Минск, ул.Рафиева 109/126
+                г.Минск, ул.Рафиева 109 / 126
             </div>
             <div className="contacts__info-block">
                 <span>Email<br/></span>
-                info@kebikov.com
+                kebikovgen@gmail.com
             </div>
         </div>
     )

@@ -30,7 +30,7 @@
 
             height: 4px;
             width: 35px;
-            background-color: #3b3b3b;
+            background-color: var(--color-black-2__to__color-light-2);
 
             transform: rotate(-45deg);
         }
@@ -42,7 +42,7 @@
 
             height: 4px;
             width: 35px;
-            background-color: #3b3b3b;
+            background-color: var(--color-black-2__to__color-light-2);
 
             transform: rotate(45deg);
         }

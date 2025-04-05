@@ -68,7 +68,7 @@
         font-family: 'Mont';
         margin: 0px 0px 20px 0px;
         white-space: pre-line;
-        background-color: var(--color-light-2);
+        background-color: var(--color-light-1__to__color-light-2);
         @media (max-width: 800px){
             font-size: 17px;
         }
@@ -93,7 +93,7 @@
         padding: 5px;
         font-family: 'Mont';
         margin:0px 0px 20px 0px;
-        background-color: var(--color-light-2);
+        background-color: var(--color-light-1__to__color-light-2);
     }
     &__textarea{
         z-index: 5;
@@ -102,11 +102,11 @@
         font-family: 'Mont';
         resize: none;
         margin:0px 0px 20px 0px;
-        background-color: var(--color-light-2);
+        background-color: var(--color-light-1__to__color-light-2);
     }
     &__label{
         z-index: 5;
-        color: var(--color-light-2);
+        color: var(--color-light-1__to__color-light-2);
         font-size: 20px;
         font-family: 'Mont';
         margin:0px 0px 3px 0px;
@@ -115,13 +115,13 @@
     &__button{
         z-index: 5;
 
-        color: #1a1c1f;
+        color: var(--color-light-1__to__color-black-1);
         font-size: 20px;
         font-weight: 500;
         font-family: 'Mont';
         text-transform: lowercase;
 
-        background-color: var(--color-orange);
+        background-color: var(--color-green__to__color-orange);
         padding: 10px 0px 10px 0px;
         width: 40%;
         margin: 20px 0px 0px 0px;

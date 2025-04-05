@@ -43,19 +43,6 @@ const MenuMobile = () => {
                         alert('Память очишена.')
                     }}
                 >clear</button>
-                <button 
-                    style={{
-                        width: '100px',
-                        height: '50px',
-                        background: 'blue',
-                        fontSize: '20px'
-                    }}
-                    onClick={() => {
-                        const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-                        alert(isDark ? 'Dark' : 'Light');
-                    }}
-                >theme ?</button>
-
             </div>
         </>
     )

@@ -25,7 +25,10 @@ html {
 
     --color-bark-green__to__color-black-2: var(--color-bark-green);
 
+    --color-black-2__to__color-light-2: var(--color-black-2);
+
     --color-light-1__to__color-black-1: var(--color-light-1);
+    --color-light-1__to__color-light-2: var(--color-light-1);
     
     --color-bark-green__to__color-black-3: var(--color-bark-green);
     --color-bark-green__to__color-light-2: var(--color-bark-green);
@@ -45,11 +48,14 @@ html[data-theme='dark'] {
     --color-light-1__50__to__color-black-1__50: var(--color-black-1__50);
     
     --color-light-1__to__color-black-1: var(--color-black-1);
+    --color-light-1__to__color-light-2: var(--color-light-2);
 
     --color-light-2__to__color-black-2: var(--color-black-2);
     --color-bark-green__to__color-black-2: var(--color-black-2);
 
     --color-bark-green__to__color-black-3: var(--color-black-3);
+
+    --color-black-2__to__color-light-2: var(--color-light-2);
 
     --color-bark-green__to__color-light-2: var(--color-light-2);
 
