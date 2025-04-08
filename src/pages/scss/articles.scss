@@ -1,0 +1,29 @@
+.article-all {
+    margin: 40px auto 40px auto;
+    max-width: 1200px;
+
+    display: grid;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px 20px;
+
+    
+
+    // .article-all__item
+    &__item {
+        min-width: 350px;
+        flex: 0 1 32%;
+
+        @media (max-width: 1090px) {
+            flex: 0 1 42%;
+        }
+
+        @media (max-width: 750px) {
+            flex: 0 1 72%;
+        }
+
+        @media (max-width: 550px) {
+            flex: 0 1 92%;
+        }
+    }
+}

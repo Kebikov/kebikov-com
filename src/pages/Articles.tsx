@@ -1,5 +1,5 @@
+import './scss/articles.scss';
 import Article from '../components/Article/Article';
-import '../components/Article/article.scss';
 import { articlesDB } from '../data/image/articles/articlesDB';
 import { useEffect } from 'react';
 import SEO from '../components/SEO/SEO';

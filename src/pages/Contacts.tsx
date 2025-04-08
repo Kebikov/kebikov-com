@@ -4,6 +4,7 @@ import ava from '../resources/images/contacts/1.jpg';
 import { motion } from 'framer-motion';
 import { Helmet } from "react-helmet";
 import Social from '@/components/Social/Social';
+import GoogleMap from '@/components/Map/Map';
 
 
 const Contacts = () => {
@@ -67,18 +68,12 @@ const HeaderContacts = () => {
 const Info = () => {
     return(
         <div className="contacts__info">
-            <Map/>
+            <GoogleMap/>
             <Social/>
         </div>
     )
 }
 
-const Map = () => {
-    return(
-        <div className="contacts__map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2353.258043017564!2d27.432214916500673!3d53.856059280089084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbda6676365d11%3A0x1a813d08f394b7c2!2z0YPQu9C40YbQsCDQoNCw0YTQuNC10LLQsCAxMDksINCc0LjQvdGB0Lo!5e0!3m2!1sru!2sby!4v1668440486651!5m2!1sru!2sby" loading="lazy"></iframe>
-        </div>
-    )
-}
+
 
 export default Contacts;

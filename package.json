@@ -5,6 +5,7 @@
 	"dependencies": {
 		"@reduxjs/toolkit": "^2.6.0",
 		"@types/react-router-dom": "^5.3.3",
+		"@vis.gl/react-google-maps": "^1.5.2",
 		"axios": "^1.8.4",
 		"framer-motion": "^12.4.10",
 		"react": "^19.0.0",
@@ -28,7 +29,6 @@
 		"build": "craco build",
 		"server": "serve -s build",
 		"test-types": "tsc --noEmit",
-        
 		"eject-1": "react-scripts eject",
 		"dev-1": "react-scripts start",
 		"build-1": "react-scripts build",
