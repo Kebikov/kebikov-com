@@ -10,16 +10,10 @@ const GoogleMap = () => {
 
     const position = {lat: 53.85612085334962, lng: 27.434687876986168};
 
-    useEffect(() => {
-        console.log('useEffect');
-        const eltHotButtons = document.querySelector('[aria-label="Быстрые клавиши"]') as HTMLElement;
-        console.log(eltHotButtons);
-        if(eltHotButtons) eltHotButtons.setAttribute('style', 'display: none !important');
-    }, []);
     
     return(
         <div className="googleMap">
-            <APIProvider apiKey='' >
+            <APIProvider apiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY as string} >
                 <Map 
                     defaultCenter={position} 
                     defaultZoom={14} 
