@@ -53,7 +53,7 @@ const WrapperTheme: FC<IWrapperTheme> = ({
                     console.log('Открытие popup.');
                     dispatch(SET_POPUP_THEME(true));
                 }
-            }, 1000);
+            }, 3000);
         }
 
         return () => window.removeEventListener('load', handleLoad);

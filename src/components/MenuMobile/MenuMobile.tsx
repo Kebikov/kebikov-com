@@ -15,6 +15,23 @@ const MenuMobile = () => {
 
     const onBurger = () => dispatch(SET_ACTIVE_MENU(!activeMenu));
 
+    const ButtonClear = () => (
+        <button 
+            style={{
+                width: '100px',
+                height: '50px',
+                background: 'red',
+                fontSize: '20px'
+            }}
+            onClick={() => {
+                localStorage.clear();
+                alert('Память очишена.')
+            }}
+        >
+            clear
+        </button>
+    )
+
     return(
         <>
             <Burger activeMenu={activeMenu} onClick={onBurger} />
@@ -31,18 +48,13 @@ const MenuMobile = () => {
                 </ul>
                 <ToggleTheme/>
 
-                <button 
-                    style={{
-                        width: '100px',
-                        height: '50px',
-                        background: 'red',
-                        fontSize: '20px'
-                    }}
-                    onClick={() => {
-                        localStorage.clear();
-                        alert('Память очишена.')
-                    }}
-                >clear</button>
+                {
+                    process.env.NODE_ENV === 'development' ?
+                    <ButtonClear/>
+                    :
+                    null
+                }
+                
             </div>
         </>
     )
