@@ -24,7 +24,7 @@
         flex: 0 1 60%;
         @media (max-width: 1020px){
             flex: 0 1 100%;
-            padding: 0px;
+            padding: 10px;
         }
     }
 
@@ -53,6 +53,7 @@
         white-space: pre-line;
         @media (max-width: 1020px){
             flex: 0 1 100%;
+            line-height: 150%;
             text-align: center;
         }
     }

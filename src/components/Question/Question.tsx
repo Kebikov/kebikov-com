@@ -1,4 +1,4 @@
-import { IItemQuestion } from "../price-faq/arrQuestion";
+import { IItemQuestion } from "../../data/arrQuestion";
 import { FC } from "react";
 
 

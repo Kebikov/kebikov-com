@@ -1,11 +1,12 @@
 import './wedding.scss';
 import { FC } from 'react';
-import { getWeddingImages } from '@/helper/getWeddingImages';
 import ImageWedding from '../ImageWedding/ImageWedding';
-
+import { dataWeddingSeries } from '@/data/dataWeddingSeries';
+import { TSeries } from '@/data/dataWeddingSeries/types';
+import WeddingSeries from '../WeddingSeries/WeddingSeries';
 
 interface IWedding {
-    link: string;
+    link: TSeries;
 }
 
 
@@ -13,22 +14,39 @@ const Wedding: FC<IWedding> = ({
     link
 }) => {
 
-    const {allImages, title} = getWeddingImages(link);
 
     return(
         <>
             <div className="all-title">
                 <div className="all-title__line"></div>
-                <h1 className="all-title__text">{title}</h1>
+                <h1 className="all-title__text">
+                    {
+                        dataWeddingSeries[link].title
+                    }
+                </h1>
                 <div className="all-title__line"></div>
             </div>
+            {
+                dataWeddingSeries[link].description ?
+                <div className="wedding-description" >
+                    <div className="wedding-description__body" >
+                        {
+                            dataWeddingSeries[link].description
+                        }
+                    </div>
+                </div>
+                : 
+                null
+            }
             <div className="photo">
                 {
-                    allImages !== undefined ?
-                    allImages.map((item, i) => <ImageWedding item={item} key={i}/> )
-                    :
-                    null
+                    dataWeddingSeries[link].images.map((item, i) => <ImageWedding item={item} key={i}/> )
                 }
+            </div>
+            <div className="all-title-weddings" >
+                <div className="all-title-weddings__body" >
+                    <WeddingSeries/>
+                </div>
             </div>
         </>
     )

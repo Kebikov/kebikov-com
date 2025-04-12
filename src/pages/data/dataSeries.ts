@@ -1,8 +1,10 @@
+import { TSeries } from "@/data/dataWeddingSeries/types";
+
 export interface InameSeries {
      /** `Титульное название.` */
     title: string;
      /** `Сокрашение для ссылки. Например: "MY"` */
-    link: string;
+    link: TSeries;
 }
 
 

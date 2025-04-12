@@ -3,11 +3,11 @@ import './social.scss';
 
 const Social = () => {
     return(
-        <div className="social">
+        <div className="social" id="social" >
             <div className="social__body" >
                 <div className="social__info-block">
                     <span>Phone<br/></span>
-                    <a href={"tel:+375296949843"}>+375 29 694-98-43</a>
+                    <a href={"tel:+375296949843"} style={{textDecoration: 'underline'}}>+375 29 694-98-43</a>
                 </div>
                 <div className="social__info-block">
                     <span>Address<br/></span>

@@ -16,6 +16,7 @@
     a:focus,a:active{outline: none;}
     nav,footer,header,aside{display: block;}
     html,body{
+    scroll-behavior: smooth;
     height: 100%;
     width: 100%;
     font-size: 100%;
@@ -92,6 +93,14 @@ body {
 .add-wed-all{
     display: flex;
     flex-direction: column;
+}
+
+.ancor {
+    text-decoration: underline;
+    color: inherit;
+    &:visited {
+        color: inherit;
+    }
 }
 
 

@@ -33,7 +33,7 @@ const FormContact: FC<IFormContact> = ({
                 message ? <EmailAnime message={message}/> 
                 : null
             }
-            <div className="contact">
+            <div className="contact" id="FormContact" >
                 <div className="contact__body">
                     <div className="contact__body-after" style={{background: `linear-gradient(to top left, rgba(42,43,48,0) 50%, ${color} 50.5%)`}}/>
                     <div className="contact__body-before" style={{background: `linear-gradient(to top right, rgba(42,43,48,0) 50%, ${color} 50.5%)`}}/>
@@ -43,7 +43,7 @@ const FormContact: FC<IFormContact> = ({
                         whileInView={'visible'}
                         viewport={{once: true}}
                         className="contact__text">
-                        Проверьте через e-mail, свободна ли ваша дата?!<br/>или позвоните<br/>+375 29 694 98 43 (Евгений)<br/>Вы можете написать в соц.сети.
+                        Проверьте через e-mail, свободна ли ваша дата?!<br/>или позвоните<br/><a href='tel:+375296949843' className='ancor' >+375 29 694 98 43</a> (Евгений)<br/>Вы можете написать в соц.сети.
                     </motion.div>
                         <form 
                             className="contact__form"

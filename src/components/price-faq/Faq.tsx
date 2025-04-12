@@ -1,6 +1,6 @@
 import './faq.scss';
 import { FC, useState } from 'react';
-import { arrQuestion } from './arrQuestion';
+import { arrQuestion } from '../../data/arrQuestion';
 import Question from '../Question/Question';
 
 
@@ -11,7 +11,7 @@ const Faq: FC = () => {
     return(
             <div className="faq">
                 <div className="faq__body">
-                    <h1 className='faq__h1' >Свадебный фотограф Минск, стоимость услуг.</h1>
+                    <h1 className='faq__h1' ><a href='/' className='ancor' >Свадебный фотограф Минск</a>, стоимость услуг.</h1>
                     <div className="faq__text">Уважаемые молодожёны, сейчас я постараюсь осветить наиболее часто встречающиеся вопросы нашего творческого сотрудничества. Хочу, чтобы после прочтения, вам все стало понятнее. Приятного чтения.</div>
                     <div className="faq__title">FAQ</div>
                     {

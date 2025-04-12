@@ -1,7 +1,6 @@
 @import '../../scss/variables.scss';
 
 .all-title {
-    margin:0px 0px 40px 0px;
     // .all-title__line
     &__line {
         border-bottom: 2px solid var(--color-gold);
@@ -21,8 +20,8 @@
 }
 
 .photo {
-    max-width: 1000px;
-    margin: 0 auto 100px auto;
+    max-width: $size-tablet;
+    margin: 20px auto 0px auto;
     & img{
         object-fit: cover;
         width: 100%;
@@ -49,5 +48,33 @@
     }
     100% {
         opacity: 1;
+    }
+}
+
+.wedding-description {
+    margin-top: 20px;
+    width: 100%;
+    padding: 0 10px 0 10px;
+    
+    display: flex;
+    justify-content: center;
+    &__body {
+        max-width: $size-tablet;
+    }
+
+    & p {
+        font-family: 'Hand';
+        font-size: 24px;
+        color: var(--color-black-2__to__color-light-2);
+        line-height: 130%;
+    }
+}
+
+.all-title-weddings {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    &__body {
+        max-width: $size-tablet;
     }
 }

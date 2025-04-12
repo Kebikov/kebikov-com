@@ -49,8 +49,12 @@ const HeaderContacts = () => {
     return(
         <div className="contacts__header">
             <div className="contacts__subtitle">
-                <h1 className="contacts__title">Контакты</h1>
-                <h2 className="contacts__text">Свяжитесь со мной и раскажите о вашем свадном дне.<br/>Заполните форму ниже или свяжитесь удобным для вас способом.</h2>
+                <h1 className="contacts__title">Контакты фотографа</h1>
+                <h2 className="contacts__text">
+                    Всё ещё сомневаетесь?<br/>
+                    Посмотрите мои <a href="/" className='ancor'>свадебные фотографии</a> или почитайте <a href="/reviews" className='ancor'>отзывы клиентов</a>.<br/>
+                    Заполните <a href="#FormContact" className='ancor' >форму ниже</a> или свяжитесь удобным для вас способом.
+                </h2>
             </div>
             <motion.div
                 variants={motAva}
@@ -74,6 +78,7 @@ const Info = () => {
     )
 }
 
-
-
 export default Contacts;
+
+
+

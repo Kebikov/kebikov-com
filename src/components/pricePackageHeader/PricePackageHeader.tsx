@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import type { IArrParagraphs } from '../../data/dataPrice';
 import type { IImageWedding } from '../../data/image/weddings/types';
 import { FC } from 'react';
+import Paragraphs from '../Paragraphs/Paragraphs';
 
 
 const Line = () => (
@@ -19,7 +20,6 @@ interface IPricePackageHeader {
 }
 
 
-//= PricePackageHeader 
 const PricePackageHeader: FC<IPricePackageHeader> = ({
     title, 
     cash, 
@@ -75,6 +75,7 @@ const PricePackageHeader: FC<IPricePackageHeader> = ({
                         <div className="price-header__title">{title}</div>
                         <Line/>
                         <div className="price-header__cash">{cash}</div>
+                        <a href='' className='ancor' ></a>
                     </div>
                 </div>
             </div>
@@ -88,50 +89,5 @@ const PricePackageHeader: FC<IPricePackageHeader> = ({
     )
 }
 
-interface IParagraphs {
-    title: string;
-    subtitle: string;
-    number: number;
-}
-
-//= Paragraphs 
-const Paragraphs: FC<IParagraphs> = ({
-    title, 
-    subtitle, 
-    number
-}) => {
-
-    const advent = {
-        hidden: {
-            opacity: 0,
-            scale: 0.7
-        },
-        visible: {
-            scale: 1,
-            opacity: 1,
-            transition: {
-                duration: 0.3
-            }
-        }
-    }
-
-    //* return 
-    return(
-        <motion.div 
-            variants={advent}
-            initial={'hidden'}
-            whileInView={'visible'}
-            viewport={{amount: 0.1, once: true}}
-            className="paragraphs"
-        >
-            <div className="paragraphs__body">
-                <div className="paragraphs__number">{`0${number + 1}`}</div>
-                <div className="paragraphs__info">
-                    <span>{title}</span>{subtitle}
-                </div>
-            </div>
-        </motion.div>
-    )
-}
 
 export default PricePackageHeader;

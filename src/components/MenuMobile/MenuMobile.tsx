@@ -5,7 +5,7 @@ import { SET_ACTIVE_MENU } from '../../redux/slice/indexSlice';
 import menuData from '../../data/DataLinks';
 import { useAppSelector } from '@/redux/store/hooks';
 import ToggleTheme from '../ToggleTheme/ToggleTheme';
-import Burger from '../Burger/Burger';
+import Burger from '@/components/Burger/Burger';
 
 
 const MenuMobile = () => {

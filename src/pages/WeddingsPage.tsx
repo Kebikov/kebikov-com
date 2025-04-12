@@ -1,10 +1,9 @@
 import Wedding from "../components/Wedding/Wedding";
-import WeddingSeries from "../components/WeddingSeries/WeddingSeries";
 import { useParams } from "react-router-dom";
 import { useEffect} from "react";
 import { Helmet } from "react-helmet";
-//* const 
 import nameSeries from './data/dataSeries';
+import { TSeries } from "@/data/dataWeddingSeries/types";
 
 
 const WeddingsPage = () => {
@@ -36,7 +35,7 @@ const WeddingsPage = () => {
                     <link rel="canonical" href={`https://kebikov.com/weddings-all/${wed}`}/>
                 </Helmet>
 
-                <Wedding link={wed}/>
+                <Wedding link={wed as TSeries}/>
 
                 {/* <div className="container" >
                     <WeddingSeries/>
