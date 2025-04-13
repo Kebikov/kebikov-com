@@ -1,7 +1,7 @@
+import './coverWedding.scss';
 import '../WeddingSeries/weddingSeries.scss';
 import { Link } from 'react-router-dom';
 import ImageWedding from '../ImageWedding/ImageWedding';
-import './types';
 import { FC } from 'react';
 import type { IImageWedding } from '@/data/image/weddings/types';
 import type { InameSeries } from '@/pages/data/dataSeries';
@@ -12,20 +12,25 @@ interface ICoverWedding {
     imgObject: IImageWedding;
 }
 
+
  /** `Обложка для сводьбы.` */
 const CoverWedding: FC<ICoverWedding> = ({
     nameSeries, 
     imgObject
 }) => {
 
+
     return(
-            <Link className="wedding-series__box" to={`/weddings-all/${nameSeries.link}`} >
-                <div className="wedding-series__item" >
-                    <ImageWedding item={imgObject} infoTest='CoverWedding' />
-                    <div className="wedding-series__title">{nameSeries.title}</div>
-                    <div className="wedding-series__sub-title">wedding day</div>
-                </div>
-            </Link>
+        <Link 
+            className="coverWedding" 
+            to={`/weddings-all/${nameSeries.link}`} 
+        >
+            <div className="coverWedding__item" >
+                <ImageWedding item={imgObject} infoTest='CoverWedding' />
+                <div className="coverWedding__title">{nameSeries.title}</div>
+                <div className="coverWedding__sub-title">wedding day</div>
+            </div>
+        </Link>
     )
 }
 

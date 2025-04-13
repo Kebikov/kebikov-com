@@ -32,15 +32,13 @@ const PopupTheme = () => {
         >
             <div className="popupTheme__body" >
                 <div className="popupTheme__up" >
-                    <div className="popupTheme__title" >Включить темную тему ?</div>
-                    <div className="popupTheme__box" >
-                        <div className="popupTheme__img" >
+                    <div className="popupTheme__img" >
+                        <div className="popupTheme__img-body" >
                             <img src={moon} alt="image moon" />
                         </div>
-                        <div className="popupTheme__text" >Сейчас у вас включена светлая тема сайта, но вы можете включить темную.</div>
                     </div>
-                    
-
+                    <div className="popupTheme__title" >Включить тёмную тему?</div>
+                    <div className="popupTheme__text" >Сейчас у вас включена светлая тема сайта, но вы можете включить темную.</div>
                 </div>
                 <div className="popupTheme__down" >
                     <button 

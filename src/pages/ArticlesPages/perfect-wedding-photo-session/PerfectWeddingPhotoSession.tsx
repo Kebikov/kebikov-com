@@ -6,11 +6,12 @@ import HederArticles from '../../../components/HederArticles/HederArticles';
 import ArticleOption from '../../../components/ArticleOption/ArticleOption';
 import FinaleBox from '../../../components/FinaleBox/FinaleBox';
 import { data } from './data';
+import { ReactNode } from 'react';
 
 
 export interface IDataForFinaleBox {
     title: string;
-    text: string;
+    text: string | ReactNode;
     img: [string, IImageWedding];
 }
 

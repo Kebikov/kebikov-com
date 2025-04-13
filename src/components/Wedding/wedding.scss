@@ -70,11 +70,14 @@
     }
 }
 
-.all-title-weddings {
+.still-weddings {
+    margin-top: 40px;
+    width: 100%;
+
     display: flex;
     justify-content: center;
-    width: 100%;
     &__body {
-        max-width: $size-tablet;
+        width: 100%;
+        max-width: 1400px;
     }
 }

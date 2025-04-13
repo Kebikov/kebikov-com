@@ -27,15 +27,11 @@ const WrapperTheme: FC<IWrapperTheme> = ({
         }
 
         // Запуск devTools на телефоне, только в режиме разработки.
-        if (process.env.NODE_ENV === 'development') {
-            import('eruda').then(eruda => {
-                eruda.default.init();
-                console.log('Eruda loaded.');
-                console.log(`Тема установленая в LocalStorage: ${theme}`);
-                console.log(`Предпочитаемае тема Dark ? => ${isDarkTheme}`);
-                console.log('document.readyState = ', document.readyState);
-            });
-        }
+        // if (process.env.NODE_ENV === 'development') {
+        //     import('eruda').then(eruda => {
+        //         eruda.default.init();
+        //     });
+        // }
 
 
         // Если тема была до этого выбрана и она записана в LS.
@@ -45,7 +41,6 @@ const WrapperTheme: FC<IWrapperTheme> = ({
         }
         
         function handleLoad() {
-            console.log('handleLoad work');
             // "Все ресурсы (HTML, изображения, стили, шрифты) загружены."
             setTimeout(() => {
                 // Первая загрузка сайта, предложение установки начальной темы.

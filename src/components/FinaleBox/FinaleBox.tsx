@@ -2,10 +2,11 @@ import '../../pages/ArticlesPages/beautiful-wedding-finale/beautifulWeddingFinal
 import { IImageWedding } from '@/data/image/weddings/types';
 import ImageWedding from '../ImageWedding/ImageWedding';
 import { FC } from "react";
+import { ReactNode } from 'react';
 
 interface IFinaleBox {
     title: string;
-    text: string;
+    text: string | ReactNode;
     img: [string, IImageWedding];
     side?: boolean;
 }

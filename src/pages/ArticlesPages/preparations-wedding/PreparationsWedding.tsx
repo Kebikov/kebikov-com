@@ -10,14 +10,19 @@ const PreparationsWedding = () => {
         window.scrollTo(0, 0);
     },[]);
 
-    const items = data.map(item => {
+    const items = data.map((item, i) => {
         const { title, text, img } = item;
 
         return(
-                <div className="start" key={title}>
-                    <div className="start__icon">
-                        <img src={img} alt="#"/>
-                    </div>
+                <div className="start" key={i}>
+                    {
+                        img ?
+                        <div className="start__icon">
+                            <img src={img} alt="#"/>
+                        </div>
+                        :
+                        null
+                    }
                     <div className="start__title">{title}</div>
                     <div className="start__text">{text}</div>
                 </div>

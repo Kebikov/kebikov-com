@@ -3,28 +3,24 @@ import { Link } from 'react-router-dom';
 import { FC } from 'react';
 import { IImageWedding } from '@/data/image/weddings/types';
 import ImageWedding from '../ImageWedding/ImageWedding';
-
+import { IArticlesDB } from '@/data/image/articles/articlesDB';
 
 interface IArticle {
-    title: string; 
-    subtitle: string;
-    picture: IImageWedding;
-    link: string;
+    article: IArticlesDB
 }
 
 
 const Article: FC<IArticle> = ({
-    title, 
-    subtitle, 
-    picture, 
-    link
+    article
 }) => {
+
+    const {picture, title, top, subtitle, link} = article;
 
     return(
         <article className="article-all__item article">
             <div className="article__body">
-                <div className="article__img">
-                    <ImageWedding item={picture} />
+                <div className="article__img" >
+                    <ImageWedding item={picture} topPercent={top} />
                 </div>
                 <div className="article__title">{title}</div>
                 <div className="article__subtitle">{subtitle}</div>

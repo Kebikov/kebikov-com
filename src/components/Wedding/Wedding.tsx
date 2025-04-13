@@ -43,8 +43,8 @@ const Wedding: FC<IWedding> = ({
                     dataWeddingSeries[link].images.map((item, i) => <ImageWedding item={item} key={i}/> )
                 }
             </div>
-            <div className="all-title-weddings" >
-                <div className="all-title-weddings__body" >
+            <div className="still-weddings" >
+                <div className="still-weddings__body" >
                     <WeddingSeries/>
                 </div>
             </div>

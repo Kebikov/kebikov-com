@@ -11,12 +11,15 @@ interface IIW {
     item: IImageWedding;
     press?: boolean;
     infoTest?: string;
+     /** `Если изображение распологается относительно. Значение в процентах.` */
+    topPercent ?: number; 
 }
 
 
 const ImageWedding: FC<IIW> = ({
     item,
     press = false,
+    topPercent,
     infoTest
 }) => {
     
@@ -52,11 +55,11 @@ const ImageWedding: FC<IIW> = ({
                     {item.jpg_mobile ? <source srcSet={item.jpg_mobile} type="image/jpeg" media="(max-width: 767px)" /> : null}
                     {item.avif ? <source srcSet={item.avif} type="image/avif"/> : null}
                     {item.webp ? <source srcSet={item.webp} type="image/webp"/> : null}
-                    <img src={item.jpg} alt="свадебная фотография"/>
+                    <img src={item.jpg} alt="свадебная фотография" style={{top: topPercent ?? `${topPercent}%`}} />
                     {/* <Info name={item.jpg} match /> */}
                 </>
                 :
-                <img src={box} height={'800px'} width={'1200px'} alt="свадебная фотография"/>
+                <img src={box} height={'800px'} width={'1200px'} alt="свадебная фотография" />
             }
         </picture>
     )

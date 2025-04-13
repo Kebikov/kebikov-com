@@ -31,7 +31,7 @@ const Articles = () => {
             </div>
             <div className="article-all">
                 {
-                    articlesDB.map(item => <Article link={item.link} title={item.title} subtitle={item.subtitle} picture={item.picture} key={item.title} />)
+                    articlesDB.map((item, i) => <Article article={item} key={i} />)
                 }
             </div>
         </>

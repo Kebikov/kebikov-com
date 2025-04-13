@@ -36,10 +36,6 @@ const WeddingsPage = () => {
                 </Helmet>
 
                 <Wedding link={wed as TSeries}/>
-
-                {/* <div className="container" >
-                    <WeddingSeries/>
-                </div> */}
             </>
     )
 }

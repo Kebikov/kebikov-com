@@ -2,11 +2,12 @@ import { IMG_articles_main_page as images } from './main-page';
 import { IImageWedding } from '../weddings/types';
 
 
-interface IArticlesDB {
+export interface IArticlesDB {
     title: string;
     subtitle: string;
     picture: IImageWedding;
     link: string;
+    top: number;
 }
 
 
@@ -15,36 +16,42 @@ export const articlesDB: IArticlesDB[] = [
         title: '15 ВАРИАНТОВ КРАСИВОГО СВАДЕБНОГО ФИНАЛА',
         subtitle: 'Если вы читаете сейчас этот текст, значит перед вами дилемма, давайте разбираться. Я сейчас вам дам лишь вектор направления, что бы вы сориентировались какие варианты вообще есть, а выбор за вами. Расскажу вам, что сам видел, что нашел в сети интересного и как бы я это сделал сам.',
         picture: images[0],
-        link: '/articles/beautiful-wedding-finale'
+        link: '/articles/beautiful-wedding-finale',
+        top: -50
     },
     {
         title: '8 ОРИГИНАЛЬНЫХ СПОСОБОВ БРОСИТЬ БУКЕТ НЕВЕСТЫ',
         subtitle: 'Самое долгожданное событие для каждой не женатой девушки на свадьбе — это бросание букета невесты. В классическом варианте, невеста становится спиной к не женатым подружкам и бросает его, не глядя через плечо. Сейчас я расскажу, как это сделать интересно и весело!',
         picture: images[1],
-        link: '/articles/bouquet-roll'
+        link: '/articles/bouquet-roll',
+        top: -30
     },
     {
         title: 'C ЧЕГО НАЧАТЬ ПОДГОТОВКУ К СВАДЬБЕ?',
         subtitle: 'У каждой пары появляется такой вопрос, в голове круговорот мыслей и вы не знаете что сделать сначала. Я постарался упорядочить ваши действия, 10 шагов, которые помогут вам лучше представить план действий.',
         picture: images[2],
-        link: '/articles/preparations-wedding'
+        link: '/articles/preparations-wedding',
+        top: -30
     },
     {
         title: '6 СОВЕТОВ ДЛЯ НЕВЕСТ ОТ ФОТОГРАФА',
         subtitle: 'Я, постарался собрать, лучшее советы для невест невест на мой взгляд, не для всех это будет актуально, взгляд со стороны свадебного фотографа ) Думаю вам будет интересно !',
         picture: images[3],
-        link: '/articles/from-the-photographer'
+        link: '/articles/from-the-photographer',
+        top: -60
     },
     {
         title: '7 Советов для Идеальной Свадебной Фотосесии',
         subtitle: 'Прочитайте подборку советов, которые помогут вам при планировании и проведении свадебной фотосессии, я отснял не один десяток пар и понял, как часто люди повторяют одни и те же ошибки, которых с легкостью можно избежать избавившись от неприятных сюрпризов.',
         picture: images[4],
-        link: '/articles/perfect-wedding-photo-session'
+        link: '/articles/perfect-wedding-photo-session',
+        top: -50
     },
     {
         title: 'АКСЕССУАРЫ ДЛЯ СВАДЕБНОЙ ФОТОСЕССИИ',
         subtitle: 'Инициативу проявлять должен не только свадебный фотограф, это должно быть творческое сотрудничество и вы полноправный участник этого тандема. Постарайтесь проявить фантазию, ведь ни кто кроме вас не знает точно чего вы хотите. Давайте вместе подумаем, что вам подойдет.',
         picture: images[5],
-        link: '/articles/accessories'
+        link: '/articles/accessories',
+        top: -40
     }
 ];

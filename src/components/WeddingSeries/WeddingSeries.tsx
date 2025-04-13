@@ -2,6 +2,8 @@ import './weddingSeries.scss';
 import CoverWedding from '../CoverWedding/CoverWedding';
 import dataSeries from '../../pages/data/dataSeries';
 import { IMG_wedding_series } from '@/data/image/wedding-series';
+import { getDelayFnc } from '@/helper/delay';
+import { FC, useRef, useEffect, useState } from 'react';
 
 
 /**

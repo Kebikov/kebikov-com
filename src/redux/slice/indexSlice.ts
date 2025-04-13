@@ -41,7 +41,6 @@ const indexSlice = createSlice({
             state.nameShowImage = actions.payload;
         },
         SET_THEME: (state, actions: PayloadAction<TTheme>) => {
-            console.log('Текущяя тема = ', actions.payload);
             state.theme = actions.payload;
         },
         SET_POPUP_THEME: (state, actions: PayloadAction<boolean>) => {

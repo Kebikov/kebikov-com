@@ -1,5 +1,6 @@
 .popupTheme {
-    --padding: 12px;
+    --padding: 28px;
+    --margin: 12px;
     --radius: 20px;
 
     width: clamp(350px, 19vw, 450px);
@@ -13,41 +14,35 @@
     transition: transform 1s ease;
 
     background-color: rgba(255, 255, 255, .5);
-    backdrop-filter: blur(4px);
-
-    // .popupTheme__body
-    &__body {
-    }
+    backdrop-filter: blur(8px);
 
     // .popupTheme__up
 
     &__up {
-        padding: var(--padding);
+        padding: var(--padding) var(--padding) 0 var(--padding);
     }
 
     // .popupTheme__title
 
     &__title {
-        font-size: 18px;
+        margin-top: var(--margin);
+
+        font-size: clamp(16px, .7vw, 18px);
         font-family: 'Mont';
         font-weight: 600;
-        text-align: center;
         letter-spacing: 1px;
-    }
-
-    // .popupTheme__box
-    &__box {
-        margin-top: var(--padding);
-
-        display: flex;
-        align-items: center;
     }
 
     // .popupTheme__img
     &__img {
-        flex: 1 0 auto;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+    }
+    &__img-body {
         width: clamp(50px, 3vw, 70px);
-        aspect-ratio: 1/1;
+        aspect-ratio: 1 / 1;
 
         & img {
             width: 100%;
@@ -58,11 +53,11 @@
 
     // .popupTheme__text
     &__text {
-        padding-left: var(--padding);
+        margin-top: var(--margin);
 
         font-size: clamp(15px, .7vw, 17px);
         font-family: 'Mont';
-        font-weight: 400;
+        font-weight: 500;
         line-height: 120%;
         color: #000000a4;
     }
@@ -72,13 +67,14 @@
     // .popupTheme__down
 
     &__down {
-        padding: var(--padding);
+        margin-top: var(--margin);
+        padding: var(--margin) var(--padding) var(--padding) var(--padding);
 
         border-top: 1px solid #1a1c1f20;
 
         display: flex;
         justify-content: space-between;
-        gap: var(--padding);
+        gap: calc(var(--padding) / 2);
     }
 
     // .popupTheme__light
@@ -99,13 +95,13 @@
 
     &__button {
         width: 100%;
-        aspect-ratio: 12/3;
+        aspect-ratio: 12 / 4;
 
-        font-size: clamp(16px, .7vw, 17px); 
+        font-size: clamp(15px, .7vw, 17px); 
         font-weight: 500;
         font-family: 'Mont';
         letter-spacing: 1px;
 
-        border-radius: calc(var(--radius) - var(--padding));
+        border-radius: 8px;
     }
 }
