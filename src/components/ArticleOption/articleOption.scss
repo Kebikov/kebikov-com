@@ -5,7 +5,7 @@
     // .options__text
     &__text {
         font-family: 'Mont';
-        font-size: 18px;
+        font-size: clamp(17px, .9vw, 19px);
         padding: 0px 20px 20px 20px;
         font-weight: 400;
         color: var(--color-bark-green__to__color-light-2);

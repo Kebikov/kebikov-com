@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import './paragraphs.scss';
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 
 
 interface IParagraphs {
-    title: string;
+    title: string | ReactNode;
     subtitle: string;
     number: number;
 }

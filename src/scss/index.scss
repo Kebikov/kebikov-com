@@ -76,12 +76,6 @@ body {
     @media (min-width: 1921px) and (max-width: 2600px){
         max-width: 70vw;
     };
-
-    @media (min-width: 2601px){
-        max-width: 2400px;
-    };
-
-    
 }
 
 .container-main{
@@ -95,29 +89,7 @@ body {
     flex-direction: column;
 }
 
-.ancor {
-    text-decoration: underline;
-    color: inherit;
-    &:visited {
-        color: inherit;
-    }
-}
 
-p + p {
-    margin-top: 16px;
-}
-
-.first-letter::first-letter {
-    color: var(--color-green__to__color-orange);
-    font-size: clamp(26px, 1.8vw, 30px);
-    font-weight: 600;   
-}
-
-.backgroundForText {
-    background-color: var(--color-select-text-light__to__--color-orange);
-    color: var(--color-black-2);
-    padding: 3px;
-}
 
 
 

@@ -1,0 +1,14 @@
+.weddingsAll {
+    padding: 20px 10px 20px 10px;
+    width: 100%;
+    &__body {
+        
+    }
+
+    & p {
+        font-family: 'Hand';
+        font-size: clamp(24px, 1.1vw, 26px);
+        color: var(--color-bark-green__to__color-light-2);
+        line-height: 120%;
+    }
+}

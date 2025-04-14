@@ -1,3 +1,4 @@
+import './scss/weddingsAll.scss';
 import WeddingSeries from "../components/WeddingSeries/WeddingSeries";
 import { useEffect } from "react";
 import SEO from "../components/SEO/SEO";
@@ -33,7 +34,23 @@ const WeddingsAll = () => {
                     img="https://kebikov.com/opengraph/weddings-all.jpg"
                 />
 
-                <div className="wed-center container">
+                <div className="container" style={{maxWidth: '1450px'}}>
+                    <div className="weddingsAll" >
+                        <div className="weddingsAll__body" >
+                            <p>
+                                На этой странице вы найдёте подборку свадебных фотосессий.
+                                Каждая история — это не просто фотографии, а живая хроника чувств, улыбок, волнительных взглядов и трогательных моментов.
+                            </p>
+                            <p>
+                                Я верю, что свадебная фотография — это искусство сохранить любовь во времени. 
+                                Поэтому в своей работе я стараюсь подчеркнуть искренность момента. 
+                                Моя задача — запечатлеть не только красоту внешнюю, но и тепло, которое рождается между двумя сердцами в день их свадьбы.
+                            </p>
+                            <p>
+                                Если вы ищете профессионального <a href='/' className='ancor' >свадебного фотографа в Минске</a>, приглашаю вас познакомиться с моими работами. Возможно, среди этих историй вы узнаете что-то близкое и своё.
+                            </p>
+                        </div>
+                    </div>
                     <WeddingSeries/>
                 </div>
             </>

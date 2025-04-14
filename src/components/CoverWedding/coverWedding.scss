@@ -1,14 +1,21 @@
 .coverWedding {
-    min-width: 350px;
+    min-width: 400px;
     flex: 1 1 auto;
     flex-wrap: wrap;
 
     position: relative;
     overflow: hidden;
+    border-radius: 14px;
 
-    @container series (min-width: 711px) and (max-width: 1073px){
+    @container series (min-width: 711px) and (max-width: 1224px){
+        min-width: 350px;
         flex-grow: 0;
         width: calc((100cqw - 12px) / 2);
+    }
+
+    @media (max-width: 711px){
+        width: 100%;
+        border-radius: 0;
     }
 
     

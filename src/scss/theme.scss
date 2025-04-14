@@ -15,7 +15,8 @@
     --color-black-2: #1a1c1f;
     --color-black-3: #222628;
 
-    --color-select-text-light: #ffe3a6;
+    --color-select-text-light: #fff6d7;
+    --color-select-text-black: #c4bea8;
 }
 
 
@@ -39,7 +40,7 @@ html {
     --color-light-2__to__color-orange: var(--color-light-2);
     --color-light-2__to__color-black-2: var(--color-light-2);
 
-    --color-select-text-light__to__--color-orange: var(--color-select-text-light);
+    --color-select-text-light__to__color-select-text-black: var(--color-select-text-light);
     //----------------------------------
 
     //: Тень 
@@ -67,7 +68,7 @@ html[data-theme='dark'] {
     --color-bark-green__to__color-orange: var(--color-orange);
     --color-light-2__to__color-orange: var(--color-orange);
 
-    --color-select-text-light__to__--color-orange: var(--color-orange);
+    --color-select-text-light__to__color-select-text-black: var(--color-select-text-black);
     //---------------------------------
 
     //: Тень 
