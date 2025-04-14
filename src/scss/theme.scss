@@ -14,6 +14,8 @@
         --color-black-1__50: rgba(17, 17, 17, .5);
     --color-black-2: #1a1c1f;
     --color-black-3: #222628;
+
+    --color-select-text-light: #ffe3a6;
 }
 
 
@@ -36,6 +38,8 @@ html {
 
     --color-light-2__to__color-orange: var(--color-light-2);
     --color-light-2__to__color-black-2: var(--color-light-2);
+
+    --color-select-text-light__to__--color-orange: var(--color-select-text-light);
     //----------------------------------
 
     //: Тень 
@@ -62,6 +66,8 @@ html[data-theme='dark'] {
     --color-green__to__color-orange: var(--color-orange);
     --color-bark-green__to__color-orange: var(--color-orange);
     --color-light-2__to__color-orange: var(--color-orange);
+
+    --color-select-text-light__to__--color-orange: var(--color-orange);
     //---------------------------------
 
     //: Тень 

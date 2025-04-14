@@ -107,7 +107,17 @@ p + p {
     margin-top: 16px;
 }
 
+.first-letter::first-letter {
+    color: var(--color-green__to__color-orange);
+    font-size: clamp(26px, 1.8vw, 30px);
+    font-weight: 600;   
+}
 
+.backgroundForText {
+    background-color: var(--color-select-text-light__to__--color-orange);
+    color: var(--color-black-2);
+    padding: 3px;
+}
 
 
 
