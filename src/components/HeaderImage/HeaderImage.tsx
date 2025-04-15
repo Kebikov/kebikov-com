@@ -54,9 +54,9 @@ const MainImage = memo(() => {
     return(
         <div className='header-image__box-img'>
             <picture>
-                <source srcSet={images[1000].avif} type="image/avif" media="(max-width: 767px)" />
-                <source srcSet={images[1000].webp} type="image/webp" media="(max-width: 767px)" />
-                <source srcSet={images[1000].jpg} type="image/jpeg" media="(max-width: 767px)" />
+                <source srcSet={images[1000].avif} type="image/avif" media="(max-width: 650px)" />
+                <source srcSet={images[1000].webp} type="image/webp" media="(max-width: 650px)" />
+                <source srcSet={images[1000].jpg} type="image/jpeg" media="(max-width: 650px)" />
 
                 <source srcSet={images[1920].avif} type="image/avif" media="(max-width: 1940px)" />
                 <source srcSet={images[1920].webp} type="image/webp" media="(max-width: 1940px)" />
@@ -84,7 +84,6 @@ const HeaderImage = () => {
     return(
         <div className='header-image'>
             <div className='header-image__body'>
-                {/* <div className='info-test' >{`nameOS = ${nameOS}, scale = ${scaleOS}, size = ${size}`}</div> */}
                 <MainImage/>
                 <Hello nameOS={nameOS} />
             </div>
