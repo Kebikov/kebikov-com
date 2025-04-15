@@ -29,10 +29,20 @@ const Hello = memo(({
             }}
         >
             <div className='hello__body'>
-                <div className='hello__hi' style={size ? {fontSize: `${size * 1.1}px`} : undefined} >ПРИВЕТ !</div>
-                <h1 className='hello__I' style={size ? {fontSize: `${size * 1.1}px`} : undefined} >Я - Евгений - свадебный фотограф в Минске !</h1>
-                <div className='hello__text' style={{fontSize: `${size}px`}} >Вот уже 10 лет я запечатлеваю самые искренние эмоции, счастливые улыбки и трепетные взгляды влюблённых. <br/>Для меня свадьба — это не просто событие, а настоящая магия момента, который должен остаться с вами навсегда.</div>
-                <h2 className='hello__show' style={{fontSize: `${size}px`}} >На моем сайте все про свадебную съемку. Приятного просмотра.</h2>
+                <div className='hello__hi' >
+                    ПРИВЕТ !
+                </div>
+                <h1 className='hello__I hi-text' >
+                    Я - Евгений - свадебный фотограф в Минске!
+                </h1>
+                <div className='hello__text hi-text' >
+                    <p>
+                        Вот уже 10 лет я запечатлеваю самые искренние эмоции, счастливые улыбки и трепетные взгляды влюблённых. 
+                        Для меня свадьба — это не просто событие, а настоящая магия момента, который должен остаться с вами навсегда. 
+                        На моем сайте все про свадебную съемку.
+                    </p>
+                    <p style={{marginTop: '10px'}}>Приятного просмотра.</p>
+                </div>
             </div>
         </div>
     )
@@ -69,14 +79,14 @@ const MainImage = memo(() => {
 
 const HeaderImage = () => {
 
-    const {size, nameOS} = useFontSize({maxWidth: 2560, minWidth: 400, maxSize: 18, minSize: 15});
+    const {nameOS} = useFontSize({maxWidth: 2560, minWidth: 400, maxSize: 18, minSize: 15});
 
     return(
         <div className='header-image'>
             <div className='header-image__body'>
                 {/* <div className='info-test' >{`nameOS = ${nameOS}, scale = ${scaleOS}, size = ${size}`}</div> */}
                 <MainImage/>
-                <Hello size={size} nameOS={nameOS} />
+                <Hello nameOS={nameOS} />
             </div>
         </div>
     )
